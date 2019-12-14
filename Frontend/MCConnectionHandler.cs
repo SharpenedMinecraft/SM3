@@ -3,11 +3,14 @@ using Microsoft.AspNetCore.Connections;
 
 namespace Frontend
 {
-    public class MCConnectionHandler : ConnectionHandler
+    public sealed class MCConnectionHandler : ConnectionHandler
     {
-        public override async Task OnConnectedAsync(ConnectionContext connection)
+        public override Task OnConnectedAsync(ConnectionContext connection) 
+            => HandleConnection(new MCConnectionContext(connection));
+
+        private async Task HandleConnection(MCConnectionContext ctx)
         {
-            connection.Abort();
+            ctx.Abort();
         }
     }
 }
