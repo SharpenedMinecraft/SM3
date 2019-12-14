@@ -23,7 +23,7 @@ namespace Frontend
         public override void CancelPendingRead() 
             => _underlyingPipeReader.CancelPendingRead();
 
-        public override void Complete(Exception exception = null) 
+        public override void Complete(Exception? exception = null) 
             => _underlyingPipeReader.Complete(exception);
 
         public override ValueTask<ReadResult> ReadAsync(CancellationToken cancellationToken = new CancellationToken())
