@@ -26,7 +26,7 @@ namespace Frontend
         public override void CancelPendingFlush() 
             => _underlyingPipeWriter.CancelPendingFlush();
 
-        public override void Complete(Exception exception = null) 
+        public override void Complete(Exception? exception = null) 
             => _underlyingPipeWriter.Complete(exception);
 
         public override ValueTask<FlushResult> FlushAsync(CancellationToken cancellationToken = new CancellationToken()) 
