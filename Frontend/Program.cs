@@ -23,6 +23,10 @@ namespace Frontend
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder
+                        .ConfigureLogging(((context, builder)
+                                              => builder.AddConsole((options => options.IncludeScopes = true))
+                                                        .AddDebug()
+                                                        .AddEventSourceLogger()))
                         .UseKestrel(((context, options) =>
                         {
                             options.ListenAnyIP(25565, listenOptions =>
