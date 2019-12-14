@@ -11,10 +11,12 @@ namespace Frontend
     public sealed class MCConnectionContext : ConnectionContext
     {
         private ConnectionContext _underlyingCtx;
+        private MCDuplexPipe _mcDuplexPipe;
         
         public MCConnectionContext(ConnectionContext ctx)
         {
             _underlyingCtx = ctx;
+            _mcDuplexPipe = new MCDuplexPipe(_underlyingCtx.Transport);
         }
 
         public override string ConnectionId
@@ -33,8 +35,8 @@ namespace Frontend
 
         public override IDuplexPipe Transport
         {
-            get => _underlyingCtx.Transport;
-            set => _underlyingCtx.Transport = value;
+            get => _mcDuplexPipe;
+            set => _mcDuplexPipe = new MCDuplexPipe(value);
         }
 
         public override void Abort() => _underlyingCtx.Abort();
