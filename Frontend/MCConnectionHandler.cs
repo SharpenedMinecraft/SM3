@@ -38,26 +38,46 @@ namespace Frontend
 
             switch (ctx.ConnectionState)
             {
-                case MCConnectionState.Handshaking when id is 0x00:
-                    var protocolVersion = reader.ReadVarInt();
-                    var serverAddress = reader.ReadString();
-                    var port = reader.ReadUInt16();
-                    var nextState = (MCConnectionState) reader.ReadVarInt();
-                    _logger.LogInformation($"Received Successful Handshake Protocol: {(protocolVersion is PROTOCOL_VERSION ? "MATCH" : "ERROR")}; Address Used: {serverAddress}:{port}");
-                    _logger.LogInformation($"Switching to {nextState}");
-                    ctx.ConnectionState = nextState;
-                    break;
                 case MCConnectionState.Handshaking:
-                    _logger.LogInformation($"Unknown Handshaking Packet {id:x2}");
+                    switch (id)
+                    {
+                        case 0x00:
+                            var protocolVersion = reader.ReadVarInt();
+                            var serverAddress = reader.ReadString();
+                            var port = reader.ReadUInt16();
+                            var nextState = (MCConnectionState) reader.ReadVarInt();
+                            _logger.LogInformation($"Received Successful Handshake Protocol: {(protocolVersion is PROTOCOL_VERSION ? "MATCH" : "ERROR")}; Address Used: {serverAddress}:{port}");
+                            _logger.LogInformation($"Switching to {nextState}");
+                            ctx.ConnectionState = nextState;
+                            break;
+                        default:
+                            _logger.LogInformation($"Unknown Handshaking Packet {id:x2}");
+                            break;
+                    }
                     break;
                 case MCConnectionState.Status:
-                    _logger.LogInformation($"Unknown Status Packet {id:x2}");
+                    switch (id)
+                    {
+                        default:
+                            _logger.LogInformation($"Unknown Status Packet {id:x2}");
+                            break;
+                    }
                     break;
                 case MCConnectionState.Login:
-                    _logger.LogInformation($"Unknown Login Packet {id:x2}");
+                    switch (id)
+                    {
+                        default:
+                            _logger.LogInformation($"Unknown Login Packet {id:x2}");
+                            break;
+                    }
                     break;
                 case MCConnectionState.Playing:
-                    _logger.LogInformation($"Unknown Playing Packet {id:x2}");
+                    switch (id)
+                    {
+                        default:
+                            _logger.LogInformation($"Unknown Playing Packet {id:x2}");
+                            break;
+                    }
                     break;
                 default:
                     _logger.LogCritical("Invalid Connection State. Aborting");
