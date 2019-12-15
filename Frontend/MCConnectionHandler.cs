@@ -32,8 +32,8 @@ namespace Frontend
         private void HandlePacket(in ReadOnlySequence<byte> buffer, MCConnectionContext ctx)
         {
             var reader = new MCPacketReader(buffer);
-            var lenght = reader.ReadVarInt();
-            reader = new MCPacketReader(reader.Buffer.Slice(0, lenght));
+            var length = reader.ReadVarInt();
+            reader = new MCPacketReader(reader.Buffer.Slice(0, length));
             var id = reader.ReadVarInt();
 
             switch (ctx.ConnectionState)
