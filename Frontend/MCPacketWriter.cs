@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Buffers;
 using System.Buffers.Binary;
 using System.IO;
@@ -26,7 +26,7 @@ namespace Frontend
                 size++;
             }
 
-            return size;
+            return size + 1;
         }
 
         public void WriteByte(byte value) 
