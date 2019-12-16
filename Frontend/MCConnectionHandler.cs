@@ -88,6 +88,42 @@ namespace Frontend
                 case MCConnectionState.Status:
                     switch (id)
                     {
+                        case 0x00: // Status Request
+                            var payload = new StatusResponse(
+                                new StatusResponse.VersionPayload(VERSION_NAME, PROTOCOL_VERSION),
+                                new StatusResponse.PlayersPayload(100, 0, null), new ChatBuilder()
+                                                                           .AppendText("This ")
+                                                                           .WithColor("blue")
+                                                                           .Bold()
+                                                                           .WithExtra(builder => builder
+                                                                                          .AppendText("is ")
+                                                                                          .WithColor("red")
+                                                                                          .Bold())
+                                                                           .WithExtra(builder => builder
+                                                                                          .AppendText("the ")
+                                                                                          .WithColor("green")
+                                                                                          .Bold())
+                                                                           .WithExtra(builder => builder
+                                                                                          .AppendText("MODT")
+                                                                                          .WithColor("purple")
+                                                                                          .Bold())
+                                                                           .Build(),
+                                null);
+                            var payloadBytes = JsonSerializer.SerializeToUtf8Bytes(payload, _jsonOptions);
+
+                            var msg = Encoding.UTF8.GetString(payloadBytes);
+                            
+                            var dataSize1 = payloadBytes.Length + writer.GetVarIntSize(payloadBytes.Length) + writer.GetVarIntSize(0x00);
+                            var packetSize1 = dataSize1 + writer.GetVarIntSize(dataSize1);
+                            var span = ctx.Transport.Output.GetSpan(packetSize1);
+                            writer.Span = span;
+                            writer.WriteVarInt(dataSize1);
+                            writer.WriteVarInt(0x00);
+                            writer.WriteVarInt(payloadBytes.Length);
+                            writer.WriteBytes(payloadBytes);
+                            ctx.Transport.Output.Advance(packetSize1);
+                            ctx.FlushNext();
+                            break;
                         default:
                             _logger.LogInformation($"Unknown Status Packet {id:x2}");
                             break;
