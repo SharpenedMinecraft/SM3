@@ -54,6 +54,14 @@ namespace Frontend
         {
             var reader = new MCPacketReader(buffer);
             var length = reader.ReadVarInt();
+
+            if (length > reader.Buffer.Length || length < 1 /* 1 = small ID but no fields*/)
+            {
+                _logger.LogCritical($"Read Invalid length {length:X}. Aborting");
+                ctx.Abort();
+                return;
+            }
+            
             reader = new MCPacketReader(reader.Buffer.Slice(0, length));
             var id = reader.ReadVarInt();
             using var packetIdScope = _logger.BeginScope($"Packet ID: {id:x2}");
