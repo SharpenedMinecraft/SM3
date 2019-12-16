@@ -1,12 +1,20 @@
 ﻿using System;
+using System.Buffers;
+using System.Buffers.Binary;
 using System.IO;
 
 namespace Frontend
 {
     public ref struct MCPacketWriter
     {
+        private MemoryPool<byte> _memPool;
         public Span<byte> Span;
         public int Position;
+
+        public MCPacketWriter(MemoryPool<byte> memoryPool) : this()
+        {
+            _memPool = memoryPool;
+        }
         
         public int GetVarIntSize(int val)
         {
@@ -28,6 +36,14 @@ namespace Frontend
         {
             values.CopyTo(Span.Slice(Position));
             Position += values.Length;
+        }
+        
+        public void WriteInt64(Int64 value)
+        {
+            using var mem = _memPool.Rent(sizeof(Int64));
+            var span = mem.Memory.Span;
+            BinaryPrimitives.WriteInt64BigEndian(span, value);
+            WriteBytes(span);
         }
 
         public void WriteVarInt(int value)
