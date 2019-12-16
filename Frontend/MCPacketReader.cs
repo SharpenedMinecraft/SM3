@@ -38,6 +38,9 @@ namespace Frontend
                 return v;
             }
         }
+        
+        public Int64 ReadInt64() 
+            => BinaryPrimitives.ReadInt64BigEndian(ReadBytes(sizeof(Int64)));
 
         public UInt16 ReadUInt16() 
             => BinaryPrimitives.ReadUInt16BigEndian(ReadBytes(2));
