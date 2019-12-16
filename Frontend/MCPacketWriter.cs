@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Buffers;
 using System.Buffers.Binary;
 using System.IO;
@@ -36,6 +36,14 @@ namespace Frontend
         {
             values.CopyTo(Span.Slice(Position));
             Position += values.Length;
+        }
+
+        public void WriteInt16(Int16 value)
+        {
+            using var mem = _memPool.Rent(sizeof(Int16));
+            var span = mem.Memory.Span;
+            BinaryPrimitives.WriteInt16BigEndian(span, value);
+            WriteBytes(span);
         }
         
         public void WriteInt64(Int64 value)
