@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Buffers;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Connections;
@@ -35,6 +35,7 @@ namespace Frontend
             var length = reader.ReadVarInt();
             reader = new MCPacketReader(reader.Buffer.Slice(0, length));
             var id = reader.ReadVarInt();
+            using var packetIdScope = _logger.BeginScope($"Packet ID: {id:x2}");
 
             switch (ctx.ConnectionState)
             {
