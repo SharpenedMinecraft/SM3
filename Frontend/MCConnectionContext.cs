@@ -14,6 +14,7 @@ namespace Frontend
         private readonly ConnectionContext _underlyingCtx;
         private MCDuplexPipe _mcDuplexPipe;
         
+        
         public MCConnectionContext(ConnectionContext ctx)
         {
             _underlyingCtx = ctx;
@@ -26,6 +27,12 @@ namespace Frontend
             get => (MCConnectionState)Items["state"];
             set => Items["state"] = value;
         }
+
+        public bool ShouldFlush { get; private set; }
+        public void FlushNext() => ShouldFlush = true;
+        
+        public bool ShouldClose { get; private set; }
+        public void CloseNext() => ShouldClose = true;
 
         public override string ConnectionId
         {

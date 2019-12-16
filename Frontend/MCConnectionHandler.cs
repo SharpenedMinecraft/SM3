@@ -22,10 +22,23 @@ namespace Frontend
 
         private async Task HandleConnection(MCConnectionContext ctx)
         {
-            while (ctx.Transport.Input.TryRead(out var readResult))
+            while (!ctx.ConnectionClosed.IsCancellationRequested)
             {
+                var readResult = await ctx.Transport.Input.ReadAsync(ctx.ConnectionClosed);
+                if (readResult.IsCanceled || readResult.IsCompleted)
+                {
+                    _logger.LogInformation("Connection Closed");
+                    return;
+                }
+                
                 var buffer = readResult.Buffer;
                 HandlePacket(buffer, ctx);
+
+                if (ctx.ShouldFlush)
+                    await ctx.Transport.Output.FlushAsync();
+                    
+                if (ctx.ShouldClose /* we don't specifically close, we just hand it back to kestrel to deal with */)
+                    return;
             }
         }
 
