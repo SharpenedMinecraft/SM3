@@ -85,6 +85,8 @@ namespace Frontend
                     ctx.Abort();
                     break;
             }
+            // NOT IDEAL, but easiest
+            ctx.Transport.Input.AdvanceTo(buffer.GetPosition(length + writer.GetVarIntSize(length)));
         }
     }
 }
