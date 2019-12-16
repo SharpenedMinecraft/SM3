@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Buffers;
 using System.IO.Pipelines;
 using System.Text;
@@ -53,6 +53,7 @@ namespace Frontend
         private void HandlePacket(in ReadOnlySequence<byte> buffer, MCConnectionContext ctx)
         {
             var reader = new MCPacketReader(buffer);
+            var writer = new MCPacketWriter(MemoryPool<byte>.Shared);
             var length = reader.ReadVarInt();
 
             if (length > reader.Buffer.Length || length < 1 /* 1 = small ID but no fields*/)
@@ -122,6 +123,18 @@ namespace Frontend
                             writer.WriteVarInt(payloadBytes.Length);
                             writer.WriteBytes(payloadBytes);
                             ctx.Transport.Output.Advance(packetSize1);
+                            ctx.FlushNext();
+                            break;
+                        case 0x01: // Ping
+                            var seed = reader.ReadInt64();
+                            
+                            var dataSize2 = writer.GetVarIntSize(0x01) + sizeof(long);
+                            var packetSize2 = writer.GetVarIntSize(dataSize2) + dataSize2;
+                            writer.Span = ctx.Transport.Output.GetSpan(packetSize2);
+                            writer.WriteVarInt(dataSize2);
+                            writer.WriteVarInt(0x01);
+                            writer.WriteInt64(seed);
+                            ctx.Transport.Output.Advance(packetSize2);
                             ctx.FlushNext();
                             break;
                         default:
