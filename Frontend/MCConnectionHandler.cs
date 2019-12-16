@@ -1,5 +1,8 @@
 using System;
 using System.Buffers;
+using System.IO.Pipelines;
+using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Connections;
 using Microsoft.Extensions.Logging;
@@ -11,10 +14,15 @@ namespace Frontend
         private const int PROTOCOL_VERSION = 498;
         private string VERSION_NAME = "SM3-1.14.4";
         private ILogger _logger;
+        private JsonSerializerOptions _jsonOptions;
 
         public MCConnectionHandler(ILogger<MCConnectionHandler> logger)
         {
             _logger = logger;
+            _jsonOptions = new JsonSerializerOptions()
+            {
+                IgnoreNullValues = true
+            };
         }
 
         public override Task OnConnectedAsync(ConnectionContext connection) 
