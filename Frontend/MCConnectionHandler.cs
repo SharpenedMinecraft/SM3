@@ -142,6 +142,32 @@ namespace Frontend
                 case MCConnectionState.Login:
                     switch (id)
                     {
+                        case 0x00: // Login Start
+                            var username = reader.ReadString();
+                            _logger.LogInformation($"{username} trying to log in. Refusing.");
+
+                            var payload = JsonSerializer.SerializeToUtf8Bytes(
+                                new ChatBuilder()
+                                    .AppendText("Currently not supporting Login\n\n")
+                                    .Bold()
+                                    .WithColor("red")
+                                    .WithExtra(builder => builder
+                                                   .Underlined()
+                                                   .Italic()
+                                                   .WithColor("green")
+                                                   .AppendText("Powered by SM3"))
+                                    .Build(), _jsonOptions);
+                            var payloadSize = writer.GetVarIntSize(0x00) + writer.GetVarIntSize(payload.Length) +
+                                             payload.Length;
+                            var packetSize = payloadSize + writer.GetVarIntSize(payloadSize);
+                            writer.Span = ctx.Transport.Output.GetSpan(packetSize);
+                            writer.WriteVarInt(payloadSize);
+                            writer.WriteVarInt(0x00);
+                            writer.WriteVarInt(payload.Length);
+                            writer.WriteBytes(payload);
+                            ctx.Transport.Output.Advance(packetSize);
+                            ctx.FlushNext();
+                            break;
                         default:
                             _logger.LogInformation($"Unknown Login Packet {id:x2}");
                             break;
