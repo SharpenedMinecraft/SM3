@@ -111,9 +111,6 @@ namespace Frontend
                                                                            .Build(),
                                 null);
                             var payloadBytes = JsonSerializer.SerializeToUtf8Bytes(payload, _jsonOptions);
-
-                            var msg = Encoding.UTF8.GetString(payloadBytes);
-                            
                             var dataSize1 = payloadBytes.Length + writer.GetVarIntSize(payloadBytes.Length) + writer.GetVarIntSize(0x00);
                             var packetSize1 = dataSize1 + writer.GetVarIntSize(dataSize1);
                             var span = ctx.Transport.Output.GetSpan(packetSize1);
