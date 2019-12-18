@@ -5,19 +5,34 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Connections;
 using Microsoft.AspNetCore.Http.Features;
+using Microsoft.Extensions.Logging;
 
 namespace Frontend
 {
     public sealed class MCConnectionContext : ConnectionContext
     {
-        private ConnectionContext _underlyingCtx;
+        private readonly ConnectionContext _underlyingCtx;
         private MCDuplexPipe _mcDuplexPipe;
+        
         
         public MCConnectionContext(ConnectionContext ctx)
         {
             _underlyingCtx = ctx;
             _mcDuplexPipe = new MCDuplexPipe(_underlyingCtx.Transport);
+            Items["state"] = MCConnectionState.Handshaking;
         }
+
+        public MCConnectionState ConnectionState
+        {
+            get => (MCConnectionState)Items["state"];
+            set => Items["state"] = value;
+        }
+
+        public bool ShouldFlush { get; private set; }
+        public void FlushNext() => ShouldFlush = true;
+        
+        public bool ShouldClose { get; private set; }
+        public void CloseNext() => ShouldClose = true;
 
         public override string ConnectionId
         {
@@ -65,6 +80,6 @@ namespace Frontend
 
         public override int GetHashCode() => _underlyingCtx.GetHashCode();
 
-        public override string ToString() => _underlyingCtx.ToString();
+        public override string? ToString() => _underlyingCtx.ToString();
     }
 }
