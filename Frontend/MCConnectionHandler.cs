@@ -15,9 +15,11 @@ namespace Frontend
         private const string VERSION_NAME = "SM3-1.14.4";
         private ILogger _logger;
         private JsonSerializerOptions _jsonOptions;
+        private readonly IPacketReaderFactory _packetReaderFactory;
 
-        public MCConnectionHandler(ILogger<MCConnectionHandler> logger)
+        public MCConnectionHandler(ILogger<MCConnectionHandler> logger, IPacketReaderFactory packetReaderFactory)
         {
+            _packetReaderFactory = packetReaderFactory;
             _logger = logger;
             _jsonOptions = new JsonSerializerOptions()
             {
@@ -50,9 +52,9 @@ namespace Frontend
             }
         }
 
-        private void HandlePacket(in ReadOnlySequence<byte> buffer, MCConnectionContext ctx)
+        private void HandlePacket(ReadOnlySequence<byte> buffer, MCConnectionContext ctx)
         {
-            var reader = new MCPacketReader(buffer);
+            var reader = _packetReaderFactory.CreateReader(buffer);
             var writer = new MCPacketWriter(MemoryPool<byte>.Shared);
             var length = reader.ReadVarInt();
 
