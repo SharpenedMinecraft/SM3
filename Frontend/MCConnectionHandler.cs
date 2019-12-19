@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Buffers;
 using System.IO.Pipelines;
 using System.Text;
@@ -12,7 +12,7 @@ namespace Frontend
     public sealed class MCConnectionHandler : ConnectionHandler
     {
         private const int PROTOCOL_VERSION = 498;
-        private string VERSION_NAME = "SM3-1.14.4";
+        private const string VERSION_NAME = "SM3-1.14.4";
         private ILogger _logger;
         private JsonSerializerOptions _jsonOptions;
 
