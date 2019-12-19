@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Frontend
 {
-    public ref struct MCPacketReader
+    public struct MCPacketReader : IPacketReader
     {
         private ReadOnlySequence<byte> _buffer;
 
@@ -16,14 +16,7 @@ namespace Frontend
         {
             _buffer = buffer;
         }
-
-        public byte ReadByte()
-        {
-            var b = _buffer.FirstSpan[0];
-            _buffer = _buffer.Slice(1);
-            return b;
-        }
-
+        
         public ReadOnlySpan<byte> ReadBytes(int length)
         {
             var data = _buffer.Slice(0, length);
@@ -38,19 +31,52 @@ namespace Frontend
                 return v;
             }
         }
-        
-        public Int64 ReadInt64() 
+
+        public byte ReadUInt8()
+        {
+            var b = _buffer.FirstSpan[0];
+            _buffer = _buffer.Slice(1);
+            return b;
+        }
+
+        public sbyte ReadInt8()
+        {
+            unchecked
+            {
+                return (sbyte)ReadUInt8();
+            }
+        }
+
+        public ulong ReadUInt64()
+            =>BinaryPrimitives.ReadUInt64BigEndian(ReadBytes(sizeof(UInt64)));
+
+        public long ReadInt64() 
             => BinaryPrimitives.ReadInt64BigEndian(ReadBytes(sizeof(Int64)));
 
-        public UInt16 ReadUInt16() 
-            => BinaryPrimitives.ReadUInt16BigEndian(ReadBytes(2));
+        public float ReadSingle()
+            => BitConverter.Int32BitsToSingle(ReadInt32());
+
+        public double ReadDouble()
+            => BitConverter.Int64BitsToDouble(ReadInt64());
+
+        public ushort ReadUInt16() 
+            => BinaryPrimitives.ReadUInt16BigEndian(ReadBytes(sizeof(ushort)));
+
+        public short ReadInt16()
+            => BinaryPrimitives.ReadInt16BigEndian(ReadBytes(sizeof(short)));
+
+        public uint ReadUInt32()
+            => BinaryPrimitives.ReadUInt32BigEndian(ReadBytes(sizeof(uint)));
+
+        public int ReadInt32()
+            => BinaryPrimitives.ReadInt32BigEndian(ReadBytes(sizeof(int)));
 
         public int ReadVarInt()
         {
             var val = 0;
             var size = 0;
             int readData;
-            while (((readData = ReadByte()) & 0x80) == 0x80)
+            while (((readData = ReadUInt8()) & 0x80) == 0x80)
             {
                 val |= (readData & 0x7F) << (size++ * 7);
                 if (size > 5)
@@ -62,7 +88,7 @@ namespace Frontend
             return val | ((readData & 0x7F) << (size * 0x7));
         }
 
-        public string ReadString()
+        public ReadOnlySpan<char> ReadString()
         {
             var length = ReadVarInt();
 
