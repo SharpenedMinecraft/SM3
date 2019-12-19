@@ -74,7 +74,7 @@ namespace Frontend
                     {
                         case 0x00:
                             var protocolVersion = reader.ReadVarInt();
-                            var serverAddress = reader.ReadString();
+                            var serverAddress = reader.ReadString().ToString();
                             var port = reader.ReadUInt16();
                             var nextState = (MCConnectionState) reader.ReadVarInt();
                             _logger.LogInformation($"Received Successful Handshake Protocol: {(protocolVersion is PROTOCOL_VERSION ? "MATCH" : "ERROR")}; Address Used: {serverAddress}:{port}");
@@ -143,7 +143,7 @@ namespace Frontend
                     switch (id)
                     {
                         case 0x00: // Login Start
-                            var username = reader.ReadString();
+                            var username = reader.ReadString().ToString();
                             _logger.LogInformation($"{username} trying to log in. Refusing.");
 
                             var payload = JsonSerializer.SerializeToUtf8Bytes(
