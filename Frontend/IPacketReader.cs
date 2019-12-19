@@ -1,4 +1,5 @@
 using System;
+using System.Buffers;
 
 namespace Frontend
 {
@@ -7,6 +8,8 @@ namespace Frontend
         int ReadVarInt();
         ReadOnlySpan<char> ReadString(); // TODO: Once UTF-8 String exsists, change this
         ReadOnlySpan<byte> ReadBytes(int length);
+
+        ReadOnlySequence<byte> Buffer { get; }
 
         byte ReadUInt8();
         sbyte ReadInt8();
