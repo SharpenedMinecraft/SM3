@@ -4,6 +4,6 @@ namespace Frontend
 {
     public interface IPacketWriterFactory
     {
-        public IPacketWriter CreateWriter(Memory<byte> memory);
+        IPacketWriter CreateWriter(Memory<byte> memory);
     }
 }
