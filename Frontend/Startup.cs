@@ -17,6 +17,8 @@ namespace Frontend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IPacketReaderFactory, MCPacketReaderFactory>();
+            services.AddSingleton<IPacketWriterFactory, MCPacketWriterFactory>();
+            services.AddSingleton<IPacketHandler, MCPacketHandler>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
