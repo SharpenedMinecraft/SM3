@@ -1,0 +1,40 @@
+name: Build on Tag
+
+on:
+  create:
+    ref_type: tag
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        useAVX: [ "AVX", "NO_AVX" ]
+        runtime: [ "win-x64", "win-x86", "linux-x64", "osx-x64" ]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.100
+    - name: Build with dotnet
+      run: dotnet publish -r ${{ matrix.runtime }} -c Release /p:PublishSingleFile=true -o ./output/
+      working-directory: ./Frontend/
+    - name: Zip Release
+      uses: TheDoctor0/zip-release@v0.2.1
+      with:
+        # Filename for archive
+        filename: ./output.zip
+        # Base path for archive files
+        path: ./Frontend/output/
+        # List of excluded files/directories
+        exclusions: 'appsettings*.json *.pdb web.config'
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        # Artifact name
+        name: ${{ matrix.runtime }}
+        # Directory containing files to upload
+        path: ./output.zip
