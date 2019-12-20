@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Buffers;
 using System.Buffers.Binary;
 using System.IO;
@@ -100,6 +100,11 @@ namespace Frontend
         {
             values.CopyTo(Memory.Slice(Position).Span);
             Position += values.Length;
+            
+#if DUMP_WRITE_BYTES
+            Console.WriteLine($"Wrote {values.Length}:");
+            Console.WriteLine(BitConverter.ToString(values.ToArray()));
+#endif
         }
         
         public void WriteUInt16(UInt16 value)
