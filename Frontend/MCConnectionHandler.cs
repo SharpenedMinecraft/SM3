@@ -55,7 +55,7 @@ namespace Frontend
         private void HandlePacket(ReadOnlySequence<byte> buffer, MCConnectionContext ctx)
         {
             var reader = _packetReaderFactory.CreateReader(buffer);
-            var writer = new MCPacketWriter(MemoryPool<byte>.Shared);
+            IPacketWriter writer;
             var length = reader.ReadVarInt();
 
             if (length > reader.Buffer.Length || length < 1 /* 1 = small ID but no fields*/)
@@ -113,10 +113,10 @@ namespace Frontend
                                                                            .Build(),
                                 null);
                             var payloadBytes = JsonSerializer.SerializeToUtf8Bytes(payload, _jsonOptions);
-                            var dataSize1 = payloadBytes.Length + writer.GetVarIntSize(payloadBytes.Length) + writer.GetVarIntSize(0x00);
-                            var packetSize1 = dataSize1 + writer.GetVarIntSize(dataSize1);
-                            var span = ctx.Transport.Output.GetSpan(packetSize1);
-                            writer.Span = span;
+                            var dataSize1 = payloadBytes.Length + MCPacketWriter.GetVarIntSize(payloadBytes.Length) + MCPacketWriter.GetVarIntSize(0x00);
+                            var packetSize1 = dataSize1 + MCPacketWriter.GetVarIntSize(dataSize1);
+                            var memory = ctx.Transport.Output.GetMemory(packetSize1);
+                            writer = new MCPacketWriter(memory, MemoryPool<byte>.Shared);
                             writer.WriteVarInt(dataSize1);
                             writer.WriteVarInt(0x00);
                             writer.WriteVarInt(payloadBytes.Length);
@@ -127,9 +127,9 @@ namespace Frontend
                         case 0x01: // Ping
                             var seed = reader.ReadInt64();
                             
-                            var dataSize2 = writer.GetVarIntSize(0x01) + sizeof(long);
-                            var packetSize2 = writer.GetVarIntSize(dataSize2) + dataSize2;
-                            writer.Span = ctx.Transport.Output.GetSpan(packetSize2);
+                            var dataSize2 = MCPacketWriter.GetVarIntSize(0x01) + sizeof(long);
+                            var packetSize2 = MCPacketWriter.GetVarIntSize(dataSize2) + dataSize2;
+                            writer = new MCPacketWriter(ctx.Transport.Output.GetMemory(packetSize2), MemoryPool<byte>.Shared);
                             writer.WriteVarInt(dataSize2);
                             writer.WriteVarInt(0x01);
                             writer.WriteInt64(seed);
@@ -159,10 +159,10 @@ namespace Frontend
                                                    .WithColor("green")
                                                    .AppendText("Powered by SM3"))
                                     .Build(), _jsonOptions);
-                            var payloadSize = writer.GetVarIntSize(0x00) + writer.GetVarIntSize(payload.Length) +
+                            var payloadSize = MCPacketWriter.GetVarIntSize(0x00) + MCPacketWriter.GetVarIntSize(payload.Length) +
                                              payload.Length;
-                            var packetSize = payloadSize + writer.GetVarIntSize(payloadSize);
-                            writer.Span = ctx.Transport.Output.GetSpan(packetSize);
+                            var packetSize = payloadSize + MCPacketWriter.GetVarIntSize(payloadSize);
+                            writer = new MCPacketWriter(ctx.Transport.Output.GetMemory(packetSize), MemoryPool<byte>.Shared);
                             writer.WriteVarInt(payloadSize);
                             writer.WriteVarInt(0x00);
                             writer.WriteVarInt(payload.Length);
@@ -189,7 +189,7 @@ namespace Frontend
                     break;
             }
             // NOT IDEAL, but easiest
-            ctx.Transport.Input.AdvanceTo(buffer.GetPosition(length + writer.GetVarIntSize(length)));
+            ctx.Transport.Input.AdvanceTo(buffer.GetPosition(length + MCPacketWriter.GetVarIntSize(length)));
         }
     }
 }
