@@ -5,4 +5,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(AVX)' != ''">
+    <DefineConstants>$(DefineConstants);AVX</DefineConstants>
+  </PropertyGroup>
+
 </Project>
