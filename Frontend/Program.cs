@@ -40,15 +40,15 @@ namespace Frontend
                                               => builder.AddConsole((options => options.IncludeScopes = true))
                                                         .AddDebug()
                                                         .AddEventSourceLogger()))
+                        .UseStartup<Startup>()
                         .UseKestrel(((context, options) =>
                         {
                             options.ListenAnyIP(25565, listenOptions =>
                             {
-                                listenOptions.Protocols = HttpProtocols.None;
+                                // listenOptions.Protocols = HttpProtocols.None;
                                 listenOptions.UseConnectionHandler<MCConnectionHandler>();
                             });
-                        }))
-                        .UseStartup<Startup>();
+                        }));
                 });
     }
 }
