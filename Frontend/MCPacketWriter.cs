@@ -15,12 +15,13 @@ namespace Frontend
         public readonly Memory<byte> Memory;
         public int Position;
 
-        public MCPacketWriter(MemoryPool<byte> memoryPool) : this()
+        public MCPacketWriter(Memory<byte> mem, MemoryPool<byte> memoryPool) : this()
         {
+            Memory = mem;
             _memPool = memoryPool;
         }
         
-        public readonly int GetVarIntSize(int val)
+        public static int GetVarIntSize(int val)
         {
             var size = 0;
             var v = val;
@@ -42,7 +43,8 @@ namespace Frontend
         public unsafe void WriteString(ReadOnlySpan<char> value)
         {
             WriteVarInt(value.Length);
-            // This code could get a lot of help from Char8
+            // This code could get a lot of help from Char8.
+            // for now, we simply drop every second byte.
 
             using var utf8Owner = _memPool.Rent(value.Length);
             var utf8Span = utf8Owner.Memory.Span;
@@ -52,7 +54,39 @@ namespace Frontend
             fixed (byte* pUtf8 = utf8Span)
             {
                 // HACK: (?) assuming sizeof(char) == 2
+                // also assuming Vector128<byte>.Count == 16
+                // also assuming Vector256<byte>.Count == 32
                 var pUtf16 = (byte*) pUtf16Char;
+#if !NO_OPTIMIZATION
+#if AVX // TAKE CARE. AVX MAY CAUSE DOWNCLOCKING
+                if (Avx2.IsSupported)
+                {
+                    while ((i + 64) < value.Length)
+                    {
+                        var vector1 = Avx2.LoadVector256(pUtf16 + i);
+                        i += 32;
+                        var vector2 = Avx2.LoadVector256(pUtf16 + i);
+                        i += 32;
+                        
+                        Avx2.Store(pUtf8 + (i / 2), Avx2.PackUnsignedSaturate(vector1.AsInt16(), vector2.AsInt16()));
+                    }
+                }
+#endif
+
+                if (Sse2.IsSupported)
+                {
+                    
+                    while ((i + 32) < value.Length)
+                    {
+                        var vector1 = Sse2.LoadVector128(pUtf16 + i);
+                        i += 16;
+                        var vector2 = Sse2.LoadVector128(pUtf16 + i);
+                        i += 16;
+
+                        Sse2.Store(pUtf8 + (i / 2), Sse2.PackUnsignedSaturate(vector1.AsInt16(), vector2.AsInt16()));
+                    }
+                }
+#endif
                 while (i < value.Length)
                 {
                     utf8Span[i / 2] = *(pUtf16 + i);
