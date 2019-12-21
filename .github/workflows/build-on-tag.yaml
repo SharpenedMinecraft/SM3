@@ -1,16 +1,43 @@
 name: Build on Tag
 
 on:
-  create:
-    ref_type: tag
+  push:
+    tags:
+    - 'v*'
 
 jobs:
-  build:
-
+  create_release:
+    name: create_release
     runs-on: ubuntu-latest
+
+    steps:
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1.0.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false
+    - run: |
+        echo "${{ steps.create_release.outputs.upload_url }}"
+        echo "${{ steps.create_release.outputs.upload_url }}" > upload.txt
+    
+    - uses: actions/upload-artifact@v1
+      with:
+        name: upload_url
+        path: ./upload.txt
+
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    needs: [ create_release ]
     strategy:
+      fail-fast: false
       matrix:
-        useAVX: [ "AVX", "NO_AVX" ]
+        useAVX: [ "AVX", "" ]
         runtime: [ "win-x64", "win-x86", "linux-x64", "osx-x64" ]
 
     steps:
@@ -19,22 +46,25 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.100
+    - uses: actions/download-artifact@v1
+      with:
+        name: upload_url
+    - uses: GenesisSam/get-simple-file-action@v1.0.4
+      id: openFile
+      with:
+        file-name: ./upload_url/upload.txt
     - name: Build with dotnet
-      run: dotnet publish -r ${{ matrix.runtime }} -c Release /p:PublishSingleFile=true -o ./output/
+      run: dotnet publish -r ${{ matrix.runtime }} -c Release /p:PublishSingleFile=true /p:AVX=${{ matrix.useAVX }} -o ./output/
       working-directory: ./Frontend/
-    - name: Zip Release
-      uses: TheDoctor0/zip-release@v0.2.1
+    - name: Zip artifacts
+      run: zip --junk-paths -r ./artifact.zip ./Frontend/output/
+    - name: Upload Release Asset
+      id: upload-release-asset 
+      uses: actions/upload-release-asset@v1.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        # Filename for archive
-        filename: ./output.zip
-        # Base path for archive files
-        path: ./Frontend/output/
-        # List of excluded files/directories
-        exclusions: 'appsettings*.json *.pdb web.config'
-    - name: Upload artifact
-      uses: actions/upload-artifact@v1.0.0
-      with:
-        # Artifact name
-        name: ${{ matrix.runtime }}
-        # Directory containing files to upload
-        path: ./output.zip
+        upload_url: ${{ steps.openFile.outputs.data }}
+        asset_path: ./artifact.zip
+        asset_name: SM3-${{ matrix.runtime }}${{ matrix.useAVX }}.zip
+        asset_content_type: application/zip
