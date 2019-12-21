@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Frontend
 {
-    public sealed class MCConnectionContext : ConnectionContext
+    public sealed class MCConnectionContext : ConnectionContext, IConnectionState
     {
         private readonly ConnectionContext _underlyingCtx;
         private MCDuplexPipe _mcDuplexPipe;
