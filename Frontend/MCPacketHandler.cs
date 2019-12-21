@@ -31,6 +31,7 @@ namespace Frontend
                         case 0x00:
                             var protocolVersion = reader.ReadVarInt();
                             var serverAddress = reader.ReadString().ToString();
+                            ctx.IsLocal = serverAddress == "localhost" || serverAddress == "127.0.0.1";
                             var port = reader.ReadUInt16();
                             var nextState = (MCConnectionState) reader.ReadVarInt();
                             _logger.LogInformation($"Received Successful Handshake Protocol: {(protocolVersion is PROTOCOL_VERSION ? "MATCH" : "ERROR")}; Address Used: {serverAddress}:{port}");
