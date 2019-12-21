@@ -4,7 +4,7 @@ namespace Frontend
 {
     public sealed class Chat
     {
-        [JsonPropertyName("text")] public string Text { get; set; }
+        [JsonPropertyName("text")] public string? Text { get; set; }
         [JsonPropertyName("bold")] public bool? Bold { get; set; }
         [JsonPropertyName("italic")] public bool? Italic { get; set; }
         [JsonPropertyName("underlined")] public bool? Underlined { get; set; }
