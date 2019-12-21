@@ -22,4 +22,8 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(AVX)' != ''">
+    <DefineConstants>$(DefineConstants);AVX</DefineConstants>
+  </PropertyGroup>
+
 </Project>
