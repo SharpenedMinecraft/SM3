@@ -24,9 +24,9 @@ namespace Frontend
         public void HandlePacket(MCConnectionContext ctx, IPacketReader reader, IPacketWriterFactory writerFactory, int id)
         {
             IPacketWriter writer;
-            switch (ctx.ConnectionState)
+            switch (ctx.ConnectionStage)
             {
-                case MCConnectionState.Handshaking:
+                case MCConnectionStage.Handshaking:
                     switch (id)
                     {
                         case 0x00:
@@ -34,17 +34,17 @@ namespace Frontend
                             var serverAddress = reader.ReadString().ToString();
                             ctx.IsLocal = serverAddress == "localhost" || serverAddress == "127.0.0.1";
                             var port = reader.ReadUInt16();
-                            var nextState = (MCConnectionState) reader.ReadVarInt();
+                            var nextState = (MCConnectionStage) reader.ReadVarInt();
                             _logger.LogInformation($"Received Successful Handshake Protocol: {(protocolVersion is PROTOCOL_VERSION ? "MATCH" : "ERROR")}; Address Used: {serverAddress}:{port}");
                             _logger.LogInformation($"Switching to {nextState}");
-                            ctx.ConnectionState = nextState;
+                            ctx.ConnectionStage = nextState;
                             break;
                         default:
                             _logger.LogInformation($"Unknown Handshaking Packet {id:x2}");
                             break;
                     }
                     break;
-                case MCConnectionState.Status:
+                case MCConnectionStage.Status:
                     switch (id)
                     {
                         case 0x00: // Status Request
@@ -97,7 +97,7 @@ namespace Frontend
                             break;
                     }
                     break;
-                case MCConnectionState.Login:
+                case MCConnectionStage.Login:
                     switch (id)
                     {
                         case 0x00: // Login Start
@@ -140,7 +140,7 @@ namespace Frontend
                                 writer.WriteString(guidString);
                                 ctx.Transport.Output.Advance(payloadSize);
                                 ctx.FlushNext();
-                                ctx.ConnectionState = MCConnectionState.Playing;
+                                ctx.ConnectionStage = MCConnectionStage.Playing;
                             }
 
                             break;
@@ -149,7 +149,7 @@ namespace Frontend
                             break;
                     }
                     break;
-                case MCConnectionState.Playing:
+                case MCConnectionStage.Playing:
                     switch (id)
                     {
                         default:
