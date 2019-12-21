@@ -1,3 +1,4 @@
+using System;
 using System.Buffers;
 using System.Text.Json;
 using Microsoft.Extensions.Logging;
@@ -123,6 +124,23 @@ namespace Frontend
                                 writer.WriteBytes(payload);
                                 ctx.Transport.Output.Advance(packetSize);
                                 ctx.FlushNext();
+                            }
+                            else
+                            {
+                                _logger.LogInformation($"Logging {username} in");
+                                ctx.Guid = Guid.NewGuid();
+                                var guidString = ctx.Guid.ToString("D");
+                                var payloadSize = MCPacketWriter.GetVarIntSize(0x02) +
+                                                  MCPacketWriter.GetVarIntSize(guidString.Length) + guidString.Length;
+                                var packetSize = payloadSize + MCPacketWriter.GetVarIntSize(payloadSize);
+
+                                writer = writerFactory.CreateWriter(ctx.Transport.Output.GetMemory(packetSize));
+                                writer.WriteVarInt(payloadSize);
+                                writer.WriteVarInt(0x02);
+                                writer.WriteString(guidString);
+                                ctx.Transport.Output.Advance(payloadSize);
+                                ctx.FlushNext();
+                                ctx.ConnectionState = MCConnectionState.Playing;
                             }
 
                             break;

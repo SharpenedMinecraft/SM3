@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO.Pipelines;
 using System.Net;
 using System.Threading;
@@ -33,6 +34,12 @@ namespace Frontend
         {
             get => (bool)Items["isLocal"];
             set => Items["isLocal"] = value;
+        }
+
+        public Guid Guid
+        {
+            get => Guid.Parse((string)Items["guid"]);
+            set => Items["guid"] = value.ToString();
         }
 
         public bool ShouldFlush { get; private set; }
