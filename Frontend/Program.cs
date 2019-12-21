@@ -14,12 +14,21 @@ namespace Frontend
 {
     public class Program
     {
-        public static Task Main(string[] args)
+        public static void Main(string[] args)
         {
             using var host = CreateHostBuilder(args).Build();
             Console.WriteLine($"Log of SM3 @ {DateTime.UtcNow}");
             Console.WriteLine($"Version: 0.1.0");
-            return host.RunAsync();
+            #if AVX && !NO_OPTIMIZATION
+            Console.WriteLine("This Build uses AVX if supported (DOWNCLOCKED OR NOT)");
+            #endif
+            #if NO_OPTIMIZATION
+            Console.WriteLine("This Build uses no special Optimizations! Might lead to heavy loss of performance!")
+            #endif
+            #if DUMP_WRITE_BYTES
+            Console.WriteLine("This Build will dump any byte*s* written to the Console. I've warned you");
+            #endif
+            host.Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -31,15 +40,15 @@ namespace Frontend
                                               => builder.AddConsole((options => options.IncludeScopes = true))
                                                         .AddDebug()
                                                         .AddEventSourceLogger()))
+                        .UseStartup<Startup>()
                         .UseKestrel(((context, options) =>
                         {
                             options.ListenAnyIP(25565, listenOptions =>
                             {
-                                listenOptions.Protocols = HttpProtocols.None;
+                                // listenOptions.Protocols = HttpProtocols.None;
                                 listenOptions.UseConnectionHandler<MCConnectionHandler>();
                             });
-                        }))
-                        .UseStartup<Startup>();
+                        }));
                 });
     }
 }
