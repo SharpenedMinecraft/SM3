@@ -1,6 +1,6 @@
 ﻿namespace Frontend
 {
-    public enum MCConnectionState
+    public enum MCConnectionStage
     {
         Handshaking = 0,
         Status = 1,

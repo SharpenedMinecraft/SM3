@@ -20,13 +20,13 @@ namespace Frontend
         {
             _underlyingCtx = ctx;
             _mcDuplexPipe = new MCDuplexPipe(_underlyingCtx.Transport);
-            Items["state"] = MCConnectionState.Handshaking;
+            Items["state"] = MCConnectionStage.Handshaking;
             Items["isLocal"] = false;
         }
 
-        public MCConnectionState ConnectionState
+        public MCConnectionStage ConnectionStage
         {
-            get => (MCConnectionState)Items["state"];
+            get => (MCConnectionStage)Items["state"];
             set => Items["state"] = value;
         }
         
