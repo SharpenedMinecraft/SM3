@@ -18,21 +18,14 @@ namespace Frontend.Packets.Status
         {
             get
             {
-                if (_size == null)
-                {
-                    var length = JsonSerializer.SerializeToUtf8Bytes(Data, _jsonSerializerOptions).Length;
+                var length = JsonSerializer.SerializeToUtf8Bytes(Data, _jsonSerializerOptions).Length;
                     
-                    _size = MCPacketWriter.GetVarIntSize(length)
-                          + length;
-                }
-
-                return _size.Value;
+                return MCPacketWriter.GetVarIntSize(length)
+                      + length;
             }
         }
 
         public Payload Data;
-        
-        private int? _size;
         
         public void Write(IPacketWriter writer)
         {
