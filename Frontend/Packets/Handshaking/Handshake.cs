@@ -43,6 +43,8 @@ namespace Frontend.Packets.Handshaking
         public readonly void Process(ILogger logger, IConnectionState connectionState, IPacketQueue packetQueue)
         {
             connectionState.ConnectionStage = NextStage;
+            connectionState.IsLocal = ServerAddress == "localhost" || ServerAddress == "127.0.0.1";
+
             logger.LogInformation($"Received Handshake; Protocol {(ProtocolVersion is MCPacketHandler.PROTOCOL_VERSION ? "MATCH" : "ERROR")}; Address Used: {ServerAddress}:{Port}");
             logger.LogInformation($"Switching to {NextStage.AsString()}");
         }
