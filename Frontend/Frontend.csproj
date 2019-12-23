@@ -12,7 +12,7 @@
     without downclocking -->
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <DefineConstants>TRACE;AVX</DefineConstants>
+    <DefineConstants>TRACE;NO_OPTIMIZATION</DefineConstants>
     <DebugType>full</DebugType>
   </PropertyGroup>
 
