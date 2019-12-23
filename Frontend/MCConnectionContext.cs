@@ -41,9 +41,6 @@ namespace Frontend
             get => Guid.Parse((string)Items["guid"]);
             set => Items["guid"] = value.ToString();
         }
-
-        public bool ShouldFlush { get; private set; }
-        public void FlushNext() => ShouldFlush = true;
         
         public bool ShouldClose { get; private set; }
         public void CloseNext() => ShouldClose = true;
