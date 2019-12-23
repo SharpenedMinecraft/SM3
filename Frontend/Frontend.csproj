@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -25,5 +25,9 @@
   <PropertyGroup Condition="'$(AVX)' != ''">
     <DefineConstants>$(DefineConstants);AVX</DefineConstants>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Enums.NET" Version="3.0.2" />
+  </ItemGroup>
 
 </Project>
