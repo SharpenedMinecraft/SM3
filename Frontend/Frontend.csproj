@@ -27,10 +27,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Packets\Clientbound" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Enums.NET" Version="3.0.2" />
   </ItemGroup>
 
