@@ -1,8 +1,7 @@
-using System;
 using EnumsNET;
 using Microsoft.Extensions.Logging;
 
-namespace Frontend.Packets.Serverbound.Handshaking
+namespace Frontend.Packets.Handshaking
 {
     public struct Handshake : IPacket
     {

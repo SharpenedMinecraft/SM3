@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using Frontend.Packets.Serverbound.Handshaking;
-using Frontend.Packets.Serverbound.Status;
+using Frontend.Packets.Handshaking;
+using Frontend.Packets.Status;
 using Microsoft.Extensions.Logging;
 
 namespace Frontend
@@ -12,7 +12,7 @@ namespace Frontend
         {
             new Handshake(),
             new Ping(), new Pong(),
-            new StatusRequest(), new Packets.Serverbound.Status.StatusResponse(),
+            new StatusRequest(), new Packets.Status.StatusResponse(),
         }, new NetworkPacketComparer());
 
         private class NetworkPacketComparer : EqualityComparer<IPacket>

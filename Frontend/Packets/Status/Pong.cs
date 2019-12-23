@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Logging;
 
-namespace Frontend.Packets.Serverbound.Status
+namespace Frontend.Packets.Status
 {
     public struct Pong : IPacket
     {

@@ -1,9 +1,8 @@
-using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Microsoft.Extensions.Logging;
 
-namespace Frontend.Packets.Serverbound.Status
+namespace Frontend.Packets.Status
 {
     public struct StatusResponse : IPacket
     {

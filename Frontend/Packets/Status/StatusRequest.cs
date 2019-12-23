@@ -1,7 +1,6 @@
-using Frontend.Packets.Serverbound.Handshaking;
 using Microsoft.Extensions.Logging;
 
-namespace Frontend.Packets.Serverbound.Status
+namespace Frontend.Packets.Status
 {
     public struct StatusRequest : IPacket
     {
