@@ -18,6 +18,8 @@ namespace Frontend
         {
             services.AddSingleton<IPacketReaderFactory, MCPacketReaderFactory>();
             services.AddSingleton<IPacketWriterFactory, MCPacketWriterFactory>();
+            services.AddSingleton<IPacketQueueFactory, MCPacketQueueFactory>();
+            services.AddSingleton<IPacketResolver, MCPacketResolver>();
             services.AddSingleton<IPacketHandler, MCPacketHandler>();
         }
 
