@@ -13,14 +13,16 @@ namespace Frontend
     {
         private ILogger _logger;
         private readonly IPacketReaderFactory _packetReaderFactory;
-        private readonly IPacketWriterFactory _packetWriterFactory;
+        private readonly IPacketQueueFactory _packetQueueFactory;
         private readonly IPacketHandler _packetHandler;
 
-        public MCConnectionHandler(ILogger<MCConnectionHandler> logger, IPacketReaderFactory packetReaderFactory, IPacketWriterFactory packetWriterFactory, IPacketHandler packetHandler)
+        public MCConnectionHandler(ILogger<MCConnectionHandler> logger, IPacketReaderFactory packetReaderFactory,
+                                   IPacketHandler packetHandler,
+                                   IPacketQueueFactory packetQueueFactory)
         {
+            _packetQueueFactory = packetQueueFactory;
             _packetHandler = packetHandler;
             _packetReaderFactory = packetReaderFactory;
-            _packetWriterFactory = packetWriterFactory;
             _logger = logger;
         }
 
@@ -29,6 +31,7 @@ namespace Frontend
 
         private async Task HandleConnection(MCConnectionContext ctx)
         {
+            var packetQueue = _packetQueueFactory.CreateQueue(ctx.Transport.Output);
             while (!ctx.ConnectionClosed.IsCancellationRequested)
             {
                 var readResult = await ctx.Transport.Input.ReadAsync(ctx.ConnectionClosed);
@@ -39,17 +42,20 @@ namespace Frontend
                 }
                 
                 var buffer = readResult.Buffer;
-                HandlePacket(buffer, ctx);
+                HandlePacket(buffer, ctx, packetQueue);
 
-                if (ctx.ShouldFlush)
+                if (packetQueue.NeedsWriting)
+                {
+                    packetQueue.WriteQueued();
                     await ctx.Transport.Output.FlushAsync();
-                    
+                }
+
                 if (ctx.ShouldClose /* we don't specifically close, we just hand it back to kestrel to deal with */)
                     return;
             }
         }
 
-        private void HandlePacket(ReadOnlySequence<byte> buffer, MCConnectionContext ctx)
+        private void HandlePacket(ReadOnlySequence<byte> buffer, MCConnectionContext ctx, IPacketQueue packetQueue)
         {
             var reader = _packetReaderFactory.CreateReader(buffer);
             var length = reader.ReadVarInt();
@@ -65,7 +71,7 @@ namespace Frontend
             var id = reader.ReadVarInt();
             using var packetIdScope = _logger.BeginScope($"Packet ID: {id:x2}");
 
-            _packetHandler.HandlePacket(ctx, reader, _packetWriterFactory, id);
+            _packetHandler.HandlePacket(ctx, reader, packetQueue, id);
             
             // NOT IDEAL, but easiest
             ctx.Transport.Input.AdvanceTo(buffer.GetPosition(length + MCPacketWriter.GetVarIntSize(length)));
