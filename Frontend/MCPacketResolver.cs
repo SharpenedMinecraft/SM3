@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Frontend.Packets.Handshaking;
+using Frontend.Packets.Login;
 using Frontend.Packets.Status;
 using Microsoft.Extensions.Logging;
 
@@ -13,6 +14,7 @@ namespace Frontend
             new Handshake(),
             new Ping(), new Pong(),
             new StatusRequest(), new Packets.Status.StatusResponse(),
+            new LoginStart(), new LoginSuccess(), new Disconnect(), 
         }, new NetworkPacketComparer());
 
         private class NetworkPacketComparer : EqualityComparer<IPacket>
