@@ -23,7 +23,7 @@ namespace Frontend
             Console.WriteLine("This Build uses AVX if supported (DOWNCLOCKED OR NOT)");
             #endif
             #if NO_OPTIMIZATION
-            Console.WriteLine("This Build uses no special Optimizations! Might lead to heavy loss of performance!")
+            Console.WriteLine("This Build uses no special Optimizations! Might lead to heavy loss of performance!");
             #endif
             #if DUMP_WRITE_BYTES
             Console.WriteLine("This Build will dump any byte*s* written to the Console. I've warned you");
