@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Buffers;
 using System.Buffers.Binary;
 using System.IO;
@@ -47,7 +47,7 @@ namespace Frontend
             // for now, we simply drop every second byte.
 
             using var utf8Owner = _memPool.Rent(value.Length);
-            var utf8Span = utf8Owner.Memory.Span;
+            var utf8Span = utf8Owner.Memory.Span.Slice(0, value.Length);
             int i = 0;
 
             fixed (char* pUtf16Char = value)
