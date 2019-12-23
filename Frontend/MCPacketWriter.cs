@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Buffers;
 using System.Buffers.Binary;
 using System.IO;
@@ -87,7 +87,7 @@ namespace Frontend
                     }
                 }
 #endif
-                while (i < value.Length)
+                while (i < (value.Length * 2))
                 {
                     utf8Span[i / 2] = *(pUtf16 + i);
                     i += 2;
