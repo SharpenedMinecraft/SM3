@@ -5,6 +5,7 @@ using System.IO;
 using System.Numerics;
 using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
+using System.Text;
 using Microsoft.AspNetCore.Mvc.Routing;
 
 namespace Frontend
@@ -53,46 +54,45 @@ namespace Frontend
             fixed (char* pUtf16Char = value)
             fixed (byte* pUtf8 = utf8Span)
             {
-                // HACK: (?) assuming sizeof(char) == 2
-                // also assuming Vector128<byte>.Count == 16
-                // also assuming Vector256<byte>.Count == 32
-                var pUtf16 = (byte*) pUtf16Char;
+                // HACK: (?) assuming sizeof(char) == sizeof(short)
+                var pUtf16 = (short*) pUtf16Char;
 #if !NO_OPTIMIZATION
 #if AVX // TAKE CARE. AVX MAY CAUSE DOWNCLOCKING
-                if (Avx2.IsSupported)
+                /*if (Avx2.IsSupported)
                 {
-                    while ((i + 64) < value.Length)
+                    while ((i + Vector256<short>.Count * 2) < value.Length)
                     {
                         var vector1 = Avx2.LoadVector256(pUtf16 + i);
-                        i += 32;
-                        var vector2 = Avx2.LoadVector256(pUtf16 + i);
-                        i += 32;
+                        var vector2 = Avx2.LoadVector256(pUtf16 + i + Vector256<short>.Count);
                         
-                        Avx2.Store(pUtf8 + (i / 2), Avx2.PackUnsignedSaturate(vector1.AsInt16(), vector2.AsInt16()));
+                        Avx2.Store(pUtf8 + i, Avx2.PackUnsignedSaturate(vector1, vector2));
+                        i += Vector256<short>.Count * 2;
                     }
-                }
+                }*/
 #endif
 
                 if (Sse2.IsSupported)
                 {
                     
-                    while ((i + 32) < value.Length)
+                    while ((i + Vector128<short>.Count * 2) < value.Length)
                     {
                         var vector1 = Sse2.LoadVector128(pUtf16 + i);
-                        i += 16;
-                        var vector2 = Sse2.LoadVector128(pUtf16 + i);
-                        i += 16;
-
-                        Sse2.Store(pUtf8 + (i / 2), Sse2.PackUnsignedSaturate(vector1.AsInt16(), vector2.AsInt16()));
+                        var vector2 = Sse2.LoadVector128(pUtf16 + i + Vector128<short>.Count);
+                        
+                        Sse2.Store(pUtf8 + i, Sse2.PackUnsignedSaturate(vector1, vector2));
+                        i += Vector128<short>.Count * 2;
                     }
                 }
 #endif
-                while (i < (value.Length * 2))
+                while (i < value.Length)
                 {
-                    utf8Span[i / 2] = *(pUtf16 + i);
-                    i += 2;
+                    utf8Span[i] = *(byte*)(pUtf16 + i);
+                    i += 1;
                 }
             }
+
+            var msg = Encoding.UTF8.GetString(utf8Span);
+            
             WriteBytes(utf8Span);
         }
 
