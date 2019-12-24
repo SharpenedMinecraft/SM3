@@ -9,8 +9,7 @@ namespace Frontend.Packets.Handshaking
         public readonly MCConnectionStage Stage => MCConnectionStage.Handshaking;
         public readonly bool IsServerbound => true;
 
-        public int Size =>
-            _size ??= MCPacketWriter.GetVarIntSize(ProtocolVersion)
+        public int Size => MCPacketWriter.GetVarIntSize(ProtocolVersion)
                     + MCPacketWriter.GetVarIntSize(ServerAddress.Length)
                     + ServerAddress.Length
                     + sizeof(short)
@@ -20,8 +19,6 @@ namespace Frontend.Packets.Handshaking
         public string ServerAddress;
         public short Port;
         public MCConnectionStage NextStage;
-
-        private int? _size;
 
         public readonly void Write(IPacketWriter writer)
         {
