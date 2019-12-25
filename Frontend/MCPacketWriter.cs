@@ -155,6 +155,9 @@ namespace Frontend
             WriteBytes(span);
         }
 
+        public void WriteBoolean(bool value)
+            => WriteUInt8(value ? (byte)0x01 : (byte)0x00);
+
         public void WriteSingle(float value) 
             => WriteInt32(BitConverter.SingleToInt32Bits(value));
 

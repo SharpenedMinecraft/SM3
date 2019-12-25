@@ -1,5 +1,6 @@
 using System;
 using System.Buffers;
+using Microsoft.Extensions.ObjectPool;
 
 namespace Frontend
 {
@@ -11,6 +12,7 @@ namespace Frontend
 
         ReadOnlySequence<byte> Buffer { get; }
 
+        bool ReadBoolean();
         byte ReadUInt8();
         sbyte ReadInt8();
         ushort ReadUInt16();

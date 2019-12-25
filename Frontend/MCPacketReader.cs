@@ -39,6 +39,8 @@ namespace Frontend
             return b;
         }
 
+        public bool ReadBoolean() => ReadUInt8() > 0x00; // loose parsing
+
         public sbyte ReadInt8()
         {
             unchecked
