@@ -26,7 +26,12 @@ namespace Frontend.Packets.Status
         }
 
         public Payload Data;
-        
+
+        public StatusResponse(Payload data)
+        {
+            Data = data;
+        }
+
         public void Write(IPacketWriter writer)
         {
             var data = JsonSerializer.SerializeToUtf8Bytes(Data, _jsonSerializerOptions);

@@ -28,17 +28,17 @@ namespace Frontend.Packets.Login
             {
                 logger.LogInformation($"{Username} is trying to log in from Remote. Refusing.");
                 
-                packetQueue.Write(new Disconnect(new ChatBuilder()
+                packetQueue.Write<Disconnect>(new ChatBuilder()
                                                      .AppendText("Connection from Remote is not supported \n\n")
                                                      .Bold()
                                                      .WithColor("red")
-                                                     .Build()));
+                                                     .Build());
             }
             else
             {
                 logger.LogInformation($"Logging {Username} in");
                 connectionState.Guid = Guid.NewGuid();
-                packetQueue.Write(new LoginSuccess(connectionState.Guid, Username));
+                packetQueue.Write<LoginSuccess>(connectionState.Guid, Username);
             }
         }
     }

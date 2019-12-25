@@ -20,10 +20,8 @@ namespace Frontend.Packets.Status
 
         public readonly void Process(ILogger logger, IConnectionState connectionState, IPacketQueue packetQueue)
         {
-            // ReSharper disable once HeapView.BoxingAllocation
-            packetQueue.Write(new StatusResponse()
-            {
-                Data = new StatusResponse.Payload(
+            packetQueue.Write<StatusResponse>(
+                new StatusResponse.Payload(
                     new StatusResponse.Payload.VersionPayload(MCPacketHandler.VERSION_NAME,
                                                               MCPacketHandler.PROTOCOL_VERSION),
                     new StatusResponse.Payload.PlayersPayload(100, 0, null),
@@ -43,8 +41,7 @@ namespace Frontend.Packets.Status
                                                .AppendText("MODT")
                                                .WithColor("purple")
                                                .Bold())
-                         .Build(), null)
-            });
+                         .Build(), null));
         }
     }
 }

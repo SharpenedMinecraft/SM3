@@ -23,7 +23,7 @@ namespace Frontend.Packets.Status
 
         public readonly void Process(ILogger logger, IConnectionState connectionState, IPacketQueue packetQueue)
         {
-            packetQueue.Write(new Pong(Seed));
+            packetQueue.Write<Pong>(Seed);
         }
     }
 }
