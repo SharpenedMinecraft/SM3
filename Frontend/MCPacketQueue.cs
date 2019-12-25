@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.IO.Pipelines;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Frontend
 {
@@ -8,11 +10,13 @@ namespace Frontend
         private readonly Queue<IPacket> _toWrite = new Queue<IPacket>();
         private readonly PipeWriter _writer;
         private readonly IPacketWriterFactory _writerFactory;
+        private readonly IServiceProvider _serviceProvider;
 
         public bool NeedsWriting => _toWrite.Count != 0;
 
-        public MCPacketQueue(PipeWriter writer, IPacketWriterFactory writerFactory)
+        public MCPacketQueue(PipeWriter writer, IPacketWriterFactory writerFactory, IServiceProvider serviceProvider)
         {
+            _serviceProvider = serviceProvider;
             _writer = writer;
             _writerFactory = writerFactory;
         }
@@ -24,15 +28,18 @@ namespace Frontend
                 WritePacketToPipe(packet);
             }
         }
-        
-        public void Write(IPacket packet)
+
+        private IPacket Instantiate<T>(params object[] parameters) where T : IPacket 
+            => ActivatorUtilities.CreateInstance<T>(_serviceProvider, parameters);
+
+        public void Write<T>(params object[] parameters) where T : IPacket
         {
-            _toWrite.Enqueue(packet);
+            _toWrite.Enqueue(Instantiate<T>(parameters));
         }
 
-        public void WriteImmediate(IPacket packet)
+        public void WriteImmediate<T>(params object[] parameters) where T : IPacket
         {
-            WritePacketToPipe(packet);
+            WritePacketToPipe(Instantiate<T>(parameters));
             _writer.FlushAsync().GetAwaiter().GetResult();
         }
 
