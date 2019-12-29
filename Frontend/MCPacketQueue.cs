@@ -7,7 +7,7 @@ namespace Frontend
 {
     public sealed class MCPacketQueue : IPacketQueue
     {
-        private readonly Queue<IPacket> _toWrite = new Queue<IPacket>();
+        private readonly Queue<IWriteablePacket> _toWrite = new Queue<IWriteablePacket>();
         private readonly PipeWriter _writer;
         private readonly IPacketWriterFactory _writerFactory;
         private readonly IServiceProvider _serviceProvider;
@@ -29,23 +29,20 @@ namespace Frontend
             }
         }
 
-        private IPacket Instantiate<T>(params object[] parameters) where T : IPacket 
-            => ActivatorUtilities.CreateInstance<T>(_serviceProvider, parameters);
-
-        public void Write<T>(params object[] parameters) where T : IPacket
+        public void Write(IWriteablePacket packet)
         {
-            _toWrite.Enqueue(Instantiate<T>(parameters));
+            _toWrite.Enqueue(packet);
         }
 
-        public void WriteImmediate<T>(params object[] parameters) where T : IPacket
+        public void WriteImmediate(IWriteablePacket packet)
         {
-            WritePacketToPipe(Instantiate<T>(parameters));
+            WritePacketToPipe(packet);
             _writer.FlushAsync().GetAwaiter().GetResult();
         }
 
-        private void WritePacketToPipe(IPacket packet)
+        private void WritePacketToPipe(IWriteablePacket packet)
         {
-            var dataSize = packet.Size + MCPacketWriter.GetVarIntSize(packet.Id);
+            var dataSize = packet.CalculateSize() + MCPacketWriter.GetVarIntSize(packet.Id);
             var packetSize = dataSize + MCPacketWriter.GetVarIntSize(dataSize);
 
             var writer = _writerFactory.CreateWriter(_writer.GetMemory(packetSize));

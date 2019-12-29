@@ -5,7 +5,7 @@ namespace Frontend
         bool NeedsWriting { get; }
         
         void WriteQueued();
-        void Write<T>(params object[] parameters) where T : IPacket;
-        void WriteImmediate<T>(params object[] parameters) where T : IPacket;
+        void Write(IWriteablePacket packet);
+        void WriteImmediate(IWriteablePacket packet);
     }
 }
