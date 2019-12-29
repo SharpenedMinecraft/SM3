@@ -9,59 +9,51 @@ namespace Frontend
 {
     public sealed class MCPacketResolver : IPacketResolver
     {
-        HashSet<IPacket> _packets = new HashSet<IPacket>(new IPacket[]
+        HashSet<IReadablePacket> _packets = new HashSet<IReadablePacket>(new IReadablePacket[]
         {
             new Handshake(),
-            new Ping(), new Pong(),
-            new StatusRequest(), new Packets.Status.StatusResponse(),
-            new LoginStart(), new LoginSuccess(), new Disconnect(), 
+            new Ping(),
+            new StatusRequest(),
+            new LoginStart(),
         }, new NetworkPacketComparer());
 
-        private class NetworkPacketComparer : EqualityComparer<IPacket>
+        private class NetworkPacketComparer : EqualityComparer<IReadablePacket>
         {
-            public override bool Equals(IPacket x, IPacket y)
+            public override bool Equals(IReadablePacket x, IReadablePacket y)
             {
                 if (x is null)
                     return y is null;
                 if (y is null)
                     return false;
                 
-                return x.Id == y.Id && x.IsServerbound == y.IsServerbound && x.Stage == y.Stage;
+                return x.Id == y.Id && x.Stage == y.Stage;
             }
 
-            public override int GetHashCode(IPacket obj) 
-                => HashCode.Combine(obj.Id, obj.Stage, obj.IsServerbound);
+            public override int GetHashCode(IReadablePacket obj) 
+                => HashCode.Combine(obj.Id, obj.Stage);
         }
 
-        private readonly struct FindPacket : IPacket
+        private readonly struct FindPacket : IReadablePacket
         {
             public int Id { get; }
-            public bool IsServerbound { get; }
             public MCConnectionStage Stage { get; }
-            public int Size => NoOperationsG<int>();
-            public void Write(IPacketWriter writer)
-                => NoOperations();
 
-            public FindPacket(int id, bool isServerbound, MCConnectionStage stage)
+            public FindPacket(int id, MCConnectionStage stage)
             {
                 Id = id;
-                IsServerbound = isServerbound;
                 Stage = stage;
             }
 
             public void Read(IPacketReader reader)
-                => NoOperations();
+                => throw new NotSupportedException("This Type is only intended to be used to find matching other types!");
 
-            public void Process(ILogger logger, IConnectionState connectionState, IPacketQueue packetQueue)
-                => NoOperations();
-
-            private T NoOperationsG<T>() => throw new NotSupportedException("This Type is only intended to be used to find matching other types!");
-            private void NoOperations() => throw new NotSupportedException("This Type is only intended to be used to find matching other types!");
+            public void Process(ILogger logger, IConnectionState state, IServiceProvider serviceProvider)
+                => throw new NotSupportedException("This Type is only intended to be used to find matching other types!");
         }
         
-        public IPacket? GetPacket(int id, IConnectionState connectionState, bool serverBound)
+        public IReadablePacket? GetReadablePacket(int id, IConnectionState connectionState)
         {
-            _packets.TryGetValue(new FindPacket(id, serverBound, connectionState.ConnectionStage), out var packet);
+            _packets.TryGetValue(new FindPacket(id, connectionState.ConnectionStage), out var packet);
             return packet;
         }
     }
