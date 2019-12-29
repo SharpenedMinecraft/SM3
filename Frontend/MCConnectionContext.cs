@@ -44,7 +44,13 @@ namespace Frontend
             get => Guid.Parse((string)Items["guid"]);
             set => Items["guid"] = value.ToString();
         }
-        
+
+        public IEntityId PlayerEntityId
+        {
+            get => (IEntityId) Items["playerEntityId"];
+            set => Items["playerEntityId"] = value;
+        }
+
         public bool ShouldClose { get; private set; }
         public void CloseNext() => ShouldClose = true;
 

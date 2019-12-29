@@ -11,5 +11,6 @@ namespace Frontend
         bool IsLocal { get; set; }
 
         Guid Guid { get; set; }
+        IEntityId PlayerEntityId { get; set; }
     }
 }
