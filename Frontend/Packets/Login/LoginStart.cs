@@ -31,7 +31,8 @@ namespace Frontend.Packets.Login
             {
                 logger.LogInformation($"Logging {Username} in");
                 connectionState.Guid = Guid.NewGuid();
-                connectionState.PacketQueue.Write(new LoginSuccess(connectionState.Guid, Username));
+                connectionState.PacketQueue.WriteImmediate(new LoginSuccess(connectionState.Guid, Username));
+                connectionState.ConnectionStage = MCConnectionStage.Playing;
             }
         }
     }
