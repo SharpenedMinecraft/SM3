@@ -1,4 +1,6 @@
 using System;
+using Frontend.Packets.Play;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 namespace Frontend.Packets.Login
@@ -29,10 +31,14 @@ namespace Frontend.Packets.Login
             }
             else
             {
-                logger.LogInformation($"Logging {Username} in");
+                connectionState.PlayerEntity = new Player(serviceProvider.GetRequiredService<IEntityManager>().ReserveEntityId(), 0);
+                logger.LogInformation($"Logging {Username} in. Entity ID: {connectionState.PlayerEntity.Id.Value}");
                 connectionState.Guid = Guid.NewGuid();
                 connectionState.PacketQueue.WriteImmediate(new LoginSuccess(connectionState.Guid, Username));
                 connectionState.ConnectionStage = MCConnectionStage.Playing;
+                connectionState.PacketQueue.Write(new JoinGame(connectionState.PlayerEntity.Id.Value, 1,
+                                                               connectionState.PlayerEntity.DimensionId, byte.MinValue,
+                                                               "customized", 32, false));
             }
         }
     }
