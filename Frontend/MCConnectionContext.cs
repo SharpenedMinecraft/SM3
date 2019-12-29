@@ -45,10 +45,10 @@ namespace Frontend
             set => Items["guid"] = value.ToString();
         }
 
-        public IEntityId PlayerEntityId
+        public Player PlayerEntity
         {
-            get => (IEntityId) Items["playerEntityId"];
-            set => Items["playerEntityId"] = value;
+            get => (Player) Items["playerEntity"];
+            set => Items["playerEntity"] = value;
         }
 
         public bool ShouldClose { get; private set; }
