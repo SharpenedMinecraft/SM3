@@ -21,6 +21,7 @@ namespace Frontend
             services.AddSingleton<IPacketQueueFactory, MCPacketQueueFactory>();
             services.AddSingleton<IPacketResolver, MCPacketResolver>();
             services.AddSingleton<IPacketHandler, MCPacketHandler>();
+            services.AddSingleton<IEntityManager, SimpleLinearEntityManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
