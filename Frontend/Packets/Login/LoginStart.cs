@@ -3,42 +3,35 @@ using Microsoft.Extensions.Logging;
 
 namespace Frontend.Packets.Login
 {
-    public struct LoginStart : IPacket
+    public struct LoginStart : IReadablePacket
     {
         public readonly int Id => 0x00;
-        public readonly bool IsServerbound => true;
         public readonly MCConnectionStage Stage => MCConnectionStage.Login;
-        public readonly int Size => Username.Length + MCPacketWriter.GetVarIntSize(Username.Length);
 
         public string Username;
-        
-        public readonly void Write(IPacketWriter writer)
-        {
-            writer.WriteString(Username);
-        }
 
         public void Read(IPacketReader reader)
         {
             Username = reader.ReadString().ToString();
         }
 
-        public readonly void Process(ILogger logger, IConnectionState connectionState, IPacketQueue packetQueue)
+        public readonly void Process(ILogger logger, IConnectionState connectionState, IServiceProvider serviceProvider)
         {
             if (!connectionState.IsLocal)
             {
                 logger.LogInformation($"{Username} is trying to log in from Remote. Refusing.");
                 
-                packetQueue.Write<Disconnect>(new ChatBuilder()
+                connectionState.PacketQueue.Write(new Disconnect(new ChatBuilder()
                                                      .AppendText("Connection from Remote is not supported \n\n")
                                                      .Bold()
                                                      .WithColor("red")
-                                                     .Build());
+                                                     .Build()));
             }
             else
             {
                 logger.LogInformation($"Logging {Username} in");
                 connectionState.Guid = Guid.NewGuid();
-                packetQueue.Write<LoginSuccess>(connectionState.Guid, Username);
+                connectionState.PacketQueue.Write(new LoginSuccess(connectionState.Guid, Username));
             }
         }
     }

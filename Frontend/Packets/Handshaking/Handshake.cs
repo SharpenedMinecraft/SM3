@@ -1,33 +1,18 @@
+using System;
 using EnumsNET;
 using Microsoft.Extensions.Logging;
 
 namespace Frontend.Packets.Handshaking
 {
-    public struct Handshake : IPacket
+    public struct Handshake : IReadablePacket
     {
         public readonly int Id => 0x00;
         public readonly MCConnectionStage Stage => MCConnectionStage.Handshaking;
-        public readonly bool IsServerbound => true;
-
-        public int Size => MCPacketWriter.GetVarIntSize(ProtocolVersion)
-                    + MCPacketWriter.GetVarIntSize(ServerAddress.Length)
-                    + ServerAddress.Length
-                    + sizeof(short)
-                    + MCPacketWriter.GetVarIntSize((int) NextStage);
 
         public int ProtocolVersion;
         public string ServerAddress;
         public short Port;
         public MCConnectionStage NextStage;
-
-        public readonly void Write(IPacketWriter writer)
-        {
-            writer.WriteVarInt(Id);
-            writer.WriteVarInt(ProtocolVersion);
-            writer.WriteString(ServerAddress);
-            writer.WriteInt16(Port);
-            writer.WriteVarInt((int)NextStage);
-        }
 
         public void Read(IPacketReader reader)
         {
@@ -37,7 +22,7 @@ namespace Frontend.Packets.Handshaking
             NextStage = (MCConnectionStage) reader.ReadVarInt();
         }
 
-        public readonly void Process(ILogger logger, IConnectionState connectionState, IPacketQueue packetQueue)
+        public readonly void Process(ILogger logger, IConnectionState connectionState, IServiceProvider serviceProvider)
         {
             connectionState.ConnectionStage = NextStage;
             connectionState.IsLocal = ServerAddress == "localhost" || ServerAddress == "127.0.0.1";

@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Frontend.Packets.Status
 {
-    public struct StatusResponse : IPacket
+    public struct StatusResponse : IWriteablePacket
     {
         private static JsonSerializerOptions _jsonSerializerOptions = new JsonSerializerOptions()
         {
@@ -14,15 +14,13 @@ namespace Frontend.Packets.Status
         public readonly int Id => 0x00;
         public readonly MCConnectionStage Stage => MCConnectionStage.Status;
         public readonly bool IsServerbound => false;
-        public int Size
+
+        public readonly int CalculateSize()
         {
-            get
-            {
-                var length = JsonSerializer.SerializeToUtf8Bytes(Data, _jsonSerializerOptions).Length;
-                    
-                return MCPacketWriter.GetVarIntSize(length)
-                      + length;
-            }
+            var length = JsonSerializer.SerializeToUtf8Bytes(Data, _jsonSerializerOptions).Length;
+
+            return MCPacketWriter.GetVarIntSize(length)
+                 + length;
         }
 
         public Payload Data;
@@ -37,16 +35,6 @@ namespace Frontend.Packets.Status
             var data = JsonSerializer.SerializeToUtf8Bytes(Data, _jsonSerializerOptions);
             writer.WriteVarInt(data.Length);
             writer.WriteBytes(data);
-        }
-
-        public void Read(IPacketReader reader)
-        {
-            Data = JsonSerializer.Deserialize<Payload>(reader.ReadString().ToString(), _jsonSerializerOptions);
-        }
-
-        public void Process(ILogger logger, IConnectionState connectionState, IPacketQueue packetQueue)
-        {
-            // nothing
         }
         
         public sealed class Payload

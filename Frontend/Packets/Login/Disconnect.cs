@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Frontend.Packets.Login
 {
-    public struct Disconnect : IPacket
+    public struct Disconnect : IWriteablePacket
     {
         private static JsonSerializerOptions _jsonSerializerOptions = new JsonSerializerOptions()
         {
@@ -14,14 +14,11 @@ namespace Frontend.Packets.Login
         public readonly bool IsServerbound => false;
         public readonly MCConnectionStage Stage => MCConnectionStage.Login;
 
-        public readonly int Size
+        public int CalculateSize()
         {
-            get
-            {
-                var length = JsonSerializer.SerializeToUtf8Bytes(Message, _jsonSerializerOptions).Length;
+            var length = JsonSerializer.SerializeToUtf8Bytes(Message, _jsonSerializerOptions).Length;
 
-                return length + MCPacketWriter.GetVarIntSize(length);
-            }   
+            return length + MCPacketWriter.GetVarIntSize(length);
         }
 
         public Disconnect(Chat message)
@@ -38,16 +35,5 @@ namespace Frontend.Packets.Login
             writer.WriteVarInt(data.Length);
             writer.WriteBytes(data);
         }
-
-        public void Read(IPacketReader reader)
-        {
-            var length = reader.ReadVarInt();
-            var data = reader.ReadBytes(length);
-
-            Message = JsonSerializer.Deserialize<Chat>(data, _jsonSerializerOptions);
-        }
-
-        public readonly void Process(ILogger logger, IConnectionState connectionState, IPacketQueue packetQueue)
-        {  }
     }
 }

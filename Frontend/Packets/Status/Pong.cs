@@ -2,12 +2,9 @@ using Microsoft.Extensions.Logging;
 
 namespace Frontend.Packets.Status
 {
-    public struct Pong : IPacket
+    public struct Pong : IWriteablePacket
     {
         public readonly int Id => 0x01;
-        public readonly MCConnectionStage Stage => MCConnectionStage.Status;
-        public readonly bool IsServerbound => false;
-        public readonly int Size => sizeof(long);
 
         public long Seed;
 
@@ -16,19 +13,11 @@ namespace Frontend.Packets.Status
             Seed = seed;
         }
 
+        public int CalculateSize() => sizeof(long);
+
         public readonly void Write(IPacketWriter writer)
         {
             writer.WriteInt64(Seed);
-        }
-
-        public void Read(IPacketReader reader)
-        {
-            Seed = reader.ReadInt64();
-        }
-
-        public readonly void Process(ILogger logger, IConnectionState connectionState, IPacketQueue packetQueue)
-        {
-            // nothing
         }
     }
 }
