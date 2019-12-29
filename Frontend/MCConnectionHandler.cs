@@ -27,11 +27,11 @@ namespace Frontend
         }
 
         public override Task OnConnectedAsync(ConnectionContext connection) 
-            => HandleConnection(new MCConnectionContext(connection));
+            => HandleConnection(new MCConnectionContext(connection, _packetQueueFactory.CreateQueue(connection.Transport.Output)));
 
         private async Task HandleConnection(MCConnectionContext ctx)
         {
-            var packetQueue = _packetQueueFactory.CreateQueue(ctx.Transport.Output);
+            var packetQueue = ctx.PacketQueue;
             while (!ctx.ConnectionClosed.IsCancellationRequested)
             {
                 var readResult = await ctx.Transport.Input.ReadAsync(ctx.ConnectionClosed);

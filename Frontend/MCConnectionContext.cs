@@ -16,8 +16,9 @@ namespace Frontend
         private MCDuplexPipe _mcDuplexPipe;
         
         
-        public MCConnectionContext(ConnectionContext ctx)
+        public MCConnectionContext(ConnectionContext ctx, IPacketQueue packetQueue)
         {
+            PacketQueue = packetQueue;
             _underlyingCtx = ctx;
             _mcDuplexPipe = new MCDuplexPipe(_underlyingCtx.Transport);
             Items["state"] = MCConnectionStage.Handshaking;
@@ -29,7 +30,9 @@ namespace Frontend
             get => (MCConnectionStage)Items["state"];
             set => Items["state"] = value;
         }
-        
+
+        public IPacketQueue PacketQueue { get; }
+
         public bool IsLocal
         {
             get => (bool)Items["isLocal"];

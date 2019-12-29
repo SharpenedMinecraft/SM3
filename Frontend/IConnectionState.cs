@@ -6,6 +6,8 @@ namespace Frontend
     {
         MCConnectionStage ConnectionStage { get; set; }
 
+        IPacketQueue PacketQueue { get; }
+
         bool IsLocal { get; set; }
 
         Guid Guid { get; set; }
