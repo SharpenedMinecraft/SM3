@@ -4,18 +4,17 @@ using Microsoft.Extensions.Logging;
 
 namespace Frontend.Packets.Status
 {
-    public struct StatusResponse : IWriteablePacket
+    public readonly struct StatusResponse : IWriteablePacket
     {
         private static JsonSerializerOptions _jsonSerializerOptions = new JsonSerializerOptions()
         {
             IgnoreNullValues = true
         };
         
-        public readonly int Id => 0x00;
-        public readonly MCConnectionStage Stage => MCConnectionStage.Status;
-        public readonly bool IsServerbound => false;
+        public int Id => 0x00;
+        public MCConnectionStage Stage => MCConnectionStage.Status;
 
-        public readonly int CalculateSize()
+        public int CalculateSize()
         {
             var length = JsonSerializer.SerializeToUtf8Bytes(Data, _jsonSerializerOptions).Length;
 
@@ -23,7 +22,7 @@ namespace Frontend.Packets.Status
                  + length;
         }
 
-        public Payload Data;
+        public readonly Payload Data;
 
         public StatusResponse(Payload data)
         {
