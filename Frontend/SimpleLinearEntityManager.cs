@@ -9,11 +9,11 @@ namespace Frontend
 
         private readonly struct SimpleEntityId : IEntityId
         {
-            public int Id { get; }
+            public int Value { get; }
 
-            public SimpleEntityId(int id)
+            public SimpleEntityId(int value)
             {
-                Id = id;
+                Value = value;
             }
 
             public void Dispose()
