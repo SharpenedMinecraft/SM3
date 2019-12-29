@@ -11,5 +11,7 @@ namespace Frontend
         public IEntityId Id { get; }
         
         public int DimensionId { get; }
+        
+        public string Username { get; set; }
     }
 }

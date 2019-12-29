@@ -32,6 +32,7 @@ namespace Frontend.Packets.Login
             else
             {
                 connectionState.PlayerEntity = new Player(serviceProvider.GetRequiredService<IEntityManager>().ReserveEntityId(), 0);
+                connectionState.PlayerEntity.Username = Username;
                 logger.LogInformation($"Logging {Username} in. Entity ID: {connectionState.PlayerEntity.Id.Value}");
                 connectionState.Guid = Guid.NewGuid();
                 connectionState.PacketQueue.WriteImmediate(new LoginSuccess(connectionState.Guid, Username));
