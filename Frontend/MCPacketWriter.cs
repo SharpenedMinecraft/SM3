@@ -49,10 +49,18 @@ namespace Frontend
 
             using var utf8Owner = _memPool.Rent(value.Length);
             var utf8Span = utf8Owner.Memory.Span.Slice(0, value.Length);
+
+            DownsizeUtf16(value, utf8Span);
+            
+            WriteBytes(utf8Span);
+        }
+
+        public static unsafe void DownsizeUtf16(ReadOnlySpan<char> utf16, Span<byte> utf8)
+        {
             int i = 0;
 
-            fixed (char* pUtf16Char = value)
-            fixed (byte* pUtf8 = utf8Span)
+            fixed (char* pUtf16Char = utf16)
+            fixed (byte* pUtf8 = utf8)
             {
                 // HACK: (?) assuming sizeof(char) == sizeof(short)
                 var pUtf16 = (short*) pUtf16Char;
@@ -74,7 +82,7 @@ namespace Frontend
                 if (Sse2.IsSupported)
                 {
                     
-                    while ((i + Vector128<short>.Count * 2) < value.Length)
+                    while ((i + Vector128<short>.Count * 2) < utf16.Length)
                     {
                         var vector1 = Sse2.LoadVector128(pUtf16 + i);
                         var vector2 = Sse2.LoadVector128(pUtf16 + i + Vector128<short>.Count);
@@ -84,16 +92,12 @@ namespace Frontend
                     }
                 }
 #endif
-                while (i < value.Length)
+                while (i < utf16.Length)
                 {
-                    utf8Span[i] = *(byte*)(pUtf16 + i);
+                    utf8[i] = *(byte*)(pUtf16 + i);
                     i += 1;
                 }
             }
-
-            var msg = Encoding.UTF8.GetString(utf8Span);
-            
-            WriteBytes(utf8Span);
         }
 
         public void WriteBytes(ReadOnlySpan<byte> values)
