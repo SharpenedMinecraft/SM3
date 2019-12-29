@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using Frontend.Packets.Play;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -40,6 +41,9 @@ namespace Frontend.Packets.Login
                 connectionState.PacketQueue.Write(new JoinGame(connectionState.PlayerEntity.Id.Value, 1,
                                                                connectionState.PlayerEntity.DimensionId, byte.MinValue,
                                                                "customized", 32, false));
+                var brandData = new byte[3];
+                MCPacketWriter.DownsizeUtf16("SM3", brandData);
+                connectionState.PacketQueue.Write(new ClientboundPluginMessage("minecraft:brand", brandData));
             }
         }
     }
