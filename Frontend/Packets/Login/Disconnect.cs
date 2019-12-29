@@ -3,16 +3,15 @@ using Microsoft.Extensions.Logging;
 
 namespace Frontend.Packets.Login
 {
-    public struct Disconnect : IWriteablePacket
+    public readonly struct Disconnect : IWriteablePacket
     {
         private static JsonSerializerOptions _jsonSerializerOptions = new JsonSerializerOptions()
         {
             IgnoreNullValues = true
         };
         
-        public readonly int Id => 0x00;
-        public readonly bool IsServerbound => false;
-        public readonly MCConnectionStage Stage => MCConnectionStage.Login;
+        public int Id => 0x00;
+        public MCConnectionStage Stage => MCConnectionStage.Login;
 
         public int CalculateSize()
         {
@@ -26,7 +25,7 @@ namespace Frontend.Packets.Login
             Message = message;
         }
 
-        public Chat Message;
+        public readonly Chat Message;
         
         public readonly void Write(IPacketWriter writer)
         {

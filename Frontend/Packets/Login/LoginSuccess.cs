@@ -3,10 +3,10 @@ using Microsoft.Extensions.Logging;
 
 namespace Frontend.Packets.Login
 {
-    public struct LoginSuccess : IWriteablePacket
+    public readonly struct LoginSuccess : IWriteablePacket
     {
-        public readonly int Id => 0x02;
-        public readonly MCConnectionStage Stage => MCConnectionStage.Login;
+        public int Id => 0x02;
+        public MCConnectionStage Stage => MCConnectionStage.Login;
         public int CalculateSize()
         {
                 var guidLength = Guid.ToString("D").Length;
@@ -19,10 +19,10 @@ namespace Frontend.Packets.Login
             Username = username;
         }
 
-        public Guid Guid;
-        public string Username;
+        public readonly Guid Guid;
+        public readonly string Username;
         
-        public readonly void Write(IPacketWriter writer)
+        public void Write(IPacketWriter writer)
         {
             var str = Guid.ToString("D");
             writer.WriteString(str);

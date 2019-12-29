@@ -2,11 +2,11 @@ using Microsoft.Extensions.Logging;
 
 namespace Frontend.Packets.Status
 {
-    public struct Pong : IWriteablePacket
+    public readonly struct Pong : IWriteablePacket
     {
-        public readonly int Id => 0x01;
+        public int Id => 0x01;
 
-        public long Seed;
+        public readonly long Seed;
 
         public Pong(long seed)
         {
@@ -15,7 +15,7 @@ namespace Frontend.Packets.Status
 
         public int CalculateSize() => sizeof(long);
 
-        public readonly void Write(IPacketWriter writer)
+        public void Write(IPacketWriter writer)
         {
             writer.WriteInt64(Seed);
         }
