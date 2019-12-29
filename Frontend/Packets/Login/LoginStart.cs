@@ -44,6 +44,7 @@ namespace Frontend.Packets.Login
                 var brandData = new byte[3];
                 MCPacketWriter.DownsizeUtf16("SM3", brandData);
                 connectionState.PacketQueue.Write(new ClientboundPluginMessage("minecraft:brand", brandData));
+                connectionState.PacketQueue.Write(new ServerDifficulty(1, true));
             }
         }
     }
