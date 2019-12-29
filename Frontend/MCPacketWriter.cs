@@ -110,7 +110,7 @@ namespace Frontend
         public void WriteUInt16(UInt16 value)
         {
             using var mem = _memPool.Rent(sizeof(UInt16));
-            var span = mem.Memory.Span;
+            var span = mem.Memory.Span.Slice(0, sizeof(UInt16));
             BinaryPrimitives.WriteUInt16BigEndian(span, value);
             WriteBytes(span);
         }
@@ -118,7 +118,7 @@ namespace Frontend
         public void WriteInt16(Int16 value)
         {
             using var mem = _memPool.Rent(sizeof(Int16));
-            var span = mem.Memory.Span;
+            var span = mem.Memory.Span.Slice(0, sizeof(Int16));
             BinaryPrimitives.WriteInt16BigEndian(span, value);
             WriteBytes(span);
         }
@@ -126,7 +126,7 @@ namespace Frontend
         public void WriteUInt32(UInt32 value)
         {
             using var mem = _memPool.Rent(sizeof(UInt32));
-            var span = mem.Memory.Span;
+            var span = mem.Memory.Span.Slice(0, sizeof(UInt32));
             BinaryPrimitives.WriteUInt32BigEndian(span, value);
             WriteBytes(span);
         }
@@ -134,7 +134,7 @@ namespace Frontend
         public void WriteInt32(Int32 value)
         {
             using var mem = _memPool.Rent(sizeof(Int32));
-            var span = mem.Memory.Span;
+            var span = mem.Memory.Span.Slice(0, sizeof(Int32));
             BinaryPrimitives.WriteInt32BigEndian(span, value);
             WriteBytes(span);
         }
@@ -142,7 +142,7 @@ namespace Frontend
         public void WriteUInt64(UInt64 value)
         {
             using var mem = _memPool.Rent(sizeof(UInt64));
-            var span = mem.Memory.Span;
+            var span = mem.Memory.Span.Slice(0, sizeof(UInt64));
             BinaryPrimitives.WriteUInt64BigEndian(span, value);
             WriteBytes(span);
         }
@@ -150,7 +150,7 @@ namespace Frontend
         public void WriteInt64(Int64 value)
         {
             using var mem = _memPool.Rent(sizeof(Int64));
-            var span = mem.Memory.Span;
+            var span = mem.Memory.Span.Slice(0, sizeof(Int64));
             BinaryPrimitives.WriteInt64BigEndian(span, value);
             WriteBytes(span);
         }
