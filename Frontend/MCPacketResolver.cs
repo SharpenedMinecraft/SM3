@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Frontend.Packets.Handshaking;
 using Frontend.Packets.Login;
+using Frontend.Packets.Play;
 using Frontend.Packets.Status;
 using Microsoft.Extensions.Logging;
 
@@ -14,7 +15,8 @@ namespace Frontend
             new Handshake(),
             new Ping(),
             new StatusRequest(),
-            new LoginStart(),
+            new LoginStart(), 
+            new PlayerSettings(), 
         }, new NetworkPacketComparer());
 
         private class NetworkPacketComparer : EqualityComparer<IReadablePacket>
