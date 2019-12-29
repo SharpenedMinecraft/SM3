@@ -4,6 +4,6 @@ namespace Frontend
 {
     public interface IEntityId : IDisposable
     {
-        int Id { get; }
+        int Value { get; }
     }
 }
