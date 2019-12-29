@@ -28,11 +28,5 @@ namespace Frontend.Packets.Login
             writer.WriteString(str);
             writer.WriteString(Username);
         }
-
-        public readonly void Process(ILogger logger, IConnectionState connectionState, IPacketQueue packetQueue)
-        {
-            connectionState.ConnectionStage = MCConnectionStage.Playing;
-            // TODO: Tell client about dimension state
-        }
     }
 }
