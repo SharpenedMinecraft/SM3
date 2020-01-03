@@ -12,6 +12,6 @@ namespace Frontend
 
         Guid Guid { get; set; }
         
-        Player? PlayerEntity { get; set; }
+        Player PlayerEntity { get; set; }
     }
 }

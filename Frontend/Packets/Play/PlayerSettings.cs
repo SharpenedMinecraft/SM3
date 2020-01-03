@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.Contracts;
 using Microsoft.Extensions.Logging;
 
 namespace Frontend.Packets.Play

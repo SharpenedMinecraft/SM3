@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using Microsoft.Extensions.Logging;
 
 namespace Frontend.Packets.Login
@@ -9,7 +10,7 @@ namespace Frontend.Packets.Login
         public MCConnectionStage Stage => MCConnectionStage.Login;
         public int CalculateSize()
         {
-                var guidLength = Guid.ToString("D").Length;
+                var guidLength = Guid.ToString("D", CultureInfo.InvariantCulture).Length;
                 return MCPacketWriter.GetVarIntSize(guidLength) + guidLength + MCPacketWriter.GetVarIntSize(Username.Length) + Username.Length;
         }
 
@@ -24,7 +25,7 @@ namespace Frontend.Packets.Login
         
         public void Write(IPacketWriter writer)
         {
-            var str = Guid.ToString("D");
+            var str = Guid.ToString("D", CultureInfo.InvariantCulture);
             writer.WriteString(str);
             writer.WriteString(Username);
         }

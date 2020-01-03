@@ -12,13 +12,13 @@ using Microsoft.Extensions.Logging;
 
 namespace Frontend
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
             using var host = CreateHostBuilder(args).Build();
             Console.WriteLine($"Log of SM3 @ {DateTime.UtcNow}");
-            Console.WriteLine($"Version: 0.2.0");
+            Console.WriteLine("Version: 0.2.0");
             #if AVX && !NO_OPTIMIZATION
             Console.WriteLine("This Build uses AVX if supported (DOWNCLOCKED OR NOT)");
             #endif

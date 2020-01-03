@@ -9,8 +9,8 @@ namespace Frontend
     public sealed class MCPacketHandler : IPacketHandler
     {
         private readonly ILogger _logger;
-        public const int PROTOCOL_VERSION = 498;
-        public const string VERSION_NAME = "SM3-1.14.4";
+        public const int ProtocolVersion = 498;
+        public const string VersionName = "SM3-1.14.4";
         private readonly JsonSerializerOptions _jsonOptions;
         private readonly IPacketResolver _resolver;
         private readonly IServiceProvider _serviceProvider;
