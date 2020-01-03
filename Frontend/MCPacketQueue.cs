@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Pipelines;
+using App.Metrics;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Frontend
@@ -10,15 +11,17 @@ namespace Frontend
         private readonly Queue<IWriteablePacket> _toWrite = new Queue<IWriteablePacket>();
         private readonly PipeWriter _writer;
         private readonly IPacketWriterFactory _writerFactory;
+        private readonly IMetrics _metrics;
         private readonly IServiceProvider _serviceProvider;
 
         public bool NeedsWriting => _toWrite.Count != 0;
 
-        public MCPacketQueue(PipeWriter writer, IPacketWriterFactory writerFactory, IServiceProvider serviceProvider)
+        public MCPacketQueue(PipeWriter writer, IPacketWriterFactory writerFactory, IMetrics metrics, IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
             _writer = writer;
             _writerFactory = writerFactory;
+            _metrics = metrics;
         }
 
         public void WriteQueued()
@@ -52,6 +55,7 @@ namespace Frontend
             packet.Write(writer);
             
             _writer.Advance(packetSize);
+            _metrics.Measure.Histogram.Update(MetricsRegistry.WritePacketSize, packetSize);
         }
     }
 }
