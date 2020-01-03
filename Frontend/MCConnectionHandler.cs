@@ -14,20 +14,34 @@ namespace Frontend
         private ILogger _logger;
         private readonly IPacketReaderFactory _packetReaderFactory;
         private readonly IPacketQueueFactory _packetQueueFactory;
+        private readonly IMetrics _metrics;
         private readonly IPacketHandler _packetHandler;
 
         public MCConnectionHandler(ILogger<MCConnectionHandler> logger, IPacketReaderFactory packetReaderFactory,
                                    IPacketHandler packetHandler,
-                                   IPacketQueueFactory packetQueueFactory)
+                                   IPacketQueueFactory packetQueueFactory,
+                                   IMetrics metrics)
         {
             _packetQueueFactory = packetQueueFactory;
+            _metrics = metrics;
             _packetHandler = packetHandler;
             _packetReaderFactory = packetReaderFactory;
             _logger = logger;
         }
 
-        public override Task OnConnectedAsync(ConnectionContext connection) 
-            => HandleConnection(new MCConnectionContext(connection, _packetQueueFactory.CreateQueue(connection.Transport.Output)));
+        public override Task OnConnectedAsync(ConnectionContext connection)
+        {
+            _metrics.Measure.Counter.Increment(MetricsRegistry.ActiveConnections);
+            try
+            {
+                return HandleConnection(
+                    new MCConnectionContext(connection, _packetQueueFactory.CreateQueue(connection.Transport.Output)));
+            }
+            finally
+            {
+                _metrics.Measure.Counter.Decrement(MetricsRegistry.ActiveConnections);
+            }
+        }
 
         private async Task HandleConnection(MCConnectionContext ctx)
         {
