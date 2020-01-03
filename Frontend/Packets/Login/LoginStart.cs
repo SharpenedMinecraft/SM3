@@ -1,5 +1,6 @@
 using System;
 using System.Text;
+using App.Metrics;
 using Frontend.Packets.Play;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -20,6 +21,8 @@ namespace Frontend.Packets.Login
 
         public readonly void Process(ILogger logger, IConnectionState connectionState, IServiceProvider serviceProvider)
         {
+            var metrics = serviceProvider.GetRequiredService<IMetrics>();
+            metrics.Measure.Meter.Mark(MetricsRegistry.LoginRequests);
             if (!connectionState.IsLocal)
             {
                 logger.LogInformation($"{Username} is trying to log in from Remote. Refusing.");
