@@ -18,8 +18,8 @@ namespace Frontend.Packets.Status
             // ReSharper disable once HeapView.BoxingAllocation
             connectionState.PacketQueue.Write(new StatusResponse(
                                   new StatusResponse.Payload(
-                                      new StatusResponse.Payload.VersionPayload(MCPacketHandler.VERSION_NAME,
-                                                                                MCPacketHandler.PROTOCOL_VERSION),
+                                      new StatusResponse.Payload.VersionPayload(MCPacketHandler.VersionName,
+                                                                                MCPacketHandler.ProtocolVersion),
                                       new StatusResponse.Payload.PlayersPayload(100, 0, null),
                                       new ChatBuilder(
                                           ).AppendText("This ")

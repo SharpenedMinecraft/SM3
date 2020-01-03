@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Frontend.Packets.Login
 {
+    // ReSharper disable once CA1815
     public readonly struct Disconnect : IWriteablePacket
     {
         private static JsonSerializerOptions _jsonSerializerOptions = new JsonSerializerOptions()

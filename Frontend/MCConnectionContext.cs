@@ -47,11 +47,8 @@ namespace Frontend
         public Player PlayerEntity
         {
             get => (Player) Items["playerEntity"];
-            set => Items["playerEntity"] = value;
+            set => Items["playerEntity"] = value ?? throw new ArgumentNullException(nameof(value));
         }
-
-        public bool ShouldClose { get; private set; }
-        public void CloseNext() => ShouldClose = true;
 
         public override string ConnectionId
         {
@@ -60,7 +57,7 @@ namespace Frontend
         }
 
         public override IFeatureCollection Features => _underlyingCtx.Features;
-
+        
         public override IDictionary<object, object> Items
         {
             get => _underlyingCtx.Items;

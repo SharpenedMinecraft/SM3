@@ -49,9 +49,6 @@ namespace Frontend
                     packetQueue.WriteQueued();
                     await ctx.Transport.Output.FlushAsync();
                 }
-
-                if (ctx.ShouldClose /* we don't specifically close, we just hand it back to kestrel to deal with */)
-                    return;
             }
         }
 

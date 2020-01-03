@@ -28,6 +28,13 @@
 
   <ItemGroup>
     <PackageReference Include="Enums.NET" Version="3.0.2" />
+    <PackageReference Include="Microsoft.CodeAnalysis.BannedApiAnalyzers" Version="2.9.8" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8" />
+    <PackageReference Include="Roslynator.Analyzers" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="../BannedSymbols.txt" />
   </ItemGroup>
 
 </Project>

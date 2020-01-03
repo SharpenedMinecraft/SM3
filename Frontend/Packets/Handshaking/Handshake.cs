@@ -27,7 +27,7 @@ namespace Frontend.Packets.Handshaking
             connectionState.ConnectionStage = NextStage;
             connectionState.IsLocal = ServerAddress == "localhost" || ServerAddress == "127.0.0.1";
 
-            logger.LogInformation($"Received Handshake; Protocol {(ProtocolVersion is MCPacketHandler.PROTOCOL_VERSION ? "MATCH" : "ERROR")}; Address Used: {ServerAddress}:{Port}");
+            logger.LogInformation($"Received Handshake; Protocol {(ProtocolVersion is MCPacketHandler.ProtocolVersion ? "MATCH" : "ERROR")}; Address Used: {ServerAddress}:{Port}");
             logger.LogInformation($"Switching to {NextStage.AsString()}");
         }
     }

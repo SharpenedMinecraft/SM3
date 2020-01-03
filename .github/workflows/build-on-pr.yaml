@@ -1,0 +1,23 @@
+name: Build on PR
+
+on: pull_request
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        useAVX: [ "AVX", "" ]
+        runtime: [ "win-x64", "win-x86", "linux-x64", "osx-x64" ]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.100
+    - name: Build with dotnet
+      run: dotnet publish -r ${{ matrix.runtime }} -c Release /p:PublishSingleFile=true /p:AVX=${{ matrix.useAVX }} -o ./output/
+      working-directory: ./Frontend/
