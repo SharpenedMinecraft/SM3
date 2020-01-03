@@ -9,13 +9,9 @@ namespace Frontend
         private readonly IMetrics _metrics;
         private Dictionary<int, IDimension> _dimensions;
 
-        public MCDimensionResolver(IMetrics metrics)
+        public MCDimensionResolver(IEnumerable<IDimension> dimensions, IMetrics metrics)
         {
             _metrics = metrics;
-        }
-
-        public MCDimensionResolver(IEnumerable<IDimension> dimensions)
-        {
             _dimensions = dimensions.ToDictionary(x => x.Id, x => x);
         }
 
