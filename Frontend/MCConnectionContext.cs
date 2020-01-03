@@ -14,8 +14,7 @@ namespace Frontend
     {
         private readonly ConnectionContext _underlyingCtx;
         private MCDuplexPipe _mcDuplexPipe;
-        
-        
+
         public MCConnectionContext(ConnectionContext ctx, IPacketQueue packetQueue)
         {
             PacketQueue = packetQueue;
