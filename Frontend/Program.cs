@@ -1,12 +1,10 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using App.Metrics;
+using App.Metrics.AspNetCore;
+using App.Metrics.Extensions.Configuration;
 using Microsoft.AspNetCore.Connections;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
@@ -33,6 +31,18 @@ namespace Frontend
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+                .ConfigureMetrics((context, builder) =>
+                                                  builder.Configuration.Configure(new MetricsOptions
+                                                         {
+                                                             DefaultContextLabel = "SM3 Frontend",
+                                                             Enabled = true,
+                                                             GlobalTags = new GlobalMetricTags(),
+                                                             ReportingEnabled = true
+                                                         })
+                                                         .OutputMetrics.AsPrometheusPlainText()
+                                                         .OutputEnvInfo.AsJson()
+                                                         .OutputEnvInfo.AsPlainText())
+                .UseMetrics()
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder
@@ -41,14 +51,16 @@ namespace Frontend
                                                         .AddDebug()
                                                         .AddEventSourceLogger()))
                         .UseStartup<Startup>()
-                        .UseKestrel(((context, options) =>
+                        .UseKestrel((context, options) =>
                         {
+                            options.AllowSynchronousIO = true; // Normally false, but the Prometheus Provider of App Metrics requires this.
                             options.ListenAnyIP(25565, listenOptions =>
                             {
-                                // listenOptions.Protocols = HttpProtocols.None;
+                                listenOptions.Protocols = HttpProtocols.None;
                                 listenOptions.UseConnectionHandler<MCConnectionHandler>();
                             });
-                        }));
+                            options.ListenAnyIP(80);
+                        });
                 });
     }
 }
