@@ -27,6 +27,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="App.Metrics" Version="4.0.0-*" />
+    <PackageReference Include="App.Metrics.AspNetCore" Version="4.0.0-*" />
+    <PackageReference Include="App.Metrics.AspNetCore.Endpoints" Version="4.0.0-*" />
+    <PackageReference Include="App.Metrics.AspNetCore.Hosting" Version="4.0.0-*" />
+    <PackageReference Include="App.Metrics.Extensions.Configuration" Version="4.0.0-*" />
+    <PackageReference Include="App.Metrics.Extensions.DependencyInjection" Version="4.0.0-*" />
+    <PackageReference Include="App.Metrics.Extensions.HealthChecks" Version="4.0.0-*" />
+    <PackageReference Include="App.Metrics.Formatters.Prometheus" Version="4.0.0-*" />
     <PackageReference Include="Enums.NET" Version="3.0.2" />
   </ItemGroup>
 
