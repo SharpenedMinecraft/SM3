@@ -1,4 +1,6 @@
 using System;
+using App.Metrics;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 namespace Frontend.Packets.Status
@@ -38,6 +40,7 @@ namespace Frontend.Packets.Status
                                                                  .WithColor("purple")
                                                                  .Bold())
                                            .Build(), null)));
+            serviceProvider.GetRequiredService<IMetrics>().Measure.Meter.Mark(MetricsRegistry.StatusRequests);
         }
     }
 }
