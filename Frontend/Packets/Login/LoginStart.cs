@@ -53,6 +53,7 @@ namespace Frontend.Packets.Login
                                                       ClientboundPlayerAbilities.Flags.AllowFlying |
                                                       ClientboundPlayerAbilities.Flags.InstantBreak, 0.5f, 0.1f));
                 connectionState.PacketQueue.Write(new ClientboundHeldItemChange(0));
+                connectionState.PacketQueue.Write(new DeclareRecipes());
             }
         }
     }

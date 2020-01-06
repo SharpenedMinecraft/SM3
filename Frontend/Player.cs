@@ -15,7 +15,7 @@ namespace Frontend
         
         public int DimensionId { get; }
         
-        public string Username { get; set; }
+        public string Username { get; }
 
         public PlayerSettings Settings { get; set; }
 
