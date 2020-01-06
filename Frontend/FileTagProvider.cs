@@ -16,12 +16,12 @@ namespace Frontend
         
         private Dictionary<string, Tag> _fluidTags = new Dictionary<string, Tag>();
         private Dictionary<string, Tag> _blockTags = new Dictionary<string, Tag>();
-        private Dictionary<string, Tag> _entityTags = new Dictionary<string, Tag>();
+        private Dictionary<string, Tag> _entityTypes = new Dictionary<string, Tag>();
         private Dictionary<string, Tag> _itemTags = new Dictionary<string, Tag>();
 
         public IReadOnlyDictionary<string, Tag> FluidTags => _fluidTags;
         public IReadOnlyDictionary<string, Tag> BlockTags => _blockTags;
-        public IReadOnlyDictionary<string, Tag> EntityTags => _entityTags;
+        public IReadOnlyDictionary<string, Tag> EntityTypes => _entityTypes;
         public IReadOnlyDictionary<string, Tag> ItemTags => _itemTags;
 
         public FileTagProvider()
@@ -63,13 +63,13 @@ namespace Frontend
                     jsonReader.Read();
                     
                     if (!TryParseTagInfo(ref jsonReader, out var replace, out var values) ||
-                        (_entityTags.ContainsKey(fileName) && !(replace ?? false)))
+                        (_entityTypes.ContainsKey(fileName) && !(replace ?? false)))
                     {
                         continue;
                     }
                     
                     var identifier = Path.GetFileNameWithoutExtension(fileName);
-                    _entityTags[identifier] = new Tag(identifier, ResolveEntityNames(values));
+                    _entityTypes[identifier] = new Tag(identifier, ResolveEntityNames(values));
                 } while (jsonReader.TokenType != JsonTokenType.None && jsonReader.TokenType != JsonTokenType.EndObject);
             }
         }

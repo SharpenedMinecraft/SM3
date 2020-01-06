@@ -6,7 +6,7 @@ namespace Frontend
     {
         IReadOnlyDictionary<string, Tag> FluidTags { get; }
         IReadOnlyDictionary<string, Tag> BlockTags { get; }
-        IReadOnlyDictionary<string, Tag> EntityTags { get; }
+        IReadOnlyDictionary<string, Tag> EntityTypes { get; }
         IReadOnlyDictionary<string, Tag> ItemTags { get; }
     }
 }
