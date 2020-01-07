@@ -79,6 +79,8 @@ namespace Frontend
                 return;
             }
 
+            var lengthLength = buffer.Length - reader.Buffer.Length;
+
             reader = new MCPacketReader(reader.Buffer.Slice(0, length));
             var id = reader.ReadVarInt();
             using var packetIdScope = _logger.BeginScope($"Packet ID: {id:x2}");
@@ -86,7 +88,7 @@ namespace Frontend
             _packetHandler.HandlePacket(ctx, reader, packetQueue, id);
             
             // NOT IDEAL, but easiest
-            var packetSize = length + MCPacketWriter.GetVarIntSize(length);
+            var packetSize = length + lengthLength;
             ctx.Transport.Input.AdvanceTo(buffer.GetPosition(packetSize));
             _metrics.Measure.Histogram.Update(MetricsRegistry.ReadPacketSize, packetSize);
         }
