@@ -51,5 +51,17 @@ namespace Frontend
                 MainHand = mainHand;
             }
         }
+        
+        public enum EntityStatus : byte
+        {
+            ItemUseFinished = 9,
+            EnableReducedDebugInfo = 22,
+            DisableReducedDebugInfo = 23,
+            SetOpLevel0 = 24,
+            SetOpLevel1 = 25,
+            SetOpLevel2 = 26,
+            SetOpLevel3 = 27,
+            SetOpLevel4 = 28,
+        }
     }
 }
