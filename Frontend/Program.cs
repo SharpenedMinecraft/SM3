@@ -7,6 +7,7 @@ using App.Metrics.Extensions.Configuration;
 using Microsoft.AspNetCore.Connections;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
@@ -29,6 +30,10 @@ namespace Frontend
             #if DUMP_WRITE_BYTES
             Console.WriteLine("This Build will dump any byte*s* written to the Console. I've warned you");
             #endif
+            
+            // load tags
+            host.Services.GetRequiredService<ITagProvider>().Load();
+            
             host.Run();
         }
 

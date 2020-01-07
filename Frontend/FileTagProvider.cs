@@ -25,17 +25,24 @@ namespace Frontend
         public IReadOnlyDictionary<string, Tag> EntityTypes => _entityTypes;
         public IReadOnlyDictionary<string, Tag> ItemTags => _itemTags;
 
+        private readonly ILogger _logger;
+
         public FileTagProvider(ILogger<FileTagProvider> logger)
         {
-            logger.LogInformation($"Loading Tag Files from {Path.GetFullPath(TagDir)}");
+            _logger = logger;
+        }
+
+        public void Load()
+        {
+            _logger.LogInformation($"Loading Tag Files from {Path.GetFullPath(TagDir)}");
             ParseBlocks();
-            logger.LogInformation($"Loaded {_blockTags.Count} Block Tags");
+            _logger.LogInformation($"Loaded {_blockTags.Count} Block Tags");
             ParseEntityTypes();
-            logger.LogInformation($"Loaded {_entityTypes.Count} Entity Types");
+            _logger.LogInformation($"Loaded {_entityTypes.Count} Entity Types");
             ParseFluids();
-            logger.LogInformation($"Loaded {_fluidTags.Count} Fluid Tags");
+            _logger.LogInformation($"Loaded {_fluidTags.Count} Fluid Tags");
             ParseItems();
-            logger.LogInformation($"Loaded {_itemTags.Count} Item Tags Tags");
+            _logger.LogInformation($"Loaded {_itemTags.Count} Item Tags Tags");
         }
 
         private void ParseBlocks()

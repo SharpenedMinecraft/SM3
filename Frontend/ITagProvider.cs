@@ -8,5 +8,7 @@ namespace Frontend
         IReadOnlyDictionary<string, Tag> BlockTags { get; }
         IReadOnlyDictionary<string, Tag> EntityTypes { get; }
         IReadOnlyDictionary<string, Tag> ItemTags { get; }
+
+        void Load();
     }
 }

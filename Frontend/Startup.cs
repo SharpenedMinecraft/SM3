@@ -37,7 +37,7 @@ namespace Frontend
             services.AddSingleton<IPacketResolver, MCPacketResolver>();
             services.AddSingleton<IPacketHandler, MCPacketHandler>();
             services.AddSingleton<IEntityManager, SimpleLinearEntityManager>();
-            services.AddSingleton<ITagProvider>(new FileTagProvider()); // instantiate immediately
+            services.AddSingleton<ITagProvider, FileTagProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
