@@ -21,21 +21,8 @@ namespace Frontend
             Memory = mem;
             _memPool = memoryPool;
         }
-        
-        public static int GetVarIntSize(int val)
-        {
-            var size = 0;
-            var v = val;
-            while ((v & -0x80) != 0)
-            {
-                v = (int)(((uint)v) >> 7);
-                size++;
-            }
 
-            return size + 1;
-        }
-
-        public void WriteUInt8(byte value) 
+        public void WriteUInt8(byte value)
             => Memory.Span[Position++] = value;
 
         public void WriteInt8(sbyte value)

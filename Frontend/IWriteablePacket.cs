@@ -6,8 +6,6 @@ namespace Frontend
     {
         int Id { get; }
 
-        int CalculateSize();
-
         void Write(IPacketWriter writer);
     }
 }

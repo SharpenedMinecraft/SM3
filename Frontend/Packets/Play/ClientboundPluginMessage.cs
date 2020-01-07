@@ -15,11 +15,6 @@ namespace Frontend.Packets.Play
             Data = data;
         }
 
-        public int CalculateSize()
-            => MCPacketWriter.GetVarIntSize(Identifier.Length)
-             + Identifier.Length
-             + Data.Length;
-
         public void Write(IPacketWriter writer)
         {
             writer.WriteString(Identifier);

@@ -13,8 +13,6 @@ namespace Frontend.Packets.Play
             Slot = slot;
         }
 
-        public int CalculateSize() => sizeof(byte);
-
         public void Write(IPacketWriter writer)
         {
             writer.WriteUInt8(Slot);

@@ -8,11 +8,6 @@ namespace Frontend.Packets.Login
     {
         public int Id => 0x02;
         public MCConnectionStage Stage => MCConnectionStage.Login;
-        public int CalculateSize()
-        {
-                var guidLength = Guid.ToString("D", CultureInfo.InvariantCulture).Length;
-                return MCPacketWriter.GetVarIntSize(guidLength) + guidLength + MCPacketWriter.GetVarIntSize(Username.Length) + Username.Length;
-        }
 
         public LoginSuccess(Guid guid, string username)
         {

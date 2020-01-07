@@ -3,7 +3,6 @@ namespace Frontend.Packets.Play
     public readonly struct EntityStatus : IWriteablePacket
     {
         public int Id => 0x1B;
-        public int CalculateSize() => sizeof(int) + sizeof(byte);
 
         public readonly int EntityId;
         public readonly byte Status;
