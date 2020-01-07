@@ -20,6 +20,7 @@ enabled: true
 #
 exclude:
   - ".github/**/*"
+  - "Data/**/*"
 
 # Push the style fixes directly to the original PR
 #
