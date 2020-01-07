@@ -54,6 +54,8 @@ namespace Frontend.Packets.Login
                                                       ClientboundPlayerAbilities.Flags.InstantBreak, 0.5f, 0.1f));
                 connectionState.PacketQueue.Write(new ClientboundHeldItemChange(0));
                 connectionState.PacketQueue.Write(new DeclareRecipes());
+                connectionState.PacketQueue.Write(new EntityStatus(connectionState.PlayerEntity.Id.Value, (byte)Player.EntityStatus.SetOpLevel4));
+                connectionState.PacketQueue.Write(new EntityStatus(connectionState.PlayerEntity.Id.Value, (byte)Player.EntityStatus.DisableReducedDebugInfo));
             }
         }
     }
