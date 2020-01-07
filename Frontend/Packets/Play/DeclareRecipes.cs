@@ -7,12 +7,6 @@ namespace Frontend.Packets.Play
         public int Id => 0x5A;
         
         // public Recipe[] Recipes;
-        
-        public int CalculateSize()
-        {
-            // Recipes.Length
-            return MCPacketWriter.GetVarIntSize(0);
-        }
 
         public void Write(IPacketWriter writer)
         {

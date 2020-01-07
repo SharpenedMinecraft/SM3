@@ -13,8 +13,6 @@ namespace Frontend.Packets.Status
             Seed = seed;
         }
 
-        public int CalculateSize() => sizeof(long);
-
         public void Write(IPacketWriter writer)
         {
             writer.WriteInt64(Seed);

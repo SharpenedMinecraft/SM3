@@ -27,8 +27,6 @@ namespace Frontend.Packets.Play
             FoVModifier = foVModifier;
         }
 
-        public int CalculateSize() => sizeof(Flags) + sizeof(float) + sizeof(float);
-
         public void Write(IPacketWriter writer)
         {
             writer.WriteUInt8((byte)Abilities);

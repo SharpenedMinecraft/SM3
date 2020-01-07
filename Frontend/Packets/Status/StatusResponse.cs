@@ -12,15 +12,6 @@ namespace Frontend.Packets.Status
         };
         
         public int Id => 0x00;
-        public MCConnectionStage Stage => MCConnectionStage.Status;
-
-        public int CalculateSize()
-        {
-            var length = JsonSerializer.SerializeToUtf8Bytes(Data, _jsonSerializerOptions).Length;
-
-            return MCPacketWriter.GetVarIntSize(length)
-                 + length;
-        }
 
         public readonly Payload Data;
 

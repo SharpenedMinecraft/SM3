@@ -12,14 +12,6 @@ namespace Frontend.Packets.Login
         };
         
         public int Id => 0x00;
-        public MCConnectionStage Stage => MCConnectionStage.Login;
-
-        public int CalculateSize()
-        {
-            var length = JsonSerializer.SerializeToUtf8Bytes(Message, _jsonSerializerOptions).Length;
-
-            return length + MCPacketWriter.GetVarIntSize(length);
-        }
 
         public Disconnect(Chat message)
         {
