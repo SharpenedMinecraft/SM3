@@ -13,8 +13,6 @@ namespace Frontend.Packets.Play
             IsLocked = isLocked;
         }
 
-        public int CalculateSize() => sizeof(byte) + sizeof(bool);
-
         public void Write(IPacketWriter writer)
         {
             writer.WriteUInt8(Difficulty);

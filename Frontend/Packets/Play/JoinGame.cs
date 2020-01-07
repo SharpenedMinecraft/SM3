@@ -26,11 +26,6 @@ namespace Frontend.Packets.Play
             ReducedDebugInfo = reducedDebugInfo;
         }
 
-        public int CalculateSize()
-            => sizeof(int) + sizeof(byte) + sizeof(int) + sizeof(byte) +
-               MCPacketWriter.GetVarIntSize(LevelType.Length) + LevelType.Length +
-               MCPacketWriter.GetVarIntSize(ViewDistance) + sizeof(bool);
-
         public void Write(IPacketWriter writer)
         {
             writer.WriteInt32(EntityId);
