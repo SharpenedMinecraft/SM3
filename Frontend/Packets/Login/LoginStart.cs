@@ -56,6 +56,8 @@ namespace Frontend.Packets.Login
                 connectionState.PacketQueue.Write(new DeclareRecipes());
                 connectionState.PacketQueue.Write(new EntityStatus(connectionState.PlayerEntity.Id.Value, (byte)Player.EntityStatus.SetOpLevel4));
                 connectionState.PacketQueue.Write(new EntityStatus(connectionState.PlayerEntity.Id.Value, (byte)Player.EntityStatus.DisableReducedDebugInfo));
+                connectionState.PacketQueue.Write(new DeclareCommands(serviceProvider.GetRequiredService<ICommandProvider>().SortedCommandInfos));
+                connectionState.PacketQueue.Write(new UnlockRecipes());
             }
         }
     }
