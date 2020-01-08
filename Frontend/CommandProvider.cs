@@ -21,7 +21,6 @@ namespace Frontend
 
         public bool Deregister(ICommand command)
         {
-
             if (_commands.Remove(command))
             {
                 SortedCommandInfos = BuildSortedCommandInfos();
