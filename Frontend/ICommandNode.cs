@@ -5,10 +5,11 @@ namespace Frontend
     public interface ICommandNode
     {
         CommandNodeType Type { get; }
-        IReadOnlyCollection<ICommandNode> Children { get; }
+        IReadOnlyList<ICommandNode> Children { get; }
         string? Name { get; } // literal & argument
         IArgumentParser? Parser { get; } // parser of argument types
         ICommandNode? Redirect { get; }
+        bool IsExecutable { get; }
         // ISuggestionType? SuggestionType { get; } // only valid for Argument Nodes
     }
 
