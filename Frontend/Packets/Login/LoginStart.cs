@@ -1,4 +1,5 @@
 using System;
+using System.Numerics;
 using System.Text;
 using App.Metrics;
 using Frontend.Packets.Play;
@@ -58,6 +59,11 @@ namespace Frontend.Packets.Login
                 connectionState.PacketQueue.Write(new EntityStatus(connectionState.PlayerEntity.Id.Value, (byte)Player.EntityStatus.DisableReducedDebugInfo));
                 connectionState.PacketQueue.Write(new DeclareCommands(serviceProvider.GetRequiredService<ICommandProvider>().SortedCommandInfos));
                 connectionState.PacketQueue.Write(new UnlockRecipes());
+                connectionState.PacketQueue.Write(new PlayerPositionAndLook(
+                                                      Vector3.Zero, Vector2.Zero, PlayerPositionAndLook.Flags.None,
+                                                      serviceProvider
+                                                          .GetRequiredService<ITeleportManager>()
+                                                          .BeginTeleport(connectionState.PlayerEntity.Id.Value, Vector3.Zero)));
             }
         }
     }
