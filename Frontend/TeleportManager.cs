@@ -29,7 +29,7 @@ namespace Frontend
                 id = _random.Next();
             } while (_teleportIds.ContainsKey(id));
 
-            _teleportIds[id] = new TeleportInfo(id, target);
+            _teleportIds[id] = new TeleportInfo(entityId, target);
             return id;
         }
 
