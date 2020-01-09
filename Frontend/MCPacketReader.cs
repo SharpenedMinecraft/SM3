@@ -2,6 +2,7 @@
 using System.Buffers;
 using System.Buffers.Binary;
 using System.IO;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace Frontend
@@ -54,6 +55,15 @@ namespace Frontend
 
         public long ReadInt64() 
             => BinaryPrimitives.ReadInt64BigEndian(ReadBytes(sizeof(Int64)));
+
+        public unsafe Guid ReadGuid()
+        {
+            Guid res = default;
+            var ptr = (ulong*) Unsafe.AsPointer(ref res);
+            ptr[0] = ReadUInt64();
+            ptr[1] = ReadUInt64();
+            return res;
+        }
 
         public float ReadSingle()
             => BitConverter.Int32BitsToSingle(ReadInt32());
