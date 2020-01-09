@@ -6,22 +6,25 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Frontend
 {
-    public sealed class MCPacketQueue : IPacketQueue
+    public sealed class MCPacketQueue : IPacketQueue, IDisposable
     {
         private readonly Queue<IWriteablePacket> _toWrite = new Queue<IWriteablePacket>();
         private readonly PipeWriter _writer;
         private readonly IPacketWriterFactory _writerFactory;
         private readonly IMetrics _metrics;
+        private readonly IBroadcastQueue _broadcastQueue;
         private readonly IServiceProvider _serviceProvider;
 
         public bool NeedsWriting => _toWrite.Count != 0;
 
-        public MCPacketQueue(PipeWriter writer, IPacketWriterFactory writerFactory, IMetrics metrics, IServiceProvider serviceProvider)
+        public MCPacketQueue(PipeWriter writer, IPacketWriterFactory writerFactory, IMetrics metrics, IBroadcastQueue broadcastQueue, IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
             _writer = writer;
             _writerFactory = writerFactory;
             _metrics = metrics;
+            _broadcastQueue = broadcastQueue;
+            _broadcastQueue.Register(this);
         }
 
         public void WriteQueued()
@@ -120,11 +123,19 @@ namespace Frontend
             public void WriteInt64(long value)
                 => Size += sizeof(long);
 
+            public void WriteGuid(Guid value)
+                => Size += 16;
+
             public void WriteSingle(float value)
                 => Size += sizeof(int);
 
             public void WriteDouble(double value)
                 => Size += sizeof(long);
+        }
+
+        public void Dispose()
+        {
+            _broadcastQueue.Deregister(this);
         }
     }
 }

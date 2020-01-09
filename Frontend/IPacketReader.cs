@@ -22,6 +22,7 @@ namespace Frontend
         int ReadInt32();
         ulong ReadUInt64();
         long ReadInt64();
+        Guid ReadGuid();
 
         float ReadSingle();
         double ReadDouble();

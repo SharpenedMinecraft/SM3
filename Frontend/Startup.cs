@@ -40,6 +40,7 @@ namespace Frontend
             services.AddSingleton<ITagProvider, FileTagProvider>();
             services.AddSingleton<ICommandProvider, CommandProvider>();
             services.AddSingleton<ITeleportManager, TeleportManager>();
+            services.AddSingleton<IBroadcastQueue, BroadcastQueue>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -18,6 +18,7 @@ namespace Frontend
         void WriteInt32(int value);
         void WriteUInt64(ulong value);
         void WriteInt64(long value);
+        void WriteGuid(Guid value);
 
         void WriteSingle(float value);
         void WriteDouble(double value);

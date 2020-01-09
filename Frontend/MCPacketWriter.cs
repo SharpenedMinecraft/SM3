@@ -3,6 +3,7 @@ using System.Buffers;
 using System.Buffers.Binary;
 using System.IO;
 using System.Numerics;
+using System.Runtime.CompilerServices;
 using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
@@ -144,6 +145,19 @@ namespace Frontend
             var span = mem.Memory.Span.Slice(0, sizeof(Int64));
             BinaryPrimitives.WriteInt64BigEndian(span, value);
             WriteBytes(span);
+        }
+
+        public unsafe void WriteGuid(Guid value)
+        {
+            // this is what GUID is defined as on Windows (and therefore, from history, in .Net)
+            var ptr = (byte*)Unsafe.AsPointer(ref value);
+            WriteInt32(Unsafe.Read<int>(ptr));
+            ptr += sizeof(int);
+            WriteInt16(Unsafe.Read<short>(ptr));
+            ptr += sizeof(short);
+            WriteInt16(Unsafe.Read<short>(ptr));
+            ptr += sizeof(short);
+            WriteBytes(new Span<byte>(ptr, 64));
         }
 
         public void WriteBoolean(bool value)
