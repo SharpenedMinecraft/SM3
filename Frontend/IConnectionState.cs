@@ -9,8 +9,6 @@ namespace Frontend
         IPacketQueue PacketQueue { get; }
 
         bool IsLocal { get; set; }
-
-        Guid Guid { get; set; }
         
         Player PlayerEntity { get; set; }
     }
