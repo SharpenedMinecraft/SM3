@@ -149,14 +149,15 @@ namespace Frontend
 
         public unsafe void WriteGuid(Guid value)
         {
-            // we only want Big Endian
-            // value.ToByteArray().Reverse (or some optimization) is an option
-            // but this is better, I hope.
-            
-            // in theory, GUID is defined to be this layout. and Binary Serialization is specifically accounted for.
-            var ptr = (ulong*)Unsafe.AsPointer(ref value);
-            WriteUInt64(ptr[0]);
-            WriteUInt64(ptr[1]);
+            // this is what GUID is defined as on Windows (and therefore, from history, in .Net)
+            var ptr = (byte*)Unsafe.AsPointer(ref value);
+            WriteInt32(Unsafe.Read<int>(ptr));
+            ptr += sizeof(int);
+            WriteInt16(Unsafe.Read<short>(ptr));
+            ptr += sizeof(short);
+            WriteInt16(Unsafe.Read<short>(ptr));
+            ptr += sizeof(short);
+            WriteBytes(new Span<byte>(ptr, 64));
         }
 
         public void WriteBoolean(bool value)

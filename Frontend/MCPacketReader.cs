@@ -59,9 +59,16 @@ namespace Frontend
         public unsafe Guid ReadGuid()
         {
             Guid res = default;
-            var ptr = (ulong*) Unsafe.AsPointer(ref res);
-            ptr[0] = ReadUInt64();
-            ptr[1] = ReadUInt64();
+            var ptr = (byte*) Unsafe.AsPointer(ref res);
+            
+            // this is what GUID is defined as on Windows (and therefore, from history, in .Net)
+            Unsafe.Write(ptr, ReadInt32());
+            ptr += sizeof(int);
+            Unsafe.Write(ptr, ReadInt16());
+            ptr += sizeof(short);
+            Unsafe.Write(ptr, ReadInt32());
+            ptr += sizeof(short);
+            ReadBytes(64).CopyTo(new Span<byte>(ptr, 64));
             return res;
         }
 
