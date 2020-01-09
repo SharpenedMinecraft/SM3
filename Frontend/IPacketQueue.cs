@@ -1,6 +1,8 @@
+using System;
+
 namespace Frontend
 {
-    public interface IPacketQueue
+    public interface IPacketQueue : IDisposable
     {
         bool NeedsWriting { get; }
         
