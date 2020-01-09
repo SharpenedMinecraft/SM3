@@ -16,7 +16,7 @@ namespace Frontend
         public IPacketWriter CreateWriter(Memory<byte> memory)
         {
             _metrics.Measure.Meter.Mark(MetricsRegistry.PacketWriters);
-            return new MCPacketWriter(memory, MemoryPool<byte>.Shared);
+            return new MCPacketWriter(memory);
         }
     }
 }
