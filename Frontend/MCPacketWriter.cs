@@ -3,6 +3,7 @@ using System.Buffers;
 using System.Buffers.Binary;
 using System.IO;
 using System.Numerics;
+using System.Runtime.CompilerServices;
 using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
@@ -144,6 +145,18 @@ namespace Frontend
             var span = mem.Memory.Span.Slice(0, sizeof(Int64));
             BinaryPrimitives.WriteInt64BigEndian(span, value);
             WriteBytes(span);
+        }
+
+        public unsafe void WriteGuid(Guid value)
+        {
+            // we only want Big Endian
+            // value.ToByteArray().Reverse (or some optimization) is an option
+            // but this is better, I hope.
+            
+            // in theory, GUID is defined to be this layout. and Binary Serialization is specifically accounted for.
+            var ptr = (ulong*)Unsafe.AsPointer(ref value);
+            WriteUInt64(ptr[0]);
+            WriteUInt64(ptr[1]);
         }
 
         public void WriteBoolean(bool value)

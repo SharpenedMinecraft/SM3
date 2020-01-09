@@ -120,6 +120,9 @@ namespace Frontend
             public void WriteInt64(long value)
                 => Size += sizeof(long);
 
+            public void WriteGuid(Guid value)
+                => Size += 16;
+
             public void WriteSingle(float value)
                 => Size += sizeof(int);
 
