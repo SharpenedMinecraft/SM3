@@ -36,6 +36,7 @@ namespace Frontend.Packets.Login
             }
             else
             {
+                var broadcastQueue = serviceProvider.GetRequiredService<IBroadcastQueue>();
                 connectionState.PlayerEntity = new Player(serviceProvider.GetRequiredService<IEntityManager>().ReserveEntityId(), 0, Username, Guid.NewGuid());
                 logger.LogInformation($"Logging {Username} in. Entity ID: {connectionState.PlayerEntity.Id.Value}");
                 connectionState.PacketQueue.WriteImmediate(new LoginSuccess(connectionState.PlayerEntity.Guid, Username));
@@ -63,6 +64,8 @@ namespace Frontend.Packets.Login
                                                       serviceProvider
                                                           .GetRequiredService<ITeleportManager>()
                                                           .BeginTeleport(connectionState.PlayerEntity.Id.Value, Vector3.Zero)));
+                broadcastQueue.Broadcast(new PlayerInfo(PlayerInfo.InfoType.AddPlayer, new[] { connectionState.PlayerEntity }));
+                broadcastQueue.Broadcast(new PlayerInfo(PlayerInfo.InfoType.UpdateLatency, new[] { connectionState.PlayerEntity }));
             }
         }
     }
