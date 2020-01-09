@@ -66,6 +66,7 @@ namespace Frontend.Packets.Login
                                                           .BeginTeleport(connectionState.PlayerEntity.Id.Value, Vector3.Zero)));
                 broadcastQueue.Broadcast(new PlayerInfo(PlayerInfo.InfoType.AddPlayer, new[] { connectionState.PlayerEntity }));
                 broadcastQueue.Broadcast(new PlayerInfo(PlayerInfo.InfoType.UpdateLatency, new[] { connectionState.PlayerEntity }));
+                connectionState.PacketQueue.Write(new UpdateViewPosition(0, 0));
             }
         }
     }
