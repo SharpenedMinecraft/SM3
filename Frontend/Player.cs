@@ -4,15 +4,18 @@ namespace Frontend
 {
     public class Player : IEntity
     {
-        public Player(IEntityId id, int dimensionId, string username)
+        public Player(IEntityId id, int dimensionId, string username, Guid guid)
         {
             Id = id;
             DimensionId = dimensionId;
             Username = username;
+            Guid = guid;
         }
 
         public IEntityId Id { get; }
-        
+
+        public Guid Guid { get; }
+
         public int DimensionId { get; }
         
         public string Username { get; }

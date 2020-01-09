@@ -36,10 +36,10 @@ namespace Frontend.Packets.Login
             }
             else
             {
-                connectionState.PlayerEntity = new Player(serviceProvider.GetRequiredService<IEntityManager>().ReserveEntityId(), 0, Username);
+                var broadcastQueue = serviceProvider.GetRequiredService<IBroadcastQueue>();
+                connectionState.PlayerEntity = new Player(serviceProvider.GetRequiredService<IEntityManager>().ReserveEntityId(), 0, Username, Guid.NewGuid());
                 logger.LogInformation($"Logging {Username} in. Entity ID: {connectionState.PlayerEntity.Id.Value}");
-                connectionState.Guid = Guid.NewGuid();
-                connectionState.PacketQueue.WriteImmediate(new LoginSuccess(connectionState.Guid, Username));
+                connectionState.PacketQueue.WriteImmediate(new LoginSuccess(connectionState.PlayerEntity.Guid, Username));
                 connectionState.ConnectionStage = MCConnectionStage.Playing;
                 connectionState.PacketQueue.Write(new JoinGame(connectionState.PlayerEntity.Id.Value, 1,
                                                                connectionState.PlayerEntity.DimensionId, byte.MinValue,
@@ -64,6 +64,8 @@ namespace Frontend.Packets.Login
                                                       serviceProvider
                                                           .GetRequiredService<ITeleportManager>()
                                                           .BeginTeleport(connectionState.PlayerEntity.Id.Value, Vector3.Zero)));
+                broadcastQueue.Broadcast(new PlayerInfo(PlayerInfo.InfoType.AddPlayer, new[] { connectionState.PlayerEntity }));
+                broadcastQueue.Broadcast(new PlayerInfo(PlayerInfo.InfoType.UpdateLatency, new[] { connectionState.PlayerEntity }));
             }
         }
     }
