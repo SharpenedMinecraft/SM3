@@ -66,8 +66,7 @@ namespace Frontend
 
                 if (Sse2.IsSupported)
                 {
-                    
-                    while ((i + Vector128<short>.Count * 2) < utf16.Length)
+                    while ((i + (Vector128<short>.Count * 2)) < utf16.Length)
                     {
                         var vector1 = Sse2.LoadVector128(pUtf16 + i);
                         var vector2 = Sse2.LoadVector128(pUtf16 + i + Vector128<short>.Count);
