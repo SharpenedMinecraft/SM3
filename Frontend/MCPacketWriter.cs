@@ -13,14 +13,12 @@ namespace Frontend
 {
     public struct MCPacketWriter : IPacketWriter
     {
-        private readonly MemoryPool<byte> _memPool;
         public readonly Memory<byte> Memory;
         public int Position;
 
-        public MCPacketWriter(Memory<byte> mem, MemoryPool<byte> memoryPool) : this()
+        public MCPacketWriter(Memory<byte> mem) : this()
         {
             Memory = mem;
-            _memPool = memoryPool;
         }
 
         public void WriteUInt8(byte value)
@@ -35,12 +33,11 @@ namespace Frontend
             // This code could get a lot of help from Char8.
             // for now, we simply drop every second byte.
 
-            using var utf8Owner = _memPool.Rent(value.Length);
-            var utf8Span = utf8Owner.Memory.Span.Slice(0, value.Length);
+            var utf8Span = Memory.Slice(Position, value.Length).Span;
 
             DownsizeUtf16(value, utf8Span);
-            
-            WriteBytes(utf8Span);
+
+            Position += value.Length;
         }
 
         public static unsafe void DownsizeUtf16(ReadOnlySpan<char> utf16, Span<byte> utf8)
@@ -101,50 +98,38 @@ namespace Frontend
         
         public void WriteUInt16(UInt16 value)
         {
-            using var mem = _memPool.Rent(sizeof(UInt16));
-            var span = mem.Memory.Span.Slice(0, sizeof(UInt16));
-            BinaryPrimitives.WriteUInt16BigEndian(span, value);
-            WriteBytes(span);
+            BinaryPrimitives.WriteUInt16BigEndian(Memory.Slice(Position, sizeof(UInt16)).Span, value);
+            Position += sizeof(UInt16);
         }
 
         public void WriteInt16(Int16 value)
         {
-            using var mem = _memPool.Rent(sizeof(Int16));
-            var span = mem.Memory.Span.Slice(0, sizeof(Int16));
-            BinaryPrimitives.WriteInt16BigEndian(span, value);
-            WriteBytes(span);
+            BinaryPrimitives.WriteInt16BigEndian(Memory.Slice(Position, sizeof(Int16)).Span, value);
+            Position += sizeof(Int16);
         }
         
         public void WriteUInt32(UInt32 value)
         {
-            using var mem = _memPool.Rent(sizeof(UInt32));
-            var span = mem.Memory.Span.Slice(0, sizeof(UInt32));
-            BinaryPrimitives.WriteUInt32BigEndian(span, value);
-            WriteBytes(span);
+            BinaryPrimitives.WriteUInt32BigEndian(Memory.Slice(Position, sizeof(UInt32)).Span, value);
+            Position += sizeof(UInt32);
         }
         
         public void WriteInt32(Int32 value)
         {
-            using var mem = _memPool.Rent(sizeof(Int32));
-            var span = mem.Memory.Span.Slice(0, sizeof(Int32));
-            BinaryPrimitives.WriteInt32BigEndian(span, value);
-            WriteBytes(span);
+            BinaryPrimitives.WriteInt32BigEndian(Memory.Slice(Position, sizeof(Int32)).Span, value);
+            Position += sizeof(Int32);
         }
         
         public void WriteUInt64(UInt64 value)
         {
-            using var mem = _memPool.Rent(sizeof(UInt64));
-            var span = mem.Memory.Span.Slice(0, sizeof(UInt64));
-            BinaryPrimitives.WriteUInt64BigEndian(span, value);
-            WriteBytes(span);
+            BinaryPrimitives.WriteUInt64BigEndian(Memory.Slice(Position, sizeof(UInt64)).Span, value);
+            Position += sizeof(UInt64);
         }
         
         public void WriteInt64(Int64 value)
         {
-            using var mem = _memPool.Rent(sizeof(Int64));
-            var span = mem.Memory.Span.Slice(0, sizeof(Int64));
-            BinaryPrimitives.WriteInt64BigEndian(span, value);
-            WriteBytes(span);
+            BinaryPrimitives.WriteInt64BigEndian(Memory.Slice(Position, sizeof(Int64)).Span, value);
+            Position += sizeof(Int64);
         }
 
         public unsafe void WriteGuid(Guid value)
