@@ -67,5 +67,11 @@ namespace Frontend
             MeasurementUnit = Unit.Calls,
             Name = "Dimension Resolved"
         };
+
+        public static readonly MeterOptions BroadcastPackets = new MeterOptions
+        {
+            MeasurementUnit = Unit.Calls,
+            Name = "Broadcast Packets"
+        };
     }
 }
