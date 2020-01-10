@@ -75,10 +75,10 @@ namespace Frontend
             public static int GetVarIntSize(int value)
             {
                 var size = 0;
-                var v = value;
+                var v = unchecked((uint)value);
                 while ((v & -0x80) != 0)
                 {
-                    v = (int)(((uint)v) >> 7);
+                    v >>= 7;
                     size++;
                 }
 

@@ -50,6 +50,8 @@ namespace Frontend.Packets.Play
                         writer.WriteString(cmd.Parser.SuggestionType);
                 }
             }
+            
+            writer.WriteVarInt(CommandInfos.Length - 1);
         }
     }
 }

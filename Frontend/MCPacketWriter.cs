@@ -141,7 +141,7 @@ namespace Frontend
             ptr += sizeof(short);
             WriteInt16(Unsafe.Read<short>(ptr));
             ptr += sizeof(short);
-            WriteBytes(new Span<byte>(ptr, 64));
+            WriteBytes(new Span<byte>(ptr, 8));
         }
 
         public void WriteBoolean(bool value)
@@ -156,14 +156,14 @@ namespace Frontend
         public void WriteVarInt(int value)
         {
             var size = 0;
-            var v = value;
+            var v = unchecked((uint)value);
             while ((v & -0x80) != 0)
             {
                 if (size > 5)
                     throw new IOException("VarInt too long, its just, i can't handle that");
 
                 WriteUInt8((byte)(v & 0x7F | 0x80));
-                v = (int)(((uint)v) >> 7);
+                v >>= 7;
                 size++;
             }
 
