@@ -33,7 +33,7 @@ namespace Frontend
         public CommandProvider(ILogger<CommandProvider> logger)
         {
             _logger = logger;
-            SortedCommandInfos = Array.Empty<ICommandProvider.CommandInfo>();
+            SortedCommandInfos = BuildSortedCommandInfos();
         }
 
         private ICommandProvider.CommandInfo[] BuildSortedCommandInfos()
