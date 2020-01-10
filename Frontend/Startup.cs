@@ -41,6 +41,11 @@ namespace Frontend
             services.AddSingleton<ICommandProvider, CommandProvider>();
             services.AddSingleton<ITeleportManager, TeleportManager>();
             services.AddSingleton<IBroadcastQueue, BroadcastQueue>();
+            services.AddSingleton<IDimensionResolver, MCDimensionResolver>(
+                provider => new MCDimensionResolver(new IDimension[]
+                {
+                    new Overworld(),
+                }, provider.GetRequiredService<IMetrics>()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
