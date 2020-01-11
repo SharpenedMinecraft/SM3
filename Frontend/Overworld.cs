@@ -21,8 +21,12 @@ namespace Frontend
         {
             if (_chunks.ContainsKey(position))
                 return;
+
+            Memory<byte> light = new byte[Chunk.Width * Chunk.Height * Chunk.Depth];
             
-            _chunks[position] = new Chunk(new BlockState[Chunk.Width * Chunk.Height * Chunk.Depth]);
+            _chunks[position] = new Chunk(new BlockState[Chunk.Width * Chunk.Height * Chunk.Depth],
+                                          light,
+                                          light.Slice(light.Length / 2));
         }
 
         public void Unload(ChunkPosition position)
