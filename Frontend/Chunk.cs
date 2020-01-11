@@ -20,8 +20,11 @@ namespace Frontend
             => x + Width * (y + Height * z);
 
         private ref BlockState this[int x, int y, int z] => ref States.Span[CalculateIndex(x, y, z)];
-        
+
         public static implicit operator ReadOnlyChunk(Chunk c)
-            => new ReadOnlyChunk(c.States);
+            => c.ToReadOnlyChunk();
+
+        public ReadOnlyChunk ToReadOnlyChunk()
+            => new ReadOnlyChunk(States);
     }
 }
