@@ -28,10 +28,14 @@ namespace Frontend
             Debug.Assert(Skylight.Length == (Width * Height * Depth) / 2);
             Debug.Assert(Blocklight.Length == (Width * Height * Depth) / 2);
         }
+        
+        // DO NOT CHANGE. LARGE PARTS OF CODE AND OPTIMIZATIONS RELY ON THE X-Z-Y LAYOUT
+        public int CalculateStateIndex(BlockPosition position)
+            => position.X + Width * (position.Z + Depth * position.Y);
 
-        public int CalculateIndex(int x, int y, int z)
-            => x + Width * (y + Height * z);
+        public int CalculateLightIndex(BlockPosition position)
+            => CalculateStateIndex(position) / 2;
 
-        private BlockState this[int x, int y, int z] => States.Span[CalculateIndex(x, y, z)];
+        private BlockState this[BlockPosition position] => States.Span[CalculateStateIndex(position)];
     }
 }

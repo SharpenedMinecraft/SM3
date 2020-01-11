@@ -29,10 +29,14 @@ namespace Frontend
             Debug.Assert(Blocklight.Length == (Width * Height * Depth) / 2);
         }
 
-        public readonly int CalculateIndex(int x, int y, int z)
-            => x + Width * (z + Depth * y);
+        // DO NOT CHANGE. LARGE PARTS OF CODE AND OPTIMIZATIONS RELY ON THE X-Z-Y LAYOUT
+        public readonly int CalculateStateIndex(BlockPosition position)
+            => position.X + Width * (position.Z + Depth * position.Y);
 
-        private ref BlockState this[int x, int y, int z] => ref States.Span[CalculateIndex(x, y, z)];
+        public readonly int CalculateLightIndex(BlockPosition position)
+            => CalculateStateIndex(position) / 2;
+
+        private ref BlockState this[BlockPosition position] => ref States.Span[CalculateStateIndex(position)];
 
         public static implicit operator ReadOnlyChunk(Chunk c)
             => c.ToReadOnlyChunk();
