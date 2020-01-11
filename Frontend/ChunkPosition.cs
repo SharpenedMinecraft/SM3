@@ -17,7 +17,10 @@ namespace Frontend
             z = Z;
         }
 
-        public static implicit operator ChunkPosition((int x, int z) tuple) 
+        public static implicit operator ChunkPosition((int x, int z) tuple)
+            => From(tuple);
+        
+        public static ChunkPosition From((int x, int z) tuple) 
             => new ChunkPosition(tuple.x, tuple.z);
     }
 }
