@@ -30,8 +30,11 @@ namespace Frontend
             y = Y;
             z = Z;
         }
-        
-        public static implicit operator BlockPosition((int x, int y, int z) tuple) 
+
+        public static implicit operator BlockPosition((int x, int y, int z) tuple)
+            => From(tuple);
+
+        public static BlockPosition From((int x, int y, int z) tuple)
             => new BlockPosition(tuple.x, tuple.y, tuple.z);
     }
 }
