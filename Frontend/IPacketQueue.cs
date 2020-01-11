@@ -2,7 +2,7 @@ using System;
 
 namespace Frontend
 {
-    public interface IPacketQueue : IDisposable
+    public interface IPacketQueue
     {
         bool NeedsWriting { get; }
         

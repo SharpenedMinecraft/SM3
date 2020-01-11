@@ -17,12 +17,22 @@ namespace Frontend
             return null;
         }
 
-        public void Load(ChunkPosition position)
+        public Chunk Load(ChunkPosition position)
         {
-            if (_chunks.ContainsKey(position))
-                return;
+            if (_chunks.TryGetValue(position, out var v))
+                return v;
+
+            Memory<byte> skylight = new byte[Chunk.Width * Chunk.Height * Chunk.Depth / 2];
+            Memory<byte> blocklight = new byte[Chunk.Width * Chunk.Height * Chunk.Depth / 2];
             
-            _chunks[position] = new Chunk(new BlockState[Chunk.Width * Chunk.Height * Chunk.Depth]);
+            skylight.Span.Fill(12);
+            
+            var chunk = new Chunk(new BlockState[Chunk.Width * Chunk.Height * Chunk.Depth],
+                                  skylight,
+                                  blocklight);
+            
+            _chunks[position] = chunk;
+            return chunk;
         }
 
         public void Unload(ChunkPosition position)

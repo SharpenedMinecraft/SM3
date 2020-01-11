@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Frontend
 {
-    public sealed class MCPacketQueue : IPacketQueue, IDisposable
+    public sealed class MCPacketQueue : IPacketQueue
     {
         private readonly Queue<IWriteablePacket> _toWrite = new Queue<IWriteablePacket>();
         private readonly PipeWriter _writer;
@@ -131,11 +131,6 @@ namespace Frontend
 
             public void WriteDouble(double value)
                 => Size += sizeof(long);
-        }
-
-        public void Dispose()
-        {
-            _broadcastQueue.Deregister(this);
         }
     }
 }
