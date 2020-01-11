@@ -60,13 +60,28 @@ namespace Frontend.Packets.Login
                 connectionState.PacketQueue.Write(new DeclareCommands(serviceProvider.GetRequiredService<ICommandProvider>().SortedCommandInfos));
                 connectionState.PacketQueue.Write(new UnlockRecipes());
                 connectionState.PacketQueue.Write(new PlayerPositionAndLook(
-                                                      Vector3.Zero, Vector2.Zero, PlayerPositionAndLook.Flags.None,
+                                                      connectionState.PlayerEntity.Position, connectionState.PlayerEntity.Rotation, PlayerPositionAndLook.Flags.None,
                                                       serviceProvider
                                                           .GetRequiredService<ITeleportManager>()
-                                                          .BeginTeleport(connectionState.PlayerEntity.Id.Value, Vector3.Zero)));
+                                                          .BeginTeleport(connectionState.PlayerEntity.Id.Value, connectionState.PlayerEntity.Position)));
                 broadcastQueue.Broadcast(new PlayerInfo(PlayerInfo.InfoType.AddPlayer, new[] { connectionState.PlayerEntity }));
                 broadcastQueue.Broadcast(new PlayerInfo(PlayerInfo.InfoType.UpdateLatency, new[] { connectionState.PlayerEntity }));
                 connectionState.PacketQueue.Write(new UpdateViewPosition(0, 0));
+
+                var playerChunkPosition = (ChunkPosition)BlockPosition.From(connectionState.PlayerEntity.Position);
+                var halfViewDistance = connectionState.PlayerEntity.Settings.RenderDistance / 2;
+                
+                for (int x = -halfViewDistance; x <= halfViewDistance; x++)
+                for (int z = -halfViewDistance; z <= halfViewDistance; z++)
+                {
+                    var chunkPos = playerChunkPosition + (x, z);
+                    // we don't care wether or not that chunk is currently loaded
+                    // Load will make sure it is and give it to us
+                    // this will be revised once the ticketing system is in
+                    var chunk = dimension.Load(chunkPos);
+                    
+                    connectionState.PacketQueue.Write(new UpdateLight(chunkPos, chunk));
+                }
             }
         }
     }
