@@ -38,6 +38,10 @@ namespace Frontend.Packets.Login
             {
                 var broadcastQueue = serviceProvider.GetRequiredService<IBroadcastQueue>();
                 connectionState.PlayerEntity = new Player(serviceProvider.GetRequiredService<IEntityManager>().ReserveEntityId(), 0, Username, Guid.NewGuid());
+
+                var dimension = serviceProvider.GetRequiredService<IDimensionResolver>()
+                                               .GetDimension(connectionState.PlayerEntity.DimensionId);
+                
                 logger.LogInformation($"Logging {Username} in. Entity ID: {connectionState.PlayerEntity.Id.Value}");
                 connectionState.PacketQueue.WriteImmediate(new LoginSuccess(connectionState.PlayerEntity.Guid, Username));
                 connectionState.ConnectionStage = MCConnectionStage.Playing;
