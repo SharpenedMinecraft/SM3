@@ -46,7 +46,7 @@ namespace Frontend
 
         private async Task HandleConnection(MCConnectionContext ctx)
         {
-            using var packetQueue = ctx.PacketQueue;
+            var packetQueue = ctx.PacketQueue;
             while (!ctx.ConnectionClosed.IsCancellationRequested)
             {
                 var readResult = await ctx.Transport.Input.ReadAsync(ctx.ConnectionClosed);

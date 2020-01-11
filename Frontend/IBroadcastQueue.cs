@@ -4,6 +4,5 @@ namespace Frontend
     {
         void Broadcast(IWriteablePacket packet);
         void Register(IPacketQueue queue);
-        void Deregister(IPacketQueue queue);
     }
 }
