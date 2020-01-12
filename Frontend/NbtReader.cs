@@ -2,6 +2,7 @@ using System;
 using System.Buffers.Binary;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace Frontend
@@ -78,7 +79,7 @@ namespace Frontend
 
             return res;
         }
-
+        
         public INbtTag ReadTag(byte typeCode) => typeCode switch
         {
             // 0 => new NbtEnd(),
@@ -93,8 +94,12 @@ namespace Frontend
             9 => new NbtList(ReadNbtTagList()),
             10 => ReadCompound(),
             11 => new NbtIntArray(ReadIntArray(ReadInt())),
-            12 => new NbtLongArray(ReadLongArray(ReadInt()))
+            12 => new NbtLongArray(ReadLongArray(ReadInt())),
+            _ => OutOfRangeTypeCodeThrow()
         };
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private static INbtTag OutOfRangeTypeCodeThrow() => throw new ArgumentOutOfRangeException("typeCode");
 
         public NbtCompound ReadCompound()
         {
