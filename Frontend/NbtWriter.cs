@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Frontend
 {
-    public sealed class NbtWriter
+    public sealed class NbtWriter : IDisposable
     {
         private MemoryStream _stream;
 
@@ -149,5 +149,10 @@ namespace Frontend
 
         [MethodImpl(MethodImplOptions.NoInlining)]
         private static void OutOfRangeTypeCodeThrow() => throw new ArgumentOutOfRangeException("typeCode");
+
+        public void Dispose()
+        {
+            _stream.Dispose();
+        }
     }
 }
