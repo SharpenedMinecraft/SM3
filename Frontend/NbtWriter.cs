@@ -9,14 +9,19 @@ namespace Frontend
 {
     public sealed class NbtWriter : IDisposable
     {
-        private MemoryStream _stream;
+        public MemoryStream Stream { get; }
 
         public NbtWriter()
         {
-            _stream = new MemoryStream();
+            Stream = new MemoryStream();
         }
 
-        public void WriteTag(INbtTag tag)
+        public void WriteRoot(NbtCompound root)
+        {
+            WriteCompound(root.Value, true);
+        }
+
+        private void WriteTag(INbtTag tag)
         {
             switch (tag.TagType)
             {
@@ -80,7 +85,7 @@ namespace Frontend
                 WriteInt(value[i]);
         }
 
-        private void WriteCompound(ReadOnlyDictionary<string,INbtTag> value)
+        private void WriteCompound(ReadOnlyDictionary<string,INbtTag> value, bool isImplicit = false)
         {
             foreach ((string name, INbtTag tag) in value)
             {
@@ -89,6 +94,9 @@ namespace Frontend
 
                 WriteTag(tag);
             }
+
+            if (!isImplicit)
+                WriteByte(0);
         }
 
         private void WriteList(INbtTag[] value)
@@ -105,13 +113,13 @@ namespace Frontend
         private void WriteString(string value)
         {
             WriteShort((short)value.Length);
-            _stream.Write(Encoding.UTF8.GetBytes(value));
+            Stream.Write(Encoding.UTF8.GetBytes(value));
         }
 
         private void WriteByteArray(byte[] value)
         {
             WriteInt(value.Length);
-            _stream.Write(value);
+            Stream.Write(value);
         }
 
         private void WriteDouble(double value)
@@ -124,26 +132,26 @@ namespace Frontend
         {
             Span<byte> b = stackalloc byte[sizeof(long)];
             BinaryPrimitives.WriteInt64BigEndian(b, value);
-            _stream.Write(b);
+            Stream.Write(b);
         }
 
         private void WriteInt(int value)
         {
             Span<byte> b = stackalloc byte[sizeof(int)];
             BinaryPrimitives.WriteInt32BigEndian(b, value);
-            _stream.Write(b);
+            Stream.Write(b);
         }
 
         private void WriteShort(short value)
         {
             Span<byte> b = stackalloc byte[sizeof(short)];
             BinaryPrimitives.WriteInt16BigEndian(b, value);
-            _stream.Write(b);
+            Stream.Write(b);
         }
 
         private void WriteByte(byte value)
         {
-            _stream.WriteByte(value);
+            Stream.WriteByte(value);
         }
 
 
@@ -152,7 +160,7 @@ namespace Frontend
 
         public void Dispose()
         {
-            _stream.Dispose();
+            Stream.Dispose();
         }
     }
 }
