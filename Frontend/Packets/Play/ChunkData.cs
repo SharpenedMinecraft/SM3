@@ -25,8 +25,8 @@ namespace Frontend.Packets.Play
             writer.WriteBoolean(true); // Full Chunks only
 
             const int last16Bits = 0b0000_0000_0000_0000_1111_1111_1111_1111;
-            var zeroSectionMask = CalculateZeroMask(Chunk.States.Span, Chunk, out var chunksNotSend, out var chunkNonZeroCount);
-            writer.WriteVarInt((~zeroSectionMask) & last16Bits);
+            var sectionMask = CalculateMask(Chunk.States.Span, Chunk, out var chunksSend, out var chunkNonZeroCount);
+            writer.WriteVarInt(sectionMask);
 
             var rawHeightmap = CalculateHeightmap(Chunk);
             var packedHeightMap = PackHeightMap(rawHeightmap);
@@ -34,23 +34,25 @@ namespace Frontend.Packets.Play
             {
                 {"MOTION_BLOCKING", new NbtLongArray(packedHeightMap)}
             }));
+            
+            const int bitsPerBlock = 14;
+            const int requiredLongs = 16 * 16 * 16 * bitsPerBlock / 8 / sizeof(long);
+            
             writer.WriteNbt(compound);
-            writer.WriteVarInt((16 - chunksNotSend) * (16 * 16 * 16) + (256 * 4));
+            writer.WriteVarInt((chunksSend * (sizeof(short) + sizeof(byte) + 2 + (requiredLongs * sizeof(long)))) + (256 * 4));
 
             for (int section = 0; section < 16; section++)
             {
-                if ((zeroSectionMask | (1 << section)) != 0)
+                if ((sectionMask & (1 << section)) == 0)
                     continue;
 
                 writer.WriteInt16(chunkNonZeroCount[section]);
                 
                 // log2(maxState) rounded. Direct Pallet.
-                const int bitsPerBlock = 14;
                 writer.WriteUInt8(bitsPerBlock);
-                const int requiredLongs = 16 * 16 * 16 * bitsPerBlock / 8 / sizeof(long);
                 writer.WriteVarInt(requiredLongs);
-                Span<long> longs = new long[requiredLongs];
-                var bitBuffer = new BitBuffer(MemoryMarshal.Cast<long, ulong>(longs));
+                Span<ulong> longs = new ulong[requiredLongs];
+                var bitBuffer = new BitBuffer(longs);
 
                 for (int x = 0; x < ReadOnlyChunk.Width; x++)
                 {
@@ -61,6 +63,11 @@ namespace Frontend.Packets.Play
                             bitBuffer.WriteInt32(Chunk[(x, (section * 16) + y, z)].State, 14);
                         }
                     }
+                }
+
+                for (int i = 0; i < longs.Length; i++)
+                {
+                    writer.WriteUInt64(longs[i]);
                 }
             }
 
@@ -100,7 +107,7 @@ namespace Frontend.Packets.Play
             return mask;
         }
 
-        private int CalculateZeroMask(ReadOnlySpan<BlockState> blocks, in ReadOnlyChunk chunk, out int bitsSet, out short[] nonZeroCount)
+        private int CalculateMask(ReadOnlySpan<BlockState> blocks, in ReadOnlyChunk chunk, out int bitsSet, out short[] nonZeroCount)
         {
             bitsSet = 0;
             int mask = 0;
@@ -115,8 +122,8 @@ namespace Frontend.Packets.Play
                     {
                         for (int z = 0; z < ReadOnlyChunk.Depth; z++)
                         {
-                            var index = chunk.CalculateLightIndex((x, (y + section * 16), z));
-                            if (blocks[index].State != 0)
+                            var index = chunk.CalculateStateIndex((x, (y + section * 16), z));
+                            if (blocks[index].State == 0)
                             {
                                 goto nomask;
                             }
