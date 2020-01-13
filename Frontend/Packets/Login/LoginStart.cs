@@ -85,6 +85,7 @@ namespace Frontend.Packets.Login
                     var chunk = dimension.Load(chunkPos);
                     
                     connectionState.PacketQueue.Write(new UpdateLight(chunkPos, chunk));
+                    connectionState.PacketQueue.Write(new ChunkData(chunkPos, chunk));
                 }
             }
         }
