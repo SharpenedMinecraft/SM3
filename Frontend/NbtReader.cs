@@ -12,6 +12,12 @@ namespace Frontend
         public readonly ReadOnlySpan<byte> Data;
         public int Position;
 
+        public NbtReader(ReadOnlySpan<byte> data)
+        {
+            Data = data;
+            Position = 0;
+        }
+
         public byte ReadByte()
         {
             var b = Data[Position];
@@ -105,13 +111,14 @@ namespace Frontend
         {
             var tags = new Dictionary<string, INbtTag>();
 
-            while (true)
+            while (Position < Data.Length) // implicit ending
             {
                 var typeCode = ReadByte();
                 if (typeCode == 0)
                     break;
 
-                tags[ReadString(ReadShort())] = ReadTag(typeCode);
+                var name = ReadString(ReadShort());
+                tags[name] = ReadTag(typeCode);
             }
             
             return new NbtCompound(new ReadOnlyDictionary<string, INbtTag>(tags));
