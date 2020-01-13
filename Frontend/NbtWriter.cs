@@ -16,12 +16,12 @@ namespace Frontend
             Stream = new MemoryStream();
         }
 
-        public void WriteRoot(NbtCompound root)
+        public void WriteRoot(NbtCompound root, bool isImplicit = true)
         {
-            WriteCompound(root.Value, true);
+            WriteCompound(root.Value, isImplicit);
         }
 
-        private void WriteTag(INbtTag tag)
+        public void WriteTag(INbtTag tag)
         {
             switch (tag.TagType)
             {
@@ -68,7 +68,7 @@ namespace Frontend
             }
         }
         
-        private void WriteLongArray(long[] value)
+        public void WriteLongArray(long[] value)
         {
             WriteInt(value.Length);
             
@@ -77,7 +77,7 @@ namespace Frontend
         }
 
 
-        private void WriteIntArray(int[] value)
+        public void WriteIntArray(int[] value)
         {
             WriteInt(value.Length);
             
@@ -85,7 +85,7 @@ namespace Frontend
                 WriteInt(value[i]);
         }
 
-        private void WriteCompound(ReadOnlyDictionary<string,INbtTag> value, bool isImplicit = false)
+        public void WriteCompound(ReadOnlyDictionary<string,INbtTag> value, bool isImplicit = false)
         {
             foreach ((string name, INbtTag tag) in value)
             {
@@ -99,7 +99,7 @@ namespace Frontend
                 WriteByte(0);
         }
 
-        private void WriteList(INbtTag[] value)
+        public void WriteList(INbtTag[] value)
         {
             WriteByte(value[0].TagType);
             WriteInt(value.Length);
@@ -110,46 +110,46 @@ namespace Frontend
             }
         }
 
-        private void WriteString(string value)
+        public void WriteString(string value)
         {
             WriteShort((short)value.Length);
             Stream.Write(Encoding.UTF8.GetBytes(value));
         }
 
-        private void WriteByteArray(byte[] value)
+        public void WriteByteArray(byte[] value)
         {
             WriteInt(value.Length);
             Stream.Write(value);
         }
 
-        private void WriteDouble(double value)
+        public void WriteDouble(double value)
             => WriteLong(BitConverter.DoubleToInt64Bits(value));
         
-        private void WriteFloat(float value)
+        public void WriteFloat(float value)
             => WriteInt(BitConverter.SingleToInt32Bits(value));
 
-        private void WriteLong(long value)
+        public void WriteLong(long value)
         {
             Span<byte> b = stackalloc byte[sizeof(long)];
             BinaryPrimitives.WriteInt64BigEndian(b, value);
             Stream.Write(b);
         }
 
-        private void WriteInt(int value)
+        public void WriteInt(int value)
         {
             Span<byte> b = stackalloc byte[sizeof(int)];
             BinaryPrimitives.WriteInt32BigEndian(b, value);
             Stream.Write(b);
         }
 
-        private void WriteShort(short value)
+        public void WriteShort(short value)
         {
             Span<byte> b = stackalloc byte[sizeof(short)];
             BinaryPrimitives.WriteInt16BigEndian(b, value);
             Stream.Write(b);
         }
 
-        private void WriteByte(byte value)
+        public void WriteByte(byte value)
         {
             Stream.WriteByte(value);
         }
