@@ -153,6 +153,20 @@ namespace Frontend
         public void WriteDouble(double value)
             => WriteInt64(BitConverter.DoubleToInt64Bits(value));
 
+        public void WriteNbt(NbtCompound compound, string name = "")
+        {
+            using var writer = new NbtWriter();
+            if (name != null)
+            {
+                writer.WriteByte(compound.TagType);
+                writer.WriteString(name);
+            }
+            
+            writer.WriteRoot(compound, false);
+            var array = writer.Stream.ToArray(); // :/
+            WriteBytes(array);
+        }
+
         public void WriteVarInt(int value)
         {
             var size = 0;
@@ -169,5 +183,7 @@ namespace Frontend
 
             WriteUInt8((byte)v);
         }
+        
+        
     }
 }
