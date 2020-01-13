@@ -9,7 +9,7 @@ namespace Frontend
 {
     public sealed class FileTagProvider : ITagProvider
     {
-        private const string TagDir = "./tags/";
+        private const string TagDir = "./Data/tags/";
         private const string BlockDir = TagDir + "blocks/";
         private const string EntityDir = TagDir + "entity_types/";
         private const string FluidDir = TagDir + "fluids/";

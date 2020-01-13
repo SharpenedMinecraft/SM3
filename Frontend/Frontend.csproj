@@ -43,10 +43,7 @@
 
   <ItemGroup>
     <AdditionalFiles Include="../BannedSymbols.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="..\Data\**\*.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../Data/**" LinkBase="Data/" CopyToOutputDirectory="Always" />
   </ItemGroup>
 
 </Project>
