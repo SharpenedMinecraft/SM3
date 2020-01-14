@@ -34,7 +34,7 @@ jobs:
       with:
         name: SM3-${{ matrix.runtime }}.zip
         path: ./artifact.zip
-    
+
   test:
     name: test
     runs-on: ubuntu-latest
@@ -48,4 +48,3 @@ jobs:
     - name: Test with dotnet
       run: dotnet test
       working-directory: ./Frontend.Tests/
-
