@@ -5,12 +5,14 @@ namespace Frontend
 {
     public sealed class Player : IEntity
     {
-        public Player(IEntityId id, int dimensionId, string username, Guid guid)
+        public Player(IEntityId id, int dimensionId, string username, Guid guid, Vector3 position, Vector2 rotation)
         {
             Id = id;
             DimensionId = dimensionId;
             Username = username;
             Guid = guid;
+            Position = position;
+            Rotation = rotation;
         }
 
         public IEntityId Id { get; }

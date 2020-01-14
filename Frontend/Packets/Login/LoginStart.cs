@@ -37,7 +37,7 @@ namespace Frontend.Packets.Login
             else
             {
                 var broadcastQueue = serviceProvider.GetRequiredService<IBroadcastQueue>();
-                connectionState.PlayerEntity = new Player(serviceProvider.GetRequiredService<IEntityManager>().ReserveEntityId(), 0, Username, Guid.NewGuid());
+                connectionState.PlayerEntity = new Player(serviceProvider.GetRequiredService<IEntityManager>().ReserveEntityId(), 0, Username, Guid.NewGuid(), new Vector3(0, 15, 0), Vector2.Zero);
 
                 var dimension = serviceProvider.GetRequiredService<IDimensionResolver>()
                                                .GetDimension(connectionState.PlayerEntity.DimensionId);
