@@ -3,17 +3,17 @@ using System.Diagnostics;
 
 namespace Frontend
 {
-    public struct Chunk
+    public readonly struct Chunk
     {
-        public Memory<BlockState> States;
+        public readonly Memory<BlockState> States;
         /// <summary>
         /// Every byte contains two values
         /// </summary>
-        public Memory<byte> Skylight;
+        public readonly Memory<byte> Skylight;
         /// <summary>
         /// Every byte contains two values
         /// </summary>
-        public Memory<byte> Blocklight;
+        public readonly Memory<byte> Blocklight;
         
         public const int Width = 16;
         public const int Height = 256;
