@@ -37,7 +37,6 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        useAVX: [ "AVX", "" ]
         runtime: [ "win-x64", "win-x86", "linux-x64", "osx-x64" ]
 
     steps:
@@ -54,7 +53,7 @@ jobs:
       with:
         file-name: ./upload_url/upload.txt
     - name: Build with dotnet
-      run: dotnet publish -r ${{ matrix.runtime }} -c Release /p:PublishSingleFile=true /p:AVX=${{ matrix.useAVX }} -o ./output/
+      run: dotnet publish -r ${{ matrix.runtime }} -c Release /p:PublishSingleFile=true -o ./output/
       working-directory: ./Frontend/
     - name: Zip artifacts
       run: zip --junk-paths -r ./artifact.zip ./Frontend/output/
@@ -66,5 +65,5 @@ jobs:
       with:
         upload_url: ${{ steps.openFile.outputs.data }}
         asset_path: ./artifact.zip
-        asset_name: SM3-${{ matrix.runtime }}${{ matrix.useAVX }}.zip
+        asset_name: SM3-${{ matrix.runtime }}.zip
         asset_content_type: application/zip

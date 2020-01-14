@@ -50,20 +50,6 @@ namespace Frontend
                 // HACK: (?) assuming sizeof(char) == sizeof(short)
                 var pUtf16 = (short*) pUtf16Char;
 #if !NO_OPTIMIZATION
-#if AVX // TAKE CARE. AVX MAY CAUSE DOWNCLOCKING
-                /*if (Avx2.IsSupported)
-                {
-                    while ((i + Vector256<short>.Count * 2) < value.Length)
-                    {
-                        var vector1 = Avx2.LoadVector256(pUtf16 + i);
-                        var vector2 = Avx2.LoadVector256(pUtf16 + i + Vector256<short>.Count);
-                        
-                        Avx2.Store(pUtf8 + i, Avx2.PackUnsignedSaturate(vector1, vector2));
-                        i += Vector256<short>.Count * 2;
-                    }
-                }*/
-#endif
-
                 if (Sse2.IsSupported)
                 {
                     while ((i + (Vector128<short>.Count * 2)) < utf16.Length)

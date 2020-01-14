@@ -17,13 +17,9 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <DefineConstants>TRACE;AVX</DefineConstants>
+    <DefineConstants>TRACE;</DefineConstants>
     <DebugSymbols>false</DebugSymbols>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(AVX)' != ''">
-    <DefineConstants>$(DefineConstants);AVX</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
