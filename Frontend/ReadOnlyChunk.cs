@@ -36,6 +36,6 @@ namespace Frontend
         public int CalculateLightIndex(BlockPosition position)
             => CalculateStateIndex(position) / 2;
 
-        private BlockState this[BlockPosition position] => States.Span[CalculateStateIndex(position)];
+        public BlockState this[BlockPosition position] => States.Span[CalculateStateIndex(position)];
     }
 }

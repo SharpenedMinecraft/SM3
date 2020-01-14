@@ -73,7 +73,7 @@ namespace Frontend.Packets.Login
                 connectionState.PacketQueue.Write(new UpdateViewPosition(0, 0));
 
                 var playerChunkPosition = (ChunkPosition)BlockPosition.From(connectionState.PlayerEntity.Position);
-                var halfViewDistance = connectionState.PlayerEntity.Settings.RenderDistance / 2;
+                var halfViewDistance = connectionState.PlayerEntity.Settings.RenderDistance > 0 ? connectionState.PlayerEntity.Settings.RenderDistance / 2 : 4;
                 
                 for (int x = -halfViewDistance; x <= halfViewDistance; x++)
                 for (int z = -halfViewDistance; z <= halfViewDistance; z++)
@@ -85,6 +85,7 @@ namespace Frontend.Packets.Login
                     var chunk = dimension.Load(chunkPos);
                     
                     connectionState.PacketQueue.Write(new UpdateLight(chunkPos, chunk));
+                    connectionState.PacketQueue.Write(new ChunkData(chunkPos, chunk));
                 }
             }
         }

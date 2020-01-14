@@ -22,12 +22,14 @@ namespace Frontend
             if (_chunks.TryGetValue(position, out var v))
                 return v;
 
+            Memory<BlockState> blockStates = new BlockState[Chunk.Width * Chunk.Height * Chunk.Depth];
             Memory<byte> skylight = new byte[Chunk.Width * Chunk.Height * Chunk.Depth / 2];
             Memory<byte> blocklight = new byte[Chunk.Width * Chunk.Height * Chunk.Depth / 2];
             
+            blockStates.Span.Fill(new BlockState(1));
             skylight.Span.Fill(12);
             
-            var chunk = new Chunk(new BlockState[Chunk.Width * Chunk.Height * Chunk.Depth],
+            var chunk = new Chunk(blockStates,
                                   skylight,
                                   blocklight);
             

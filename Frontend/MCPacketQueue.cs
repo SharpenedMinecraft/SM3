@@ -131,6 +131,20 @@ namespace Frontend
 
             public void WriteDouble(double value)
                 => Size += sizeof(long);
+
+            public void WriteNbt(NbtCompound compound, string name = "")
+            {
+                using var writer = new NbtWriter();
+
+                if (name != null)
+                {
+                    writer.WriteByte(compound.TagType);
+                    writer.WriteString(name);
+                }
+                
+                writer.WriteRoot(compound, false);
+                Size += (int)writer.Stream.Position;
+            }
         }
     }
 }
