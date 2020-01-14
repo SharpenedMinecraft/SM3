@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO.Pipelines;
 using System.Net;
 using System.Threading;
@@ -9,30 +10,45 @@ using Microsoft.Extensions.Logging;
 
 namespace Frontend
 {
-    public sealed class MCConnectionContext : ConnectionContext
+    public sealed class MCConnectionContext : ConnectionContext, IConnectionState
     {
         private readonly ConnectionContext _underlyingCtx;
         private MCDuplexPipe _mcDuplexPipe;
-        
-        
-        public MCConnectionContext(ConnectionContext ctx)
+
+        public MCConnectionContext(ConnectionContext ctx, IPacketQueue packetQueue)
         {
+            PacketQueue = packetQueue;
             _underlyingCtx = ctx;
             _mcDuplexPipe = new MCDuplexPipe(_underlyingCtx.Transport);
-            Items["state"] = MCConnectionState.Handshaking;
+            Items["state"] = MCConnectionStage.Handshaking;
+            Items["isLocal"] = false;
         }
 
-        public MCConnectionState ConnectionState
+        public MCConnectionStage ConnectionStage
         {
-            get => (MCConnectionState)Items["state"];
+            get => (MCConnectionStage)Items["state"];
             set => Items["state"] = value;
         }
 
-        public bool ShouldFlush { get; private set; }
-        public void FlushNext() => ShouldFlush = true;
-        
-        public bool ShouldClose { get; private set; }
-        public void CloseNext() => ShouldClose = true;
+        public IPacketQueue PacketQueue { get; }
+
+        public bool IsLocal
+        {
+            get => (bool)Items["isLocal"];
+            set => Items["isLocal"] = value;
+        }
+
+        public Guid Guid
+        {
+            get => Guid.Parse((string)Items["guid"]);
+            set => Items["guid"] = value.ToString();
+        }
+
+        public Player PlayerEntity
+        {
+            get => (Player) Items["playerEntity"];
+            set => Items["playerEntity"] = value ?? throw new ArgumentNullException(nameof(value));
+        }
 
         public override string ConnectionId
         {
@@ -41,7 +57,7 @@ namespace Frontend
         }
 
         public override IFeatureCollection Features => _underlyingCtx.Features;
-
+        
         public override IDictionary<object, object> Items
         {
             get => _underlyingCtx.Items;

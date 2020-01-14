@@ -31,7 +31,6 @@ namespace Frontend
             return this;
         }
         
-        
         public ChatBuilder Strikethrough()
         {
             _workingCopy.Strikethrough = true;

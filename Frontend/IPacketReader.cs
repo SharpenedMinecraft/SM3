@@ -1,5 +1,6 @@
 using System;
 using System.Buffers;
+using Microsoft.Extensions.ObjectPool;
 
 namespace Frontend
 {
@@ -9,8 +10,10 @@ namespace Frontend
         ReadOnlySpan<char> ReadString(); // TODO: Once UTF-8 String exsists, change this
         ReadOnlySpan<byte> ReadBytes(int length);
 
+        // Please note, ServerboundPluginMessage relies on this always being the "to read" data.
         ReadOnlySequence<byte> Buffer { get; }
 
+        bool ReadBoolean();
         byte ReadUInt8();
         sbyte ReadInt8();
         ushort ReadUInt16();
@@ -19,6 +22,7 @@ namespace Frontend
         int ReadInt32();
         ulong ReadUInt64();
         long ReadInt64();
+        Guid ReadGuid();
 
         float ReadSingle();
         double ReadDouble();

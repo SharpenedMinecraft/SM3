@@ -6,8 +6,7 @@ namespace Frontend
     public sealed class MCDuplexPipe : IDuplexPipe
     {
         private IDuplexPipe _underlyingDuplexPipe;
-
-
+        
         public PipeReader Input { get; }
 
         public PipeWriter Output { get; }

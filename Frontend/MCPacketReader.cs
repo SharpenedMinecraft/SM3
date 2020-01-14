@@ -2,6 +2,7 @@
 using System.Buffers;
 using System.Buffers.Binary;
 using System.IO;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace Frontend
@@ -39,6 +40,8 @@ namespace Frontend
             return b;
         }
 
+        public bool ReadBoolean() => ReadUInt8() > 0x00; // loose parsing
+
         public sbyte ReadInt8()
         {
             unchecked
@@ -52,6 +55,22 @@ namespace Frontend
 
         public long ReadInt64() 
             => BinaryPrimitives.ReadInt64BigEndian(ReadBytes(sizeof(Int64)));
+
+        public unsafe Guid ReadGuid()
+        {
+            Guid res = default;
+            var ptr = (byte*) Unsafe.AsPointer(ref res);
+            
+            // this is what GUID is defined as on Windows (and therefore, from history, in .Net)
+            Unsafe.Write(ptr, ReadInt32());
+            ptr += sizeof(int);
+            Unsafe.Write(ptr, ReadInt16());
+            ptr += sizeof(short);
+            Unsafe.Write(ptr, ReadInt32());
+            ptr += sizeof(short);
+            ReadBytes(64).CopyTo(new Span<byte>(ptr, 64));
+            return res;
+        }
 
         public float ReadSingle()
             => BitConverter.Int32BitsToSingle(ReadInt32());

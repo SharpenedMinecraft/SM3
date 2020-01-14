@@ -12,18 +12,34 @@
     without downclocking -->
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <DefineConstants>TRACE;AVX</DefineConstants>
+    <DefineConstants>TRACE;NO_OPTIMIZATION</DefineConstants>
     <DebugType>full</DebugType>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <DefineConstants>TRACE;AVX</DefineConstants>
+    <DefineConstants>TRACE;</DefineConstants>
     <DebugSymbols>false</DebugSymbols>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(AVX)' != ''">
-    <DefineConstants>$(DefineConstants);AVX</DefineConstants>
-  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="App.Metrics" Version="4.0.0-*" />
+    <PackageReference Include="App.Metrics.AspNetCore" Version="4.0.0-*" />
+    <PackageReference Include="App.Metrics.AspNetCore.Endpoints" Version="4.0.0-*" />
+    <PackageReference Include="App.Metrics.AspNetCore.Hosting" Version="4.0.0-*" />
+    <PackageReference Include="App.Metrics.Extensions.Configuration" Version="4.0.0-*" />
+    <PackageReference Include="App.Metrics.Extensions.DependencyInjection" Version="4.0.0-*" />
+    <PackageReference Include="App.Metrics.Extensions.HealthChecks" Version="4.0.0-*" />
+    <PackageReference Include="App.Metrics.Formatters.Prometheus" Version="4.0.0-*" />
+    <PackageReference Include="Enums.NET" Version="3.0.2" />
+    <PackageReference Include="Microsoft.CodeAnalysis.BannedApiAnalyzers" Version="2.9.8" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8" />
+    <PackageReference Include="Roslynator.Analyzers" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="../BannedSymbols.txt" />
+    <None Include="../Data/**" LinkBase="Data/" CopyToOutputDirectory="Always" />
+  </ItemGroup>
 
 </Project>
