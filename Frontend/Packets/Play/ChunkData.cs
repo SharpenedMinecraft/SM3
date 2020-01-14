@@ -24,7 +24,6 @@ namespace Frontend.Packets.Play
             writer.WriteInt32(Position.Z);
             writer.WriteBoolean(true); // Full Chunks only
 
-            const int last16Bits = 0b0000_0000_0000_0000_1111_1111_1111_1111;
             var sectionMask = CalculateMask(Chunk.States.Span, Chunk, out var chunksSend, out var chunkNonZeroCount);
             writer.WriteVarInt(sectionMask);
 
