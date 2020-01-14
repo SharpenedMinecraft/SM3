@@ -20,7 +20,7 @@ namespace Frontend
             Directory.SetCurrentDirectory(Path.GetDirectoryName(Assembly.GetEntryAssembly()?.Location));
             using var host = CreateHostBuilder(args).Build();
             Console.WriteLine($"Log of SM3 @ {DateTime.UtcNow}");
-            Console.WriteLine("Version: 0.2.0");
+            Console.WriteLine("Version: 0.3.0");
             #if AVX && !NO_OPTIMIZATION
             Console.WriteLine("This Build uses AVX if supported (DOWNCLOCKED OR NOT)");
             #endif
