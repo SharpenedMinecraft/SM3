@@ -21,9 +21,6 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.100
-    - uses: actions/download-artifact@v1
-      with:
-        name: upload_url
     - name: Build with dotnet
       run: dotnet publish -r ${{ matrix.runtime }} -c Release /p:PublishSingleFile=true -o ./output/
       working-directory: ./Frontend/
