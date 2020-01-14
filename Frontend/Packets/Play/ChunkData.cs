@@ -53,15 +53,11 @@ namespace Frontend.Packets.Play
                 Span<ulong> longs = new ulong[requiredLongs];
                 var bitBuffer = new BitBuffer(longs);
 
+                for (int y = 0; y < 16; y++)
                 for (int x = 0; x < ReadOnlyChunk.Width; x++)
+                for (int z = 0; z < ReadOnlyChunk.Depth; z++)
                 {
-                    for (int z = 0; z < ReadOnlyChunk.Depth; z++)
-                    {
-                        for (int y = 0; y < 16; y++)
-                        {
-                            bitBuffer.WriteInt32(Chunk[(x, (section * 16) + y, z)].State, 14);
-                        }
-                    }
+                    bitBuffer.WriteInt32(Chunk[(x, (section * 16) + y, z)].State, 14);
                 }
 
                 for (int i = 0; i < longs.Length; i++)
@@ -122,18 +118,19 @@ namespace Frontend.Packets.Play
                         for (int z = 0; z < ReadOnlyChunk.Depth; z++)
                         {
                             var index = chunk.CalculateStateIndex((x, (y + section * 16), z));
-                            if (blocks[index].State == 0)
+                            if (blocks[index].State != 0)
                             {
-                                goto nomask;
+                                nonZeroCount[section]++;
                             }
-                            nonZeroCount[section]++;
                         }
                     }
                 }
 
-                mask |= 1 << section;
-                bitsSet++;
-                nomask: ;
+                if (nonZeroCount[section] > 0)
+                {
+                    mask |= 1 << section;
+                    bitsSet++;
+                }
             }
 
             return mask;
