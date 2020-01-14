@@ -21,7 +21,12 @@ namespace Frontend
             WriteCompound(root.Value, isImplicit);
         }
 
-        public void WriteTag(INbtTag tag)
+        public void WriteRoot(NbtCompound root)
+        {
+            WriteCompound(root.Value, true);
+        }
+
+        private void WriteTag(INbtTag tag)
         {
             switch (tag.TagType)
             {
