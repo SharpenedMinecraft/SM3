@@ -3,7 +3,6 @@ name: Test and build master
 on:
   push:
     branches:
-      - dev
       - master
 
 jobs:
