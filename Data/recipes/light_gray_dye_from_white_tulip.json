@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "light_gray_dye",
-  "ingredients": [
-    {
-      "item": "minecraft:white_tulip"
-    }
-  ],
-  "result": {
-    "item": "minecraft:light_gray_dye"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:436c564738e42a7241f9f9f40a200ebb8bf45c1a05a41f07abc0686e6c785fdf
+size 205

@@ -1,32 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "conditions": [
-                {
-                  "condition": "minecraft:block_state_property",
-                  "block": "minecraft:dark_oak_slab",
-                  "properties": {
-                    "type": "double"
-                  }
-                }
-              ],
-              "count": 2
-            },
-            {
-              "function": "minecraft:explosion_decay"
-            }
-          ],
-          "name": "minecraft:dark_oak_slab"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:34edd53d9bd6ec863061ee51c3bb2939d0dff4ce6122ebb7ff79fcec0e0e49ff
+size 722

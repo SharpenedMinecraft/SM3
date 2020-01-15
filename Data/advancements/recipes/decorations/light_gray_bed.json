@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:light_gray_bed"
-    ]
-  },
-  "criteria": {
-    "has_light_gray_wool": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:light_gray_wool"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:light_gray_bed"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_light_gray_wool",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fcce07bb2063c19d33dfef67dbc77a5005b8111afbd3b265387c04ba5ff71e01
+size 592

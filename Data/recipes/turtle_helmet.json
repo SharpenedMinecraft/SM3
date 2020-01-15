@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "XXX",
-    "X X"
-  ],
-  "key": {
-    "X": {
-      "item": "minecraft:scute"
-    }
-  },
-  "result": {
-    "item": "minecraft:turtle_helmet"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:37956264331095422588c58a8a23a1b3e6d60564fbfbf3237089590b9b833c05
+size 204

@@ -1,33 +1,3 @@
-{
-  "parent": "minecraft:adventure/trade",
-  "display": {
-    "icon": {
-      "item": "minecraft:carved_pumpkin"
-    },
-    "title": {
-      "translate": "advancements.adventure.summon_iron_golem.title"
-    },
-    "description": {
-      "translate": "advancements.adventure.summon_iron_golem.description"
-    },
-    "frame": "goal",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "summoned_golem": {
-      "trigger": "minecraft:summoned_entity",
-      "conditions": {
-        "entity": {
-          "type": "minecraft:iron_golem"
-        }
-      }
-    }
-  },
-  "requirements": [
-    [
-      "summoned_golem"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ff6c23fb645d7bd5668440ae6de7056f91a31bb7550d37072df1780e090d5173
+size 670

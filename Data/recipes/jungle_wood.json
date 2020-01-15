@@ -1,17 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "bark",
-  "pattern": [
-    "##",
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:jungle_log"
-    }
-  },
-  "result": {
-    "item": "minecraft:jungle_wood",
-    "count": 3
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8aa2fe13670b94d4879b992f69041fda5e5abcf9bc4f99d2a9f86fff73e98be4
+size 240

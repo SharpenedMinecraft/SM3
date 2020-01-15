@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:glowstone"
-    ]
-  },
-  "criteria": {
-    "has_glowstone_dust": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:glowstone_dust"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:glowstone"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_glowstone_dust",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:77fa0ed04a703eeb8e11528fe93f1ab9444246c1aad6a325fcf1e9d04dcf8579
+size 579

@@ -1,11 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:oak_boat",
-    "minecraft:spruce_boat",
-    "minecraft:birch_boat",
-    "minecraft:jungle_boat",
-    "minecraft:acacia_boat",
-    "minecraft:dark_oak_boat"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:56eb445db48748e766314fbc000e68328e7cc8ddf4c12186190d6876eafbcffd
+size 212

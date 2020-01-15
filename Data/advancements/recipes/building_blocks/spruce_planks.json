@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:spruce_planks"
-    ]
-  },
-  "criteria": {
-    "has_log": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "tag": "minecraft:spruce_logs"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:spruce_planks"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_log",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:65c4ae6b39759879a58ca4ca9ea021b2d355a38fe7662da496bbdf4072de2fa5
+size 561

@@ -1,29 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:tube_coral"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:match_tool",
-          "predicate": {
-            "enchantments": [
-              {
-                "enchantment": "minecraft:silk_touch",
-                "levels": {
-                  "min": 1
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3192413811addda7b72f02dcff24944ff63b08a2100b8adab94ec34613e10964
+size 542

@@ -1,22 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "III",
-    "IXI",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:smooth_stone"
-    },
-    "X": {
-      "item": "minecraft:furnace"
-    },
-    "I": {
-      "item": "minecraft:iron_ingot"
-    }
-  },
-  "result": {
-    "item": "minecraft:blast_furnace"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:142ebcf88b6b27e694470c607d1cac3a527963cd6884b39847bc856f5d3639ed
+size 329

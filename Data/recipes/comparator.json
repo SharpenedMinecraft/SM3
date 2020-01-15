@@ -1,22 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " # ",
-    "#X#",
-    "III"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:redstone_torch"
-    },
-    "X": {
-      "item": "minecraft:quartz"
-    },
-    "I": {
-      "item": "minecraft:stone"
-    }
-  },
-  "result": {
-    "item": "minecraft:comparator"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a665082be860345d912326fa5f5c6160e05dc99573dabda81153c4c891971bf6
+size 322

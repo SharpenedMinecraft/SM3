@@ -1,17 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:polished_andesite"
-    }
-  },
-  "result": {
-    "item": "minecraft:polished_andesite_stairs",
-    "count": 4
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f7fdc779f645917e118c40a66667fc44c41a932c2d10e9b142a583d53d68b0f5
+size 254

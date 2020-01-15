@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:cartography_table"
-    ]
-  },
-  "criteria": {
-    "has_string": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:string"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:cartography_table"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_string",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8a6602de23f38e31bc1addef019d92f93a75a508f223ad27dae6385f235dc61e
+size 571

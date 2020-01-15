@@ -1,17 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "bark",
-  "pattern": [
-    "##",
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:dark_oak_log"
-    }
-  },
-  "result": {
-    "item": "minecraft:dark_oak_wood",
-    "count": 3
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bca125cc7531a980d22ebc8fb6b9bac3a689e3122d7f7f6f69ce19bfc815cff8
+size 244

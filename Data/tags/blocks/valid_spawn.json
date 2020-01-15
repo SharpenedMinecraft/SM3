@@ -1,7 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:grass_block",
-    "minecraft:podzol"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ae02dd4c5665d24ccf0f2d1240a23680f5a1878b6365b34097178620dc1b3f75
+size 93

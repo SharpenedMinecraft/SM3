@@ -1,32 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "conditions": [
-                {
-                  "condition": "minecraft:block_state_property",
-                  "block": "minecraft:purpur_slab",
-                  "properties": {
-                    "type": "double"
-                  }
-                }
-              ],
-              "count": 2
-            },
-            {
-              "function": "minecraft:explosion_decay"
-            }
-          ],
-          "name": "minecraft:purpur_slab"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1f1be508b6a881799d52ac9b52deea38ccebb00751c7ad07262d5f87a6d4addf
+size 718

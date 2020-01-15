@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:glass"
-    ]
-  },
-  "criteria": {
-    "has_sand": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "tag": "minecraft:sand"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:glass"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_sand",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc50082ee5d37ef7092fe6bcde12605b1b64b19cb1114e2a853a0e667a29b22a
+size 540

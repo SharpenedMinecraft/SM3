@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:purpur_block"
-    ]
-  },
-  "criteria": {
-    "has_chorus_fruit_popped": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:popped_chorus_fruit"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:purpur_block"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_chorus_fruit_popped",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:806867cafa8a09e12a2c15d7ca9ecc09b084453c3ddc2648eac200cab389d333
+size 600

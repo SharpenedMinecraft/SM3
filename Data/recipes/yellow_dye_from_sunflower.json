@@ -1,13 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "yellow_dye",
-  "ingredients": [
-    {
-      "item": "minecraft:sunflower"
-    }
-  ],
-  "result": {
-    "item": "minecraft:yellow_dye",
-    "count": 2
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c446f74c6c17f912e6d982d5095c326be8905e82fdef9722dfc365e474021f46
+size 211

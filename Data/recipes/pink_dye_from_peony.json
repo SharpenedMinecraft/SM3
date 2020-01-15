@@ -1,13 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "pink_dye",
-  "ingredients": [
-    {
-      "item": "minecraft:peony"
-    }
-  ],
-  "result": {
-    "item": "minecraft:pink_dye",
-    "count": 2
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a932432e5ab0cf85d5c48f024daf94b4490da996be00bca124ddadbfa60ffe32
+size 203

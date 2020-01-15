@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:cooked_cod_from_smoking"
-    ]
-  },
-  "criteria": {
-    "has_cod": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:cod"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:cooked_cod_from_smoking"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_cod",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:df96cde747b63b0f5583585bae63796ecc8897390944d25e76cb49cf009072f7
+size 574

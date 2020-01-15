@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:emerald_block"
-    }
-  ],
-  "result": {
-    "item": "minecraft:emerald",
-    "count": 9
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:00408ca62fb3a4ae2e19ce6068cf132cfa0350518178df4ba98892e2389e1447
+size 187

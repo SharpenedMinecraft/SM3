@@ -1,22 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " B ",
-    "D#D",
-    "###"
-  ],
-  "key": {
-    "B": {
-      "item": "minecraft:book"
-    },
-    "#": {
-      "item": "minecraft:obsidian"
-    },
-    "D": {
-      "item": "minecraft:diamond"
-    }
-  },
-  "result": {
-    "item": "minecraft:enchanting_table"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1df2eee175abf8ac2d660470d378c444544579d5d41c770869e0d3686fcd2c2d
+size 322

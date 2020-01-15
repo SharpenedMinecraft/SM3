@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:furnace"
-    ]
-  },
-  "criteria": {
-    "has_cobblestone": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:cobblestone"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:furnace"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_cobblestone",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bf068185c2fb3f57a2808bc39b6baa83934c210063600b15fea02d98a621e40e
+size 566

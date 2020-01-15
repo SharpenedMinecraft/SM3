@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:magenta_stained_glass_pane"
-    ]
-  },
-  "criteria": {
-    "has_glass": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:glass"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:magenta_stained_glass_pane"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_glass",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dba9cfe4b1c6886708c5b07ea882609a8c27d0448370d88e65b97f7556f905d8
+size 586

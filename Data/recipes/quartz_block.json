@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "##",
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:quartz"
-    }
-  },
-  "result": {
-    "item": "minecraft:quartz_block"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8501b23acedd4dbf7e38acb022ca83abe3768a6f9805319a531450f0d7e21725
+size 202

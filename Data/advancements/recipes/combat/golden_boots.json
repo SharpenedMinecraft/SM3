@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:golden_boots"
-    ]
-  },
-  "criteria": {
-    "has_gold_ingot": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:gold_ingot"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:golden_boots"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_gold_ingot",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b63566ca7df9eb1c070f15d1d53a3cb51f584ef5f83acafa26bed64a438004a6
+size 573

@@ -1,21 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "I-I",
-    "# #"
-  ],
-  "key": {
-    "I": {
-      "item": "minecraft:stick"
-    },
-    "-": {
-      "item": "minecraft:stone_slab"
-    },
-    "#": {
-      "tag": "minecraft:planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:grindstone"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f8b2f636c534d2a5953280729064e9989f6e7de3e9ea4d60c8cb50ef6386f7bc
+size 306

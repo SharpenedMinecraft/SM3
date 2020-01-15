@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "A",
-    "B"
-  ],
-  "key": {
-    "A": {
-      "item": "minecraft:hopper"
-    },
-    "B": {
-      "item": "minecraft:minecart"
-    }
-  },
-  "result": {
-    "item": "minecraft:hopper_minecart"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:358ecb5d9f18e7048c10dcbdaae1487cb0c523a219ae8208929633a57b4c8ec1
+size 256

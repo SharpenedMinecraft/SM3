@@ -1,30 +1,3 @@
-{
-  "type": "minecraft:gift",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:cooked_rabbit"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:cooked_chicken"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:cooked_porkchop"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:cooked_beef"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:cooked_mutton"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c2596f7b7c7ab93111f734ad9ee16691a7b7aa2d3588756cc99d9553c14f7459
+size 610

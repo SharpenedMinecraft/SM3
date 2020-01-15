@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "MMM",
-    "MMM",
-    "MMM"
-  ],
-  "key": {
-    "M": {
-      "item": "minecraft:melon_slice"
-    }
-  },
-  "result": {
-    "item": "minecraft:melon"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1c6bac4051ab543df1d6d895dc8580578c7d30e23d974ed7b1929837d4689883
+size 213

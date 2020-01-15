@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:oak_button"
-    ]
-  },
-  "criteria": {
-    "has_planks": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:oak_planks"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:oak_button"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_planks",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7955d19e22629944f8df411728a60ce9d5aaefc874fe7637306da899c8a64b17
+size 561

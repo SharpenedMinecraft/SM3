@@ -1,17 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_trapdoor",
-  "pattern": [
-    "###",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:jungle_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:jungle_trapdoor",
-    "count": 2
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d6151ad39c65117b91bcf29e0b5ef04af19e60cf4419e6f9f0ac191acda62ab9
+size 260

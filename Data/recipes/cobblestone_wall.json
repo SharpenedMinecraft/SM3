@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:cobblestone"
-    }
-  },
-  "result": {
-    "item": "minecraft:cobblestone_wall",
-    "count": 6
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d171ea4faaefd560aef0dd19c55d9d17ef3984e096cda9cffe4e4f6f0128fc93
+size 229

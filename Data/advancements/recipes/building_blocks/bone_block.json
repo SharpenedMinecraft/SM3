@@ -1,35 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:bone_block"
-    ]
-  },
-  "criteria": {
-    "has_at_least_9_bonemeal": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:bone_meal",
-            "count": {
-              "min": 9
-            }
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:bone_block"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_at_least_9_bonemeal",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7f56d768f3f952ab1faaa61d63b0da7404c6d8fa55d9d6e2f3f716880d94fd9a
+size 647

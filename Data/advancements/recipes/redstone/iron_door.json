@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:iron_door"
-    ]
-  },
-  "criteria": {
-    "has_iron_ingot": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:iron_ingot"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:iron_door"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_iron_ingot",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bbd3e5285f5a5ad7ad73d8ed6de8375e9df6539cda763fbed8ac209059d1dc83
+size 567

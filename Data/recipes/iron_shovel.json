@@ -1,19 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "X",
-    "#",
-    "#"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "X": {
-      "item": "minecraft:iron_ingot"
-    }
-  },
-  "result": {
-    "item": "minecraft:iron_shovel"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:99ad1fa932c4c8ce69076ca98f87d9bcf5df6d780d3997525d0e97476bd60d03
+size 262

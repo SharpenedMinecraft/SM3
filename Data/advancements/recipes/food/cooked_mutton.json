@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:cooked_mutton"
-    ]
-  },
-  "criteria": {
-    "has_mutton": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:mutton"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:cooked_mutton"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_mutton",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b865b64d2f26e1c8a792b6a7a8c07775c41c653cbdb0132b151ddeeba54fcd56
+size 563

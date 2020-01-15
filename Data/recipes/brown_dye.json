@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "brown_dye",
-  "ingredients": [
-    {
-      "item": "minecraft:cocoa_beans"
-    }
-  ],
-  "result": {
-    "item": "minecraft:brown_dye"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1061613219ed7dcbad8e3550830145e2c42028bf8ea9bccca0b96b641a0039d5
+size 195

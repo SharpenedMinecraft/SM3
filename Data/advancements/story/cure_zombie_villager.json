@@ -1,29 +1,3 @@
-{
-  "parent": "minecraft:story/enter_the_nether",
-  "display": {
-    "icon": {
-      "item": "minecraft:golden_apple"
-    },
-    "title": {
-      "translate": "advancements.story.cure_zombie_villager.title"
-    },
-    "description": {
-      "translate": "advancements.story.cure_zombie_villager.description"
-    },
-    "frame": "goal",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "cured_zombie": {
-      "trigger": "minecraft:cured_zombie_villager",
-      "conditions": {}
-    }
-  },
-  "requirements": [
-    [
-      "cured_zombie"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:915f2d50770621f608fe4b537c73ffeeef2779da0181fdce29580404e7957d51
+size 597

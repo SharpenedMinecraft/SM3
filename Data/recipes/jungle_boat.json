@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "boat",
-  "pattern": [
-    "# #",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:jungle_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:jungle_boat"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e5137ac35b2a13a9cc4dbe5a19589df2468b012bc096cac6b6e588faf9ae43f3
+size 229

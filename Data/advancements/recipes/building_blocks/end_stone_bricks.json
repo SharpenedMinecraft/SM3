@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:end_stone_bricks"
-    ]
-  },
-  "criteria": {
-    "has_end_stone": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:end_stone"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:end_stone_bricks"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_end_stone",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e89ce1359f8c936bc9d409412af62267a2a97ef782712f2943bdeb31de404045
+size 578

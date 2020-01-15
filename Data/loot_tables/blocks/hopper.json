@@ -1,25 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:copy_name",
-              "source": "block_entity"
-            }
-          ],
-          "name": "minecraft:hopper"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fb969b50160e176efe2f9180b17092db56fc303c25f3f0aa69530fdbb089b88f
+size 458

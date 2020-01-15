@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:end_stone_brick_slab_from_end_stone_brick_stonecutting"
-    ]
-  },
-  "criteria": {
-    "has_end_stone_brick": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:end_stone_bricks"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:end_stone_brick_slab_from_end_stone_brick_stonecutting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_end_stone_brick",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:eaa23db5ac9c4b92b36786c00a21898fc062815a11428b80d4b80e76f94dc04d
+size 673

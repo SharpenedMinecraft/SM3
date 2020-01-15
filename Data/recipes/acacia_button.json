@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "wooden_button",
-  "ingredients": [
-    {
-      "item": "minecraft:acacia_planks"
-    }
-  ],
-  "result": {
-    "item": "minecraft:acacia_button"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:47e39efa25187f40c7b78e5a3b349ea6baab08fde32b3691de5aab2754c302a6
+size 205

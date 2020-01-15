@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:iron_ore"
-  },
-  "result": "minecraft:iron_ingot",
-  "experience": 0.7,
-  "cookingtime": 200
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f1681946eb0a6e181ea01b5a0b65b1534cd577b0c5a6aed424de9a40ad451b21
+size 169

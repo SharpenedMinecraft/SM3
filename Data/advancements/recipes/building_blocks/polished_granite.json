@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:polished_granite"
-    ]
-  },
-  "criteria": {
-    "has_stone": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:granite"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:polished_granite"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_stone",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:33780afa8227606da64d8a50f61385afd907a96e4068f3b3d6de918b4429b64e
+size 568

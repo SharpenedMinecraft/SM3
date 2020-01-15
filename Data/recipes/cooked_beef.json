@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:beef"
-  },
-  "result": "minecraft:cooked_beef",
-  "experience": 0.35,
-  "cookingtime": 200
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:93c1daab819aa61ae3979ec2bdfa8a76e4ba8688490c199985d5f22fe3fb92cc
+size 167

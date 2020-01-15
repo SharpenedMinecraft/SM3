@@ -1,22 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "RRQ",
-    "###"
-  ],
-  "key": {
-    "Q": {
-      "item": "minecraft:quartz"
-    },
-    "R": {
-      "item": "minecraft:redstone"
-    },
-    "#": {
-      "item": "minecraft:cobblestone"
-    }
-  },
-  "result": {
-    "item": "minecraft:observer"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8570ce631e6a30d79f66e22abd505342d1f2e3f8f03796ae22cb0c51c73cfce5
+size 320

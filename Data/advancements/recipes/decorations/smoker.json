@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:smoker"
-    ]
-  },
-  "criteria": {
-    "has_furnace": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:furnace"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:smoker"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_furnace",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9fe32ef8d568add498eef8cda69f889d5939a7d03aff4b651236e979edfbf538
+size 552

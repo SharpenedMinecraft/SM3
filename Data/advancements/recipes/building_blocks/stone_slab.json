@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:stone_slab"
-    ]
-  },
-  "criteria": {
-    "has_stone": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:stone"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:stone_slab"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_stone",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:07574dfc0521fde98fb648b3d1ace09b2d55d5bad45e0afdecdafd3156b9809f
+size 554

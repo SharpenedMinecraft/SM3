@@ -1,19 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_fence_gate",
-  "pattern": [
-    "#W#",
-    "#W#"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "W": {
-      "item": "minecraft:spruce_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:spruce_fence_gate"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a5de6fc928b7d146f71f84657a930f0ecbe9b3343f502fd3de683a191dfbbd52
+size 298

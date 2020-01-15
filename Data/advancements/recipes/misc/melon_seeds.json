@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:melon_seeds"
-    ]
-  },
-  "criteria": {
-    "has_melon": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:melon_slice"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:melon_seeds"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_melon",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:99a2d0ac99438a12f80f2856c2929609657b7af5078866cb11964f3b77470731
+size 562

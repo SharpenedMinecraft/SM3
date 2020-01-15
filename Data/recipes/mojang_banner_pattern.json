@@ -1,14 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:paper"
-    },
-    {
-      "item": "minecraft:enchanted_golden_apple"
-    }
-  ],
-  "result": {
-    "item": "minecraft:mojang_banner_pattern"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6541600eb543e4d908e0fcb109295eee0a16499d5b229905c677580d9d50608b
+size 239

@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "light_gray_dye",
-  "ingredients": [
-    {
-      "item": "minecraft:gray_dye"
-    },
-    {
-      "item": "minecraft:white_dye"
-    }
-  ],
-  "result": {
-    "item": "minecraft:light_gray_dye",
-    "count": 2
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:73bcf5017f926b0a9932c60133b3a9e0f0116392384ba72e18de19a015c658ee
+size 267

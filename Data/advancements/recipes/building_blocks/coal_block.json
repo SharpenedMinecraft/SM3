@@ -1,35 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:coal_block"
-    ]
-  },
-  "criteria": {
-    "has_at_least_9_coal": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:coal",
-            "count": {
-              "min": 9
-            }
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:coal_block"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_at_least_9_coal",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:087f8630067b900ec6c66d46941cf5c31b8f68a4033216db6bf00294655cecb6
+size 634

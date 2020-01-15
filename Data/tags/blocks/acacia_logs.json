@@ -1,9 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:acacia_log",
-    "minecraft:acacia_wood",
-    "minecraft:stripped_acacia_log",
-    "minecraft:stripped_acacia_wood"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1189b4bdd3dd91f525d487f1b57c079942274e4c4e6ae7451401c588135064c4
+size 172

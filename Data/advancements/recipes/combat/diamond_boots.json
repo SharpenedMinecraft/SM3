@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:diamond_boots"
-    ]
-  },
-  "criteria": {
-    "has_diamond": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:diamond"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:diamond_boots"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_diamond",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f423d1716d0ad3709cfcff3038cd2a29859af7a61d29d552d907817d99cda6ef
+size 566

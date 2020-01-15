@@ -1,17 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "iron_ingot",
-  "pattern": [
-    "###",
-    "###",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:iron_nugget"
-    }
-  },
-  "result": {
-    "item": "minecraft:iron_ingot"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:83a809c34aac3330bf0c885ba7619fe85c5b0187bb2cb71d95d687756aea2e07
+size 243

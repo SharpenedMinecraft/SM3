@@ -1,35 +1,3 @@
-{
-  "parent": "minecraft:story/iron_tools",
-  "display": {
-    "icon": {
-      "item": "minecraft:diamond"
-    },
-    "title": {
-      "translate": "advancements.story.mine_diamond.title"
-    },
-    "description": {
-      "translate": "advancements.story.mine_diamond.description"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "diamond": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:diamond"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "diamond"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6033bc340cc9c850c11babad1a53180f0c72a99a2bc8cedfeb16044e1b6ff644
+size 656

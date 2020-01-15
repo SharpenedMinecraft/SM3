@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:white_glazed_terracotta"
-    ]
-  },
-  "criteria": {
-    "has_white_terracotta": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:white_terracotta"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:white_glazed_terracotta"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_white_terracotta",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:72dc5b2c79a999fda3373e8054da549407b3be54bafbcdc5b10c2b0e4bab5598
+size 613

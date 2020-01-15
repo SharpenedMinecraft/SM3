@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:gray_banner"
-    ]
-  },
-  "criteria": {
-    "has_gray_wool": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:gray_wool"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:gray_banner"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_gray_wool",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8d7cd1af921c6361b272446893ca0cd569a77829444c555ba4b0cd9c2e333217
+size 568

@@ -1,17 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_trapdoor",
-  "pattern": [
-    "###",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:birch_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:birch_trapdoor",
-    "count": 2
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d05ac43fad8ff9e9cca304d4d4e5733ffc060739f68edf46974072cfebf88374
+size 258

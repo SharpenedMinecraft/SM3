@@ -1,21 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "carpet",
-  "pattern": [
-    "###",
-    "#$#",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:white_carpet"
-    },
-    "$": {
-      "item": "minecraft:blue_dye"
-    }
-  },
-  "result": {
-    "item": "minecraft:blue_carpet",
-    "count": 8
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e222d6748b3202f7c9d636b0ba5ef951bb6c47e1369a42b4a04e146e18fcc19f
+size 310

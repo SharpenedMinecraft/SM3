@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:green_carpet"
-    ]
-  },
-  "criteria": {
-    "has_green_wool": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:green_wool"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:green_carpet"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_green_wool",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:abb31dde508006c528f95ae954318718217e26e20563a96cbc98d432270fd0cd
+size 573

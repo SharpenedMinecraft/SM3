@@ -1,25 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:copy_name",
-              "source": "block_entity"
-            }
-          ],
-          "name": "minecraft:trapped_chest"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:23619f8981ea919bca9fd1ac67ba52cf782790d9ef845979dd08dfdb0c57c915
+size 465

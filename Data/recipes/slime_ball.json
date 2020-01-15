@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:slime_block"
-    }
-  ],
-  "result": {
-    "item": "minecraft:slime_ball",
-    "count": 9
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5e2abcf02c192b5569826391823512a333f2664a7e687d345f62f6d0ab4071db
+size 188

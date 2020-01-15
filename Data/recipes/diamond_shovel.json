@@ -1,19 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "X",
-    "#",
-    "#"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "X": {
-      "item": "minecraft:diamond"
-    }
-  },
-  "result": {
-    "item": "minecraft:diamond_shovel"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5bd0bf4cc127d8e68fe27944987c570f216f125d881559b3718ef944d96c80aa
+size 262

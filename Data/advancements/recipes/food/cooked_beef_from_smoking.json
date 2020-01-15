@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:cooked_beef_from_smoking"
-    ]
-  },
-  "criteria": {
-    "has_beef": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:beef"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:cooked_beef_from_smoking"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_beef",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0d6ae9c460a80bed8b1ddc9f1c33c07c5761edb0d49aba29e69692ee58a4e5d4
+size 579

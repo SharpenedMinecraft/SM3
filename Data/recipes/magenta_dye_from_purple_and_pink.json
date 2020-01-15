@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "magenta_dye",
-  "ingredients": [
-    {
-      "item": "minecraft:purple_dye"
-    },
-    {
-      "item": "minecraft:pink_dye"
-    }
-  ],
-  "result": {
-    "item": "minecraft:magenta_dye",
-    "count": 2
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:86d5bd69a17cf8ce6a44bd3e0d256dd91ccc2677a965265b60e788b7cc28e4a8
+size 262

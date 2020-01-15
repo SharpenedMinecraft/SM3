@@ -1,19 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " # ",
-    "#X#",
-    " # "
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:gold_ingot"
-    },
-    "X": {
-      "item": "minecraft:redstone"
-    }
-  },
-  "result": {
-    "item": "minecraft:clock"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:134b7264908ccfa60023edbc27a6f36bcb6d37756b66e05781cd2b3e3fe6a5fd
+size 265

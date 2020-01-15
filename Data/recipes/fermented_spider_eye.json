@@ -1,17 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:spider_eye"
-    },
-    {
-      "item": "minecraft:brown_mushroom"
-    },
-    {
-      "item": "minecraft:sugar"
-    }
-  ],
-  "result": {
-    "item": "minecraft:fermented_spider_eye"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:949c2099949519b966675d57915de5c163295c3ac94cf5bc563024fb536bb366
+size 280

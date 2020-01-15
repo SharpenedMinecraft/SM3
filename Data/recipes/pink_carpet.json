@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "carpet",
-  "pattern": [
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:pink_wool"
-    }
-  },
-  "result": {
-    "item": "minecraft:pink_carpet",
-    "count": 3
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a1b398917af975e23c40e9ef88dadaf9142ca2f9bcc0aa1b4d7d5a7d388acf02
+size 231

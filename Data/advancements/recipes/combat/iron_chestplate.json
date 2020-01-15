@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:iron_chestplate"
-    ]
-  },
-  "criteria": {
-    "has_iron_ingot": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:iron_ingot"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:iron_chestplate"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_iron_ingot",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:66c3088a6a7c22c53732dcc0f524cc5e610d57edb095dd94fed54a7816f8e88e
+size 579

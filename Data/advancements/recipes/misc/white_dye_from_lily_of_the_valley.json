@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:white_dye_from_lily_of_the_valley"
-    ]
-  },
-  "criteria": {
-    "has_white_flower": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:lily_of_the_valley"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:white_dye_from_lily_of_the_valley"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_white_flower",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f8fc12047766749aa7906ef971f923270f3fc2187af4ac885a35254ced5806dc
+size 627

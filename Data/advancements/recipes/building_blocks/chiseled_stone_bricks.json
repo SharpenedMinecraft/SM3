@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:chiseled_stone_bricks"
-    ]
-  },
-  "criteria": {
-    "has_stone_bricks": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "tag": "minecraft:stone_bricks"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:chiseled_stone_bricks"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_stone_bricks",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3565211222e8ae00ad2d86d6be79b8166ebed8474ba099fa771cd75ffeabdd0d
+size 596

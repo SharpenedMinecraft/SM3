@@ -1,19 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "#X#",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "tag": "minecraft:planks"
-    },
-    "X": {
-      "item": "minecraft:redstone"
-    }
-  },
-  "result": {
-    "item": "minecraft:note_block"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:76fa087904afbd7153404f3f601976de9ace7f18e2d86b4d43d9062b329f6c57
+size 265

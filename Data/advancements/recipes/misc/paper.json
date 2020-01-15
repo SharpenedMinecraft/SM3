@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:paper"
-    ]
-  },
-  "criteria": {
-    "has_reeds": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:sugar_cane"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:paper"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_reeds",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:575e540f9bc3d6263fe104aabc36cfcb89ef3b3974f460c2cc5167309328e37e
+size 549

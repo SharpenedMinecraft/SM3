@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:torch"
-    ]
-  },
-  "criteria": {
-    "has_stone_pickaxe": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:stone_pickaxe"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:torch"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_stone_pickaxe",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:aa73eb98021261c169686294b64e1e6ce77d54227b74d039c7b7ccbb93ecc007
+size 568

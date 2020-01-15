@@ -1,17 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:cobblestone"
-    }
-  },
-  "result": {
-    "item": "minecraft:cobblestone_stairs",
-    "count": 4
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:715cb3e8fe1af8ef954f2d4545233c7964e45ccc3639d1e429e6c4f6f1d4b792
+size 242

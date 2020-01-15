@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:smooth_sandstone_stairs"
-    ]
-  },
-  "criteria": {
-    "has_smooth_sandstone": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:smooth_sandstone"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:smooth_sandstone_stairs"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_smooth_sandstone",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:44a3697f8fcbffcfafd086006a2f8a2287509dc809e2df5734e98c741af06b0d
+size 613

@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:dispenser"
-    ]
-  },
-  "criteria": {
-    "has_bow": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:bow"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:dispenser"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_bow",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:59df5654f65a680373323e908df37a9d393875b7a315b387982e1a063169ad48
+size 546

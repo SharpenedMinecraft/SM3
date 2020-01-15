@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "X X",
-    "XXX",
-    "XXX"
-  ],
-  "key": {
-    "X": {
-      "item": "minecraft:diamond"
-    }
-  },
-  "result": {
-    "item": "minecraft:diamond_chestplate"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c66044e702d76eee426e01e32deaf1de9a829382a705b30b99a8a92517f65555
+size 222

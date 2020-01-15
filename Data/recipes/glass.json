@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "tag": "minecraft:sand"
-  },
-  "result": "minecraft:glass",
-  "experience": 0.1,
-  "cookingtime": 200
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7dbb449ad6bd096115db88838f14f7b5f4c2889d90f8a813eff8128ada0bbad0
+size 159

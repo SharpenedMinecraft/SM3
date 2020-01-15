@@ -1,8 +1,3 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:red_nether_bricks"
-  },
-  "result": "minecraft:red_nether_brick_stairs",
-  "count": 1
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5591543c7d8be5bcf19fb0eca7411774869981ba029624ac5824c089c6af559f
+size 166

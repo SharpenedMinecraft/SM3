@@ -1,35 +1,3 @@
-{
-  "parent": "minecraft:story/lava_bucket",
-  "display": {
-    "icon": {
-      "item": "minecraft:obsidian"
-    },
-    "title": {
-      "translate": "advancements.story.form_obsidian.title"
-    },
-    "description": {
-      "translate": "advancements.story.form_obsidian.description"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "obsidian": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:obsidian"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "obsidian"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:78115e3a5266ff751d807121200b3a4be5c66c62ea135f3ecbcfbdfe12b2af87
+size 663

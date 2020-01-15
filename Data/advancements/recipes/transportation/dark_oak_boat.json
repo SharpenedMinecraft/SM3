@@ -1,28 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:dark_oak_boat"
-    ]
-  },
-  "criteria": {
-    "in_water": {
-      "trigger": "minecraft:enter_block",
-      "conditions": {
-        "block": "minecraft:water"
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:dark_oak_boat"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "in_water",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7489ad6db1ebc183190e5b146be1d994638dcd7d56bca8679d1070473836479c
+size 496

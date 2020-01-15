@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "red_dye",
-  "ingredients": [
-    {
-      "item": "minecraft:beetroot"
-    }
-  ],
-  "result": {
-    "item": "minecraft:red_dye"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6cfa4759ae3e05d9e30c18dac547c9ff32ea71ff75083f4ea1ebf2cc33d9f650
+size 188

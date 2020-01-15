@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:leather_boots"
-    ]
-  },
-  "criteria": {
-    "has_leather": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:leather"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:leather_boots"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_leather",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a5fd1d4917ce94bf16b379b23fd8c4f9f15b73d5fd24eb92514b3eff286d93eb
+size 566

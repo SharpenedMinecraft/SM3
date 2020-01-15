@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:diorite"
-    }
-  },
-  "result": {
-    "item": "minecraft:diorite_wall",
-    "count": 6
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:88ad82254c9963f9a43006e6c509dce8ef580d622f809cddbe6e57ff6124f8bc
+size 221

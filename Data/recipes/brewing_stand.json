@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " B ",
-    "###"
-  ],
-  "key": {
-    "B": {
-      "item": "minecraft:blaze_rod"
-    },
-    "#": {
-      "item": "minecraft:cobblestone"
-    }
-  },
-  "result": {
-    "item": "minecraft:brewing_stand"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6022f5ed90cbd73bc6d4329b3737a3774e975b05b0f6a28718715fa836ce4b86
+size 264

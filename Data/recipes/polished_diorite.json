@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "SS",
-    "SS"
-  ],
-  "key": {
-    "S": {
-      "item": "minecraft:diorite"
-    }
-  },
-  "result": {
-    "item": "minecraft:polished_diorite",
-    "count": 4
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0ac0968ff55c49f24abd773e1abb325602d082e75cde1ed9540398a4d9c6baab
+size 223

@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "minecraft:nether_quartz_ore"
-  },
-  "result": "minecraft:quartz",
-  "experience": 0.2,
-  "cookingtime": 100
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:20df28cb549c758afa79831f4fae06cdb9ac04adb31a6c05bf1310068ff15f0a
+size 174

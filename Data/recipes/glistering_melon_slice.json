@@ -1,19 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "#X#",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:gold_nugget"
-    },
-    "X": {
-      "item": "minecraft:melon_slice"
-    }
-  },
-  "result": {
-    "item": "minecraft:glistering_melon_slice"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:40f6d8ac226e66ea8e41850bbb117a86d38a5d7fa4d83a16ee4f42835a5f08d1
+size 286

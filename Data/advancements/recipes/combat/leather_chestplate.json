@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:leather_chestplate"
-    ]
-  },
-  "criteria": {
-    "has_leather": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:leather"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:leather_chestplate"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_leather",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5f5f932c946d3852bd7db4cdcb78381c94fc2fe422973d7eee16e220412ec3c4
+size 576

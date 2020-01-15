@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:lapis_ore"
-  },
-  "result": "minecraft:lapis_lazuli",
-  "experience": 0.2,
-  "cookingtime": 200
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:499991476caedf3ecd498dde6877aeae4672587138db610e31a3bad2995644b4
+size 172

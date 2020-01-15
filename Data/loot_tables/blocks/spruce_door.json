@@ -1,28 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "conditions": [
-            {
-              "condition": "minecraft:block_state_property",
-              "block": "minecraft:spruce_door",
-              "properties": {
-                "half": "lower"
-              }
-            }
-          ],
-          "name": "minecraft:spruce_door"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1ffa96cc1113f1d57e8bc83c0630cb810dd8bb04728d88f2eb6ea3a0970f92a3
+size 563

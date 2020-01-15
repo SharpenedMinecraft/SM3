@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:andesite"
-    }
-  },
-  "result": {
-    "item": "minecraft:andesite_wall",
-    "count": 6
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0810b51e37b01c58e07f2745c90360fd0ba91dabec10ceb09f8856ce19b10085
+size 223

@@ -1,28 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "conditions": [
-            {
-              "condition": "minecraft:block_state_property",
-              "block": "minecraft:sunflower",
-              "properties": {
-                "half": "lower"
-              }
-            }
-          ],
-          "name": "minecraft:sunflower"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:32891c68d00f04933e3109851506453f58fa324bb74d3b3b382d2de9d8520c12
+size 559

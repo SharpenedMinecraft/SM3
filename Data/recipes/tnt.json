@@ -1,24 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "X#X",
-    "#X#",
-    "X#X"
-  ],
-  "key": {
-    "#": [
-      {
-        "item": "minecraft:sand"
-      },
-      {
-        "item": "minecraft:red_sand"
-      }
-    ],
-    "X": {
-      "item": "minecraft:gunpowder"
-    }
-  },
-  "result": {
-    "item": "minecraft:tnt"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2a6c324d930e5e8ab2e40a3b8d9e0071a273cd8bc61e38b5a89c199c46c491a6
+size 330

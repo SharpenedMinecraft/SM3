@@ -1,32 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "conditions": [
-                {
-                  "condition": "minecraft:block_state_property",
-                  "block": "minecraft:jungle_slab",
-                  "properties": {
-                    "type": "double"
-                  }
-                }
-              ],
-              "count": 2
-            },
-            {
-              "function": "minecraft:explosion_decay"
-            }
-          ],
-          "name": "minecraft:jungle_slab"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e6dd22fecd19adfcf7a4d0f9448e95f840e8f09d914e7b6d06afbeff5aef893e
+size 718

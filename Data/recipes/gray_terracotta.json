@@ -1,21 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "stained_terracotta",
-  "pattern": [
-    "###",
-    "#X#",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:terracotta"
-    },
-    "X": {
-      "item": "minecraft:gray_dye"
-    }
-  },
-  "result": {
-    "item": "minecraft:gray_terracotta",
-    "count": 8
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:15b311997fcf1d4a7f805d874014b5ebe4b602667fa1faf4b86034f6d940c445
+size 324

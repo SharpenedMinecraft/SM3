@@ -1,17 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "stained_glass_pane",
-  "pattern": [
-    "###",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:white_stained_glass"
-    }
-  },
-  "result": {
-    "item": "minecraft:white_stained_glass_pane",
-    "count": 16
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bd418ce38be567a1f7555559bc141c1cc42d20368c27286506a0f88c4bb90a45
+size 279

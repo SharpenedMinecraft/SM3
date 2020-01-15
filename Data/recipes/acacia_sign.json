@@ -1,20 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "###",
-    " X "
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:acacia_planks"
-    },
-    "X": {
-      "item": "minecraft:stick"
-    }
-  },
-  "result": {
-    "item": "minecraft:acacia_sign",
-    "count": 3
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8bb6842381020890aed47fcdaae550272732fbc90be09260ce4672c0a2277ae8
+size 287

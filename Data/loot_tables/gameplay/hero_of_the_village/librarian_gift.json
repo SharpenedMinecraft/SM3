@@ -1,14 +1,3 @@
-{
-  "type": "minecraft:gift",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:book"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1df2e0ce9e043b1dccf1aba41cb4c90761ca2fb317249dc1b7c641330135d185
+size 196

@@ -1,14 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:skeleton_skull"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0b6a9f4d3563e1bef95de0389901d31ef0c7e01bca893ff01789beedaae4652b
+size 207

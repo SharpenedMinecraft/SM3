@@ -1,17 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "bark",
-  "pattern": [
-    "##",
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:acacia_log"
-    }
-  },
-  "result": {
-    "item": "minecraft:acacia_wood",
-    "count": 3
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e84c1358de06ead495727a943892420cda2ff625a94d6e8503569cf34c3cdeb7
+size 240

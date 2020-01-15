@@ -1,35 +1,3 @@
-{
-  "parent": "minecraft:story/upgrade_tools",
-  "display": {
-    "icon": {
-      "item": "minecraft:iron_ingot"
-    },
-    "title": {
-      "translate": "advancements.story.smelt_iron.title"
-    },
-    "description": {
-      "translate": "advancements.story.smelt_iron.description"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "iron": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:iron_ingot"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "iron"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:40dcb6560f659b329d97efa80128b3f18e020000dce007889e78b205b0c5a522
+size 655

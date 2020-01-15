@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "##",
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:end_stone"
-    }
-  },
-  "result": {
-    "item": "minecraft:end_stone_bricks",
-    "count": 4
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0aae1b3fceff4b83ecd5bec62cb73fd7debe8015d91a3b31905a296208dcc2af
+size 225

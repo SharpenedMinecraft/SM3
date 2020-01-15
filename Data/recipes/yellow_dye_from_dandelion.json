@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "yellow_dye",
-  "ingredients": [
-    {
-      "item": "minecraft:dandelion"
-    }
-  ],
-  "result": {
-    "item": "minecraft:yellow_dye"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7665de9fac034cb4dcfacb60923403ac5f6d224bf314e9ab63acc936407cc7ec
+size 195

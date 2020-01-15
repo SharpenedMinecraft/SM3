@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "A",
-    "B"
-  ],
-  "key": {
-    "A": {
-      "item": "minecraft:carved_pumpkin"
-    },
-    "B": {
-      "item": "minecraft:torch"
-    }
-  },
-  "result": {
-    "item": "minecraft:jack_o_lantern"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cd6ef532a4b29413f6c0864fc72b5787e528548ae91b2e8c71d3a7be1910db47
+size 260

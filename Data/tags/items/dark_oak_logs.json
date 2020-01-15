@@ -1,9 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:dark_oak_log",
-    "minecraft:dark_oak_wood",
-    "minecraft:stripped_dark_oak_log",
-    "minecraft:stripped_dark_oak_wood"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1c245a3959d2ac84fdf853bfde6cf6d3ed4086c4c0cc73277fad98d1cf8dfaf2
+size 180

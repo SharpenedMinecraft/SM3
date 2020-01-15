@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:ladder"
-    ]
-  },
-  "criteria": {
-    "has_stick": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:stick"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:ladder"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_stick",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b350bea1b9a4b120cffb8e1c6053d5b3e7261d10ba2d468aa46934dc085797e2
+size 546

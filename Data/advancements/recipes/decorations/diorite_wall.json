@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:diorite_wall"
-    ]
-  },
-  "criteria": {
-    "has_diorite": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:diorite"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:diorite_wall"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_diorite",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4a8ba89efb17ab19ef39390efe32e480f3e9af67875c5106b6acf845e193b2dc
+size 564

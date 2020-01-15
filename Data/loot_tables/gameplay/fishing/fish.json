@@ -1,30 +1,3 @@
-{
-  "type": "minecraft:fishing",
-  "pools": [
-    {
-      "rolls": 1.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "weight": 60,
-          "name": "minecraft:cod"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 25,
-          "name": "minecraft:salmon"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 2,
-          "name": "minecraft:tropical_fish"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 13,
-          "name": "minecraft:pufferfish"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ec513a21d77013013e851ce71b9ef04ec5744eb70efec6daf70c084837fc1446
+size 588

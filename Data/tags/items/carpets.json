@@ -1,21 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:white_carpet",
-    "minecraft:orange_carpet",
-    "minecraft:magenta_carpet",
-    "minecraft:light_blue_carpet",
-    "minecraft:yellow_carpet",
-    "minecraft:lime_carpet",
-    "minecraft:pink_carpet",
-    "minecraft:gray_carpet",
-    "minecraft:light_gray_carpet",
-    "minecraft:cyan_carpet",
-    "minecraft:purple_carpet",
-    "minecraft:blue_carpet",
-    "minecraft:brown_carpet",
-    "minecraft:green_carpet",
-    "minecraft:red_carpet",
-    "minecraft:black_carpet"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:57176b0a9e5bba0507d333303f61a00506f64b3edc2c89e27ec7219e1f8b3e5e
+size 528

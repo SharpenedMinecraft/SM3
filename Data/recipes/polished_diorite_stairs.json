@@ -1,17 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:polished_diorite"
-    }
-  },
-  "result": {
-    "item": "minecraft:polished_diorite_stairs",
-    "count": 4
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3a8d844d14008576b0b12631664ae8aaec0afa643bb514ef5c3e877d8e77aa18
+size 252

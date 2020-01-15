@@ -1,29 +1,3 @@
-{
-  "display": {
-    "icon": {
-      "item": "minecraft:hay_block"
-    },
-    "title": {
-      "translate": "advancements.husbandry.root.title"
-    },
-    "description": {
-      "translate": "advancements.husbandry.root.description"
-    },
-    "frame": "task",
-    "show_toast": false,
-    "announce_to_chat": false,
-    "hidden": false,
-    "background": "minecraft:textures/gui/advancements/backgrounds/husbandry.png"
-  },
-  "criteria": {
-    "consumed_item": {
-      "trigger": "minecraft:consume_item",
-      "conditions": {}
-    }
-  },
-  "requirements": [
-    [
-      "consumed_item"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:72bdab670bbffdd31c50a74d0029f4f76a26ef754f274a5be39ad0551c34f5b6
+size 600

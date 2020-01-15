@@ -1,24 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "X",
-    "#"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "X": [
-      {
-        "item": "minecraft:coal"
-      },
-      {
-        "item": "minecraft:charcoal"
-      }
-    ]
-  },
-  "result": {
-    "item": "minecraft:torch",
-    "count": 4
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a195ea7659df11190cf8dd8d753da18160755b8fa18d82ccb2f9c8230b9e2fa7
+size 329

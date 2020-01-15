@@ -1,36 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:oak_stairs",
-    "minecraft:cobblestone_stairs",
-    "minecraft:spruce_stairs",
-    "minecraft:sandstone_stairs",
-    "minecraft:acacia_stairs",
-    "minecraft:jungle_stairs",
-    "minecraft:birch_stairs",
-    "minecraft:dark_oak_stairs",
-    "minecraft:nether_brick_stairs",
-    "minecraft:stone_brick_stairs",
-    "minecraft:brick_stairs",
-    "minecraft:purpur_stairs",
-    "minecraft:quartz_stairs",
-    "minecraft:red_sandstone_stairs",
-    "minecraft:prismarine_brick_stairs",
-    "minecraft:prismarine_stairs",
-    "minecraft:dark_prismarine_stairs",
-    "minecraft:polished_granite_stairs",
-    "minecraft:smooth_red_sandstone_stairs",
-    "minecraft:mossy_stone_brick_stairs",
-    "minecraft:polished_diorite_stairs",
-    "minecraft:mossy_cobblestone_stairs",
-    "minecraft:end_stone_brick_stairs",
-    "minecraft:stone_stairs",
-    "minecraft:smooth_sandstone_stairs",
-    "minecraft:smooth_quartz_stairs",
-    "minecraft:granite_stairs",
-    "minecraft:andesite_stairs",
-    "minecraft:red_nether_brick_stairs",
-    "minecraft:polished_andesite_stairs",
-    "minecraft:diorite_stairs"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6325a87b128e8631444faacddb8f2ac5c2bc511b470ce90de08c6728e343c0b1
+size 1153

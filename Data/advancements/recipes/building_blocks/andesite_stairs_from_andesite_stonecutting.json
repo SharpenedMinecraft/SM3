@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:andesite_stairs_from_andesite_stonecutting"
-    ]
-  },
-  "criteria": {
-    "has_andesite": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:andesite"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:andesite_stairs_from_andesite_stonecutting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_andesite",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:89ec3b415b0e9dc46f1913b5e468fb76da26d3b529969ecfc8016e026bc75a25
+size 627

@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:mojang_banner_pattern"
-    ]
-  },
-  "criteria": {
-    "has_enchanted_golden_apple": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:enchanted_golden_apple"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:mojang_banner_pattern"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_enchanted_golden_apple",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:63886d97f3ad1215d040b8d32c189f8047dbd7e0094276f57a0a9bff814ecafd
+size 627

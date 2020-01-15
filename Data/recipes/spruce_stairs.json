@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_stairs",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:spruce_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:spruce_stairs",
-    "count": 4
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:665fa9f5948cc85116b715982766ec93d899b6daeb59f9fd73b808e5b69838a1
+size 267

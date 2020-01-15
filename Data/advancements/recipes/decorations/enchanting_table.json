@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:enchanting_table"
-    ]
-  },
-  "criteria": {
-    "has_obsidian": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:obsidian"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:enchanting_table"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_obsidian",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e4ab796878de44edd39b54ee2aead2b1da60e35403fafa6e775110814386a2bd
+size 575

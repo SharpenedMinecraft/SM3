@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "minecraft:emerald_ore"
-  },
-  "result": "minecraft:emerald",
-  "experience": 1.0,
-  "cookingtime": 100
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:631a479880909d2e7c8b0f0c34581027a834e1188d64bb56da54b0019410cdce
+size 169

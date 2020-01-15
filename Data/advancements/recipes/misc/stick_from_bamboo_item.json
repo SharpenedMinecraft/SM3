@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:stick_from_bamboo_item"
-    ]
-  },
-  "criteria": {
-    "has_bamboo": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:bamboo"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:stick_from_bamboo_item"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_bamboo",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e1de46837c2aea113e6ad6e626d86999dbd7f579cff829da71df6f7103ca88c4
+size 581

@@ -1,20 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:paper"
-    },
-    {
-      "item": "minecraft:paper"
-    },
-    {
-      "item": "minecraft:paper"
-    },
-    {
-      "item": "minecraft:leather"
-    }
-  ],
-  "result": {
-    "item": "minecraft:book"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b7887660efd5ec66ab4cfd9ee0d38cecb5f308e3fcc405e7503990b8c802b4c9
+size 297

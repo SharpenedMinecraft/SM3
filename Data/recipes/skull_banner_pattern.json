@@ -1,14 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:paper"
-    },
-    {
-      "item": "minecraft:wither_skeleton_skull"
-    }
-  ],
-  "result": {
-    "item": "minecraft:skull_banner_pattern"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3bd7fce25139356a87106b0b4cc67a8122eb86eb31618e8ea8d22b5183e29867
+size 237

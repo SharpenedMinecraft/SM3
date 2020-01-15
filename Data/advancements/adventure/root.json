@@ -1,34 +1,3 @@
-{
-  "display": {
-    "icon": {
-      "item": "minecraft:map"
-    },
-    "title": {
-      "translate": "advancements.adventure.root.title"
-    },
-    "description": {
-      "translate": "advancements.adventure.root.description"
-    },
-    "frame": "task",
-    "show_toast": false,
-    "announce_to_chat": false,
-    "hidden": false,
-    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png"
-  },
-  "criteria": {
-    "killed_something": {
-      "trigger": "minecraft:player_killed_entity",
-      "conditions": {}
-    },
-    "killed_by_something": {
-      "trigger": "minecraft:entity_killed_player",
-      "conditions": {}
-    }
-  },
-  "requirements": [
-    [
-      "killed_something",
-      "killed_by_something"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7babc9f0fc4ba202d17cbf4046b01d6e6bd2274b3b8d7a1ee5b0b2644fe8bad8
+size 747

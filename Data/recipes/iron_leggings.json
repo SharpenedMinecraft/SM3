@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "XXX",
-    "X X",
-    "X X"
-  ],
-  "key": {
-    "X": {
-      "item": "minecraft:iron_ingot"
-    }
-  },
-  "result": {
-    "item": "minecraft:iron_leggings"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1fbc696f9c74c331102277c02c1bdcab6b26e02b139014e76df4f8f003aa74a4
+size 220

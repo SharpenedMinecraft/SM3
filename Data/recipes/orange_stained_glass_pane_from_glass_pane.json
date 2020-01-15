@@ -1,21 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "stained_glass_pane",
-  "pattern": [
-    "###",
-    "#$#",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:glass_pane"
-    },
-    "$": {
-      "item": "minecraft:orange_dye"
-    }
-  },
-  "result": {
-    "item": "minecraft:orange_stained_glass_pane",
-    "count": 8
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6108255da8f3487f30c289f4718c97fe9ca3cbc25e84047496278afa8523ec2b
+size 336

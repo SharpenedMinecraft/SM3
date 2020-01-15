@@ -1,8 +1,3 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:purpur_block"
-  },
-  "result": "minecraft:purpur_stairs",
-  "count": 1
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8dd258a754edbede91123790afb3461d6a1e5e8cc9604cc99c54cdb55218277c
+size 151

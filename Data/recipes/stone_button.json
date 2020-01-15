@@ -1,11 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:stone"
-    }
-  ],
-  "result": {
-    "item": "minecraft:stone_button"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f9e9393c6b65fc4f3e948232a410645828284df5f6a25635d91850bd608a794f
+size 168

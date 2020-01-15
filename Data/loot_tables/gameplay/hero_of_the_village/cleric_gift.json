@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:gift",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:redstone"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:lapis_lazuli"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cfb8b4579c55bab1083bd08feab176865d38f2ea79361c7424dd7ceacb0b94d1
+size 300

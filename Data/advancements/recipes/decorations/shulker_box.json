@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:shulker_box"
-    ]
-  },
-  "criteria": {
-    "has_shulker_shell": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:shulker_shell"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:shulker_box"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_shulker_shell",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f326f3a1f581191f847d82f6dae426e234355f24ab0250247f6d8ac579729830
+size 580

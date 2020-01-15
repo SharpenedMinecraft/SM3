@@ -1,20 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "###",
-    " X "
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:spruce_planks"
-    },
-    "X": {
-      "item": "minecraft:stick"
-    }
-  },
-  "result": {
-    "item": "minecraft:spruce_sign",
-    "count": 3
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:142b0a3c7772070f548979d7dc11325dc458177b083f79b7e4ffc48e1811e26d
+size 287

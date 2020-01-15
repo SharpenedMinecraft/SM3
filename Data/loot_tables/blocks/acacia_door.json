@@ -1,28 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "conditions": [
-            {
-              "condition": "minecraft:block_state_property",
-              "block": "minecraft:acacia_door",
-              "properties": {
-                "half": "lower"
-              }
-            }
-          ],
-          "name": "minecraft:acacia_door"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:12e9d316f81c680dd5007ca88b1ce1b1355e6571ff981f365b19b3da09663962
+size 563

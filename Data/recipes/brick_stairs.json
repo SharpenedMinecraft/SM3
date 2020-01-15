@@ -1,17 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:bricks"
-    }
-  },
-  "result": {
-    "item": "minecraft:brick_stairs",
-    "count": 4
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fc2f4578232f302f945117576aff962a27539be5fd8df8c8e1c3061917d83461
+size 231

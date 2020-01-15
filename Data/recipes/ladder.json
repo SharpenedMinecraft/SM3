@@ -1,17 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "# #",
-    "###",
-    "# #"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:stick"
-    }
-  },
-  "result": {
-    "item": "minecraft:ladder",
-    "count": 3
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2f11601f9187eb9950a5fde3c00de47f8e33e66fa0e6734a79e169484ef9bfa2
+size 224

@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:coal_from_blasting"
-    ]
-  },
-  "criteria": {
-    "has_coal_ore": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:coal_ore"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:coal_from_blasting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_coal_ore",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cab156a784a0a161bca63c91a53116834661e9c8e68b791d231a29494cfc73fc
+size 579

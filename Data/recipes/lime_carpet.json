@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "carpet",
-  "pattern": [
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:lime_wool"
-    }
-  },
-  "result": {
-    "item": "minecraft:lime_carpet",
-    "count": 3
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:318cd45ab68b5c52803dcf3f4c5614341029ca1eb685bd74c214d21504ab69a0
+size 231

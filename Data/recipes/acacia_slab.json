@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_slab",
-  "pattern": [
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:acacia_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:acacia_slab",
-    "count": 6
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2e2d23be4316bf74bee94a43feabe91642cbc60a49de4b09277e93c59fe4c364
+size 241

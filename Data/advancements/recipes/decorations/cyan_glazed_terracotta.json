@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:cyan_glazed_terracotta"
-    ]
-  },
-  "criteria": {
-    "has_cyan_terracotta": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:cyan_terracotta"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:cyan_glazed_terracotta"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_cyan_terracotta",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:29349620d65b38b190d9745c039352be184b7a342a080b4dcdcb0e8ae6119599
+size 608

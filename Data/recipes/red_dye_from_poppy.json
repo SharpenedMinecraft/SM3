@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "red_dye",
-  "ingredients": [
-    {
-      "item": "minecraft:poppy"
-    }
-  ],
-  "result": {
-    "item": "minecraft:red_dye"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:925743bdaaa6f299c9bfc05770c6e81d97afdd6292873a16db912b4e729ca425
+size 185

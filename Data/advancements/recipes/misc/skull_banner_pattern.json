@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:skull_banner_pattern"
-    ]
-  },
-  "criteria": {
-    "has_wither_skeleton_skull": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:wither_skeleton_skull"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:skull_banner_pattern"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_wither_skeleton_skull",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b3570498d5391bc0b7eed7ac83f4d13c21e6ab65e4c5254d86100807b6e9060d
+size 622

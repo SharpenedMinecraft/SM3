@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "X X",
-    "X X"
-  ],
-  "key": {
-    "X": {
-      "item": "minecraft:leather"
-    }
-  },
-  "result": {
-    "item": "minecraft:leather_boots"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f4e37eb8822530abced05efea2a052c049a5601eafbb6bdc767bced584f6f513
+size 206

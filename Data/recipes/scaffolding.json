@@ -1,20 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "I~I",
-    "I I",
-    "I I"
-  ],
-  "key": {
-    "~": {
-      "item": "minecraft:string"
-    },
-    "I": {
-      "item": "minecraft:bamboo"
-    }
-  },
-  "result": {
-    "item": "minecraft:scaffolding",
-    "count": 6
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cf18123c16546cc832e75fa9f8c4e37e1aaf6dc564f688b90e9ab67475b86559
+size 281

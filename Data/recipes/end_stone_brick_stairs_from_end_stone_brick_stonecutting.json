@@ -1,8 +1,3 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:end_stone_bricks"
-  },
-  "result": "minecraft:end_stone_brick_stairs",
-  "count": 1
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9b66c4a204a01a426c1781a64fee26f92f97e3ab2914ddd0c373603381595371
+size 164

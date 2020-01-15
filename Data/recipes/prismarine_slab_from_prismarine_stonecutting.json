@@ -1,8 +1,3 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:prismarine"
-  },
-  "result": "minecraft:prismarine_slab",
-  "count": 2
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1b47a3d5c102dc7b023272cc1156f1cfe0739830381c20ba6a739a047fce4b3a
+size 151

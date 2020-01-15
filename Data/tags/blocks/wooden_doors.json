@@ -1,11 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:oak_door",
-    "minecraft:spruce_door",
-    "minecraft:birch_door",
-    "minecraft:jungle_door",
-    "minecraft:acacia_door",
-    "minecraft:dark_oak_door"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:40f6a7aeca3a34ab8151be151c549236864f3459387ff22b5125b50b7519650b
+size 212

@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "X X",
-    "XXX",
-    "XXX"
-  ],
-  "key": {
-    "X": {
-      "item": "minecraft:leather"
-    }
-  },
-  "result": {
-    "item": "minecraft:leather_chestplate"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:77b49155d5dc23baaaad2a1cc4cd6ae0fcfcf70fac7fc473cbfa4c0784f06366
+size 222

@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:nether_brick_stairs"
-    ]
-  },
-  "criteria": {
-    "has_nether_brick": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:nether_bricks"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:nether_brick_stairs"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_nether_brick",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:babaf3e23ad65b5eba4bcfad30b5a98624dc0b3b69338a2728aa910bfe3745b0
+size 594

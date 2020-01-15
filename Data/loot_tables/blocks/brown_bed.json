@@ -1,28 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "conditions": [
-            {
-              "condition": "minecraft:block_state_property",
-              "block": "minecraft:brown_bed",
-              "properties": {
-                "part": "head"
-              }
-            }
-          ],
-          "name": "minecraft:brown_bed"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:01763ae9806d1e31bc73b8da3c35b5697579bd06e64a5dce88cbea075a03b920
+size 558

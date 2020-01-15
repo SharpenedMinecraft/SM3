@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:campfire_cooking",
-  "ingredient": {
-    "item": "minecraft:porkchop"
-  },
-  "result": "minecraft:cooked_porkchop",
-  "experience": 0.35,
-  "cookingtime": 600
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a3b064b5834e277db1d5b181e75cec10639e870c5928878d15c08bd006dfb13c
+size 183

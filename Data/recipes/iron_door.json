@@ -1,17 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "##",
-    "##",
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:iron_ingot"
-    }
-  },
-  "result": {
-    "item": "minecraft:iron_door",
-    "count": 3
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d67dbdbccbd2d1e8e650cb472deacb4ce1818f950f3ddd2e81ca3d62720de2d3
+size 229

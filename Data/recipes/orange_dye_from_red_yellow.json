@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "orange_dye",
-  "ingredients": [
-    {
-      "item": "minecraft:red_dye"
-    },
-    {
-      "item": "minecraft:yellow_dye"
-    }
-  ],
-  "result": {
-    "item": "minecraft:orange_dye",
-    "count": 2
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d118a2cf5d452b159876cd88cbc66f5ffc28a599245ea8590fe16d2bcf2106c8
+size 259

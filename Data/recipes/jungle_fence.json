@@ -1,20 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_fence",
-  "pattern": [
-    "W#W",
-    "W#W"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "W": {
-      "item": "minecraft:jungle_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:jungle_fence",
-    "count": 3
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dcdb5b9f650b802927cda911eda6a8cbfb49b5bbba6a4fdaea51135b055723b3
+size 304

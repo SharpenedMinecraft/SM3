@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:blaze_rod"
-    }
-  ],
-  "result": {
-    "item": "minecraft:blaze_powder",
-    "count": 2
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:571726be756be91289e6c901c8e55f97969fd3a9cc6f0f79d7f034804997be56
+size 188

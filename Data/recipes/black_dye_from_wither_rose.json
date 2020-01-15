@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "black_dye",
-  "ingredients": [
-    {
-      "item": "minecraft:wither_rose"
-    }
-  ],
-  "result": {
-    "item": "minecraft:black_dye"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:20758bf21d9c98752eff725dac9597a1644001cf58bce84d6f4186a20477932b
+size 195

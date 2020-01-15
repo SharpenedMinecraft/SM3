@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:green_dye"
-    ]
-  },
-  "criteria": {
-    "has_cactus": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:cactus"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:green_dye"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_cactus",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:91d17426966ca5c20cc10baaacd30603254f149966e8ea1abc535b92e556a872
+size 555

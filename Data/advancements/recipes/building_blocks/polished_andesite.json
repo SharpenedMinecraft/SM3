@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:polished_andesite"
-    ]
-  },
-  "criteria": {
-    "has_stone": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:andesite"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:polished_andesite"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_stone",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9f4c259208ffc3ba205ff192fb9ec464f6094da16a5377682a5585002ef92039
+size 571

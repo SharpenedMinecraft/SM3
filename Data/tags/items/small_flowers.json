@@ -1,18 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:dandelion",
-    "minecraft:poppy",
-    "minecraft:blue_orchid",
-    "minecraft:allium",
-    "minecraft:azure_bluet",
-    "minecraft:red_tulip",
-    "minecraft:orange_tulip",
-    "minecraft:white_tulip",
-    "minecraft:pink_tulip",
-    "minecraft:oxeye_daisy",
-    "minecraft:cornflower",
-    "minecraft:lily_of_the_valley",
-    "minecraft:wither_rose"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:52d686ae02bdf067948af898f1697fb198b4a36843cd54ec4dc9945dcd075ee2
+size 408

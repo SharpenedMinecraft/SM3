@@ -1,32 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "conditions": [
-                {
-                  "condition": "minecraft:block_state_property",
-                  "block": "minecraft:diorite_slab",
-                  "properties": {
-                    "type": "double"
-                  }
-                }
-              ],
-              "count": 2
-            },
-            {
-              "function": "minecraft:explosion_decay"
-            }
-          ],
-          "name": "minecraft:diorite_slab"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fc3541d9b03d1b235489870de3a115f86d706466ec009d5e256f8d99abd73bec
+size 720

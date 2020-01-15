@@ -1,20 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " # ",
-    "#X#",
-    " # "
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:glowstone_dust"
-    },
-    "X": {
-      "item": "minecraft:arrow"
-    }
-  },
-  "result": {
-    "item": "minecraft:spectral_arrow",
-    "count": 2
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:31b115be5880f5522d3cc3ac4862cf3347625882868a0d939a1fb58bbc38017f
+size 291

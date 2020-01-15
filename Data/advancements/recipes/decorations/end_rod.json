@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:end_rod"
-    ]
-  },
-  "criteria": {
-    "has_chorus_fruit_popped": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:popped_chorus_fruit"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:end_rod"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_chorus_fruit_popped",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8d7ed1635b2a170553a4e9a040306841f253c4114ef0486ae8ae0331d1eaa776
+size 590

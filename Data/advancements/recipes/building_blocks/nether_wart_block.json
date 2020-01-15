@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:nether_wart_block"
-    ]
-  },
-  "criteria": {
-    "has_nether_wart": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:nether_wart"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:nether_wart_block"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_nether_wart",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:13e5b6bbe9167221810268405871237ab7e95db22edea94648e2368ee08cfc5f
+size 586

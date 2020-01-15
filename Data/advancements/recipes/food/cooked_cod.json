@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:cooked_cod"
-    ]
-  },
-  "criteria": {
-    "has_cod": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:cod"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:cooked_cod"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_cod",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7a7e71b87b468c8f52aae85188ea80b2bc6b9cd24a835152d29e673af2ec1bd1
+size 548

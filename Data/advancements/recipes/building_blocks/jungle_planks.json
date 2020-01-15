@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:jungle_planks"
-    ]
-  },
-  "criteria": {
-    "has_log": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "tag": "minecraft:jungle_logs"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:jungle_planks"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_log",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:50d01a0b11bd731feb72d3d0f3bfd3a0aeef7b4f65bb22ad6702ef9928469644
+size 561

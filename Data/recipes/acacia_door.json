@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_door",
-  "pattern": [
-    "##",
-    "##",
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:acacia_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:acacia_door",
-    "count": 3
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3f3925110a622a82cf793d7a2ccb725e89f613333af2e2346a2be462778adf7c
+size 260

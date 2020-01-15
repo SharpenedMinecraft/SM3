@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:brown_wool"
-    ]
-  },
-  "criteria": {
-    "has_white_wool": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:white_wool"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:brown_wool"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_white_wool",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:de1786bf59610fa7ff6ca8e8298011ad2a99989b9d6658dfee93b41d8445126b
+size 569

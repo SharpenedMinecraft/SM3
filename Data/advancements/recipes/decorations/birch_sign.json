@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:birch_sign"
-    ]
-  },
-  "criteria": {
-    "has_birch_planks": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:birch_planks"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:birch_sign"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_birch_planks",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b8aff616a6581ba67b3f0653f5b04dd6ecbf5e1b3b8e99eb429f7ee12efe2d82
+size 575

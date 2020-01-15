@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:turtle_helmet"
-    ]
-  },
-  "criteria": {
-    "has_scute": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:scute"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:turtle_helmet"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_scute",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:26aeb400c85ca7ad2097027f5818a1beed87f21966b1467340be782b08e6161c
+size 560

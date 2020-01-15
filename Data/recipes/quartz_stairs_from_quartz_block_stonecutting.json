@@ -1,8 +1,3 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:quartz_block"
-  },
-  "result": "minecraft:quartz_stairs",
-  "count": 1
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:be0c5ec55755877b779a8b7e7c90043c434fca856aa295927c10fa0597135b94
+size 151

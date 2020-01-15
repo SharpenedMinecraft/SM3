@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:pink_dye_from_peony"
-    ]
-  },
-  "criteria": {
-    "has_double_plant": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:peony"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:pink_dye_from_peony"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_double_plant",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f5d6662880c0669d52f1075e013ba5dd84aa241ea6f4f8d038d13d07f6eed36a
+size 586

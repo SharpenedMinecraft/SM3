@@ -1,20 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "###",
-    " X "
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:birch_planks"
-    },
-    "X": {
-      "item": "minecraft:stick"
-    }
-  },
-  "result": {
-    "item": "minecraft:birch_sign",
-    "count": 3
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b263da7201449d91cdfd9834616869a74d3fa0bc58f3ee63d51a1fb76a2835a8
+size 285

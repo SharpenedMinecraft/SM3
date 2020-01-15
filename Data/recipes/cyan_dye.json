@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:blue_dye"
-    },
-    {
-      "item": "minecraft:green_dye"
-    }
-  ],
-  "result": {
-    "item": "minecraft:cyan_dye",
-    "count": 2
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:214673fa967fc6e430a19787c6cc0457b62b6802db75d7bd2179f4f0f315557d
+size 232

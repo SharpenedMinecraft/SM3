@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:cobblestone_wall_from_cobblestone_stonecutting"
-    ]
-  },
-  "criteria": {
-    "has_cobblestone": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:cobblestone"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:cobblestone_wall_from_cobblestone_stonecutting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_cobblestone",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f56451f6f581fb00449d5a8b154c392399ece52167b45d932de80a077653af6b
+size 644

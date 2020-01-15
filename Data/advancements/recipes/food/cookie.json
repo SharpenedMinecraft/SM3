@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:cookie"
-    ]
-  },
-  "criteria": {
-    "has_cocoa": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:cocoa_beans"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:cookie"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_cocoa",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bd3c23987bc634ef1499c912be58c8539724e955559f3edf7e2c6ce3836764a6
+size 552

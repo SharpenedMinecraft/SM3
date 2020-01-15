@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:redstone_block"
-    }
-  ],
-  "result": {
-    "item": "minecraft:redstone",
-    "count": 9
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d12bcf367c91740a7c3ad807eacaabe0e11c0a21fdc130c3ffd05558c9051033
+size 189

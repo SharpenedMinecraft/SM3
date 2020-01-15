@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:cobblestone_stairs"
-    ]
-  },
-  "criteria": {
-    "has_cobblestone": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:cobblestone"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:cobblestone_stairs"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_cobblestone",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:365931be58d81587192a118a539f277491cc221a47fdc2602100de878db198d4
+size 588

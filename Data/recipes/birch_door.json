@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_door",
-  "pattern": [
-    "##",
-    "##",
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:birch_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:birch_door",
-    "count": 3
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:942ac1502807b37b93d8fb567029881503ab6f453dafe9dbf4ee1b7db1050d2f
+size 258

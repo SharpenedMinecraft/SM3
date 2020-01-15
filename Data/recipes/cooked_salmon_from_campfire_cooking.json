@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:campfire_cooking",
-  "ingredient": {
-    "item": "minecraft:salmon"
-  },
-  "result": "minecraft:cooked_salmon",
-  "experience": 0.35,
-  "cookingtime": 600
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:01b035f4cc18ab0d2bfb01ebc520a868fb5ae5324d5d4bae0495a4c0b7838412
+size 179

@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:dried_kelp_from_smoking"
-    ]
-  },
-  "criteria": {
-    "has_kelp": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:kelp"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:dried_kelp_from_smoking"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_kelp",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f9740c0e320102a2d7ae5f6b51de309e56486db22a52a70469af036f14fc1a3e
+size 577

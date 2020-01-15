@@ -1,26 +1,3 @@
-{
-  "type": "minecraft:gift",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:chainmail_helmet"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:chainmail_chestplate"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:chainmail_leggings"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:chainmail_boots"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b2381bc95f053175591a389e40a64ada0940355a27a8c5ea043abf3592209c68
+size 525

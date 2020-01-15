@@ -1,8 +1,3 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:red_sandstone"
-  },
-  "result": "minecraft:cut_red_sandstone",
-  "count": 1
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ed46c01f6fa1e2c272c87575da3cbddd2d9157c2c5a239902a5e4690877108e7
+size 156

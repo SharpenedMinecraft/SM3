@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:bone_meal"
-    ]
-  },
-  "criteria": {
-    "has_bone": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:bone"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:bone_meal"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_bone",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5dea1c07db51e5ca8233fad801b38b108110d9bf54c5c227d51768d419036a11
+size 549

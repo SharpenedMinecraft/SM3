@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:black_dye_from_wither_rose"
-    ]
-  },
-  "criteria": {
-    "has_black_flower": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:wither_rose"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:black_dye_from_wither_rose"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_black_flower",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:34fd0471eb3f50f1249f67bf982fc9cf63e7b204bb5d785f7c392c5aeb6147be
+size 606

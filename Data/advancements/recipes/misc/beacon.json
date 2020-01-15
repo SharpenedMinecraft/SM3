@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:beacon"
-    ]
-  },
-  "criteria": {
-    "has_nether_star": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:nether_star"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:beacon"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_nether_star",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8ab21c9171ff90c06830efa3b39fd43a68fcc6ec8400372e555e29c75815d4bc
+size 564

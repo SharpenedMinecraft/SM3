@@ -1,8 +1,3 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:andesite"
-  },
-  "result": "minecraft:andesite_wall",
-  "count": 1
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6de17a89c526d1697e0479d4a018f765d9ab7d8a7fdc2de493463486c1faabb7
+size 147

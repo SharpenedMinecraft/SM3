@@ -1,21 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#X#",
-    "III"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:redstone_torch"
-    },
-    "X": {
-      "item": "minecraft:redstone"
-    },
-    "I": {
-      "item": "minecraft:stone"
-    }
-  },
-  "result": {
-    "item": "minecraft:repeater"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6fc5e0040deed121b2dbb7121590d2d3457606c278729c079de0f10c8d9754de
+size 311

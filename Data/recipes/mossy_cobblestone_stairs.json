@@ -1,17 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:mossy_cobblestone"
-    }
-  },
-  "result": {
-    "item": "minecraft:mossy_cobblestone_stairs",
-    "count": 4
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:89f9d7279dd48fba93746184c0ad2086158bac792c0c7b8cbeddd2bc0dbdc87d
+size 254

@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "boat",
-  "pattern": [
-    "# #",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:acacia_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:acacia_boat"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e947c3a431b4e4facc7ab9baeaae3618ba433070b1eac16b5e22524acf352cc5
+size 229

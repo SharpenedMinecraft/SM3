@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:quartz"
-    ]
-  },
-  "criteria": {
-    "has_nether_quartz_ore": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:nether_quartz_ore"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:quartz"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_nether_quartz_ore",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:51c9f5d50d17666f85a254ee05355d7815d2f1c8224579cb288fb80ee8c5d8dc
+size 582

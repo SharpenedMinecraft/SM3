@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:prismarine"
-    }
-  },
-  "result": {
-    "item": "minecraft:prismarine_wall",
-    "count": 6
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:116b06cd3a81726b2567f960b2dc7da38e88e26aa56555959da730b3f5c8474c
+size 227

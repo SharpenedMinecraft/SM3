@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:mossy_stone_bricks"
-    }
-  },
-  "result": {
-    "item": "minecraft:mossy_stone_brick_slab",
-    "count": 6
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:688d295c3a95be66dcb61cd3fc3a2e28c842e61b1355c57ac61e1e1fec83b473
+size 231

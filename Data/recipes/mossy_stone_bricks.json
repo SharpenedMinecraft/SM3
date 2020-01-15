@@ -1,14 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:stone_bricks"
-    },
-    {
-      "item": "minecraft:vine"
-    }
-  ],
-  "result": {
-    "item": "minecraft:mossy_stone_bricks"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f2281b3fca6bf35176d3555bbc63d63276d9bc9e161c948beafb6fd9b5198c96
+size 225

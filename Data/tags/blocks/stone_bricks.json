@@ -1,9 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:stone_bricks",
-    "minecraft:mossy_stone_bricks",
-    "minecraft:cracked_stone_bricks",
-    "minecraft:chiseled_stone_bricks"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e3c90e847ac5abc2bcab935541a659fd295cad21d5e0254675aa51e1d226d30a
+size 183

@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "##",
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:iron_ingot"
-    }
-  },
-  "result": {
-    "item": "minecraft:iron_trapdoor"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:33bf8a2d1be82e48f96bf2abd7d25b94bc03235c556dc04df9fc46b08f2f2872
+size 207

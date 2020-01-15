@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:brown_terracotta"
-    ]
-  },
-  "criteria": {
-    "has_terracotta": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:terracotta"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:brown_terracotta"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_terracotta",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f24f0ff13c818ce960b6f4531135a097c08a142eb9a75426dcb58ffb810cb402
+size 581

@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:observer"
-    ]
-  },
-  "criteria": {
-    "has_quartz": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:quartz"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:observer"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_quartz",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:41cafac59332ad7b2243f5ddf3c3304fab62caf143d32b3c6bb54c78d8dc9cb4
+size 553

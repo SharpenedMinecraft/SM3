@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "X X",
-    "X X"
-  ],
-  "key": {
-    "X": {
-      "item": "minecraft:diamond"
-    }
-  },
-  "result": {
-    "item": "minecraft:diamond_boots"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:72a44331c2aa87d0971c324ccf0d5379942bdd2bc828024c220ca96cbd649b30
+size 206

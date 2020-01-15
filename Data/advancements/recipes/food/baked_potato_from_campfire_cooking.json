@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:baked_potato_from_campfire_cooking"
-    ]
-  },
-  "criteria": {
-    "has_potato": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:potato"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:baked_potato_from_campfire_cooking"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_potato",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:322455f4bc9d728a1719eaa7abbe8d3e972714c25936a68675f21c96fda3e0d3
+size 605

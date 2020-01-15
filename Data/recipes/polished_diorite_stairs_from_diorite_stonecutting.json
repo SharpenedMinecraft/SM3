@@ -1,8 +1,3 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:diorite"
-  },
-  "result": "minecraft:polished_diorite_stairs",
-  "count": 1
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:23013dfbd43cd233e2281d9e071dde707f49dad8a7bdd200102fece2fcf0014b
+size 156

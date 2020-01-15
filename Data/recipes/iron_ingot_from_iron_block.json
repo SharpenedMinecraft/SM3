@@ -1,13 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "iron_ingot",
-  "ingredients": [
-    {
-      "item": "minecraft:iron_block"
-    }
-  ],
-  "result": {
-    "item": "minecraft:iron_ingot",
-    "count": 9
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6fb12fea93b442ee217164fc0119a810d596b271edb3e36bef45afbbe3b0700e
+size 212

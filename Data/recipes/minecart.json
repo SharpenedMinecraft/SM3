@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "# #",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:iron_ingot"
-    }
-  },
-  "result": {
-    "item": "minecraft:minecart"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:de0048f15a905b3b497b50c520f88103bcb4267c853d3bdc577111cca2836502
+size 204

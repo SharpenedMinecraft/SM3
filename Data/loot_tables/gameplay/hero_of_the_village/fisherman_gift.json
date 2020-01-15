@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:gift",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:cod"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:salmon"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:64189a3511198a8ee2aa154cc68f82de353de7d55a082648d18a41795c9d1d08
+size 289

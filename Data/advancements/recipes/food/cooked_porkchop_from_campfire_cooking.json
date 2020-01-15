@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:cooked_porkchop_from_campfire_cooking"
-    ]
-  },
-  "criteria": {
-    "has_porkchop": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:porkchop"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:cooked_porkchop_from_campfire_cooking"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_porkchop",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ae75181fc736431207e7ef85ad9c8799c6491e3a00b1d263941fa42e5c6c7749
+size 617

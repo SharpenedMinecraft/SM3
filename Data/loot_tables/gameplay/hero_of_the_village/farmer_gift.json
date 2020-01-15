@@ -1,22 +1,3 @@
-{
-  "type": "minecraft:gift",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:bread"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:pumpkin_pie"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:cookie"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:02e4656b40636af49e4df75b4ab852e34e39a4026d2fd14b7a81e41467fad684
+size 390

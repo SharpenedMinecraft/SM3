@@ -1,8 +1,3 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:diorite"
-  },
-  "result": "minecraft:diorite_wall",
-  "count": 1
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:214583e0bfb043bc0c08ee506ea8624bd01b6e27de02b6b3dd8ebf63d1f62ae9
+size 145

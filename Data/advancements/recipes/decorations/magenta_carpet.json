@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:magenta_carpet"
-    ]
-  },
-  "criteria": {
-    "has_magenta_wool": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:magenta_wool"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:magenta_carpet"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_magenta_wool",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:645b39c329988b25ab57ac718b287a584aadb3fe9583e240c165daff78d67814
+size 583

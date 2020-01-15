@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:redstone_lamp"
-    ]
-  },
-  "criteria": {
-    "has_glowstone": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:glowstone"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:redstone_lamp"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_glowstone",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:68dcf7ddc3e3a5fc26a8776a9fa213304b68ddc132e37e7b38274a9c8926bc46
+size 572

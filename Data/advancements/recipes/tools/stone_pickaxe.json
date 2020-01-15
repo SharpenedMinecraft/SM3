@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:stone_pickaxe"
-    ]
-  },
-  "criteria": {
-    "has_cobblestone": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:cobblestone"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:stone_pickaxe"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_cobblestone",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:013e82bf3f2411b11e3d968369a3f5581f74661b2c595ee52154561b479bc9c1
+size 578

@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "##",
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:magma_cream"
-    }
-  },
-  "result": {
-    "item": "minecraft:magma_block"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c50ea03b3d1042df9a8af0ea3e0b5ae8d4fef5309c5e62381794dd78ade81e40
+size 206

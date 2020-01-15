@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:nether_brick_slab_from_nether_bricks_stonecutting"
-    ]
-  },
-  "criteria": {
-    "has_nether_bricks": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:nether_bricks"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:nether_brick_slab_from_nether_bricks_stonecutting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_nether_bricks",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3ddbafabfc3df1a56e43f32807da89ef230b20fc7a042e4e2df8bd964267b3d1
+size 656

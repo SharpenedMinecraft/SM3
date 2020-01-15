@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:clay"
-  },
-  "result": "minecraft:terracotta",
-  "experience": 0.35,
-  "cookingtime": 200
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc9e23e70c03cb25867a1b57eeac83f3438cf87da8c0e8e477c6e96a460f251d
+size 166

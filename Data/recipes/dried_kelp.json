@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:dried_kelp_block"
-    }
-  ],
-  "result": {
-    "item": "minecraft:dried_kelp",
-    "count": 9
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d4b26babd2bceec6fb21d907558994dc4b626a626013d8786ce75ead0dad2e7a
+size 193

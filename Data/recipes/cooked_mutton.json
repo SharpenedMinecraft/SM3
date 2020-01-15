@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:mutton"
-  },
-  "result": "minecraft:cooked_mutton",
-  "experience": 0.35,
-  "cookingtime": 200
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc267095717ba856d14c17f82b8846bfffc6abde229e9e10e66d9bd114273d16
+size 171

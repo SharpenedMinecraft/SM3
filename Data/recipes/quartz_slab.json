@@ -1,23 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
-  "key": {
-    "#": [
-      {
-        "item": "minecraft:chiseled_quartz_block"
-      },
-      {
-        "item": "minecraft:quartz_block"
-      },
-      {
-        "item": "minecraft:quartz_pillar"
-      }
-    ]
-  },
-  "result": {
-    "item": "minecraft:quartz_slab",
-    "count": 6
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:12ff1d7e8c23dc969b075ed24afd318b3b38511afe18ef9a09dfac241177acc2
+size 358

@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "@@",
-    "##"
-  ],
-  "key": {
-    "#": {
-      "tag": "minecraft:planks"
-    },
-    "@": {
-      "item": "minecraft:string"
-    }
-  },
-  "result": {
-    "item": "minecraft:loom"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a1f48323639d56d3621b038534d778e84056eed2074c042acb3c104512b7deb9
+size 244

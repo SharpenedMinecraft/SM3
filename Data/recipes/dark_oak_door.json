@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_door",
-  "pattern": [
-    "##",
-    "##",
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:dark_oak_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:dark_oak_door",
-    "count": 3
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4c74d1ea8666e4c0f6055a13f4faa0c83b6714053aa427dabde2e71ca4684ffc
+size 264

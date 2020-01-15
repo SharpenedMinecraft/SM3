@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_slab",
-  "pattern": [
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:jungle_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:jungle_slab",
-    "count": 6
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cb61130105df8f0ef6b20e926ac47ae50f59cab2275fbf66369b9d0f58c9376b
+size 241

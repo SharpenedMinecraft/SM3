@@ -1,8 +1,3 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:end_stone"
-  },
-  "result": "minecraft:end_stone_brick_slab",
-  "count": 2
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:57d85c98ec3c73ac622fa5be1332305b1f51b6a02e8a39a17a102dcad59643bb
+size 155

@@ -1,8 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:skeleton",
-    "minecraft:stray",
-    "minecraft:wither_skeleton"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:26396d991e4bd3fc1050e4b2b30d473fb4886d86bed14710353f0c67e1aca10f
+size 122

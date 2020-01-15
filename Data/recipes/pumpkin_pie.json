@@ -1,17 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:pumpkin"
-    },
-    {
-      "item": "minecraft:sugar"
-    },
-    {
-      "item": "minecraft:egg"
-    }
-  ],
-  "result": {
-    "item": "minecraft:pumpkin_pie"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:587692b61a95dd5536c77fd7229860fddb56db72d555c0c170285dc6dfb003a7
+size 257

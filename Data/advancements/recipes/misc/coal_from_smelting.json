@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:coal_from_smelting"
-    ]
-  },
-  "criteria": {
-    "has_coal_ore": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:coal_ore"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:coal_from_smelting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_coal_ore",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a810e2a32b8a546869b7a04270f580510eb3a887b8c31ebdb164c39971bb6a3f
+size 579

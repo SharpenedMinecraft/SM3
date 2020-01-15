@@ -1,11 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:sugar_cane"
-    }
-  ],
-  "result": {
-    "item": "minecraft:sugar"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3975c5b746333fb4179bfd11d6f9341980182e02c3035ea33fa51ce4f178dcaf
+size 166

@@ -1,35 +1,3 @@
-{
-  "parent": "minecraft:adventure/ol_betsy",
-  "display": {
-    "icon": {
-      "item": "minecraft:crossbow"
-    },
-    "title": {
-      "translate": "advancements.adventure.whos_the_pillager_now.title"
-    },
-    "description": {
-      "translate": "advancements.adventure.whos_the_pillager_now.description"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "kill_pillager": {
-      "trigger": "minecraft:killed_by_crossbow",
-      "conditions": {
-        "victims": [
-          {
-            "type": "minecraft:pillager"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "kill_pillager"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2e62e8600e730dbb73b7a769304d23c262e69bd2e8921aaa45c089ad854f76a1
+size 701

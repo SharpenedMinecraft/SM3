@@ -1,8 +1,3 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:stone"
-  },
-  "result": "minecraft:stone_brick_wall",
-  "count": 1
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:aec8f4d9406d072d95902c4eb2aadf14b3c265eaaa46d2679296c1229f12ebda
+size 147

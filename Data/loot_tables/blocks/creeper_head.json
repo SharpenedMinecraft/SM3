@@ -1,14 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:creeper_head"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:630409b28b1060144fdac0885d40e67d7ca2df0fbb056d39f16be4824ffd3fab
+size 205

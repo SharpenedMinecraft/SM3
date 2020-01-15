@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "red_dye",
-  "ingredients": [
-    {
-      "item": "minecraft:red_tulip"
-    }
-  ],
-  "result": {
-    "item": "minecraft:red_dye"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4df4c533e39bbe3149734b2e57731e71c371896da34d3e9e25f4a0a758e165d0
+size 189

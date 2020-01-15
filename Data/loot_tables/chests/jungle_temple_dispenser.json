@@ -1,29 +1,3 @@
-{
-  "type": "minecraft:chest",
-  "pools": [
-    {
-      "rolls": {
-        "min": 1.0,
-        "max": 2.0,
-        "type": "minecraft:uniform"
-      },
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "weight": 30,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 2.0,
-                "max": 7.0,
-                "type": "minecraft:uniform"
-              }
-            }
-          ],
-          "name": "minecraft:arrow"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6965b6a1b68bf253480e7e8fcd581b7f9077de1ed63103d19f5821d31a595103
+size 562

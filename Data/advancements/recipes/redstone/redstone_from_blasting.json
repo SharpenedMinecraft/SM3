@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:redstone_from_blasting"
-    ]
-  },
-  "criteria": {
-    "has_redstone_ore": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:redstone_ore"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:redstone_from_blasting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_redstone_ore",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7fba4cf9eda645e4a1c1776c357589828ae19e6b186b0bee7b1e0a8776efa0ee
+size 599

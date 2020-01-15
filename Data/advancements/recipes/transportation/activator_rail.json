@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:activator_rail"
-    ]
-  },
-  "criteria": {
-    "has_rail": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:rail"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:activator_rail"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_rail",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6a781b50b9d16f7a0c2e6bfe2ca29539743a7f6d9d8f75ea23d66ff06f301579
+size 559

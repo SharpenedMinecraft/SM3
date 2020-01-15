@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:cooked_rabbit"
-    ]
-  },
-  "criteria": {
-    "has_rabbit": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:rabbit"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:cooked_rabbit"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_rabbit",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4c4a92cd9ab36c154090e9559a6dba79c9faf04c93dbc48fa74b6c3c2f713247
+size 563

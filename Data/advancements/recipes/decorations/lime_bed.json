@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:lime_bed"
-    ]
-  },
-  "criteria": {
-    "has_lime_wool": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:lime_wool"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:lime_bed"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_lime_wool",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7fae45467ef252aca0e2e31f7801607ed93e17a500829cd3194f43f901bc4cb5
+size 562

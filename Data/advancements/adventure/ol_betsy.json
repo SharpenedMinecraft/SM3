@@ -1,33 +1,3 @@
-{
-  "parent": "minecraft:adventure/root",
-  "display": {
-    "icon": {
-      "item": "minecraft:crossbow"
-    },
-    "title": {
-      "translate": "advancements.adventure.ol_betsy.title"
-    },
-    "description": {
-      "translate": "advancements.adventure.ol_betsy.description"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "shot_crossbow": {
-      "trigger": "minecraft:shot_crossbow",
-      "conditions": {
-        "item": {
-          "item": "minecraft:crossbow"
-        }
-      }
-    }
-  },
-  "requirements": [
-    [
-      "shot_crossbow"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7d86a31eb4bb32d16c20e2da9c4e727878c8bb7bb3c904511a7b85261d8bab6e
+size 637

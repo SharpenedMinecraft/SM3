@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "A",
-    "B"
-  ],
-  "key": {
-    "A": {
-      "item": "minecraft:furnace"
-    },
-    "B": {
-      "item": "minecraft:minecart"
-    }
-  },
-  "result": {
-    "item": "minecraft:furnace_minecart"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ea113d100ef4959bd08077ad9c050744fbbb7201a3c6d8503d89e908b16e816d
+size 258

@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:blaze_powder"
-    ]
-  },
-  "criteria": {
-    "has_blaze_rod": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:blaze_rod"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:blaze_powder"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_blaze_rod",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0c147cb48660d01642708a47267eaea406f63cbf549bd9adf8a2e8d2e03eaba1
+size 570

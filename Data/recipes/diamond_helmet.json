@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "XXX",
-    "X X"
-  ],
-  "key": {
-    "X": {
-      "item": "minecraft:diamond"
-    }
-  },
-  "result": {
-    "item": "minecraft:diamond_helmet"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9cd64b6031d1d510e6ff44adb0c47c8dc97e53a5738c688a0c72a159eb650fd9
+size 207

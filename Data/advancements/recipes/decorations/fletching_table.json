@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:fletching_table"
-    ]
-  },
-  "criteria": {
-    "has_flint": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:flint"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:fletching_table"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_flint",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e8e676d4cca7acecc69f390806545056add47cfbf6a4e31a6525eed51f409fc3
+size 564

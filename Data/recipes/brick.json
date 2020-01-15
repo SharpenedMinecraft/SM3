@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:clay_ball"
-  },
-  "result": "minecraft:brick",
-  "experience": 0.3,
-  "cookingtime": 200
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:831b0efc3b17569fdb8908aa93341885aef7322ad7a1bd4a411d8277c7e24616
+size 165

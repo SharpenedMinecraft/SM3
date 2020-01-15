@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:iron_ingot"
-    ]
-  },
-  "criteria": {
-    "has_iron_ore": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:iron_ore"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:iron_ingot"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_iron_ore",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e20bfed34ce098e37f677598a999a266808292387b4038584ea6ef2acbf9e99a
+size 563

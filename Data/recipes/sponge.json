@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:wet_sponge"
-  },
-  "result": "minecraft:sponge",
-  "experience": 0.15,
-  "cookingtime": 200
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:de2922a3a2cd77b43821fe13ac98098f2b3b3c3f00b5b65fa938206683970998
+size 168

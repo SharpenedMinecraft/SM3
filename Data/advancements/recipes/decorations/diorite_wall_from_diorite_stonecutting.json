@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:diorite_wall_from_diorite_stonecutting"
-    ]
-  },
-  "criteria": {
-    "has_diorite": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:diorite"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:diorite_wall_from_diorite_stonecutting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_diorite",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:55fa027af3ae0781416e9bc6b4041bdea3fee89a81a9800475eadea3ba4f5a77
+size 616

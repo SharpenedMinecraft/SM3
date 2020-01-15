@@ -1,22 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " S ",
-    "SCS",
-    "LLL"
-  ],
-  "key": {
-    "L": {
-      "tag": "minecraft:logs"
-    },
-    "S": {
-      "item": "minecraft:stick"
-    },
-    "C": {
-      "tag": "minecraft:coals"
-    }
-  },
-  "result": {
-    "item": "minecraft:campfire"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:99e5ee2b2f17124f64fdf8530723c376390588954f82f6dfa7822f6dc4b94048
+size 307

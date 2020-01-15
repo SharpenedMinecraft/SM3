@@ -1,17 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:music_disc_13",
-    "minecraft:music_disc_cat",
-    "minecraft:music_disc_blocks",
-    "minecraft:music_disc_chirp",
-    "minecraft:music_disc_far",
-    "minecraft:music_disc_mall",
-    "minecraft:music_disc_mellohi",
-    "minecraft:music_disc_stal",
-    "minecraft:music_disc_strad",
-    "minecraft:music_disc_ward",
-    "minecraft:music_disc_11",
-    "minecraft:music_disc_wait"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:59583ee57c80f21db7c1b19d84138d0d37669f7c32238d2fa8cc164e0c63b171
+size 437

@@ -1,17 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:dark_prismarine"
-    }
-  },
-  "result": {
-    "item": "minecraft:dark_prismarine_stairs",
-    "count": 4
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:40d229fea9454e2795efec1d4ef7e1cfdf7319d5e56364452dd1a97abd563c4f
+size 250

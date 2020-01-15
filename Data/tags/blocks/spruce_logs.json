@@ -1,9 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:spruce_log",
-    "minecraft:spruce_wood",
-    "minecraft:stripped_spruce_log",
-    "minecraft:stripped_spruce_wood"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:62de42ab612d0b7c7ae86f4c18672115aa91269943ac33d3372849fd2b554f01
+size 172

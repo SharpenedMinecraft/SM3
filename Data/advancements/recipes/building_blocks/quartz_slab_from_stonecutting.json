@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:quartz_slab_from_stonecutting"
-    ]
-  },
-  "criteria": {
-    "has_quartz_block": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:quartz_block"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:quartz_slab_from_stonecutting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_quartz_block",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6867823152a86b2ba93849323fa1cea37c34f279f6458a0a2094eb09bc69a028
+size 613

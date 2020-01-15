@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_door",
-  "pattern": [
-    "##",
-    "##",
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:spruce_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:spruce_door",
-    "count": 3
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:39222b51cf8b344c95d87adab16938133fe5cfa9589559c5173ce01800ac05a8
+size 260

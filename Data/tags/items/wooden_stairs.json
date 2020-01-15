@@ -1,11 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:oak_stairs",
-    "minecraft:spruce_stairs",
-    "minecraft:birch_stairs",
-    "minecraft:jungle_stairs",
-    "minecraft:acacia_stairs",
-    "minecraft:dark_oak_stairs"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b3d4b9bb681d0b89dbe27e2b46f095eb742427cc7e855d947063c71f9179c9b7
+size 224

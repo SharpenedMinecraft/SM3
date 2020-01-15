@@ -1,35 +1,3 @@
-{
-  "parent": "minecraft:story/root",
-  "display": {
-    "icon": {
-      "item": "minecraft:wooden_pickaxe"
-    },
-    "title": {
-      "translate": "advancements.story.mine_stone.title"
-    },
-    "description": {
-      "translate": "advancements.story.mine_stone.description"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "get_stone": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:cobblestone"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "get_stone"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:85908dfe241c21dffeac5a6c286327a9fa280c047c3b5b0593a975d88c3d781b
+size 661

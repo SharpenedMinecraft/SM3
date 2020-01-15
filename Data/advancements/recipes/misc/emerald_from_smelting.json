@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:emerald_from_smelting"
-    ]
-  },
-  "criteria": {
-    "has_emerald_ore": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:emerald_ore"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:emerald_from_smelting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_emerald_ore",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b180caf9e76efecd9e17be900b6469f6b6fa4740ed2f9923aa3ec57c76c092a0
+size 594

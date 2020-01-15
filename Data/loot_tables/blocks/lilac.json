@@ -1,28 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "conditions": [
-            {
-              "condition": "minecraft:block_state_property",
-              "block": "minecraft:lilac",
-              "properties": {
-                "half": "lower"
-              }
-            }
-          ],
-          "name": "minecraft:lilac"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0551b4e924dfe30bf8e09c39b079729ab53417bb44d3b0bd9495e6c368ea97da
+size 551

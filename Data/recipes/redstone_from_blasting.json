@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "minecraft:redstone_ore"
-  },
-  "result": "minecraft:redstone",
-  "experience": 0.7,
-  "cookingtime": 100
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b80ad2dc331b5b6451be31afbd086f403d8f83cb8c4aeaa812f75faf79d40d42
+size 171

@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:lead"
-    ]
-  },
-  "criteria": {
-    "has_slime_ball": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:slime_ball"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:lead"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_slime_ball",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1ec29fb98f949638b7c5cc2acce72984b300940aff0d9b14a63e2f11df3c944c
+size 557

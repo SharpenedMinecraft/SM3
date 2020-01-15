@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:mossy_cobblestone_slab_from_mossy_cobblestone_stonecutting"
-    ]
-  },
-  "criteria": {
-    "has_mossy_cobblestone": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:mossy_cobblestone"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:mossy_cobblestone_slab_from_mossy_cobblestone_stonecutting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_mossy_cobblestone",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:27f06c7711bc403f98d34d5da51c1367f37725ff2f6de7c0779b6700dd579686
+size 686

@@ -1,33 +1,3 @@
-{
-  "parent": "minecraft:adventure/kill_a_mob",
-  "display": {
-    "icon": {
-      "item": "minecraft:totem_of_undying"
-    },
-    "title": {
-      "translate": "advancements.adventure.totem_of_undying.title"
-    },
-    "description": {
-      "translate": "advancements.adventure.totem_of_undying.description"
-    },
-    "frame": "goal",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "used_totem": {
-      "trigger": "minecraft:used_totem",
-      "conditions": {
-        "item": {
-          "item": "minecraft:totem_of_undying"
-        }
-      }
-    }
-  },
-  "requirements": [
-    [
-      "used_totem"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:de1f7725ad645f1c42d20ef242ba67286722cdc5c2bb719825d29e386b188d7c
+size 666

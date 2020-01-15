@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#",
-    "#"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:purpur_slab"
-    }
-  },
-  "result": {
-    "item": "minecraft:purpur_pillar"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b0693bef3ad9439d99382be17f827fafc1b3fe669b5b52a8f9e167b8d0dde9aa
+size 206

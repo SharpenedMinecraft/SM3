@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:red_bed_from_white_bed"
-    ]
-  },
-  "criteria": {
-    "has_bed": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:white_bed"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:red_bed_from_white_bed"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_bed",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8d48995bec71a637790fb7769e006f2174ecf9e368c44653d0a716569d170b85
+size 578

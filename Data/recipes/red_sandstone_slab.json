@@ -1,20 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
-  "key": {
-    "#": [
-      {
-        "item": "minecraft:red_sandstone"
-      },
-      {
-        "item": "minecraft:chiseled_red_sandstone"
-      }
-    ]
-  },
-  "result": {
-    "item": "minecraft:red_sandstone_slab",
-    "count": 6
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6f0004ff9012f87f4ca3dfbf55c9193f0e65c3f28bc17f94956100c07f150c42
+size 308

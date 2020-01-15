@@ -1,16 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:barrier",
-    "minecraft:bedrock",
-    "minecraft:end_portal",
-    "minecraft:end_portal_frame",
-    "minecraft:end_gateway",
-    "minecraft:command_block",
-    "minecraft:repeating_command_block",
-    "minecraft:chain_command_block",
-    "minecraft:structure_block",
-    "minecraft:jigsaw",
-    "minecraft:moving_piston"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7c0b6c29de769d9b03a591a7c84e1351c91ce9956915e3d1e50ea8f5ca8adfd9
+size 378

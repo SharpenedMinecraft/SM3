@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:polished_granite"
-    }
-  },
-  "result": {
-    "item": "minecraft:polished_granite_slab",
-    "count": 6
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:10559e30fad373fb20ecb13ed4e19b124fa1bd791779c9d46248bcb97d705d63
+size 228

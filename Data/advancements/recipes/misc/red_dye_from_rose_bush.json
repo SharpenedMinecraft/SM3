@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:red_dye_from_rose_bush"
-    ]
-  },
-  "criteria": {
-    "has_double_plant": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:rose_bush"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:red_dye_from_rose_bush"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_double_plant",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:86ff80d2b1751838cb5b4cb6bb1cc28349b9791c990b2a6f0d47aecf0c3eae3e
+size 596

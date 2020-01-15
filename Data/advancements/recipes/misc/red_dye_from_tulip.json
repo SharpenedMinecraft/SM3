@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:red_dye_from_tulip"
-    ]
-  },
-  "criteria": {
-    "has_red_flower": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:red_tulip"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:red_dye_from_tulip"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_red_flower",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:984773fb0375c8fa4e337d5fc1ba86e4638387fe1f2ddb197be49cf870acae15
+size 584

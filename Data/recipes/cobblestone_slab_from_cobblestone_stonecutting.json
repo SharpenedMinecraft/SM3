@@ -1,8 +1,3 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:cobblestone"
-  },
-  "result": "minecraft:cobblestone_slab",
-  "count": 2
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9146bc3278a11994b3ff0f4f4fc887559235eb6f6ada7dcfd0448112c9ef8279
+size 153

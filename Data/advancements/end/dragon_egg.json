@@ -1,35 +1,3 @@
-{
-  "parent": "minecraft:end/kill_dragon",
-  "display": {
-    "icon": {
-      "item": "minecraft:dragon_egg"
-    },
-    "title": {
-      "translate": "advancements.end.dragon_egg.title"
-    },
-    "description": {
-      "translate": "advancements.end.dragon_egg.description"
-    },
-    "frame": "goal",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "dragon_egg": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:dragon_egg"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "dragon_egg"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7dbd31873bb5c526f818b97a0e420292c8935566e8e6359298c2ebfa14cbc430
+size 659

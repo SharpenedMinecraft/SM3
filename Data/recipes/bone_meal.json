@@ -1,13 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "bonemeal",
-  "ingredients": [
-    {
-      "item": "minecraft:bone"
-    }
-  ],
-  "result": {
-    "item": "minecraft:bone_meal",
-    "count": 3
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a1d4a0f794f693d8b62ec6fb84606e0a6de2512c4ae206bd37afb9c7a9a73c08
+size 203

@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "A",
-    "B"
-  ],
-  "key": {
-    "A": {
-      "item": "minecraft:chest"
-    },
-    "B": {
-      "item": "minecraft:minecart"
-    }
-  },
-  "result": {
-    "item": "minecraft:chest_minecart"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1e178223e5cb3395f16c73cf3dd78ceafa65d7b8d265f76820d0513ef6b62267
+size 254

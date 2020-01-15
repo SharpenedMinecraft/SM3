@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:sponge"
-    ]
-  },
-  "criteria": {
-    "has_wet_sponge": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:wet_sponge"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:sponge"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_wet_sponge",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:90e76b28c6891f40adb72a6ef1a16bcb1d4245a2553a6b69fddc23c64e994f54
+size 561

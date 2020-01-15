@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "# #",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "tag": "minecraft:planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:chest"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b6827d28340a0519d57acf80026f71a2f5039761780bc5bfdc1f88784e87a4f7
+size 207

@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:light_gray_dye_from_azure_bluet"
-    ]
-  },
-  "criteria": {
-    "has_red_flower": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:azure_bluet"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:light_gray_dye_from_azure_bluet"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_red_flower",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:564a88ec3b1be6fd7db43b45d674afe99bb2201892fe0977e8281eb7a5619cec
+size 612

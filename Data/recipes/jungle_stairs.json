@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_stairs",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:jungle_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:jungle_stairs",
-    "count": 4
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5de21ca83bfa5a67c9ab58671b6c9b5b62aa4f134a5c2ad03146d76b0bc85ba0
+size 267

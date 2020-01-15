@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:nether_brick_slab"
-    ]
-  },
-  "criteria": {
-    "has_nether_brick": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:nether_bricks"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:nether_brick_slab"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_nether_brick",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:930ea274ff0e044b0d7682cb9517bb4133c9a55513f8254c5a95fa84eacc8ff0
+size 590

@@ -1,22 +1,3 @@
-{
-  "type": "minecraft:gift",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:stone_axe"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:golden_axe"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:iron_axe"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9af5d6978d8f220ecc00f82803d87d36165c63f6d3a0c57860e06845264ea762
+size 395

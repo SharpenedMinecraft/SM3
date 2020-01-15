@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:mossy_cobblestone"
-    ]
-  },
-  "criteria": {
-    "has_vine": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:vine"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:mossy_cobblestone"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_vine",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:044bbe22a8fdd588296fd7261bebaa1b3d42c51cd401b34ea065dc312dd6b6f6
+size 565

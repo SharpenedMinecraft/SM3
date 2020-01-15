@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#",
-    "#"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:sandstone_slab"
-    }
-  },
-  "result": {
-    "item": "minecraft:chiseled_sandstone"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6e7004e1b61ea51b43a455541f991d3de7a5c45ce4f02521e043b9126bfb07c7
+size 214
