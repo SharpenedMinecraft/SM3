@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 namespace Frontend.Packets.Play
@@ -36,7 +37,17 @@ namespace Frontend.Packets.Play
 
         public readonly void Process(ILogger logger, IConnectionState state, IServiceProvider serviceProvider)
         {
-            Task.Delay(15).ContinueWith(t => state.PacketQueue.WriteImmediate(new KeepAliveClientbound(1)));
+            var broadcastQueue = serviceProvider.GetRequiredService<IBroadcastQueue>();
+            var ping = DateTime.UtcNow - DateTime.FromBinary(KeepAliveId);
+            broadcastQueue.Broadcast(new PlayerInfo(PlayerInfo.InfoType.UpdateLatency, new[] {state.PlayerEntity}));
+            state.PlayerEntity.Ping = ping;
+            logger.LogInformation($"New Ping {ping.TotalMilliseconds}ms");
+            
+            
+            Task.Delay(15 * 1000).ContinueWith(t =>
+            {
+                state.PacketQueue.WriteImmediate(new KeepAliveClientbound(DateTime.UtcNow.ToBinary()));
+            });
         }
     }
 }
