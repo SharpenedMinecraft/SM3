@@ -38,14 +38,14 @@ namespace Frontend.Packets.Play
                         writer.WriteString(player.Username);
                         writer.WriteVarInt(0); // no skin support
                         writer.WriteVarInt(1); // Gamemode 1
-                        writer.WriteVarInt(-1); // No Connection ping
+                        writer.WriteVarInt((int)(player.Ping?.TotalMilliseconds ?? -1));
                         writer.WriteBoolean(false); // No display name
                         break;
                     case InfoType.UpdateGamemode:
                         writer.WriteVarInt(1); // Gamemode 1
                         break;
                     case InfoType.UpdateLatency:
-                        writer.WriteVarInt(-1); // No Connection ping
+                        writer.WriteVarInt((int)(player.Ping?.TotalMilliseconds ?? -1)); // No Connection ping
                         break;
                     case InfoType.UpdateDisplayName:
                         writer.WriteBoolean(false); // No display name
