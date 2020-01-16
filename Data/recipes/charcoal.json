@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "tag": "minecraft:logs"
-  },
-  "result": "minecraft:charcoal",
-  "experience": 0.15,
-  "cookingtime": 200
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:818da4e884a48dbd30ed424c7486dcc8f721f4b7d7c9bcd0c8e83398130418fd
+size 163

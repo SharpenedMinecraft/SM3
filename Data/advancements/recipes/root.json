@@ -1,12 +1,3 @@
-{
-  "criteria": {
-    "impossible": {
-      "trigger": "minecraft:impossible"
-    }
-  },
-  "requirements": [
-    [
-      "impossible"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6932cfe668cbc5be30bf7e37d26118c661780301783b4e7b8d445d7da9837538
+size 145

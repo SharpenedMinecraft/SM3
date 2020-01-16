@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:baked_potato"
-    ]
-  },
-  "criteria": {
-    "has_potato": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:potato"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:baked_potato"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_potato",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:acf875296382ee0f30cda88d122fd385045dea35418559ca1834aff95943fbbe
+size 561

@@ -1,11 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:oak_sign",
-    "minecraft:spruce_sign",
-    "minecraft:birch_sign",
-    "minecraft:acacia_sign",
-    "minecraft:jungle_sign",
-    "minecraft:dark_oak_sign"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:90292d9f8b7938297f18059ab2913840168e7b821629c949c5313711202c4800
+size 212

@@ -1,28 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:jungle_boat"
-    ]
-  },
-  "criteria": {
-    "in_water": {
-      "trigger": "minecraft:enter_block",
-      "conditions": {
-        "block": "minecraft:water"
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:jungle_boat"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "in_water",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7d3fb0b453e8077290cf75794304b7e665219161e16247ed1f8271d8304479c0
+size 492

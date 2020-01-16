@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:repeater"
-    ]
-  },
-  "criteria": {
-    "has_redstone_torch": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:redstone_torch"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:repeater"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_redstone_torch",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b0b739c9b26e0d76e6a2bcf480fe12d156f9bbbcb06e3922281720870dd5b69e
+size 577

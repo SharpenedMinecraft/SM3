@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:bookshelf"
-    ]
-  },
-  "criteria": {
-    "has_book": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:book"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:bookshelf"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_book",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a925718a035f5c79381c5f7b4635c080aef3e87ac6385ed25d75ace647f4ccca
+size 549

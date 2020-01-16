@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:snow_block"
-    }
-  },
-  "result": {
-    "item": "minecraft:snow",
-    "count": 6
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bcaae63dc3c5679a36278fc755ff6a1183db384e54342df94b5dae8cdb08df62
+size 205

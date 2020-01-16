@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "minecraft:diamond_ore"
-  },
-  "result": "minecraft:diamond",
-  "experience": 1.0,
-  "cookingtime": 100
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1b34197af4a7d046de7714b68d61f528c304b3c7f4e177c1b8c07e9700c368fd
+size 169

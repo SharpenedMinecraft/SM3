@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:jukebox"
-    ]
-  },
-  "criteria": {
-    "has_diamond": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:diamond"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:jukebox"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_diamond",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2daaf7c5a3fe21006dc2a7b648b6f25092bd0e375db7ed3db5de2d6d19ef3fc5
+size 554

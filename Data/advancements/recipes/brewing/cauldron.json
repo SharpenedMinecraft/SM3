@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:cauldron"
-    ]
-  },
-  "criteria": {
-    "has_water_bucket": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:water_bucket"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:cauldron"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_water_bucket",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e3f826a3f89ce127218d95f927b1180e5862ea5bdbd9f682ac99d33355cedb76
+size 571

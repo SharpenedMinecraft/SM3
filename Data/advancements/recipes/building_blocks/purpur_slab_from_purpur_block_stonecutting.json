@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:purpur_slab_from_purpur_block_stonecutting"
-    ]
-  },
-  "criteria": {
-    "has_purpur_block": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:purpur_block"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:purpur_slab_from_purpur_block_stonecutting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_purpur_block",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b2a1e2eedeefd2a2bf36089a6009c16c3a795bf11479caf2d3d45e4c3c3eb91f
+size 639

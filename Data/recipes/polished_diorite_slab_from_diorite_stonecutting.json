@@ -1,8 +1,3 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:diorite"
-  },
-  "result": "minecraft:polished_diorite_slab",
-  "count": 2
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d849fef41d868169ccb4a24d7ccfae7c80b2c3380df234b4c69add573d719209
+size 154

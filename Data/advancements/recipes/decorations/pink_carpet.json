@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:pink_carpet"
-    ]
-  },
-  "criteria": {
-    "has_pink_wool": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:pink_wool"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:pink_carpet"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_pink_wool",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc4c631d7e2d462dc71219a096312645e72ff86b4aac402fbf8c0e03d6adbcfa
+size 568

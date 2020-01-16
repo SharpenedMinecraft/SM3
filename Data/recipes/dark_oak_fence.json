@@ -1,20 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_fence",
-  "pattern": [
-    "W#W",
-    "W#W"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "W": {
-      "item": "minecraft:dark_oak_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:dark_oak_fence",
-    "count": 3
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e7e650b42c28405f6f565af593b8bc86281a6d4417a8c045739cb1330cde26d5
+size 308

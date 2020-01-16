@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:leather"
-    ]
-  },
-  "criteria": {
-    "has_rabbit_hide": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:rabbit_hide"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:leather"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_rabbit_hide",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:83fce4cd09cea8207bafbe13b9ab3d79c751e9a859465af85ee156ca94dfd6a2
+size 566

@@ -1,11 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:evoker",
-    "minecraft:pillager",
-    "minecraft:ravager",
-    "minecraft:vindicator",
-    "minecraft:illusioner",
-    "minecraft:witch"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1cdb63374472dab334bce6baf7fbed5ae5bde36062acf527cc864f8765f89987
+size 194

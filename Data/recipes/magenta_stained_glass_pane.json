@@ -1,17 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "stained_glass_pane",
-  "pattern": [
-    "###",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:magenta_stained_glass"
-    }
-  },
-  "result": {
-    "item": "minecraft:magenta_stained_glass_pane",
-    "count": 16
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ab2fee464a5fb0b68c60cd809ce0bf0e4359a0dd332b266ed203bc26a9ca2b6e
+size 283

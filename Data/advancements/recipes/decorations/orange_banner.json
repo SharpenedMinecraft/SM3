@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:orange_banner"
-    ]
-  },
-  "criteria": {
-    "has_orange_wool": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:orange_wool"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:orange_banner"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_orange_wool",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a49f6c3357956888ca2a0a60e16bd8abb093eb849620e77f896a1711a959e93b
+size 578

@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:cooked_mutton_from_smoking"
-    ]
-  },
-  "criteria": {
-    "has_mutton": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:mutton"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:cooked_mutton_from_smoking"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_mutton",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:64b41f964d3276856586cda28ddbe9a9197d5e085491f99728ad02e29a3f70da
+size 589

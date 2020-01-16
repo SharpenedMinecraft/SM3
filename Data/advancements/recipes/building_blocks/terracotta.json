@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:terracotta"
-    ]
-  },
-  "criteria": {
-    "has_clay_block": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:clay"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:terracotta"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_clay_block",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a944177476da2bada8ba33ac53ddae076ba89ec12ebcf7f4ad656dc585bc1871
+size 563

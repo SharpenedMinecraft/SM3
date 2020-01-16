@@ -1,14 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:zombie_head"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8bcc3ec453b760a34b7afae818c760fa6ee2a29eb8ccf36247a2c082c7fca5b1
+size 204

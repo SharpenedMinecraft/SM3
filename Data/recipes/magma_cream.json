@@ -1,14 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:blaze_powder"
-    },
-    {
-      "item": "minecraft:slime_ball"
-    }
-  ],
-  "result": {
-    "item": "minecraft:magma_cream"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:911ef9af63850782039f3142616d58741b7ebad9308473d987048fc2c5ae5a06
+size 224

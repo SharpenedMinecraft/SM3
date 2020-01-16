@@ -1,28 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "conditions": [
-            {
-              "condition": "minecraft:block_state_property",
-              "block": "minecraft:dark_oak_door",
-              "properties": {
-                "half": "lower"
-              }
-            }
-          ],
-          "name": "minecraft:dark_oak_door"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9508ed89662534d577b2ae12463f7d488df9f35307eed86f9be783fc49ce14e3
+size 567

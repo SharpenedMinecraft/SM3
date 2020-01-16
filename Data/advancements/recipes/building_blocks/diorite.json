@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:diorite"
-    ]
-  },
-  "criteria": {
-    "has_quartz": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:quartz"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:diorite"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_quartz",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2e35adb71d05d18692f1e493d67a4aa63ebdb4ff8dfde631978eeed477cf05cf
+size 551

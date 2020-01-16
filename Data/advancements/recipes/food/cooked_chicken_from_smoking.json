@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:cooked_chicken_from_smoking"
-    ]
-  },
-  "criteria": {
-    "has_chicken": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:chicken"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:cooked_chicken_from_smoking"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_chicken",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2ea8336cea7f1c14034bafb32b5e61622321f4431853c6716b99cc0d2826a61c
+size 594

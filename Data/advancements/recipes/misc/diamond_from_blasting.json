@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:diamond_from_blasting"
-    ]
-  },
-  "criteria": {
-    "has_diamond_ore": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:diamond_ore"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:diamond_from_blasting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_diamond_ore",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:25a1e0775dfde7330100bdc226322080728a965b58e3b787be6686b127865ab4
+size 594

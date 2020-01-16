@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:carrot_on_a_stick"
-    ]
-  },
-  "criteria": {
-    "has_carrot": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:carrot"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:carrot_on_a_stick"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_carrot",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9fb6dfd759c3a76d5cd71252a8a4fe0cb3ee101bf047eb9693ebbeef56ca2e06
+size 571

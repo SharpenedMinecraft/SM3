@@ -1,7 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "#minecraft:standing_signs",
-    "#minecraft:wall_signs"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b97c92898727585dd94b12843aaff438fa7b9c54a00a185b44ea7b979d9f89a3
+size 102

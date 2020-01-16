@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:acacia_sign"
-    ]
-  },
-  "criteria": {
-    "has_acacia_planks": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:acacia_planks"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:acacia_sign"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_acacia_planks",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fe1570e5e82fef88990c398e40efd05f5fed42af02df847bcecb0c5923eceae6
+size 580

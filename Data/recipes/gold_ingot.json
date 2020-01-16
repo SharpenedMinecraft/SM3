@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:gold_ore"
-  },
-  "result": "minecraft:gold_ingot",
-  "experience": 1.0,
-  "cookingtime": 200
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f96da4c5a84561df25962b6b96cd50385716dc2e056a1738f71fe1c8439764c7
+size 169

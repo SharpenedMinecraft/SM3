@@ -1,17 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:brown_mushroom"
-    },
-    {
-      "item": "minecraft:red_mushroom"
-    },
-    {
-      "item": "minecraft:bowl"
-    }
-  ],
-  "result": {
-    "item": "minecraft:mushroom_stew"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4ccbc68ad7739bbe1f63fbec597c855a9556b55d383da81f9fd79e6e918000c1
+size 274

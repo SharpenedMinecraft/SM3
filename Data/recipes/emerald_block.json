@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "###",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:emerald"
-    }
-  },
-  "result": {
-    "item": "minecraft:emerald_block"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b3681da6b22acb30060cb110e3381cde1bb68926c9a651f44cc8d24bbcaaf2e8
+size 217

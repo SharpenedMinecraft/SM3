@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:smooth_red_sandstone"
-    ]
-  },
-  "criteria": {
-    "has_red_sandstone": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:red_sandstone"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:smooth_red_sandstone"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_red_sandstone",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5d7e9280f7d8b3d571d7f1de7ebf6ff029e8a3ae7c2c9b4d1bcaeac7dc5e2357
+size 598

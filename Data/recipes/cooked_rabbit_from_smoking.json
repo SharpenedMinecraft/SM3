@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smoking",
-  "ingredient": {
-    "item": "minecraft:rabbit"
-  },
-  "result": "minecraft:cooked_rabbit",
-  "experience": 0.35,
-  "cookingtime": 100
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6057e1af4364172b96d898a7a7c7ebc8482fdab5beb01df8efae23ae96418b9c
+size 170

@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "XXX",
-    "X X",
-    "X X"
-  ],
-  "key": {
-    "X": {
-      "item": "minecraft:gold_ingot"
-    }
-  },
-  "result": {
-    "item": "minecraft:golden_leggings"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2ca7bade205adcd5575948f0e658514e3b8b353fe3cc7fff93061fe8ad72fc91
+size 222

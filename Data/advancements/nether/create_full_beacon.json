@@ -1,31 +1,3 @@
-{
-  "parent": "minecraft:nether/create_beacon",
-  "display": {
-    "icon": {
-      "item": "minecraft:beacon"
-    },
-    "title": {
-      "translate": "advancements.nether.create_full_beacon.title"
-    },
-    "description": {
-      "translate": "advancements.nether.create_full_beacon.description"
-    },
-    "frame": "goal",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "beacon": {
-      "trigger": "minecraft:construct_beacon",
-      "conditions": {
-        "level": 4
-      }
-    }
-  },
-  "requirements": [
-    [
-      "beacon"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a61fa00c9087535d66019e2d5b96c40b583326aca31315ab22b70c8dc9d674cf
+size 596

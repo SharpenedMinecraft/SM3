@@ -1,13 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "planks",
-  "ingredients": [
-    {
-      "tag": "minecraft:oak_logs"
-    }
-  ],
-  "result": {
-    "item": "minecraft:oak_planks",
-    "count": 4
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:405a409886b1eed183e50d26eef8077a241219a593532c3f03b971450b4f7288
+size 205

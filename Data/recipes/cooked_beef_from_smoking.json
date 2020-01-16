@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smoking",
-  "ingredient": {
-    "item": "minecraft:beef"
-  },
-  "result": "minecraft:cooked_beef",
-  "experience": 0.35,
-  "cookingtime": 100
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:047adbc99f3ff62c013f9fcf4044d828ca34b3f32e0b5b34f3cb5855f8c8f0fb
+size 166

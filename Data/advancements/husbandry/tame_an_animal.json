@@ -1,29 +1,3 @@
-{
-  "parent": "minecraft:husbandry/root",
-  "display": {
-    "icon": {
-      "item": "minecraft:lead"
-    },
-    "title": {
-      "translate": "advancements.husbandry.tame_an_animal.title"
-    },
-    "description": {
-      "translate": "advancements.husbandry.tame_an_animal.description"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "tamed_animal": {
-      "trigger": "minecraft:tame_animal",
-      "conditions": {}
-    }
-  },
-  "requirements": [
-    [
-      "tamed_animal"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c5c0f8bee6083da1228071cfb35966e8073eb0647601820940f9c42823191d7d
+size 567

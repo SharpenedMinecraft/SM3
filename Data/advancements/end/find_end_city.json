@@ -1,31 +1,3 @@
-{
-  "parent": "minecraft:end/enter_end_gateway",
-  "display": {
-    "icon": {
-      "item": "minecraft:purpur_block"
-    },
-    "title": {
-      "translate": "advancements.end.find_end_city.title"
-    },
-    "description": {
-      "translate": "advancements.end.find_end_city.description"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "in_city": {
-      "trigger": "minecraft:location",
-      "conditions": {
-        "feature": "endcity"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "in_city"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:04fd8720f2e45031264beb9f75c6eac96c7e7001715d034c0575100a8949e968
+size 591

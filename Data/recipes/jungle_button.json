@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "wooden_button",
-  "ingredients": [
-    {
-      "item": "minecraft:jungle_planks"
-    }
-  ],
-  "result": {
-    "item": "minecraft:jungle_button"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:12befa6b37961f69116f8f0014886a9110592f954823791df87dd8a0ff5df985
+size 205

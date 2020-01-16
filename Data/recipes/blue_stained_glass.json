@@ -1,21 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "stained_glass",
-  "pattern": [
-    "###",
-    "#X#",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:glass"
-    },
-    "X": {
-      "item": "minecraft:blue_dye"
-    }
-  },
-  "result": {
-    "item": "minecraft:blue_stained_glass",
-    "count": 8
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:234753a9a88dad5780356ae77cd49b4bcae3e917fd3444e2ae515c4052af1880
+size 317

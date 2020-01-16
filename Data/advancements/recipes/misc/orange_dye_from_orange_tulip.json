@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:orange_dye_from_orange_tulip"
-    ]
-  },
-  "criteria": {
-    "has_red_flower": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:orange_tulip"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:orange_dye_from_orange_tulip"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_red_flower",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b1703aadb13e025082dcf8f01206029d247c4cec88d4bd2930af4d4561af4184
+size 607

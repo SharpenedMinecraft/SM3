@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:brick_stairs"
-    ]
-  },
-  "criteria": {
-    "has_brick_block": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:bricks"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:brick_stairs"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_brick_block",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:090f46a4bc215a914e99c1927cdbf57cd77f7f4c65e1f5d9e92740cee7d0489b
+size 571

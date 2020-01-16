@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "S",
-    "P"
-  ],
-  "key": {
-    "P": {
-      "item": "minecraft:piston"
-    },
-    "S": {
-      "item": "minecraft:slime_ball"
-    }
-  },
-  "result": {
-    "item": "minecraft:sticky_piston"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bc145738e3ea847c2dac58399d88c5b394b7689258357b1fb99c18c65320a9a6
+size 256

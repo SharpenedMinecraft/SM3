@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:polished_granite_slab_from_polished_granite_stonecutting"
-    ]
-  },
-  "criteria": {
-    "has_polished_granite": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:polished_granite"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:polished_granite_slab_from_polished_granite_stonecutting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_polished_granite",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9020076e861c79215bc315c1ea781e5e9abc4916beab9ef534c9355a31033477
+size 679

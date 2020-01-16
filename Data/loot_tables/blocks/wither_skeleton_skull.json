@@ -1,14 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:wither_skeleton_skull"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:16caa00eea1066c0a025f9e070a8778ccedff06eeef7e84cf3a06db1213b18f5
+size 214

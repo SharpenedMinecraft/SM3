@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:gold_ingot"
-    ]
-  },
-  "criteria": {
-    "has_gold_ore": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:gold_ore"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:gold_ingot"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_gold_ore",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d93fb7468d87a4778c6fc7dea9e7c9221f309f7415e3375aac39ec93206eadfc
+size 563

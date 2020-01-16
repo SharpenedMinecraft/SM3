@@ -1,14 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:cobblestone"
-    },
-    {
-      "item": "minecraft:vine"
-    }
-  ],
-  "result": {
-    "item": "minecraft:mossy_cobblestone"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4208bfa4915d6a144148fc39151d181d7448c3f1505aaba36c3be4e350c6b8dc
+size 223

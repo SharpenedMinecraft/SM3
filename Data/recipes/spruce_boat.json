@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "boat",
-  "pattern": [
-    "# #",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:spruce_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:spruce_boat"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4c3eaa7f7eb19fdf3d257822825e46866104ffab01db3d1e984f5921ecf2df8e
+size 229

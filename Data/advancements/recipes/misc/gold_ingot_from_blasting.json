@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:gold_ingot_from_blasting"
-    ]
-  },
-  "criteria": {
-    "has_gold_ore": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:gold_ore"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:gold_ingot_from_blasting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_gold_ore",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6234f80ca60b4ed9d7a3c6b15a750ee1e961e9f84b53d97dcbafc7a667c047a1
+size 591

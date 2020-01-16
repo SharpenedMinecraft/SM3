@@ -1,31 +1,3 @@
-{
-  "display": {
-    "icon": {
-      "item": "minecraft:red_nether_bricks"
-    },
-    "title": {
-      "translate": "advancements.nether.root.title"
-    },
-    "description": {
-      "translate": "advancements.nether.root.description"
-    },
-    "frame": "task",
-    "show_toast": false,
-    "announce_to_chat": false,
-    "hidden": false,
-    "background": "minecraft:textures/gui/advancements/backgrounds/nether.png"
-  },
-  "criteria": {
-    "entered_nether": {
-      "trigger": "minecraft:changed_dimension",
-      "conditions": {
-        "to": "minecraft:the_nether"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "entered_nether"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2cee4dcd3cbcb05276584c4d34f91cfda1106f7cbcba88072f69bca4508b1978
+size 650

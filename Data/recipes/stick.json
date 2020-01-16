@@ -1,17 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "sticks",
-  "pattern": [
-    "#",
-    "#"
-  ],
-  "key": {
-    "#": {
-      "tag": "minecraft:planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:stick",
-    "count": 4
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ce98867c607f56ba3aac4639f78ba735d8666e4c7078f6c4a1f75406cb6628b2
+size 229

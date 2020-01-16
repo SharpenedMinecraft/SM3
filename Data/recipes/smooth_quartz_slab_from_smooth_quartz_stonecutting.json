@@ -1,8 +1,3 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:smooth_quartz"
-  },
-  "result": "minecraft:smooth_quartz_slab",
-  "count": 2
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:909ae74daca3a53020d18d3e5ebc7e8ea49b1c3d8d2942d6b4feb51c61e640a2
+size 157

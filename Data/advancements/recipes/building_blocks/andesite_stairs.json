@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:andesite_stairs"
-    ]
-  },
-  "criteria": {
-    "has_andesite": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:andesite"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:andesite_stairs"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_andesite",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b7a4fd31247fbf7d95b5827014c45587348d97c3bb82162415d371f048d342be
+size 573

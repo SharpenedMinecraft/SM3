@@ -1,28 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:acacia_boat"
-    ]
-  },
-  "criteria": {
-    "in_water": {
-      "trigger": "minecraft:enter_block",
-      "conditions": {
-        "block": "minecraft:water"
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:acacia_boat"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "in_water",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f3ede154a5318b0596e0b302f6b5c7e51c92d9c87cd5bcd45ab4135133c689d6
+size 492

@@ -1,8 +1,3 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:nether_bricks"
-  },
-  "result": "minecraft:nether_brick_wall",
-  "count": 1
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:669835f1c399be44df7068be97a6009a5ab897772b29f972d5f5c30b2f228b8b
+size 156

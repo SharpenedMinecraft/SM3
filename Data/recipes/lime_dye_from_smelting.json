@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:sea_pickle"
-  },
-  "result": "minecraft:lime_dye",
-  "experience": 0.1,
-  "cookingtime": 200
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f1734917a5c8e038ff083f82318f1206267e5686e9bd39d58135259130cb55cc
+size 169

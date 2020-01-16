@@ -1,13 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "planks",
-  "ingredients": [
-    {
-      "tag": "minecraft:jungle_logs"
-    }
-  ],
-  "result": {
-    "item": "minecraft:jungle_planks",
-    "count": 4
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:06b4013132fa271f76231663f76b3e911e7cc8ca49446be2430ef06783a98143
+size 211

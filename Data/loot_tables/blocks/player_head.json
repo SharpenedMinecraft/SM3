@@ -1,27 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:copy_nbt",
-              "source": "block_entity",
-              "ops": [
-                {
-                  "source": "Owner",
-                  "target": "SkullOwner",
-                  "op": "replace"
-                }
-              ]
-            }
-          ],
-          "name": "minecraft:player_head"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:533bb6c815d9665db3acd89fd3683b527087c4c7ecb42f36d9d037cc08c4825b
+size 546

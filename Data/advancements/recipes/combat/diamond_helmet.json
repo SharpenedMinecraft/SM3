@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:diamond_helmet"
-    ]
-  },
-  "criteria": {
-    "has_diamond": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:diamond"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:diamond_helmet"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_diamond",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a9cea371bf7c66d37f3e4c264df3e00f22a45fd135cab24c7103e7bca2eacac1
+size 568

@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:smooth_sandstone"
-    }
-  },
-  "result": {
-    "item": "minecraft:smooth_sandstone_slab",
-    "count": 6
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:49e3d9cfa117908bb51ce756bb2e9ced5c8718a309ce49234c21e9d563cbf523
+size 228

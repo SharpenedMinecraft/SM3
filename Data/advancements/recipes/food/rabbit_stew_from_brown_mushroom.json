@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:rabbit_stew_from_brown_mushroom"
-    ]
-  },
-  "criteria": {
-    "has_cooked_rabbit": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:cooked_rabbit"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:rabbit_stew_from_brown_mushroom"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_cooked_rabbit",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:da70a920ba9fb7ffea9919c73e9df1d141c0246020d27c7cdea03ba56a4475cb
+size 620

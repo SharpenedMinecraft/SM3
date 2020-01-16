@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "SS",
-    "SS"
-  ],
-  "key": {
-    "S": {
-      "item": "minecraft:andesite"
-    }
-  },
-  "result": {
-    "item": "minecraft:polished_andesite",
-    "count": 4
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0a53b2f9ac6c4df90dec643b353550fb00c2bff1d8008ecbb43ad87676cc7a52
+size 225

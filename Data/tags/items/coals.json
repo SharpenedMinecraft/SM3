@@ -1,7 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:coal",
-    "minecraft:charcoal"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8639a86786109b164e2d84ced7be913c71965a8e5ef240d747bff299eb2ec166
+size 88

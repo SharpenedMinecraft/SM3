@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:orange_terracotta"
-  },
-  "result": "minecraft:orange_glazed_terracotta",
-  "experience": 0.1,
-  "cookingtime": 200
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3c48ac650cdb328e021173c83a5d4032878dd01a3b06fc8957124f950e69f5d7
+size 192

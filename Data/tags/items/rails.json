@@ -1,9 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:rail",
-    "minecraft:powered_rail",
-    "minecraft:detector_rail",
-    "minecraft:activator_rail"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:780e63860d349246605b951519883d95edd2d75962962881ffed15420e61585d
+size 155

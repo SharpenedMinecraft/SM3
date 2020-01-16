@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "light_blue_dye",
-  "ingredients": [
-    {
-      "item": "minecraft:blue_orchid"
-    }
-  ],
-  "result": {
-    "item": "minecraft:light_blue_dye"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8c5d7e5f74a49befb26eef2d6efde32ebb36dba72a4ad4e1eebae8f0b076920f
+size 205

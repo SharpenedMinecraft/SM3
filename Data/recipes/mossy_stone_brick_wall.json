@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:mossy_stone_bricks"
-    }
-  },
-  "result": {
-    "item": "minecraft:mossy_stone_brick_wall",
-    "count": 6
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5f17e881f351912aa860f551523dbe07eeab8395b53736de38e6aa344215f611
+size 242

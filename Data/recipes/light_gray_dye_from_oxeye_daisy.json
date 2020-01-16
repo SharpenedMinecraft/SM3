@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "light_gray_dye",
-  "ingredients": [
-    {
-      "item": "minecraft:oxeye_daisy"
-    }
-  ],
-  "result": {
-    "item": "minecraft:light_gray_dye"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:eba7527ecfe862f70a2275f7ba51bd6f0fba5e61e69d003a6780fd0514c9e095
+size 205

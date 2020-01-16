@@ -1,33 +1,3 @@
-{
-  "parent": "minecraft:nether/get_wither_skull",
-  "display": {
-    "icon": {
-      "item": "minecraft:nether_star"
-    },
-    "title": {
-      "translate": "advancements.nether.summon_wither.title"
-    },
-    "description": {
-      "translate": "advancements.nether.summon_wither.description"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "summoned": {
-      "trigger": "minecraft:summoned_entity",
-      "conditions": {
-        "entity": {
-          "type": "minecraft:wither"
-        }
-      }
-    }
-  },
-  "requirements": [
-    [
-      "summoned"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2171db5daf598836a41c7a347e0c4e90f43bdec0c347baa3ce8fe4703b64b1a2
+size 645

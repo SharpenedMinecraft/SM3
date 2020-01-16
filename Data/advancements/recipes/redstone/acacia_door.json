@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:acacia_door"
-    ]
-  },
-  "criteria": {
-    "has_planks": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:acacia_planks"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:acacia_door"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_planks",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:338f4f659df82e5099db36e1a2cc9f5b31948b09e6ce52e9b29d26771166df81
+size 566

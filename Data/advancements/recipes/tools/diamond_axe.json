@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:diamond_axe"
-    ]
-  },
-  "criteria": {
-    "has_diamond": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:diamond"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:diamond_axe"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_diamond",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2fd5ed2ee457dfec465629c27d4ff68a9b9a7e839b4b1f099d739dd8491e3eb7
+size 562

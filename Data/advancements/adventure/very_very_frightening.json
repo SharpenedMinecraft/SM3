@@ -1,35 +1,3 @@
-{
-  "parent": "minecraft:adventure/throw_trident",
-  "display": {
-    "icon": {
-      "item": "minecraft:trident"
-    },
-    "title": {
-      "translate": "advancements.adventure.very_very_frightening.title"
-    },
-    "description": {
-      "translate": "advancements.adventure.very_very_frightening.description"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "struck_villager": {
-      "trigger": "minecraft:channeled_lightning",
-      "conditions": {
-        "victims": [
-          {
-            "type": "minecraft:villager"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "struck_villager"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d95364c0b850afc66126ca89e229b927bf7b940928d4b06d053c063a158555b4
+size 710

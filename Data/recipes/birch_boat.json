@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "boat",
-  "pattern": [
-    "# #",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:birch_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:birch_boat"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:97183fadfdcdd8946fc62817dcff176ed4db6227ebc2293a77d281dfcf797b03
+size 227

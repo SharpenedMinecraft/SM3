@@ -1,29 +1,3 @@
-{
-  "parent": "minecraft:nether/obtain_blaze_rod",
-  "display": {
-    "icon": {
-      "item": "minecraft:potion"
-    },
-    "title": {
-      "translate": "advancements.nether.brew_potion.title"
-    },
-    "description": {
-      "translate": "advancements.nether.brew_potion.description"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "potion": {
-      "trigger": "minecraft:brewed_potion",
-      "conditions": {}
-    }
-  },
-  "requirements": [
-    [
-      "potion"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:df786028cab304dfeba8e8715e7068ab2927a7f6075513b0d9ba1a257cc1eed0
+size 556

@@ -1,17 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "bark",
-  "pattern": [
-    "##",
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:birch_log"
-    }
-  },
-  "result": {
-    "item": "minecraft:birch_wood",
-    "count": 3
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:454dab1ac4f75b0e6abfc88ea39c099a09b1165d82b9e34fe79e7f3894b20ffa
+size 238

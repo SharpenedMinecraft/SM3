@@ -1,11 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:oak_fence",
-    "minecraft:acacia_fence",
-    "minecraft:dark_oak_fence",
-    "minecraft:spruce_fence",
-    "minecraft:birch_fence",
-    "minecraft:jungle_fence"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6c7f827ceb45ad6b6b7df14e8871908b2a17f904ec3c03cb3551ef48acdf188f
+size 218

@@ -1,11 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:melon_slice"
-    }
-  ],
-  "result": {
-    "item": "minecraft:melon_seeds"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9046d4b0698c4402af9b9d280df9964f5604a74851fa9a7c72ce0f80fdb3bb7d
+size 173

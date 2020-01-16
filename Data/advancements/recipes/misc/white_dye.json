@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:white_dye"
-    ]
-  },
-  "criteria": {
-    "has_bone_meal": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:bone_meal"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:white_dye"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_bone_meal",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3b65067533f407e089f41ff1be85664b8321959cb0b4cfdc33304ea270760e66
+size 564

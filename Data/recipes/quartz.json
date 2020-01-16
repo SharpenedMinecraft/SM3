@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:nether_quartz_ore"
-  },
-  "result": "minecraft:quartz",
-  "experience": 0.2,
-  "cookingtime": 200
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2d5cdcd8c74d399465fe1e9cb3d0bed55f13b82014c1da2aa956eafe527e6a18
+size 174

@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "A",
-    "B"
-  ],
-  "key": {
-    "A": {
-      "item": "minecraft:tnt"
-    },
-    "B": {
-      "item": "minecraft:minecart"
-    }
-  },
-  "result": {
-    "item": "minecraft:tnt_minecart"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:25a452d3da1ad865eb73259fa0985f88e0863f66ea9823e15fd505c18f9245bb
+size 250

@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:red_dye_from_poppy"
-    ]
-  },
-  "criteria": {
-    "has_red_flower": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:poppy"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:red_dye_from_poppy"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_red_flower",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d687fa0017035162b5cf10a0c01f2b5be69f5d366354068d79973c4dfe6c5b52
+size 580

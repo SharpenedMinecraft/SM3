@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:kelp"
-  },
-  "result": "minecraft:dried_kelp",
-  "experience": 0.1,
-  "cookingtime": 200
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:442f0376494359e8f6c44295c9600d7c882f08f92f17ef7bdf5bb4ce9daf1c1a
+size 165

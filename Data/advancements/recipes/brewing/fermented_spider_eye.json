@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:fermented_spider_eye"
-    ]
-  },
-  "criteria": {
-    "has_spider_eye": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:spider_eye"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:fermented_spider_eye"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_spider_eye",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:aea9604481ab5edc07ce6efbacb479a4c20bffdd68a90d85af0a77562d132483
+size 589

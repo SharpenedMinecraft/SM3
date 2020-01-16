@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:emerald_ore"
-  },
-  "result": "minecraft:emerald",
-  "experience": 1.0,
-  "cookingtime": 200
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:28830fc58cfa0e8741459acb84b7f111f97fcdd5bcd0b96924ca013666ca9831
+size 169

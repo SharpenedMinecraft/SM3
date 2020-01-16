@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "# ",
-    " X"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:fishing_rod"
-    },
-    "X": {
-      "item": "minecraft:carrot"
-    }
-  },
-  "result": {
-    "item": "minecraft:carrot_on_a_stick"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f8c407566ed794e3b8c6f8577fa80317b8ca8d680fa35dfc91a8ceed3883107c
+size 263

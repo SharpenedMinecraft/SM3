@@ -27,6 +27,7 @@ namespace Frontend
         public string Username { get; }
 
         public PlayerSettings Settings { get; set; }
+        public TimeSpan? Ping { get; set; }
 
         public readonly struct PlayerSettings
         {

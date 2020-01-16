@@ -1,35 +1,3 @@
-{
-  "parent": "minecraft:end/find_end_city",
-  "display": {
-    "icon": {
-      "item": "minecraft:elytra"
-    },
-    "title": {
-      "translate": "advancements.end.elytra.title"
-    },
-    "description": {
-      "translate": "advancements.end.elytra.description"
-    },
-    "frame": "goal",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "elytra": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:elytra"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "elytra"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d8a0a1c1192d6545cc554c038998d18078707ed6dc9d37e8e87a520353b27a89
+size 637

@@ -1,35 +1,3 @@
-{
-  "display": {
-    "icon": {
-      "item": "minecraft:grass_block"
-    },
-    "title": {
-      "translate": "advancements.story.root.title"
-    },
-    "description": {
-      "translate": "advancements.story.root.description"
-    },
-    "frame": "task",
-    "show_toast": false,
-    "announce_to_chat": false,
-    "hidden": false,
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
-  },
-  "criteria": {
-    "crafting_table": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:crafting_table"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "crafting_table"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:322b6b0aa23dfa013065e3bb4b78a958628870ff25cba58d8eedd075507aafff
+size 704

@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_pressure_plate",
-  "pattern": [
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:jungle_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:jungle_pressure_plate"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:86d9bdeb99c196ac0c613eca0c19e78358f284ca7cc4a164dcba6ff885036278
+size 244

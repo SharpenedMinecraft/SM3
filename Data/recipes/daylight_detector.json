@@ -1,22 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "GGG",
-    "QQQ",
-    "WWW"
-  ],
-  "key": {
-    "Q": {
-      "item": "minecraft:quartz"
-    },
-    "G": {
-      "item": "minecraft:glass"
-    },
-    "W": {
-      "tag": "minecraft:wooden_slabs"
-    }
-  },
-  "result": {
-    "item": "minecraft:daylight_detector"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ea0fb7dbc72c2e177f97fe304420f0b596287828579f8266bdd8450a20e31264
+size 326

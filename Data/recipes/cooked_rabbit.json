@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:rabbit"
-  },
-  "result": "minecraft:cooked_rabbit",
-  "experience": 0.35,
-  "cookingtime": 200
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d26feaab67d4136f0a421738c0faa0fd8073cd529317779182ea4f1b4b91d75b
+size 171

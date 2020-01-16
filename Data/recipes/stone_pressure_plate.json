@@ -1,14 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:stone"
-    }
-  },
-  "result": {
-    "item": "minecraft:stone_pressure_plate"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6cbae4bde146af036daa7259a8b28dde35c73cc49e3a65be272bd9190e8f7ffb
+size 199

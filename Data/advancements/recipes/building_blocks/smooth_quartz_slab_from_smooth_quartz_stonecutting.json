@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:smooth_quartz_slab_from_smooth_quartz_stonecutting"
-    ]
-  },
-  "criteria": {
-    "has_smooth_quartz": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:smooth_quartz"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:smooth_quartz_slab_from_smooth_quartz_stonecutting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_smooth_quartz",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:85a6d94905846a3dd8a7339b5c504b532f99fa8ceda5edca9a1a6cef288b23d0
+size 658

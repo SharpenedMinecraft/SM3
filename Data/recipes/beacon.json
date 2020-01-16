@@ -1,22 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "GGG",
-    "GSG",
-    "OOO"
-  ],
-  "key": {
-    "S": {
-      "item": "minecraft:nether_star"
-    },
-    "G": {
-      "item": "minecraft:glass"
-    },
-    "O": {
-      "item": "minecraft:obsidian"
-    }
-  },
-  "result": {
-    "item": "minecraft:beacon"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc123269a98c9ddea3baab262cbc303a3819c3aa43a9ceb179a9e4a1ea816a2c
+size 317

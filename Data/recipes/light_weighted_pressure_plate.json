@@ -1,14 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:gold_ingot"
-    }
-  },
-  "result": {
-    "item": "minecraft:light_weighted_pressure_plate"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:040e981eccd4db368556acedf15b466c047d76ebfe3425148556f18af79b4d8f
+size 213

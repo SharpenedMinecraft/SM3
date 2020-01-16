@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_stairs",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:acacia_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:acacia_stairs",
-    "count": 4
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:27fe2747fba6ee0b735c054121490708e0d7f0a644360ba9aa365aac1fef10c2
+size 267

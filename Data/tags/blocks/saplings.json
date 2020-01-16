@@ -1,11 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:oak_sapling",
-    "minecraft:spruce_sapling",
-    "minecraft:birch_sapling",
-    "minecraft:jungle_sapling",
-    "minecraft:acacia_sapling",
-    "minecraft:dark_oak_sapling"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:95b8e66170ffdb4fd9b46fc445f37a9a0d286c44eac31374e327973b5fe47505
+size 230

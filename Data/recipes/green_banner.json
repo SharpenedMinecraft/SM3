@@ -1,20 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "banner",
-  "pattern": [
-    "###",
-    "###",
-    " | "
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:green_wool"
-    },
-    "|": {
-      "item": "minecraft:stick"
-    }
-  },
-  "result": {
-    "item": "minecraft:green_banner"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:290e5a108474a4f679df28ac56b7ebb0dbb6ea3b40d54d5b5db88c236c0323f2
+size 290

@@ -1,7 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:sand",
-    "minecraft:red_sand"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:515a260c9c911f16b6318afda3570a9783773f777f7ccd0c4824c1f12df8c3ba
+size 88

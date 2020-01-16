@@ -1,14 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:paper"
-    },
-    {
-      "item": "minecraft:creeper_head"
-    }
-  ],
-  "result": {
-    "item": "minecraft:creeper_banner_pattern"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:11df2e9275bf9fd43e3139be6fe40ee1ca2b132823436a17e8f4dfb057a8cc51
+size 230

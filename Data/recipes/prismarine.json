@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "SS",
-    "SS"
-  ],
-  "key": {
-    "S": {
-      "item": "minecraft:prismarine_shard"
-    }
-  },
-  "result": {
-    "item": "minecraft:prismarine"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:aac96dfe9a254be0e51a93e6634b8a631e3c7badeeb9b2f3eaeefb6aee16d21b
+size 210

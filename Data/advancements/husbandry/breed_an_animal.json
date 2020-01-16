@@ -1,29 +1,3 @@
-{
-  "parent": "minecraft:husbandry/root",
-  "display": {
-    "icon": {
-      "item": "minecraft:wheat"
-    },
-    "title": {
-      "translate": "advancements.husbandry.breed_an_animal.title"
-    },
-    "description": {
-      "translate": "advancements.husbandry.breed_an_animal.description"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "bred": {
-      "trigger": "minecraft:bred_animals",
-      "conditions": {}
-    }
-  },
-  "requirements": [
-    [
-      "bred"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:238a22c7544e4690b6787788bf2cfde7f3393dcf30b795b1740355c9aefeb24d
+size 555

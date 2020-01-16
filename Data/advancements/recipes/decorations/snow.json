@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:snow"
-    ]
-  },
-  "criteria": {
-    "has_snowball": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:snowball"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:snow"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_snowball",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b0b351e0ec851e6f399cb200accd2d896b7e0c889ee274ba1d074ec5482c7567
+size 551

@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_stairs",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:birch_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:birch_stairs",
-    "count": 4
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b14a5a01aff225ac87a17387ed1d32a616a6d79db6082cbe91dd7c0d28aff7d9
+size 265

@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "minecraft:gold_ore"
-  },
-  "result": "minecraft:gold_ingot",
-  "experience": 1.0,
-  "cookingtime": 100
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:73bfe65ece368e73793671cf42e588f258a62e48367e69da7346e28c35591915
+size 169

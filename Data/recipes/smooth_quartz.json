@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:quartz_block"
-  },
-  "result": "minecraft:smooth_quartz",
-  "experience": 0.1,
-  "cookingtime": 200
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:212d0e1c20617318a17b34706e6ab568d152913112d2b5cf94cbf1ad8cff8d3a
+size 176

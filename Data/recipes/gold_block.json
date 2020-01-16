@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "###",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:gold_ingot"
-    }
-  },
-  "result": {
-    "item": "minecraft:gold_block"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f40178fab20d7f76b95b026050bc26b40a8dd9c96faf9348640186ba2fd105c8
+size 217

@@ -1,25 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
-  "key": {
-    "#": [
-      {
-        "item": "minecraft:sandstone"
-      },
-      {
-        "item": "minecraft:chiseled_sandstone"
-      },
-      {
-        "item": "minecraft:cut_sandstone"
-      }
-    ]
-  },
-  "result": {
-    "item": "minecraft:sandstone_stairs",
-    "count": 4
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:306837c4a2db885833f974de35c16ad57807f484e6d43f660119980fd402ba49
+size 379

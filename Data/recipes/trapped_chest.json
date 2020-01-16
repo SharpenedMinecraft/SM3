@@ -1,14 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:chest"
-    },
-    {
-      "item": "minecraft:tripwire_hook"
-    }
-  ],
-  "result": {
-    "item": "minecraft:trapped_chest"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cfc66114a58d2d8ad5eaf18f5ff11b5870b23df0b7b618753722e0807ea9ea9d
+size 222

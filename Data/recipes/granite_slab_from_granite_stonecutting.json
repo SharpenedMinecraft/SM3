@@ -1,8 +1,3 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:granite"
-  },
-  "result": "minecraft:granite_slab",
-  "count": 2
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4fb84d620089ba333f982346064940c8416eae2c241469d854f7a6642e91e8c3
+size 145

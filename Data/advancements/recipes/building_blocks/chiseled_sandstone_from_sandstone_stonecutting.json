@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:chiseled_sandstone_from_sandstone_stonecutting"
-    ]
-  },
-  "criteria": {
-    "has_sandstone": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:sandstone"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:chiseled_sandstone_from_sandstone_stonecutting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_sandstone",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:29403c28e0a8674aa2ffea927aa9161ca58983460263d66152b5d08cb6317ea1
+size 638

@@ -1,28 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:birch_boat"
-    ]
-  },
-  "criteria": {
-    "in_water": {
-      "trigger": "minecraft:enter_block",
-      "conditions": {
-        "block": "minecraft:water"
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:birch_boat"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "in_water",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b80aebf03e2cd9a29613c6091477e8e2eb955e73d23911f9e6a88bc5baed7a24
+size 490

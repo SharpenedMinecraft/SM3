@@ -1,13 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "magenta_dye",
-  "ingredients": [
-    {
-      "item": "minecraft:lilac"
-    }
-  ],
-  "result": {
-    "item": "minecraft:magenta_dye",
-    "count": 2
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:32d0940e2580b46cc79be285cc1fa4a57e3820469536207ffe60f85df1678dc6
+size 209

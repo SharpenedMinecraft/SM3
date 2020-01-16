@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:smooth_stone_slab"
-    ]
-  },
-  "criteria": {
-    "has_smooth_stone": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:smooth_stone"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:smooth_stone_slab"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_smooth_stone",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d1174706b7bf0747e0370e37ee788276e1e4045c6dbd77f66ada87e5adb8333f
+size 589

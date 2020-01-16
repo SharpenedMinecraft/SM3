@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:brown_dye"
-    ]
-  },
-  "criteria": {
-    "has_cocoa_beans": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:cocoa_beans"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:brown_dye"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_cocoa_beans",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7dd589d7ea46d4dcd9cead2b078d126510162f737869c0905e101759833a2e90
+size 570

@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:bricks"
-    }
-  },
-  "result": {
-    "item": "minecraft:brick_wall",
-    "count": 6
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:51f377b86a3fff0334ea1590681e831e75d3cb48d7df6144598d34471df856da
+size 218

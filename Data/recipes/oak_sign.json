@@ -1,20 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "###",
-    " X "
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:oak_planks"
-    },
-    "X": {
-      "item": "minecraft:stick"
-    }
-  },
-  "result": {
-    "item": "minecraft:oak_sign",
-    "count": 3
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5086a8e10069fa372aa56ccdfc5e0c6b09b4ebc4356c29f0d8b33667bc3bf4c4
+size 281

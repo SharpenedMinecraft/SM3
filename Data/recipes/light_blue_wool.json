@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "wool",
-  "ingredients": [
-    {
-      "item": "minecraft:light_blue_dye"
-    },
-    {
-      "item": "minecraft:white_wool"
-    }
-  ],
-  "result": {
-    "item": "minecraft:light_blue_wool"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ae110b3228c29abd46147a4b13dc1b272731d18235ee33111ac7d446ed087fbf
+size 249

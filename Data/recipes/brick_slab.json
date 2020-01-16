@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:bricks"
-    }
-  },
-  "result": {
-    "item": "minecraft:brick_slab",
-    "count": 6
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9ad0bb3198d19e42f5ce550b6bcbd77b65cfa325a405f0d5264e83353017166f
+size 207

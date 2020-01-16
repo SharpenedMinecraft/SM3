@@ -1,35 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:dried_kelp"
-    },
-    {
-      "item": "minecraft:dried_kelp"
-    },
-    {
-      "item": "minecraft:dried_kelp"
-    },
-    {
-      "item": "minecraft:dried_kelp"
-    },
-    {
-      "item": "minecraft:dried_kelp"
-    },
-    {
-      "item": "minecraft:dried_kelp"
-    },
-    {
-      "item": "minecraft:dried_kelp"
-    },
-    {
-      "item": "minecraft:dried_kelp"
-    },
-    {
-      "item": "minecraft:dried_kelp"
-    }
-  ],
-  "result": {
-    "item": "minecraft:dried_kelp_block"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f0f12b03c878f641e27d4e4f00ae77dc567383810eccd47f1bc86f3566d0679c
+size 577

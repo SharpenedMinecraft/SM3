@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:cooked_salmon"
-    ]
-  },
-  "criteria": {
-    "has_salmon": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:salmon"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:cooked_salmon"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_salmon",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e8fe6110617a2b3cb6735f4a585cc093b15d48a3ef73d2767ee399c7325f3db0
+size 563

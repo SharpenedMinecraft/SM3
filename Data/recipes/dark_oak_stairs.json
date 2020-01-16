@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_stairs",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:dark_oak_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:dark_oak_stairs",
-    "count": 4
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:705a2944d873b33926a0f108912e3be6d62c4191b542b9695084cbaed0cada2e
+size 271

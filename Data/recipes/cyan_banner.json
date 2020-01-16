@@ -1,20 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "banner",
-  "pattern": [
-    "###",
-    "###",
-    " | "
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:cyan_wool"
-    },
-    "|": {
-      "item": "minecraft:stick"
-    }
-  },
-  "result": {
-    "item": "minecraft:cyan_banner"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c08dfd1e62ce79d13a7de54a9be7727b67dacecafcfe360742eb5ce902a204e6
+size 288

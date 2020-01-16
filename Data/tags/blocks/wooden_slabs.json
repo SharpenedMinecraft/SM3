@@ -1,11 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:oak_slab",
-    "minecraft:spruce_slab",
-    "minecraft:birch_slab",
-    "minecraft:jungle_slab",
-    "minecraft:acacia_slab",
-    "minecraft:dark_oak_slab"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ecc07a0aae853c9599b91a519479a0e7b53698b0873bb52504061ba7cb1f3dc4
+size 212

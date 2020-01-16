@@ -1,35 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:lapis_block"
-    ]
-  },
-  "criteria": {
-    "has_at_least_9_lapis": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:lapis_lazuli",
-            "count": {
-              "min": 9
-            }
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:lapis_block"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_at_least_9_lapis",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:deb084eae674ef0a1f6ee2c5d88b1b5d083c08359c21c46349ae5de2fa58a216
+size 646

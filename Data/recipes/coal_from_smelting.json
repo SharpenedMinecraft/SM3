@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:coal_ore"
-  },
-  "result": "minecraft:coal",
-  "experience": 0.1,
-  "cookingtime": 200
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5871c6b179738e238b1ac8f89ef4f33653e281668ab059e3eac06c11464cab23
+size 163

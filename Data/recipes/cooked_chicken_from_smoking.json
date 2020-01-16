@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smoking",
-  "ingredient": {
-    "item": "minecraft:chicken"
-  },
-  "result": "minecraft:cooked_chicken",
-  "experience": 0.35,
-  "cookingtime": 100
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:40e8ffc7f401490eb97f1491625fb84880322ce449f4e891e7e4e3842cb719f2
+size 172

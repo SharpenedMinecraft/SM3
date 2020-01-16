@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:diorite_stairs"
-    ]
-  },
-  "criteria": {
-    "has_diorite": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:diorite"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:diorite_stairs"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_diorite",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cf097ccfca381fc689e2cb80680313935e69047f02af4f3caabce6bba4c51751
+size 568

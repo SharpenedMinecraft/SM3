@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "###",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:packed_ice"
-    }
-  },
-  "result": {
-    "item": "minecraft:blue_ice"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5519e102098090e0bbf67e8171bb738ab1f4f6e518bf58a0fe4fd5c4998010c1
+size 215

@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:clay"
-    ]
-  },
-  "criteria": {
-    "has_clay_ball": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:clay_ball"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:clay"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_clay_ball",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:77f8b3a3f396d92098b51badbd4d13d85eacb21b9c0ebd9cf9477cf133ba6ace
+size 554

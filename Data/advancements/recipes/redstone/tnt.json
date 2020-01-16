@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:tnt"
-    ]
-  },
-  "criteria": {
-    "has_gunpowder": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:gunpowder"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:tnt"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_gunpowder",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:397f2377f4f2e18c1ab0ffa72ca710deeacc419a890d41a12387f27ecc3c84a1
+size 552

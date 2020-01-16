@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:iron_ingot"
-    }
-  },
-  "result": {
-    "item": "minecraft:iron_bars",
-    "count": 16
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3a7656e2257907ad77972ff7607f4b6705a88a3167cd9c5dc57862bcad13b3b4
+size 222

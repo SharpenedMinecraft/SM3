@@ -1,8 +1,3 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:mossy_cobblestone"
-  },
-  "result": "minecraft:mossy_cobblestone_stairs",
-  "count": 1
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:10895359218ed28f5997c5a986623e3d1be94ed46ef505870bfe0eff7d02db61
+size 167

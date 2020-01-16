@@ -1,8 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:anvil",
-    "minecraft:chipped_anvil",
-    "minecraft:damaged_anvil"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8f5766f6f65e2daf2df9185d9fe99cb4f7b21077b5e3facaf7c2333f7c8f19a1
+size 125

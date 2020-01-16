@@ -1,13 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "planks",
-  "ingredients": [
-    {
-      "tag": "minecraft:birch_logs"
-    }
-  ],
-  "result": {
-    "item": "minecraft:birch_planks",
-    "count": 4
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a13a7ccaaa0640837e4613d32a5e1bd80f7e826979f4b606ec76e5feb8cb6c63
+size 209

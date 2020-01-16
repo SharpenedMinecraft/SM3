@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#X#"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:wheat"
-    },
-    "X": {
-      "item": "minecraft:cocoa_beans"
-    }
-  },
-  "result": {
-    "item": "minecraft:cookie",
-    "count": 8
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8c8ed60be627dd0b270c6f11a02a4193bcafc973034c9fb1d706fcdd4ad13588
+size 258

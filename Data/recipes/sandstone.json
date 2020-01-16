@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "##",
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:sand"
-    }
-  },
-  "result": {
-    "item": "minecraft:sandstone"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7585d95d0912c42f6569d2394d3703209762f136df3441110ab12ebc8b167a6a
+size 197

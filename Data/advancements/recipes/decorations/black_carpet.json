@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:black_carpet"
-    ]
-  },
-  "criteria": {
-    "has_black_wool": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:black_wool"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:black_carpet"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_black_wool",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:353961031b115c2b17e63ad03bfccf11960082b6f8ca0decf760c6b0f3363bcd
+size 573

@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:smooth_quartz_stairs"
-    ]
-  },
-  "criteria": {
-    "has_smooth_quartz": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:smooth_quartz"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:smooth_quartz_stairs"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_smooth_quartz",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e04ccd98db7850f620d06fcdd5b8300e862f55aa62afa37385fbcae37206cc26
+size 598

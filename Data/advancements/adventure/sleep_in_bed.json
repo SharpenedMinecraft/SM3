@@ -1,28 +1,3 @@
-{
-  "parent": "minecraft:adventure/root",
-  "display": {
-    "icon": {
-      "item": "minecraft:red_bed"
-    },
-    "title": {
-      "translate": "advancements.adventure.sleep_in_bed.title"
-    },
-    "description": {
-      "translate": "advancements.adventure.sleep_in_bed.description"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "slept_in_bed": {
-      "trigger": "minecraft:slept_in_bed"
-    }
-  },
-  "requirements": [
-    [
-      "slept_in_bed"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e4c0a6146b1ddb57b9399bdd0a4e3fa5ddc7f486f1df3bea38fe2c873ab99273
+size 543

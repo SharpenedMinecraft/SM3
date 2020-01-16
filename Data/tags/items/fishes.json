@@ -1,11 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:cod",
-    "minecraft:cooked_cod",
-    "minecraft:salmon",
-    "minecraft:cooked_salmon",
-    "minecraft:pufferfish",
-    "minecraft:tropical_fish"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1c8309eb4c87bdca5e640d91f5c3897dc095561343b100d7573cc3c6d19492b8
+size 203

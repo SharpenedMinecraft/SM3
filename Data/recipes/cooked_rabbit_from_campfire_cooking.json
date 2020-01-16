@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:campfire_cooking",
-  "ingredient": {
-    "item": "minecraft:rabbit"
-  },
-  "result": "minecraft:cooked_rabbit",
-  "experience": 0.35,
-  "cookingtime": 600
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:977adb4e4e5e9e9991d8d5685758c0550b0afc444b010fefd98135c1e4d3231c
+size 179

@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:furnace_minecart"
-    ]
-  },
-  "criteria": {
-    "has_minecart": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:minecart"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:furnace_minecart"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_minecart",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f23fba2cbbb7e8b47417d3acb4e5664c7dca436b57790ac56d38963eab1f45bd
+size 575

@@ -1,13 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "planks",
-  "ingredients": [
-    {
-      "tag": "minecraft:acacia_logs"
-    }
-  ],
-  "result": {
-    "item": "minecraft:acacia_planks",
-    "count": 4
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9a2fec34992ca4c880c77405f92cce838461650c8f41ab6b397d36fba8b25174
+size 211

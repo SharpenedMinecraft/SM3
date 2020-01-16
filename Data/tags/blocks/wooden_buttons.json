@@ -1,11 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:oak_button",
-    "minecraft:spruce_button",
-    "minecraft:birch_button",
-    "minecraft:jungle_button",
-    "minecraft:acacia_button",
-    "minecraft:dark_oak_button"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cf9d8832b2609989d351da2ca94e3de6f0dc783203fd50a0cb1bca7bfa7e9350
+size 224

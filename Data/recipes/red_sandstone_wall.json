@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:red_sandstone"
-    }
-  },
-  "result": {
-    "item": "minecraft:red_sandstone_wall",
-    "count": 6
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:39e094b2c1516df645e11d1ded0da45710a4a10e2f9ce4d8adf2f0d957cdd0b6
+size 233

@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:cyan_carpet"
-    ]
-  },
-  "criteria": {
-    "has_cyan_wool": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:cyan_wool"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:cyan_carpet"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_cyan_wool",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:486da2c661195573a0ef9cd715fdd1b0a4e2d0dd74dad9a93cbf015084586bfa
+size 568

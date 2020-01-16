@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "carpet",
-  "pattern": [
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:red_wool"
-    }
-  },
-  "result": {
-    "item": "minecraft:red_carpet",
-    "count": 3
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8fec8e8799ad5b7865a999d8ad2c039506f62dde15f1138d21ef32ba86e7ec70
+size 229

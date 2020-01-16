@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_slab",
-  "pattern": [
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:dark_oak_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:dark_oak_slab",
-    "count": 6
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6612febf84233f1bfb3975fb932b88c0191589014dbb3ec7b2b77f8b18b2dd11
+size 245

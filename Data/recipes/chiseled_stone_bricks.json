@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#",
-    "#"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:stone_brick_slab"
-    }
-  },
-  "result": {
-    "item": "minecraft:chiseled_stone_bricks"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:64f90ad7926c93ef202e02c22ef337b8d191c6e827d500b61eca9d6595c43027
+size 219

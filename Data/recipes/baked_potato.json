@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:potato"
-  },
-  "result": "minecraft:baked_potato",
-  "experience": 0.35,
-  "cookingtime": 200
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4b199f628fb7bd86dd939ec4799df2c291630770a75d1f53cfc06951c1dbac96
+size 170

@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:cooked_beef_from_campfire_cooking"
-    ]
-  },
-  "criteria": {
-    "has_beef": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:beef"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:cooked_beef_from_campfire_cooking"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_beef",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b69fec6a9e954f280d21772d64f0ed44d8a24e032158904d09c34ab4affc16d2
+size 597

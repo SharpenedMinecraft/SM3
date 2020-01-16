@@ -1,22 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "GGG",
-    "GEG",
-    "GTG"
-  ],
-  "key": {
-    "T": {
-      "item": "minecraft:ghast_tear"
-    },
-    "E": {
-      "item": "minecraft:ender_eye"
-    },
-    "G": {
-      "item": "minecraft:glass"
-    }
-  },
-  "result": {
-    "item": "minecraft:end_crystal"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d650725d53c6dff51f9a9a3c2fe52afad5ac70c6522c114c51156f19223b8dbd
+size 322

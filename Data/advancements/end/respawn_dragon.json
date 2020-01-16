@@ -1,33 +1,3 @@
-{
-  "parent": "minecraft:end/kill_dragon",
-  "display": {
-    "icon": {
-      "item": "minecraft:end_crystal"
-    },
-    "title": {
-      "translate": "advancements.end.respawn_dragon.title"
-    },
-    "description": {
-      "translate": "advancements.end.respawn_dragon.description"
-    },
-    "frame": "goal",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "summoned_dragon": {
-      "trigger": "minecraft:summoned_entity",
-      "conditions": {
-        "entity": {
-          "type": "minecraft:ender_dragon"
-        }
-      }
-    }
-  },
-  "requirements": [
-    [
-      "summoned_dragon"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:598de95a90475ebc2b8a24c4236659dd9dd9f66dd0bb4e6de216e0fbb4b784dd
+size 653

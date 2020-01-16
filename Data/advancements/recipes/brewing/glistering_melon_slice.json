@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:glistering_melon_slice"
-    ]
-  },
-  "criteria": {
-    "has_melon": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:melon_slice"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:glistering_melon_slice"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_melon",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fa551a3b8c53dd6a73d02509c3fa654c92fe4c583c9fad6de7164800e9a8d4fe
+size 584

@@ -1,24 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "rabbit_stew",
-  "ingredients": [
-    {
-      "item": "minecraft:baked_potato"
-    },
-    {
-      "item": "minecraft:cooked_rabbit"
-    },
-    {
-      "item": "minecraft:bowl"
-    },
-    {
-      "item": "minecraft:carrot"
-    },
-    {
-      "item": "minecraft:brown_mushroom"
-    }
-  ],
-  "result": {
-    "item": "minecraft:rabbit_stew"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:061ca7a733b12ae5b6425914a3fe0c958c6d147ff43d309c4d7f59b035cf06ef
+size 397

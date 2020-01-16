@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smoking",
-  "ingredient": {
-    "item": "minecraft:mutton"
-  },
-  "result": "minecraft:cooked_mutton",
-  "experience": 0.35,
-  "cookingtime": 100
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f90b1698f147a70533d15f02f81c919e676a1754f99da2d1ddc7565115198653
+size 170

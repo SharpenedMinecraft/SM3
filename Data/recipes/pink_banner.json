@@ -1,20 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "banner",
-  "pattern": [
-    "###",
-    "###",
-    " | "
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:pink_wool"
-    },
-    "|": {
-      "item": "minecraft:stick"
-    }
-  },
-  "result": {
-    "item": "minecraft:pink_banner"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0b1b4c0fcd0b06f7cdec80226c00b208ade4cda1721ba6e43fa16c1e02f94962
+size 288

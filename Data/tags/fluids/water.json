@@ -1,7 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:water",
-    "minecraft:flowing_water"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:698e1662335b6241879b380a58d478ee019a1e789362b004050b5ccac421ad18
+size 94

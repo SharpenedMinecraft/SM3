@@ -1,7 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "#minecraft:wooden_fences",
-    "minecraft:nether_brick_fence"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8c4ebabbf6d088340c70c29091eadfd94d11cd551b193af52ea06cc073bc7483
+size 108

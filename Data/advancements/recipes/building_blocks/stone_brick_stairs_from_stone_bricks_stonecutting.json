@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:stone_brick_stairs_from_stone_bricks_stonecutting"
-    ]
-  },
-  "criteria": {
-    "has_stone_bricks": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:stone_bricks"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:stone_brick_stairs_from_stone_bricks_stonecutting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_stone_bricks",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:26032dbfb196028051d5bef516a0346522d37638c2556b0c3a3c5be0c4f3ca23
+size 653

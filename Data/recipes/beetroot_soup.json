@@ -1,29 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:bowl"
-    },
-    {
-      "item": "minecraft:beetroot"
-    },
-    {
-      "item": "minecraft:beetroot"
-    },
-    {
-      "item": "minecraft:beetroot"
-    },
-    {
-      "item": "minecraft:beetroot"
-    },
-    {
-      "item": "minecraft:beetroot"
-    },
-    {
-      "item": "minecraft:beetroot"
-    }
-  ],
-  "result": {
-    "item": "minecraft:beetroot_soup"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:53a75246373d4169e6c9e6667b28743bd392576c7f9841801c0585e69e9804d5
+size 456

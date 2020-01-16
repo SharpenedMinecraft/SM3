@@ -1,11 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "#minecraft:dark_oak_logs",
-    "#minecraft:oak_logs",
-    "#minecraft:acacia_logs",
-    "#minecraft:birch_logs",
-    "#minecraft:jungle_logs",
-    "#minecraft:spruce_logs"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ca3514f58b46a5b1864cba420583d28dcbd6596cf7388895fe56093bcaf92477
+size 218

@@ -1,13 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "red_dye",
-  "ingredients": [
-    {
-      "item": "minecraft:rose_bush"
-    }
-  ],
-  "result": {
-    "item": "minecraft:red_dye",
-    "count": 2
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e61f6980bfcd81e107c29cb22e461a04a1110626e3aba8f2692dcbd41d870fa7
+size 205

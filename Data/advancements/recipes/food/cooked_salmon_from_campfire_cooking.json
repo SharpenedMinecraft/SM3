@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:cooked_salmon_from_campfire_cooking"
-    ]
-  },
-  "criteria": {
-    "has_salmon": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:salmon"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:cooked_salmon_from_campfire_cooking"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_salmon",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f83177d3c81b7407ae8571f5d026a3072053053756506be26ed38d3b2cd34428
+size 607

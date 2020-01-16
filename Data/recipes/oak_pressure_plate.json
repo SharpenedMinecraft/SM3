@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_pressure_plate",
-  "pattern": [
-    "##"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:oak_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:oak_pressure_plate"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d8c4f94c85c0971d0cb4cc06b491c0ee4e61fabe5cda13fc0ad00f794328f778
+size 238

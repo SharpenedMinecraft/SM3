@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "NW",
-    "WN"
-  ],
-  "key": {
-    "W": {
-      "item": "minecraft:nether_wart"
-    },
-    "N": {
-      "item": "minecraft:nether_brick"
-    }
-  },
-  "result": {
-    "item": "minecraft:red_nether_bricks"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bf1c626b7fd270ed2010b1b96775ae6540afa9440cc8dbe262f9d2723011eb97
+size 269

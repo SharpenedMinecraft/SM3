@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:redstone_from_smelting"
-    ]
-  },
-  "criteria": {
-    "has_redstone_ore": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:redstone_ore"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:redstone_from_smelting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_redstone_ore",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:47be80e1f62a9bb996fdf5b551f7287e1f14788f4faf436ccf77e2b7cc480f39
+size 599

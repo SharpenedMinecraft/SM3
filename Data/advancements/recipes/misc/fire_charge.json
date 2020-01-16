@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:fire_charge"
-    ]
-  },
-  "criteria": {
-    "has_blaze_powder": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:blaze_powder"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:fire_charge"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_blaze_powder",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b5a77f84decade7bcf959352a7f88bb3ea14c6c395e89cfd51b2a40d73e3732a
+size 577

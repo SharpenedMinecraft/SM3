@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:anvil"
-    ]
-  },
-  "criteria": {
-    "has_iron_block": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:iron_block"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:anvil"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_iron_block",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cb1e817e69d1a60d7ef4b8a2320c4432d9fa8d93b29af3856957eeacb37f9ac6
+size 559

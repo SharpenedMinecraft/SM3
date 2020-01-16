@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "X X",
-    "XXX",
-    "XXX"
-  ],
-  "key": {
-    "X": {
-      "item": "minecraft:iron_ingot"
-    }
-  },
-  "result": {
-    "item": "minecraft:iron_chestplate"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8aec0031d325287e4c55fa83b6a31b9b0daee08d897363fc3d941d8f9848626f
+size 222

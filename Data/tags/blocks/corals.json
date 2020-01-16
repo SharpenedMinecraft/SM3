@@ -1,11 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "#minecraft:coral_plants",
-    "minecraft:tube_coral_fan",
-    "minecraft:brain_coral_fan",
-    "minecraft:bubble_coral_fan",
-    "minecraft:fire_coral_fan",
-    "minecraft:horn_coral_fan"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8f8a276990a5be14480ee2b86323a83b4fc8ac43be0bfc066e80850a0f30f87c
+size 234

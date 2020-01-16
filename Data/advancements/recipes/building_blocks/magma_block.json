@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:magma_block"
-    ]
-  },
-  "criteria": {
-    "has_magma_cream": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:magma_cream"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:magma_block"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_magma_cream",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:81105ff1b47bf4fdb122b4e83e28427c0951f2331f118d3c69846b4ceb7d4ea2
+size 574

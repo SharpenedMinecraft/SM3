@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:beetroot_soup"
-    ]
-  },
-  "criteria": {
-    "has_beetroot": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:beetroot"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:beetroot_soup"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_beetroot",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dae470be7ff9038dd78b48bbf41a570c24ff752dd26dbffedd4456620dac98fc
+size 569

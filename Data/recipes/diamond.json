@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:diamond_block"
-    }
-  ],
-  "result": {
-    "item": "minecraft:diamond",
-    "count": 9
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d08a62201a10539076b43cf61a4b174787f4e890377cac9e1a0432299597869a
+size 187

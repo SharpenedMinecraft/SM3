@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "dyed_bed",
-  "ingredients": [
-    {
-      "item": "minecraft:white_bed"
-    },
-    {
-      "item": "minecraft:blue_dye"
-    }
-  ],
-  "result": {
-    "item": "minecraft:blue_bed"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:71ee978a74432dd5457790d932460bfb5393e84fd4d28bfb64095da8a6fd858b
+size 239

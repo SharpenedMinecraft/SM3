@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:ender_chest"
-    ]
-  },
-  "criteria": {
-    "has_ender_eye": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:ender_eye"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:ender_chest"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_ender_eye",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:db3ddcc02bf87bcecf7909ee623168d6be9b55d0002fbebe0a263c0e3b98a424
+size 568

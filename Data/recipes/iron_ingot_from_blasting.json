@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "minecraft:iron_ore"
-  },
-  "result": "minecraft:iron_ingot",
-  "experience": 0.7,
-  "cookingtime": 100
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6428f81df9921d94d2362219ba81ca2e139c5e2cf0aba549cce9651adab4d398
+size 169

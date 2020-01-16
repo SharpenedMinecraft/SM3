@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:gift",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:map"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:paper"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dae2142bcb779f19bf083e2db204d794c6ba1d3f007423171a94651eb1234f86
+size 288

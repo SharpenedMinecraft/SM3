@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:lapis_from_blasting"
-    ]
-  },
-  "criteria": {
-    "has_lapis_ore": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:lapis_ore"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:lapis_from_blasting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_lapis_ore",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:24387ce206e801d8eb9b147d063d5ba22449bb031a4e8d0d257574c73d85fff0
+size 584

@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:iron_ingot"
-    }
-  ],
-  "result": {
-    "item": "minecraft:iron_nugget",
-    "count": 9
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:39e56e7b5d51d4071390960736168268a1a28d26f42c50f21c47668d1d2700aa
+size 188

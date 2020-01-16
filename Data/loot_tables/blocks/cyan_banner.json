@@ -1,36 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:copy_name",
-              "source": "block_entity"
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": "block_entity",
-              "ops": [
-                {
-                  "source": "Patterns",
-                  "target": "BlockEntityTag.Patterns",
-                  "op": "replace"
-                }
-              ]
-            }
-          ],
-          "name": "minecraft:cyan_banner"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:51667d08e114c0cd4bfc9c7bf4ff327f0d4f6cc2e7b61020daceb82512cb26cc
+size 784

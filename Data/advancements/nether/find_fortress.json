@@ -1,31 +1,3 @@
-{
-  "parent": "minecraft:nether/root",
-  "display": {
-    "icon": {
-      "item": "minecraft:nether_bricks"
-    },
-    "title": {
-      "translate": "advancements.nether.find_fortress.title"
-    },
-    "description": {
-      "translate": "advancements.nether.find_fortress.description"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "fortress": {
-      "trigger": "minecraft:location",
-      "conditions": {
-        "feature": "fortress"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "fortress"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a29fca8585b98bbadafae9222cb34c63819554039b7c846f6f6677635b487874
+size 591

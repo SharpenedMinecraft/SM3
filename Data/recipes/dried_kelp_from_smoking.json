@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smoking",
-  "ingredient": {
-    "item": "minecraft:kelp"
-  },
-  "result": "minecraft:dried_kelp",
-  "experience": 0.1,
-  "cookingtime": 100
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1efda43a8cd97a1c81d5fd9028aed507989bc87f7c01a81124be413c459ae8d9
+size 164

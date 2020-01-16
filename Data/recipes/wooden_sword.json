@@ -1,19 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "X",
-    "X",
-    "#"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "X": {
-      "tag": "minecraft:planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:wooden_sword"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:af2c7bc54a72ea2b26c59e7c3f8cf71ca8de152ecaa01969d6b691a9122b561d
+size 258

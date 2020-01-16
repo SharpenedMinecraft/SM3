@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:blue_stained_glass"
-    ]
-  },
-  "criteria": {
-    "has_glass": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:glass"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:blue_stained_glass"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_glass",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8d4c7486af9ea9e2b0b30facce854dff89df77bdd3355e90bc239219b5d4cf3c
+size 570

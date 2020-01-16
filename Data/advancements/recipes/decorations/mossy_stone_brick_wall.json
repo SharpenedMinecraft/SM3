@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:mossy_stone_brick_wall"
-    ]
-  },
-  "criteria": {
-    "has_mossy_stone_bricks": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:mossy_stone_bricks"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:mossy_stone_brick_wall"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_mossy_stone_bricks",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc8d57e2fbe0dce78546716454663f363360743e82524250cfe360aa2305ff78
+size 617

@@ -1,8 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:seagrass",
-    "#minecraft:corals",
-    "#minecraft:wall_corals"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc7e93bcd1019e10edd35e5254d6128861c3f87971e2e184a6ece4432583528c
+size 121

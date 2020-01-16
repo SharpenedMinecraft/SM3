@@ -1,7 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "#minecraft:wooden_buttons",
-    "minecraft:stone_button"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3ddea4ed60149243506761b8b38af0eb831f8cc15d18d2a2526d2f433d99827a
+size 103

@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:hay_block"
-    }
-  ],
-  "result": {
-    "item": "minecraft:wheat",
-    "count": 9
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:81d5e5902a17e7e4e8b614c9f55c8ee658672aee12ed59d93b8a5d2293342fda
+size 181

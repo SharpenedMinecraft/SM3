@@ -1,35 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:packed_ice"
-    ]
-  },
-  "criteria": {
-    "has_at_least_9_ice": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:ice",
-            "count": {
-              "min": 9
-            }
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:packed_ice"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_at_least_9_ice",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bef51ca9a38f663156146216732562a1c23d0e11e633b86b10837134097f8396
+size 631

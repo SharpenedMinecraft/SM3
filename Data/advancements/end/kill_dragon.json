@@ -1,33 +1,3 @@
-{
-  "parent": "minecraft:end/root",
-  "display": {
-    "icon": {
-      "item": "minecraft:dragon_head"
-    },
-    "title": {
-      "translate": "advancements.end.kill_dragon.title"
-    },
-    "description": {
-      "translate": "advancements.end.kill_dragon.description"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "criteria": {
-    "killed_dragon": {
-      "trigger": "minecraft:player_killed_entity",
-      "conditions": {
-        "entity": {
-          "type": "minecraft:ender_dragon"
-        }
-      }
-    }
-  },
-  "requirements": [
-    [
-      "killed_dragon"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:86a29cd987a48af20628c42506314cb57aa6da2ebead4636ac9b9c40d325df66
+size 641

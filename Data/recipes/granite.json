@@ -1,14 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:diorite"
-    },
-    {
-      "item": "minecraft:quartz"
-    }
-  ],
-  "result": {
-    "item": "minecraft:granite"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:46ab4d74c08453bc4db3245817759bf9420b9d07f6649d3298dbbf462e240c19
+size 211

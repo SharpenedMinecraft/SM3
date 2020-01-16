@@ -1,7 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "#minecraft:wooden_doors",
-    "minecraft:iron_door"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5132a37a97839559a4a2223918421597b95b569aa99f327d7eba6f9a648a0295
+size 98

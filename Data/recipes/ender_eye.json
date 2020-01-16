@@ -1,14 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:ender_pearl"
-    },
-    {
-      "item": "minecraft:blaze_powder"
-    }
-  ],
-  "result": {
-    "item": "minecraft:ender_eye"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:69455a007fe5a93cbf5e4e1ca8f788eb3337d828ab90544e3923b1e16f6d9f6d
+size 223

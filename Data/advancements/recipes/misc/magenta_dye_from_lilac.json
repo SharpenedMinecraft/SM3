@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:magenta_dye_from_lilac"
-    ]
-  },
-  "criteria": {
-    "has_double_plant": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:lilac"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:magenta_dye_from_lilac"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_double_plant",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2b3b167ae689ad6e24284bc7b8073548808bfecd7e5957583e860fa3817053eb
+size 592

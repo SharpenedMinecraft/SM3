@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:composter"
-    ]
-  },
-  "criteria": {
-    "has_wooden_fences": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "tag": "minecraft:wooden_fences"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:composter"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_wooden_fences",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ea5b09085e4faa772c2578488a2e0f2377bbc62da327d65df33d018c0607dade
+size 575

@@ -1,20 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "group": "wooden_fence",
-  "pattern": [
-    "W#W",
-    "W#W"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "W": {
-      "item": "minecraft:birch_planks"
-    }
-  },
-  "result": {
-    "item": "minecraft:birch_fence",
-    "count": 3
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:03a825ecc7dbbdc709f6ac0bdd0afef394926a078ba4b1345433088b87e65b68
+size 302

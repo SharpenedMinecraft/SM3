@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:diamond_from_smelting"
-    ]
-  },
-  "criteria": {
-    "has_diamond_ore": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:diamond_ore"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:diamond_from_smelting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_diamond_ore",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:280401cdec2be18e5aa9b236d93d4daddd26dae095eace6cffb917da8754a046
+size 594

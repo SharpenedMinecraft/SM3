@@ -1,14 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:wheat"
-    }
-  },
-  "result": {
-    "item": "minecraft:bread"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dac7cacf5c47bcc62ac656d7e17c06e68a328664c80a40f0527d3bda3c60f7b6
+size 185

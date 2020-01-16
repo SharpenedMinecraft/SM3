@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:diorite"
-    },
-    {
-      "item": "minecraft:cobblestone"
-    }
-  ],
-  "result": {
-    "item": "minecraft:andesite",
-    "count": 2
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a82f35a60b98c95b6a6ecd0c32b47e3b3ac7160431df014c9229aae0321ed539
+size 233

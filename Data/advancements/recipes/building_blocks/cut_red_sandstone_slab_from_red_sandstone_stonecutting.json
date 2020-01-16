@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:cut_red_sandstone_slab_from_red_sandstone_stonecutting"
-    ]
-  },
-  "criteria": {
-    "has_red_sandstone": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:red_sandstone"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:cut_red_sandstone_slab_from_red_sandstone_stonecutting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_red_sandstone",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:34098d135f81074b0d68ee386f071fc69313c6b351f21432e31bb6d937e0e11a
+size 666

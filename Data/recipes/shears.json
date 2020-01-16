@@ -1,15 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " #",
-    "# "
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:iron_ingot"
-    }
-  },
-  "result": {
-    "item": "minecraft:shears"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:438172cdf97d8f0a2b0873a404c44cd4b095c927c96f80e32308d3069329b407
+size 200

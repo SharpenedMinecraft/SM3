@@ -1,8 +1,3 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:mossy_stone_bricks"
-  },
-  "result": "minecraft:mossy_stone_brick_slab",
-  "count": 2
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ca2d42529eec280bb7b0012626d08fea3251c981959df0a42b6c0891badd4206
+size 166

@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:prismarine_brick_slab"
-    ]
-  },
-  "criteria": {
-    "has_prismarine_bricks": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:prismarine_bricks"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:prismarine_brick_slab"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_prismarine_bricks",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:095cd62b951c29e1c0b02a855b69d65e4722e5a1c002d8e36c9e18c606af61de
+size 612

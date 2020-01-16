@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "X",
-    "#"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:cobblestone"
-    },
-    "X": {
-      "item": "minecraft:stick"
-    }
-  },
-  "result": {
-    "item": "minecraft:lever"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a1ecb9933261910d3acc4e8f04e5007a24d80c877fb8ce2b1987269bb11c6c17
+size 248

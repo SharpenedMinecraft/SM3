@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "white_dye",
-  "ingredients": [
-    {
-      "item": "minecraft:bone_meal"
-    }
-  ],
-  "result": {
-    "item": "minecraft:white_dye"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a95cb5acbad5520f52123cd7175c9f6ce5cc23b903dd03455032681594c87cd7
+size 193

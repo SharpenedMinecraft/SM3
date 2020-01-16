@@ -1,14 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:paper"
-    },
-    {
-      "item": "minecraft:oxeye_daisy"
-    }
-  ],
-  "result": {
-    "item": "minecraft:flower_banner_pattern"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f34c24c90dd2e7454f69cafae9727b4fa48e9065dc8bf79402c87b49e088f5e0
+size 228

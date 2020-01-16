@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:purpur_stairs"
-    ]
-  },
-  "criteria": {
-    "has_purpur_block": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:purpur_block"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:purpur_stairs"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_purpur_block",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:03f9811c7b1e1412ad6aded2d1f88f40c3245f9404cbbac8a9b4e7d442e87286
+size 581

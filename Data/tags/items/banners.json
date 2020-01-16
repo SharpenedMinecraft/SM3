@@ -1,21 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:white_banner",
-    "minecraft:orange_banner",
-    "minecraft:magenta_banner",
-    "minecraft:light_blue_banner",
-    "minecraft:yellow_banner",
-    "minecraft:lime_banner",
-    "minecraft:pink_banner",
-    "minecraft:gray_banner",
-    "minecraft:light_gray_banner",
-    "minecraft:cyan_banner",
-    "minecraft:purple_banner",
-    "minecraft:blue_banner",
-    "minecraft:brown_banner",
-    "minecraft:green_banner",
-    "minecraft:red_banner",
-    "minecraft:black_banner"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e6082bf09e0461c51303770afcb056c3a1b50e1285ba68de3853456e8132ad27
+size 528

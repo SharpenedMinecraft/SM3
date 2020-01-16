@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:cake"
-    ]
-  },
-  "criteria": {
-    "has_egg": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:egg"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:cake"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_egg",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cb0aefcd00a2f37d9f86eab5a919787dbdb2a55b18d128070110100f9b9b0a36
+size 536

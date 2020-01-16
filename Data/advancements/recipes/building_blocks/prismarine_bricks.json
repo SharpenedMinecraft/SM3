@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:prismarine_bricks"
-    ]
-  },
-  "criteria": {
-    "has_prismarine_shard": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:prismarine_shard"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:prismarine_bricks"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_prismarine_shard",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ef241355a632988b305048fd56a68a152bb6a90eeae9162ac28e17cdb3287258
+size 601

@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:dark_oak_planks"
-    ]
-  },
-  "criteria": {
-    "has_logs": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "tag": "minecraft:dark_oak_logs"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:dark_oak_planks"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_logs",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1168b303870d5ce53a8ee6f6228e3718b022f2f9d14e41f58dbdc1cda0933778
+size 569

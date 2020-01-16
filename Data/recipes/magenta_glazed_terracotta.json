@@ -1,9 +1,3 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "minecraft:magenta_terracotta"
-  },
-  "result": "minecraft:magenta_glazed_terracotta",
-  "experience": 0.1,
-  "cookingtime": 200
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7556bfb6ad328ea7796f1bb041089b6f47395f2490a72becbbcc651703275a0a
+size 194

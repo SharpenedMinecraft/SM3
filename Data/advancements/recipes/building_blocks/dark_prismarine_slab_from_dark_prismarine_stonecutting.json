@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:dark_prismarine_slab_from_dark_prismarine_stonecutting"
-    ]
-  },
-  "criteria": {
-    "has_dark_prismarine": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:dark_prismarine"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:dark_prismarine_slab_from_dark_prismarine_stonecutting"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_dark_prismarine",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9d16653d61f1a1e4193f16616612123ecd55656954c08fc007c4c428a7650e4f
+size 672

@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "orange_dye",
-  "ingredients": [
-    {
-      "item": "minecraft:orange_tulip"
-    }
-  ],
-  "result": {
-    "item": "minecraft:orange_dye"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:24201a60da7527c312e78f77b61cb64f9c86e2b481fe81225277b1d6925d7b64
+size 198

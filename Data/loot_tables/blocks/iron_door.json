@@ -1,28 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "conditions": [
-            {
-              "condition": "minecraft:block_state_property",
-              "block": "minecraft:iron_door",
-              "properties": {
-                "half": "lower"
-              }
-            }
-          ],
-          "name": "minecraft:iron_door"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7cc32c87e7b53edcfaddf92778d89a251d84e4226fc35fb87e428ec33c36fad5
+size 559

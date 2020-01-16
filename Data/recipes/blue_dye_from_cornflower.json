@@ -1,12 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "blue_dye",
-  "ingredients": [
-    {
-      "item": "minecraft:cornflower"
-    }
-  ],
-  "result": {
-    "item": "minecraft:blue_dye"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6da874eec780361c0a48c6803994d20e3442859e5c353bb71c8cdc7cb855b3b5
+size 192

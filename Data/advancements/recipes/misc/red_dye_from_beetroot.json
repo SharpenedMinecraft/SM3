@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "minecraft:red_dye_from_beetroot"
-    ]
-  },
-  "criteria": {
-    "has_beetroot": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:beetroot"
-          }
-        ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "minecraft:red_dye_from_beetroot"
-      }
-    }
-  },
-  "requirements": [
-    [
-      "has_beetroot",
-      "has_the_recipe"
-    ]
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:521f3e74c577e6d0cb3680838168559c6421520901f9d2bce6dc164b512f64fe
+size 585
