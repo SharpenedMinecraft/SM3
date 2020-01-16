@@ -1,5 +1,6 @@
 using System;
 using EnumsNET;
+using Frontend.Packets.Login;
 using Microsoft.Extensions.Logging;
 
 namespace Frontend.Packets.Handshaking
@@ -8,7 +9,7 @@ namespace Frontend.Packets.Handshaking
     {
         public readonly int Id => 0x00;
         public readonly MCConnectionStage Stage => MCConnectionStage.Handshaking;
-
+        
         public int ProtocolVersion;
         public string ServerAddress;
         public short Port;
@@ -27,7 +28,19 @@ namespace Frontend.Packets.Handshaking
             connectionState.ConnectionStage = NextStage;
             connectionState.IsLocal = ServerAddress == "localhost" || ServerAddress == "127.0.0.1";
 
-            logger.LogInformation($"Received Handshake; Protocol {(ProtocolVersion is MCPacketHandler.ProtocolVersion ? "MATCH" : "ERROR")}; Address Used: {ServerAddress}:{Port}");
+            if (MCPacketHandler.ProtocolVersion != ProtocolVersion && NextStage == MCConnectionStage.Login)
+            {
+                var msg = $"Version missmatch. Server: {MCPacketHandler.ProtocolVersion} ({MCPacketHandler.VersionName}), Client: {ProtocolVersion}";
+                logger.LogInformation(msg);
+                connectionState.PacketQueue.Write(new Disconnect(new ChatBuilder()
+                                                                 .AppendText(msg)
+                                                                 .Bold()
+                                                                 .WithColor("red")
+                                                                 .Build()));
+                return;
+            }
+
+            logger.LogInformation($"Received Handshake; Protcol Matches. Address Used: {ServerAddress}:{Port}");
             logger.LogInformation($"Switching to {NextStage.AsString()}");
         }
     }
