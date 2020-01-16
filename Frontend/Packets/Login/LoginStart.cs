@@ -71,6 +71,7 @@ namespace Frontend.Packets.Login
                 broadcastQueue.Broadcast(new PlayerInfo(PlayerInfo.InfoType.AddPlayer, new[] { connectionState.PlayerEntity }));
                 broadcastQueue.Broadcast(new PlayerInfo(PlayerInfo.InfoType.UpdateLatency, new[] { connectionState.PlayerEntity }));
                 connectionState.PacketQueue.Write(new UpdateViewPosition(0, 0));
+                connectionState.PacketQueue.WriteImmediate(new KeepAliveClientbound(1));
 
                 var playerChunkPosition = (ChunkPosition)BlockPosition.From(connectionState.PlayerEntity.Position);
                 var halfViewDistance = connectionState.PlayerEntity.Settings.RenderDistance > 0 ? connectionState.PlayerEntity.Settings.RenderDistance / 2 : 4;

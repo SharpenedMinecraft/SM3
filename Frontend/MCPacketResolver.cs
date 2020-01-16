@@ -18,6 +18,7 @@ namespace Frontend
             new LoginStart(), 
             new PlayerSettings(), 
             new ServerboundPluginMessage(), 
+            new KeepAliveServerbound(), 
         }, new NetworkPacketComparer());
 
         private class NetworkPacketComparer : EqualityComparer<IReadablePacket>
