@@ -46,6 +46,7 @@ namespace Frontend
                 {
                     new Overworld(),
                 }, provider.GetRequiredService<IMetrics>()));
+            services.AddSingleton<IRandomProvider, JavaRandomProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

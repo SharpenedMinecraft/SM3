@@ -7,7 +7,7 @@ namespace Frontend.Packets.Play
 {
     public readonly struct KeepAliveClientbound : IWriteablePacket
     {
-        public int Id => 0x20;
+        public int Id => 0x21;
         
         public readonly long KeepAliveId;
 

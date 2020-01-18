@@ -7,7 +7,7 @@ namespace Frontend.Packets.Play
 {
     public readonly struct ChunkData : IWriteablePacket
     {
-        public int Id => 0x21;
+        public int Id => 0x22;
 
         public readonly ChunkPosition Position;
         public readonly ReadOnlyChunk Chunk;
@@ -38,7 +38,10 @@ namespace Frontend.Packets.Play
             const int requiredLongs = 16 * 16 * 16 * bitsPerBlock / 8 / sizeof(long);
             
             writer.WriteNbt(compound);
-            writer.WriteVarInt((chunksSend * (sizeof(short) + sizeof(byte) + 2 + (requiredLongs * sizeof(long)))) + (256 * 4));
+
+            WriteBiomes(writer);
+            
+            writer.WriteVarInt((chunksSend * (sizeof(short) + sizeof(byte) + 2 + (requiredLongs * sizeof(long)))));
 
             for (int section = 0; section < 16; section++)
             {
@@ -65,18 +68,23 @@ namespace Frontend.Packets.Play
                     writer.WriteUInt64(longs[i]);
                 }
             }
-
-            
-            for (int x = 0; x < 16; x++)
-            {
-                for (int z = 0; z < 16; z++)
-                {
-                    writer.WriteInt32(127); // Void
-                }
-            }
             
             // Block Entities
             writer.WriteVarInt(0);
+        }
+
+        private void WriteBiomes(IPacketWriter writer)
+        {
+            const int HORIZONTAL_SECTION_COUNT = 2; // (int)Math.round(Math.log(16.0D) / Math.log(2.0D)) - 2;
+            const int VERTICAL_SECTION_COUNT = 6; // (int)Math.round(Math.log(256.0D) / Math.log(2.0D)) - 2;
+            const int DEFAULT_LENGTH = 1 << HORIZONTAL_SECTION_COUNT + HORIZONTAL_SECTION_COUNT + VERTICAL_SECTION_COUNT;
+            // const int HORIZONTAL_BIT_MASK = (1 << HORIZONTAL_SECTION_COUNT) - 1;
+            // const int VERTICAL_BIT_MASK = (1 << VERTICAL_SECTION_COUNT) - 1;
+
+            for (int i = 0; i < DEFAULT_LENGTH; i++)
+            {
+                writer.WriteInt32(127); // void
+            }
         }
 
         private int[] CalculateHeightmap(in ReadOnlyChunk chunk)

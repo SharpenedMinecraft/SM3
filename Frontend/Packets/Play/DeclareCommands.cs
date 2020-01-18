@@ -6,7 +6,7 @@ namespace Frontend.Packets.Play
 {
     public readonly struct DeclareCommands : IWriteablePacket
     {
-        public int Id => 0x11;
+        public int Id => 0x12;
 
         public readonly ICommandProvider.CommandInfo[] CommandInfos;
 

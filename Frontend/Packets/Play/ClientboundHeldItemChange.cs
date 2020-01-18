@@ -4,7 +4,7 @@ namespace Frontend.Packets.Play
 {
     public readonly struct ClientboundHeldItemChange : IWriteablePacket
     {
-        public int Id => 0x3F;
+        public int Id => 0x40;
 
         public readonly byte Slot;
 

@@ -14,7 +14,7 @@ namespace Frontend.Packets.Play
             InstantBreak = 0x08
         }
         
-        public int Id => 0x31;
+        public int Id => 0x32;
 
         public readonly Flags Abilities;
         public readonly float FlyingSpeed;

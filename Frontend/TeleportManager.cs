@@ -7,7 +7,12 @@ namespace Frontend
     public sealed class TeleportManager : ITeleportManager
     {
         private Dictionary<int, TeleportInfo> _teleportIds = new Dictionary<int, TeleportInfo>();
-        private Random _random = new Random();
+        private IRandomProvider _randomProvider;
+
+        public TeleportManager(IRandomProvider randomProvider)
+        {
+            _randomProvider = randomProvider;
+        }
 
         private readonly struct TeleportInfo
         {
@@ -26,7 +31,7 @@ namespace Frontend
             int id;
             do
             {
-                id = _random.Next();
+                id = _randomProvider.NextInt();
             } while (_teleportIds.ContainsKey(id));
 
             _teleportIds[id] = new TeleportInfo(entityId, target);

@@ -2,7 +2,7 @@ namespace Frontend.Packets.Play
 {
     public readonly struct EntityStatus : IWriteablePacket
     {
-        public int Id => 0x1B;
+        public int Id => 0x1C;
 
         public readonly int EntityId;
         public readonly byte Status;

@@ -13,7 +13,7 @@ namespace Frontend.Packets.Play
             RemovePlayer = 4
         }
 
-        public int Id => 0x33;
+        public int Id => 0x34;
 
         public readonly InfoType Type;
         public readonly Player[] Players;

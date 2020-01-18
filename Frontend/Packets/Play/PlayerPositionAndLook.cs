@@ -16,7 +16,7 @@ namespace Frontend.Packets.Play
             RelativeXRot = 0x10,
         }
 
-        public int Id => 0x35;
+        public int Id => 0x36;
 
         public readonly Vector3 Position;
         public readonly Vector2 Rotation;
