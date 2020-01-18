@@ -3,10 +3,10 @@ using System.Threading;
 
 namespace Frontend
 {
-    public sealed class JavaRandomProvider : IRandomProvider
+    public sealed class JavaRandomProvider : IRandomProvider, IDisposable
     {
         public long Seed { get; private set; }
-        private SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
+        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
         public int Next(int bits)
         {
             _semaphore.Wait();
@@ -19,6 +19,11 @@ namespace Frontend
             {
                 _semaphore.Release();
             }
+        }
+
+        public void Dispose()
+        {
+            _semaphore.Dispose();
         }
     }
 }

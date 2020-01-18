@@ -7,7 +7,7 @@ namespace Frontend.Packets.Play
 {
     public readonly struct ChunkData : IWriteablePacket
     {
-        public int Id => 0x21;
+        public int Id => 0x22;
 
         public readonly ChunkPosition Position;
         public readonly ReadOnlyChunk Chunk;
@@ -78,8 +78,8 @@ namespace Frontend.Packets.Play
             const int HORIZONTAL_SECTION_COUNT = 2; // (int)Math.round(Math.log(16.0D) / Math.log(2.0D)) - 2;
             const int VERTICAL_SECTION_COUNT = 6; // (int)Math.round(Math.log(256.0D) / Math.log(2.0D)) - 2;
             const int DEFAULT_LENGTH = 1 << HORIZONTAL_SECTION_COUNT + HORIZONTAL_SECTION_COUNT + VERTICAL_SECTION_COUNT;
-            const int HORIZONTAL_BIT_MASK = (1 << HORIZONTAL_SECTION_COUNT) - 1;
-            const int VERTICAL_BIT_MASK = (1 << VERTICAL_SECTION_COUNT) - 1;
+            // const int HORIZONTAL_BIT_MASK = (1 << HORIZONTAL_SECTION_COUNT) - 1;
+            // const int VERTICAL_BIT_MASK = (1 << VERTICAL_SECTION_COUNT) - 1;
 
             for (int i = 0; i < DEFAULT_LENGTH; i++)
             {
