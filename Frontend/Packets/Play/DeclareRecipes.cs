@@ -4,7 +4,7 @@ namespace Frontend.Packets.Play
     // then implement this packet like https://wiki.vg/Protocol#Declare_Recipes
     public readonly struct DeclareRecipes : IWriteablePacket
     {
-        public int Id => 0x5A;
+        public int Id => 0x5B;
         
         // public Recipe[] Recipes;
 

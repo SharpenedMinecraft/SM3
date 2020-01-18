@@ -4,7 +4,7 @@ namespace Frontend.Packets.Play
 {
     public readonly struct ClientboundPluginMessage : IWriteablePacket
     {
-        public int Id => 0x18;
+        public int Id => 0x19;
 
         public readonly string Identifier;
         public readonly ReadOnlyMemory<byte> Data;

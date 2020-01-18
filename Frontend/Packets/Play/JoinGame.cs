@@ -5,7 +5,7 @@ namespace Frontend.Packets.Play
 {
     public readonly struct JoinGame : IWriteablePacket
     {
-        public int Id => 0x25;
+        public int Id => 0x26;
 
         public readonly int EntityId;
         public readonly byte GameMode;
