@@ -2,7 +2,7 @@ namespace Frontend.Packets.Play
 {
     public readonly struct UpdateViewPosition : IWriteablePacket
     {
-        public int Id => 0x40;
+        public int Id => 0x41;
 
         public readonly int ChunkX;
         public readonly int ChunkY;

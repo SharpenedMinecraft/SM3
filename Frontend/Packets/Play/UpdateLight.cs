@@ -5,7 +5,7 @@ namespace Frontend.Packets.Play
 {
     public readonly struct UpdateLight : IWriteablePacket
     {
-        public int Id => 0x24;
+        public int Id => 0x25;
 
         public readonly ChunkPosition Position;
         public readonly Chunk Chunk;

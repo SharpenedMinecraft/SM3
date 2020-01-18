@@ -2,7 +2,7 @@ namespace Frontend.Packets.Play
 {
     public readonly struct ServerDifficulty : IWriteablePacket
     {
-        public int Id => 0x0D;
+        public int Id => 0x0E;
 
         public readonly byte Difficulty;
         public readonly bool IsLocked;

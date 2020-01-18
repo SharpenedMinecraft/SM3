@@ -2,7 +2,7 @@ namespace Frontend.Packets.Play
 {
     public readonly struct UnlockRecipes : IWriteablePacket
     {
-        public int Id => 0x36;
+        public int Id => 0x37;
         
         public void Write(IPacketWriter writer)
         {
