@@ -12,8 +12,11 @@ namespace Frontend
             _semaphore.Wait();
             try
             {
-                Seed = ((Seed * 0x5DEECE66DL) + 0xBL) & ((1L << 48) - 1);
-                return (int) (Seed >> (48 - bits));
+                unchecked
+                {
+                    Seed = ((Seed * 0x5DEECE66DL) + 0xBL) & ((1L << 48) - 1);
+                    return (int) (Seed >> (48 - bits));
+                }
             }
             finally
             {
