@@ -41,7 +41,7 @@ namespace Frontend.Packets.Play
 
             WriteBiomes(writer);
             
-            writer.WriteVarInt((chunksSend * (sizeof(short) + sizeof(byte) + 2 + (requiredLongs * sizeof(long)))) + (256 * 4));
+            writer.WriteVarInt((chunksSend * (sizeof(short) + sizeof(byte) + 2 + (requiredLongs * sizeof(long)))));
 
             for (int section = 0; section < 16; section++)
             {
