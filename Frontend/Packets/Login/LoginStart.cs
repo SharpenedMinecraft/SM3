@@ -41,13 +41,15 @@ namespace Frontend.Packets.Login
 
                 var dimension = serviceProvider.GetRequiredService<IDimensionResolver>()
                                                .GetDimension(connectionState.PlayerEntity.DimensionId);
+
+                var randomProvider = serviceProvider.GetRequiredService<IRandomProvider>();
                 
                 logger.LogInformation($"Logging {Username} in. Entity ID: {connectionState.PlayerEntity.Id.Value}");
                 connectionState.PacketQueue.WriteImmediate(new LoginSuccess(connectionState.PlayerEntity.Guid, Username));
                 connectionState.ConnectionStage = MCConnectionStage.Playing;
                 connectionState.PacketQueue.Write(new JoinGame(connectionState.PlayerEntity.Id.Value, 1,
-                                                               connectionState.PlayerEntity.DimensionId, byte.MinValue,
-                                                               "customized", 32, false));
+                                                               connectionState.PlayerEntity.DimensionId, randomProvider.Seed, byte.MinValue,
+                                                               "customized", 32, false, false));
                 var brandData = new byte[3];
                 MCPacketWriter.DownsizeUtf16("SM3", brandData);
                 connectionState.PacketQueue.Write(new ClientboundPluginMessage("minecraft:brand", brandData));
