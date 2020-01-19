@@ -36,7 +36,7 @@ namespace Frontend
             services.AddSingleton<IPacketQueueFactory, MCPacketQueueFactory>();
             services.AddSingleton<IPacketResolver, MCPacketResolver>();
             services.AddSingleton<IPacketHandler, MCPacketHandler>();
-            services.AddSingleton<IEntityManager, SimpleLinearEntityManager>();
+            services.AddSingleton<IEntityManager, SimpleEntityManager>();
             services.AddSingleton<ITagProvider, FileTagProvider>();
             services.AddSingleton<ICommandProvider, CommandProvider>();
             services.AddSingleton<ITeleportManager, TeleportManager>();

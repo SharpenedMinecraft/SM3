@@ -1,12 +1,8 @@
-using System.Numerics;
-
-namespace Frontend
+﻿namespace Frontend
 {
     public interface IEntity
     {
-        IEntityId Id { get; }
-        int DimensionId { get; }
-        Vector3 Position { get; }
-        Vector2 Rotation { get; }
+        int Id { get; set; }
+        void Process(IEntityManager preTick, IEntityManager postTick);
     }
 }

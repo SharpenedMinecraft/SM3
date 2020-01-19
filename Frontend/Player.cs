@@ -5,7 +5,13 @@ namespace Frontend
 {
     public sealed class Player : IEntity
     {
-        public Player(IEntityId id, int dimensionId, string username, Guid guid, Vector3 position, Vector2 rotation)
+        [Obsolete("DO NOT USE")]
+        #nullable disable
+        public Player()
+        { }
+        #nullable enable
+
+        public Player(int id, int dimensionId, string username, Guid guid, Vector3 position, Vector2 rotation)
         {
             Id = id;
             DimensionId = dimensionId;
@@ -15,19 +21,25 @@ namespace Frontend
             Rotation = rotation;
         }
 
-        public IEntityId Id { get; }
+        public int Id { get; set; }
 
         public Guid Guid { get; }
 
         public int DimensionId { get; }
-        
+
         public Vector3 Position { get; }
         public Vector2 Rotation { get; }
 
         public string Username { get; }
 
         public PlayerSettings Settings { get; set; }
+
         public TimeSpan? Ping { get; set; }
+
+        public void Process(IEntityManager preTick, IEntityManager postTick)
+        {
+            // nop
+        }
 
         public readonly struct PlayerSettings
         {
@@ -61,7 +73,7 @@ namespace Frontend
                 MainHand = mainHand;
             }
         }
-        
+
         public enum EntityStatus : byte
         {
             ItemUseFinished = 9,
