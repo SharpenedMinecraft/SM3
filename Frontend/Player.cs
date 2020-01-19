@@ -26,21 +26,21 @@ namespace Frontend
         public Guid Guid { get; }
 
         public int DimensionId { get; }
-        
+
         public Vector3 Position { get; }
         public Vector2 Rotation { get; }
 
         public string Username { get; }
 
         public PlayerSettings Settings { get; set; }
-        
+
         public TimeSpan? Ping { get; set; }
 
         public void Process(IEntityManager preTick, IEntityManager postTick)
         {
             // nop
         }
-        
+
         public readonly struct PlayerSettings
         {
             [Flags]
@@ -73,7 +73,7 @@ namespace Frontend
                 MainHand = mainHand;
             }
         }
-        
+
         public enum EntityStatus : byte
         {
             ItemUseFinished = 9,

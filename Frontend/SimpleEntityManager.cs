@@ -19,16 +19,16 @@ namespace Frontend
         public SimpleEntityManager() : this(0, new IEntity[MinSize])
         {
         }
-        
-        
+
+
         private SimpleEntityManager(int index, IEntity[] entities)
         {
             _index = index;
             _entities = entities;
             _entitiesSemaphore = new SemaphoreSlim(1, 1);
         }
-        
-        
+
+
         public ref T Instantiate<T>() where T : IEntity, new()
         {
             var id = Interlocked.Increment(ref _index);
@@ -67,7 +67,7 @@ namespace Frontend
         }
 
         public int Count => _entities.Length;
-        
+
         [return: MaybeNull]
         public ref T GetEntity<T>(int id) where T : IEntity
         {

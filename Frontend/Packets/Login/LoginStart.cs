@@ -27,7 +27,7 @@ namespace Frontend.Packets.Login
             if (!connectionState.IsLocal)
             {
                 logger.LogInformation($"{Username} is trying to log in from Remote. Refusing.");
-                
+
                 connectionState.PacketQueue.Write(new Disconnect(new ChatBuilder()
                                                      .AppendText("Connection from Remote is not supported \n\n")
                                                      .Bold()
@@ -48,7 +48,7 @@ namespace Frontend.Packets.Login
                                                .GetDimension(connectionState.PlayerEntity.DimensionId);
 
                 var randomProvider = serviceProvider.GetRequiredService<IRandomProvider>();
-                
+
                 logger.LogInformation($"Logging {Username} in. Entity ID: {connectionState.PlayerEntity.Id}");
                 connectionState.PacketQueue.WriteImmediate(new LoginSuccess(connectionState.PlayerEntity.Guid, Username));
                 connectionState.ConnectionStage = MCConnectionStage.Playing;
@@ -82,7 +82,7 @@ namespace Frontend.Packets.Login
 
                 var playerChunkPosition = (ChunkPosition)BlockPosition.From(connectionState.PlayerEntity.Position);
                 var halfViewDistance = connectionState.PlayerEntity.Settings.RenderDistance > 0 ? connectionState.PlayerEntity.Settings.RenderDistance / 2 : 4;
-                
+
                 for (int x = -halfViewDistance; x <= halfViewDistance; x++)
                 for (int z = -halfViewDistance; z <= halfViewDistance; z++)
                 {
@@ -91,7 +91,7 @@ namespace Frontend.Packets.Login
                     // Load will make sure it is and give it to us
                     // this will be revised once the ticketing system is in
                     var chunk = dimension.Load(chunkPos);
-                    
+
                     connectionState.PacketQueue.Write(new UpdateLight(chunkPos, chunk));
                     connectionState.PacketQueue.Write(new ChunkData(chunkPos, chunk));
                 }
