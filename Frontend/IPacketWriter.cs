@@ -23,6 +23,6 @@ namespace Frontend
         void WriteSingle(float value);
         void WriteDouble(double value);
 
-        void WriteNbt(NbtCompound compound, string name = "");
+        void WriteNbt(NbtCompound? compound, string name = "");
     }
 }

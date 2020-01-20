@@ -16,9 +16,12 @@ namespace Frontend
             Stream = new MemoryStream();
         }
 
-        public void WriteRoot(NbtCompound root, bool isImplicit = true)
+        public void WriteRoot(NbtCompound? root, bool isImplicit = true)
         {
-            WriteCompound(root.Value, isImplicit);
+            if (root != null)
+                WriteCompound(root.Value.Value, isImplicit);
+            else if (!isImplicit)
+                WriteByte(0);
         }
 
         public void WriteRoot(NbtCompound root)
