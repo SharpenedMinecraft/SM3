@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Pipelines;
+using System.Numerics;
 using App.Metrics;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -145,6 +146,9 @@ namespace Frontend
                 writer.WriteRoot(compound, false);
                 Size += (int)writer.Stream.Position;
             }
+
+            public void WritePosition(Vector3Int position)
+                => Size += sizeof(long);
         }
     }
 }

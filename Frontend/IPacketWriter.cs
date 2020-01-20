@@ -1,5 +1,6 @@
 using System;
 using System.Buffers;
+using System.Numerics;
 
 namespace Frontend
 {
@@ -24,6 +25,7 @@ namespace Frontend
         void WriteDouble(double value);
 
         void WriteNbt(NbtCompound? compound, string name = "");
+        void WritePosition(Vector3Int position);
 
         void WriteSpecialType(IWriteableSpecialType t) => t.Write(this);
     }

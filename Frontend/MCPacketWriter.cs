@@ -153,6 +153,12 @@ namespace Frontend
             WriteBytes(array);
         }
 
+        public void WritePosition(Vector3Int position)
+        {
+            (long x, long y, long z) = position;
+            WriteInt64(((x & 0x3FFFFFF) << 38) | ((z & 0x3FFFFFF) << 12) | (y & 0xFFF));
+        }
+
         public void WriteVarInt(int value)
         {
             var size = 0;
