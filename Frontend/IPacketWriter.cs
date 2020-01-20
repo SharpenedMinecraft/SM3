@@ -24,5 +24,7 @@ namespace Frontend
         void WriteDouble(double value);
 
         void WriteNbt(NbtCompound? compound, string name = "");
+
+        void WriteSpecialType(IWriteableSpecialType t) => t.Write(this);
     }
 }
