@@ -7,7 +7,7 @@ namespace Frontend
 
     {
     // General Use
-    ref T Instantiate<T>() where T : IEntity, new();
+    ref T Instantiate<T>() where T : IEntity;
     void Destroy<T>(T entity) where T : IEntity;
     IEnumerable<T> EnumerateEntities<T>() where T : IEntity;
     int Count { get; }
