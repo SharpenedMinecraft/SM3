@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Frontend.Entities;
 
 namespace Frontend
 {
@@ -17,5 +18,6 @@ namespace Frontend
     // Advanced Use, take care
     // Called to copy Pre-Tick and create Post-Tick
     IEntityManager Copy();
+    void Spawn(IEntity entity);
     }
 }
