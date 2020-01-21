@@ -25,7 +25,7 @@ namespace Frontend
 
         public static implicit operator Vector3Int((int x, int y, int z) value)
             => ToVector3Int(value);
-        
+
         public static Vector3Int ToVector3Int((int x, int y, int z) value)
             => new Vector3Int(value.x, value.y, value.z);
 

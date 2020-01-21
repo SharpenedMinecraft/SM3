@@ -9,33 +9,33 @@ namespace Frontend
     public sealed class EntityMetadata
     {
         private readonly IPacketWriter _writer;
-        
+
         public EntityMetadata(IPacketWriter writer)
         {
             _writer = writer;
         }
-        
+
         public void WriteUInt8(byte index, byte value)
         {
             _writer.WriteUInt8(index);
             _writer.WriteUInt8(0);
             _writer.WriteUInt8(value);
         }
-        
+
         public void WriteVarInt(byte index, int value)
         {
             _writer.WriteUInt8(index);
             _writer.WriteUInt8(1);
             _writer.WriteVarInt(value);
         }
-        
+
         public void WriteSingle(byte index, float value)
         {
             _writer.WriteUInt8(index);
             _writer.WriteUInt8(2);
             _writer.WriteSingle(value);
         }
-        
+
         public void WriteString(byte index, string value)
         {
             _writer.WriteUInt8(index);
@@ -58,7 +58,7 @@ namespace Frontend
             _writer.WriteUInt8(5);
             var b = value is null;
             _writer.WriteBoolean(!b);
-            
+
             if (!b)
             {
                 var data = JsonSerializer.SerializeToUtf8Bytes(value);
@@ -73,7 +73,7 @@ namespace Frontend
             _writer.WriteUInt8(6);
             _writer.WriteSpecialType(value);
         }
-        
+
         public void WriteBoolean(byte index, bool value)
         {
             _writer.WriteUInt8(index);
@@ -96,13 +96,13 @@ namespace Frontend
             _writer.WriteUInt8(9);
             _writer.WritePosition(value);
         }
-        
+
         public void WriteOptPosition(byte index, Vector3Int? value)
         {
             _writer.WriteUInt8(index);
             _writer.WriteUInt8(10);
             _writer.WriteBoolean(!(value is null));
-            
+
             if (!(value is null))
             {
                 _writer.WritePosition(value.Value);
@@ -115,19 +115,19 @@ namespace Frontend
             _writer.WriteUInt8(11);
             _writer.WriteVarInt((int)value);
         }
-        
+
         public void WriteOptGuid(byte index, Guid? value)
         {
             _writer.WriteUInt8(index);
             _writer.WriteUInt8(12);
             _writer.WriteBoolean(!(value is null));
-            
+
             if (!(value is null))
             {
                 _writer.WriteGuid(value.Value);
             }
         }
-        
+
         public void WriteOptBlockId(byte index, BlockState value)
         {
             _writer.WriteUInt8(index);

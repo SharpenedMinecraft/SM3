@@ -18,7 +18,7 @@
             writer.WriteDouble(Entity.Position.X);
             writer.WriteDouble(Entity.Position.Y);
             writer.WriteDouble(Entity.Position.Z);
-            
+
             var rotation = RotationHelper.FromLookAt(Entity.LookDir);
             var pitch = rotation.X;
             var yaw = rotation.Y;

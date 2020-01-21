@@ -6,7 +6,7 @@
         public readonly int Id;
         public readonly byte Count;
         public readonly NbtCompound? Nbt;
-        
+
         public void Write(IPacketWriter writer)
         {
             writer.WriteBoolean(Present);

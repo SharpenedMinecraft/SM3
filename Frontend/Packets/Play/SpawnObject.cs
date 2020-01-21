@@ -22,13 +22,13 @@ namespace Frontend.Packets.Play
             writer.WriteDouble(Entity.Position.X);
             writer.WriteDouble(Entity.Position.Y);
             writer.WriteDouble(Entity.Position.Z);
-            
+
             var rotation = RotationHelper.FromLookAt(Entity.LookDir);
             var pitch = rotation.X;
             var yaw = rotation.Y;
             writer.WriteUInt8(RotationHelper.RadiansTo256Angle(pitch));
             writer.WriteUInt8(RotationHelper.RadiansTo256Angle(yaw));
-            
+
             writer.WriteInt32(1);
             writer.WriteInt16(0);
             writer.WriteInt16(0);
