@@ -96,6 +96,16 @@ namespace Frontend.Packets.Login
                     connectionState.PacketQueue.Write(new UpdateLight(chunkPos, chunk));
                     connectionState.PacketQueue.Write(new ChunkData(chunkPos, chunk));
                 }
+
+                ref var theEgg = ref entityManager.Instantiate<Egg>();
+                theEgg.NoGravity = true;
+                theEgg.Position = new Vector3(0, 20, 0);
+                entityManager.Spawn(theEgg);
+
+                ref var thePerl = ref entityManager.Instantiate<EnderPearl>();
+                thePerl.NoGravity = true;
+                thePerl.Position = new Vector3(0, 21, 0);
+                entityManager.Spawn(thePerl);
             }
         }
     }
