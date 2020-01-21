@@ -25,7 +25,7 @@ namespace Frontend
                 IgnoreNullValues = true
             };
         }
-        
+
         public void HandlePacket(MCConnectionContext ctx, IPacketReader reader, IPacketQueue packetQueue, int id)
         {
             var packet = _resolver.GetReadablePacket(id, ctx);
