@@ -9,8 +9,8 @@ namespace Frontend
     public sealed class MCPacketHandler : IPacketHandler
     {
         private readonly ILogger _logger;
-        public const int ProtocolVersion = 577;
-        public const string VersionName = "SM3-1.15-pre2";
+        public const int ProtocolVersion = 578;
+        public const string VersionName = "SM3-1.15.2";
         private readonly JsonSerializerOptions _jsonOptions;
         private readonly IPacketResolver _resolver;
         private readonly IServiceProvider _serviceProvider;
@@ -25,7 +25,7 @@ namespace Frontend
                 IgnoreNullValues = true
             };
         }
-        
+
         public void HandlePacket(MCConnectionContext ctx, IPacketReader reader, IPacketQueue packetQueue, int id)
         {
             var packet = _resolver.GetReadablePacket(id, ctx);
