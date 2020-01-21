@@ -1,33 +1,35 @@
 using System;
+using System.Collections.Generic;
 using System.Numerics;
+using Frontend.Entities;
+using Frontend.Packets.Play;
 
 namespace Frontend
 {
-    public sealed class Player : IEntity
+    public sealed class Player : Living
     {
-        public Player(IEntityId id, int dimensionId, string username, Guid guid, Vector3 position, Vector2 rotation)
+        public override string Type => "sm3:player";
+        public override int TypeId => throw new InvalidOperationException("Player does not have a Type ID");
+        public override IEnumerable<IWriteablePacket> SpawnPackets
         {
-            Id = id;
-            DimensionId = dimensionId;
-            Username = username;
-            Guid = guid;
-            Position = position;
-            Rotation = rotation;
+            get {
+                yield return new SpawnPlayer(this);
+                yield return new Packets.Play.EntityMetadata(this);
+                yield return new PlayerInfo(PlayerInfo.InfoType.AddPlayer, new[] { this });
+                yield return new PlayerInfo(PlayerInfo.InfoType.UpdateLatency, new[] { this });
+                yield return new Packets.Play.EntityStatus(Id, (byte) EntityStatus.SetOpLevel4);
+                yield return new Packets.Play.EntityStatus(Id, (byte) EntityStatus.DisableReducedDebugInfo);
+            }
         }
 
-        public IEntityId Id { get; }
-
-        public Guid Guid { get; }
-
-        public int DimensionId { get; }
-        
-        public Vector3 Position { get; }
-        public Vector2 Rotation { get; }
-
-        public string Username { get; }
-
+        public string Username { get; set; }
         public PlayerSettings Settings { get; set; }
         public TimeSpan? Ping { get; set; }
+
+        public Player(IEntityRegistry entityRegistry) : base(entityRegistry)
+        {
+            Username = "";
+        }
 
         public readonly struct PlayerSettings
         {
@@ -61,7 +63,7 @@ namespace Frontend
                 MainHand = mainHand;
             }
         }
-        
+
         public enum EntityStatus : byte
         {
             ItemUseFinished = 9,

@@ -1,12 +1,11 @@
-using System.Numerics;
+﻿using System.Collections.Generic;
 
 namespace Frontend
 {
     public interface IEntity
     {
-        IEntityId Id { get; }
-        int DimensionId { get; }
-        Vector3 Position { get; }
-        Vector2 Rotation { get; }
+        int Id { get; set; }
+        IEnumerable<IWriteablePacket> SpawnPackets { get; }
+        void ProcessTick(IEntityManager preTick, IEntityManager postTick);
     }
 }

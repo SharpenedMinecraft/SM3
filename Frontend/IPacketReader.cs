@@ -26,5 +26,7 @@ namespace Frontend
 
         float ReadSingle();
         double ReadDouble();
+
+        void ReadSpecialType(IReadableSpecialType t) => t.Read(this);
     }
 }
