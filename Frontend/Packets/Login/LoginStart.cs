@@ -63,7 +63,7 @@ namespace Frontend.Packets.Login
                                                       ClientboundPlayerAbilities.Flags.Flying |
                                                       ClientboundPlayerAbilities.Flags.Invulnerable |
                                                       ClientboundPlayerAbilities.Flags.AllowFlying |
-                                                      ClientboundPlayerAbilities.Flags.InstantBreak, 0.5f, 0.1f));
+                                                      ClientboundPlayerAbilities.Flags.InstantBreak, 0.05f, 0.1f));
                 connectionState.PacketQueue.Write(new ClientboundHeldItemChange(0));
                 connectionState.PacketQueue.Write(new DeclareRecipes());
                 connectionState.PacketQueue.Write(new EntityStatus(connectionState.PlayerEntity.Id, (byte)Player.EntityStatus.SetOpLevel4));
