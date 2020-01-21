@@ -5,6 +5,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading;
+using Frontend.Entities;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Frontend
@@ -16,18 +17,20 @@ namespace Frontend
         private IEntity?[] _entities;
         private SemaphoreSlim _entitiesSemaphore;
         private int _index; // index 0 is skipped. Id 0 is invalid.
-        private readonly ServiceProvider _provider;
+        private readonly IServiceProvider _provider;
+        private readonly IBroadcastQueue _queue;
 
-        public SimpleEntityManager(ServiceProvider provider) : this(provider, 0, new IEntity[MinSize])
+        public SimpleEntityManager(IServiceProvider provider) : this(provider, 0, new IEntity[MinSize])
         { }
 
 
-        private SimpleEntityManager(ServiceProvider provider, int index, IEntity[] entities)
+        private SimpleEntityManager(IServiceProvider provider, int index, IEntity[] entities)
         {
             _index = index;
             _entities = entities;
             _entitiesSemaphore = new SemaphoreSlim(1, 1);
             _provider = provider;
+            _queue = provider.GetRequiredService<IBroadcastQueue>();
         }
 
 
@@ -93,6 +96,14 @@ namespace Frontend
             finally
             {
                 _entitiesSemaphore.Release();
+            }
+        }
+
+        public void Spawn(IEntity entity)
+        {
+            foreach (var packet in entity.SpawnPackets)
+            {
+                _queue.Broadcast(packet);
             }
         }
 
