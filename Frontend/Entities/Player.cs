@@ -25,9 +25,11 @@ namespace Frontend
         public string Username { get; set; }
         public PlayerSettings Settings { get; set; }
         public TimeSpan? Ping { get; set; }
-        
+
         public Player(IEntityRegistry entityRegistry) : base(entityRegistry)
-        { }
+        {
+            Username = "";
+        }
 
         public readonly struct PlayerSettings
         {

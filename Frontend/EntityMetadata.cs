@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Numerics;
 using System.Text.Json;
 using Frontend.Entities;
@@ -100,10 +101,9 @@ namespace Frontend
         {
             _writer.WriteUInt8(index);
             _writer.WriteUInt8(10);
-            var b = value is null;
-            _writer.WriteBoolean(!b);
+            _writer.WriteBoolean(!(value is null));
             
-            if (!b)
+            if (!(value is null))
             {
                 _writer.WritePosition(value.Value);
             }
@@ -120,10 +120,9 @@ namespace Frontend
         {
             _writer.WriteUInt8(index);
             _writer.WriteUInt8(12);
-            var b = value is null;
-            _writer.WriteBoolean(!b);
+            _writer.WriteBoolean(!(value is null));
             
-            if (!b)
+            if (!(value is null))
             {
                 _writer.WriteGuid(value.Value);
             }

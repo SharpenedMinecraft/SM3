@@ -31,8 +31,8 @@ namespace Frontend
 
         public static implicit operator (int x, int y, int z)(Vector3Int value)
             => value.ToTuple();
-        
-        public (int x, int y, int z) ToTuple()
+
+        public (int x, int y, int z)ToTuple()
             => (X, Y, Z);
 
         public bool Equals(Vector3Int other) => X == other.X && Y == other.Y && Z == other.Z;

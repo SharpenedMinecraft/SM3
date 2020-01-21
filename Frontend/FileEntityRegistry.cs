@@ -8,6 +8,7 @@
     {
         public FileEntityRegistry()
         {
+            Default = "";
             const string registryPath = "./Data/registries.json";
             var reader = new Utf8JsonReader(File.ReadAllBytes(registryPath));
 

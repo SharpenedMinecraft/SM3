@@ -155,8 +155,8 @@ namespace Frontend
 
         public void WritePosition(Vector3Int position)
         {
-            (long x, long y, long z) = position;
-            WriteInt64(((x & 0x3FFFFFF) << 38) | ((z & 0x3FFFFFF) << 12) | (y & 0xFFF));
+            position.Deconstruct(out int x, out int y, out int z);
+            WriteInt64(((((long)x) & 0x3FFFFFF) << 38) | ((((long)z) & 0x3FFFFFF) << 12) | (((long)y) & 0xFFF));
         }
 
         public void WriteVarInt(int value)
