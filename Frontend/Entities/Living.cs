@@ -30,7 +30,7 @@
 
             if (InRiptideSpinAttack)
                 bits |= 0x04;
-            
+
             metadata.WriteUInt8(7, bits );
             metadata.WriteSingle(8, Health);
             metadata.WriteVarInt(9, PotionEffectColor);

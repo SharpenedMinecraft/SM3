@@ -12,7 +12,7 @@ namespace Frontend
         public override int TypeId => throw new InvalidOperationException("Player does not have a Type ID");
         public override IEnumerable<IWriteablePacket> SpawnPackets
         {
-            get { 
+            get {
                 yield return new SpawnPlayer(this);
                 yield return new Packets.Play.EntityMetadata(this);
                 yield return new PlayerInfo(PlayerInfo.InfoType.AddPlayer, new[] { this });

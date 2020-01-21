@@ -75,11 +75,11 @@ namespace Frontend
                     break;
             }
         }
-        
+
         public void WriteLongArray(long[] value)
         {
             WriteInt(value.Length);
-            
+
             for (int i = 0; i < value.Length; i++)
                 WriteLong(value[i]);
         }
@@ -88,7 +88,7 @@ namespace Frontend
         public void WriteIntArray(int[] value)
         {
             WriteInt(value.Length);
-            
+
             for (int i = 0; i < value.Length; i++)
                 WriteInt(value[i]);
         }
@@ -132,7 +132,7 @@ namespace Frontend
 
         public void WriteDouble(double value)
             => WriteLong(BitConverter.DoubleToInt64Bits(value));
-        
+
         public void WriteFloat(float value)
             => WriteInt(BitConverter.SingleToInt32Bits(value));
 

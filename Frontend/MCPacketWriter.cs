@@ -56,7 +56,7 @@ namespace Frontend
                     {
                         var vector1 = Sse2.LoadVector128(pUtf16 + i);
                         var vector2 = Sse2.LoadVector128(pUtf16 + i + Vector128<short>.Count);
-                        
+
                         Sse2.Store(pUtf8 + i, Sse2.PackUnsignedSaturate(vector1, vector2));
                         i += Vector128<short>.Count * 2;
                     }
@@ -74,13 +74,13 @@ namespace Frontend
         {
             values.CopyTo(Memory.Slice(Position).Span);
             Position += values.Length;
-            
+
 #if DUMP_WRITE_BYTES
             Console.WriteLine($"Wrote {values.Length}:");
             Console.WriteLine(BitConverter.ToString(values.ToArray()));
 #endif
         }
-        
+
         public void WriteUInt16(UInt16 value)
         {
             BinaryPrimitives.WriteUInt16BigEndian(Memory.Slice(Position, sizeof(UInt16)).Span, value);
@@ -92,25 +92,25 @@ namespace Frontend
             BinaryPrimitives.WriteInt16BigEndian(Memory.Slice(Position, sizeof(Int16)).Span, value);
             Position += sizeof(Int16);
         }
-        
+
         public void WriteUInt32(UInt32 value)
         {
             BinaryPrimitives.WriteUInt32BigEndian(Memory.Slice(Position, sizeof(UInt32)).Span, value);
             Position += sizeof(UInt32);
         }
-        
+
         public void WriteInt32(Int32 value)
         {
             BinaryPrimitives.WriteInt32BigEndian(Memory.Slice(Position, sizeof(Int32)).Span, value);
             Position += sizeof(Int32);
         }
-        
+
         public void WriteUInt64(UInt64 value)
         {
             BinaryPrimitives.WriteUInt64BigEndian(Memory.Slice(Position, sizeof(UInt64)).Span, value);
             Position += sizeof(UInt64);
         }
-        
+
         public void WriteInt64(Int64 value)
         {
             BinaryPrimitives.WriteInt64BigEndian(Memory.Slice(Position, sizeof(Int64)).Span, value);
@@ -133,7 +133,7 @@ namespace Frontend
         public void WriteBoolean(bool value)
             => WriteUInt8(value ? (byte)0x01 : (byte)0x00);
 
-        public void WriteSingle(float value) 
+        public void WriteSingle(float value)
             => WriteInt32(BitConverter.SingleToInt32Bits(value));
 
         public void WriteDouble(double value)
@@ -147,7 +147,7 @@ namespace Frontend
                 writer.WriteByte(compound.Value.TagType);
                 writer.WriteString(name);
             }
-            
+
             writer.WriteRoot(compound, false);
             var array = writer.Stream.ToArray(); // :/
             WriteBytes(array);
@@ -175,7 +175,7 @@ namespace Frontend
 
             WriteUInt8((byte)v);
         }
-        
-        
+
+
     }
 }

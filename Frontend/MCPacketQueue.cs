@@ -53,11 +53,11 @@ namespace Frontend
             var packetSize = dataSize + CountingPacketWriter.GetVarIntSize(dataSize);
 
             var writer = _writerFactory.CreateWriter(_writer.GetMemory(packetSize));
-            
+
             writer.WriteVarInt(dataSize);
             writer.WriteVarInt(packet.Id);
             packet.Write(writer);
-            
+
             _writer.Advance(packetSize);
             _metrics.Measure.Histogram.Update(MetricsRegistry.WritePacketSize, packetSize);
         }
@@ -68,11 +68,11 @@ namespace Frontend
             packet.Write(writer);
             return writer.Size;
         }
-        
+
         private class CountingPacketWriter : IPacketWriter
         {
             public int Size { get; private set; }
-            
+
             public static int GetVarIntSize(int value)
             {
                 var size = 0;
@@ -142,7 +142,7 @@ namespace Frontend
                     writer.WriteByte(compound.Value.TagType);
                     writer.WriteString(name);
                 }
-                
+
                 writer.WriteRoot(compound, false);
                 Size += (int)writer.Stream.Position;
             }

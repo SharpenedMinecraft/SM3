@@ -22,7 +22,7 @@
                     reader.Skip();
                 }
             }
-            
+
             reader.Read(); // Start Object
 
             while (reader.TokenType != JsonTokenType.EndObject)
