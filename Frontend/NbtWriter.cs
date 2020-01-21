@@ -16,9 +16,12 @@ namespace Frontend
             Stream = new MemoryStream();
         }
 
-        public void WriteRoot(NbtCompound root, bool isImplicit = true)
+        public void WriteRoot(NbtCompound? root, bool isImplicit = true)
         {
-            WriteCompound(root.Value, isImplicit);
+            if (root != null)
+                WriteCompound(root.Value.Value, isImplicit);
+            else if (!isImplicit)
+                WriteByte(0);
         }
 
         public void WriteRoot(NbtCompound root)
@@ -72,11 +75,11 @@ namespace Frontend
                     break;
             }
         }
-        
+
         public void WriteLongArray(long[] value)
         {
             WriteInt(value.Length);
-            
+
             for (int i = 0; i < value.Length; i++)
                 WriteLong(value[i]);
         }
@@ -85,7 +88,7 @@ namespace Frontend
         public void WriteIntArray(int[] value)
         {
             WriteInt(value.Length);
-            
+
             for (int i = 0; i < value.Length; i++)
                 WriteInt(value[i]);
         }
@@ -129,7 +132,7 @@ namespace Frontend
 
         public void WriteDouble(double value)
             => WriteLong(BitConverter.DoubleToInt64Bits(value));
-        
+
         public void WriteFloat(float value)
             => WriteInt(BitConverter.SingleToInt32Bits(value));
 

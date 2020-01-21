@@ -2,6 +2,7 @@ using System;
 using System.Numerics;
 using System.Text;
 using App.Metrics;
+using Frontend.Entities;
 using Frontend.Packets.Play;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -40,9 +41,13 @@ namespace Frontend.Packets.Login
                 var entityManager = serviceProvider.GetRequiredService<IEntityManager>();
 
                 ref var player = ref entityManager.Instantiate<Player>();
-                player = new Player(player.Id, 0, Username, Guid.NewGuid(), new Vector3(0, 15, 0), Vector2.Zero);
-
+                player.DimensionId = 0;
+                player.Username = Username;
+                player.Guid = Guid.NewGuid();
+                player.Position = new Vector3(0, 15, 0);
                 connectionState.PlayerEntity = player;
+
+                entityManager.Spawn(player);
 
                 var dimension = serviceProvider.GetRequiredService<IDimensionResolver>()
                                                .GetDimension(connectionState.PlayerEntity.DimensionId);
@@ -63,20 +68,16 @@ namespace Frontend.Packets.Login
                                                       ClientboundPlayerAbilities.Flags.Flying |
                                                       ClientboundPlayerAbilities.Flags.Invulnerable |
                                                       ClientboundPlayerAbilities.Flags.AllowFlying |
-                                                      ClientboundPlayerAbilities.Flags.InstantBreak, 0.5f, 0.1f));
+                                                      ClientboundPlayerAbilities.Flags.InstantBreak, 0.05f, 0.1f));
                 connectionState.PacketQueue.Write(new ClientboundHeldItemChange(0));
                 connectionState.PacketQueue.Write(new DeclareRecipes());
-                connectionState.PacketQueue.Write(new EntityStatus(connectionState.PlayerEntity.Id, (byte)Player.EntityStatus.SetOpLevel4));
-                connectionState.PacketQueue.Write(new EntityStatus(connectionState.PlayerEntity.Id, (byte)Player.EntityStatus.DisableReducedDebugInfo));
                 connectionState.PacketQueue.Write(new DeclareCommands(serviceProvider.GetRequiredService<ICommandProvider>().SortedCommandInfos));
                 connectionState.PacketQueue.Write(new UnlockRecipes());
                 connectionState.PacketQueue.Write(new PlayerPositionAndLook(
-                                                      connectionState.PlayerEntity.Position, connectionState.PlayerEntity.Rotation, PlayerPositionAndLook.Flags.None,
+                                                      connectionState.PlayerEntity.Position, RotationHelper.FromLookAt(connectionState.PlayerEntity.LookDir), PlayerPositionAndLook.Flags.None,
                                                       serviceProvider
                                                           .GetRequiredService<ITeleportManager>()
                                                           .BeginTeleport(connectionState.PlayerEntity.Id, connectionState.PlayerEntity.Position)));
-                broadcastQueue.Broadcast(new PlayerInfo(PlayerInfo.InfoType.AddPlayer, new[] { connectionState.PlayerEntity }));
-                broadcastQueue.Broadcast(new PlayerInfo(PlayerInfo.InfoType.UpdateLatency, new[] { connectionState.PlayerEntity }));
                 connectionState.PacketQueue.Write(new UpdateViewPosition(0, 0));
                 connectionState.PacketQueue.WriteImmediate(new KeepAliveClientbound(DateTime.UtcNow.ToBinary()));
 
@@ -95,6 +96,16 @@ namespace Frontend.Packets.Login
                     connectionState.PacketQueue.Write(new UpdateLight(chunkPos, chunk));
                     connectionState.PacketQueue.Write(new ChunkData(chunkPos, chunk));
                 }
+
+                ref var theEgg = ref entityManager.Instantiate<Egg>();
+                theEgg.NoGravity = true;
+                theEgg.Position = new Vector3(0, 20, 0);
+                entityManager.Spawn(theEgg);
+
+                ref var thePerl = ref entityManager.Instantiate<EnderPearl>();
+                thePerl.NoGravity = true;
+                thePerl.Position = new Vector3(0, 21, 0);
+                entityManager.Spawn(thePerl);
             }
         }
     }

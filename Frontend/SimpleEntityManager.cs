@@ -5,6 +5,8 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading;
+using Frontend.Entities;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Frontend
 {
@@ -15,21 +17,24 @@ namespace Frontend
         private IEntity?[] _entities;
         private SemaphoreSlim _entitiesSemaphore;
         private int _index; // index 0 is skipped. Id 0 is invalid.
+        private readonly IServiceProvider _provider;
+        private readonly IBroadcastQueue _queue;
 
-        public SimpleEntityManager() : this(0, new IEntity[MinSize])
-        {
-        }
+        public SimpleEntityManager(IServiceProvider provider) : this(provider, 0, new IEntity[MinSize])
+        { }
 
 
-        private SimpleEntityManager(int index, IEntity[] entities)
+        private SimpleEntityManager(IServiceProvider provider, int index, IEntity[] entities)
         {
             _index = index;
             _entities = entities;
             _entitiesSemaphore = new SemaphoreSlim(1, 1);
+            _provider = provider;
+            _queue = provider.GetRequiredService<IBroadcastQueue>();
         }
 
 
-        public ref T Instantiate<T>() where T : IEntity, new()
+        public ref T Instantiate<T>() where T : IEntity
         {
             var id = Interlocked.Increment(ref _index);
             if (id >= _entities.Length)
@@ -47,7 +52,9 @@ namespace Frontend
                     _entitiesSemaphore.Release();
                 }
             }
-            var v = new T {Id = id};
+
+            var v = ActivatorUtilities.CreateInstance<T>(_provider);
+            v.Id = id;
             _entities[id] = v;
             return ref GetEntity<T>(id);
         }
@@ -84,11 +91,19 @@ namespace Frontend
             {
                 var newEntities = new IEntity[_entities.Length];
                 Array.Copy(_entities, newEntities, _entities.Length);
-                return new SimpleEntityManager(_index, newEntities);
+                return new SimpleEntityManager(_provider, _index, newEntities);
             }
             finally
             {
                 _entitiesSemaphore.Release();
+            }
+        }
+
+        public void Spawn(IEntity entity)
+        {
+            foreach (var packet in entity.SpawnPackets)
+            {
+                _queue.Broadcast(packet);
             }
         }
 

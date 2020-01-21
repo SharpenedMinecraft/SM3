@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Frontend.Entities;
 
 namespace Frontend
 {
@@ -7,7 +8,7 @@ namespace Frontend
 
     {
     // General Use
-    ref T Instantiate<T>() where T : IEntity, new();
+    ref T Instantiate<T>() where T : IEntity;
     void Destroy<T>(T entity) where T : IEntity;
     IEnumerable<T> EnumerateEntities<T>() where T : IEntity;
     int Count { get; }
@@ -17,5 +18,6 @@ namespace Frontend
     // Advanced Use, take care
     // Called to copy Pre-Tick and create Post-Tick
     IEntityManager Copy();
+    void Spawn(IEntity entity);
     }
 }
