@@ -45,6 +45,8 @@ namespace Frontend.Packets.Login
                 player.Username = Username;
                 player.Guid = Guid.NewGuid();
                 player.Position = new Vector3(0, 15, 0);
+                player.WindowManager = serviceProvider.GetRequiredService<IWindowManagerFactory>()
+                    .CreateManager(connectionState.PacketQueue);
                 connectionState.PlayerEntity = player;
 
                 entityManager.Spawn(player);

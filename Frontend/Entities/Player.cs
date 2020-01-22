@@ -25,8 +25,9 @@ namespace Frontend
         public string Username { get; set; }
         public PlayerSettings Settings { get; set; }
         public TimeSpan? Ping { get; set; }
+        public IWindowManager WindowManager { get; set; }
 
-        public Player(IEntityRegistry entityRegistry) : base(entityRegistry)
+        public Player(IEntityRegistry entityRegistry, IWindowManagerFactory windowManagerFactory) : base(entityRegistry)
         {
             Username = "";
         }
