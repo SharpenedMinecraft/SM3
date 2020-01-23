@@ -3,6 +3,7 @@ using System.Numerics;
 using System.Text;
 using App.Metrics;
 using Frontend.Entities;
+using Frontend.Menus;
 using Frontend.Packets.Play;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -108,6 +109,8 @@ namespace Frontend.Packets.Login
                 thePerl.NoGravity = true;
                 thePerl.Position = new Vector3(0, 21, 0);
                 entityManager.Spawn(thePerl);
+
+                var menu = connectionState.PlayerEntity.MenuManager.Open<Generic9x1>();
             }
         }
     }
