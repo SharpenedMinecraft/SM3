@@ -31,6 +31,7 @@ namespace Frontend
         public Player(IEntityRegistry entityRegistry) : base(entityRegistry)
         {
             Username = "";
+            MenuManager = null!;
         }
 
         public readonly struct PlayerSettings
