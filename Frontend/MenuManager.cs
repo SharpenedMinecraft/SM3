@@ -7,7 +7,7 @@ namespace Frontend
     {
         private readonly IServiceProvider _provider;
         private readonly IPacketQueue _queue;
-        private byte _id = 0;
+        private byte _id = 1;
 
         public IMenu? OpenWindow { get; private set; }
 
@@ -27,7 +27,11 @@ namespace Frontend
             }
             
             var instance = ActivatorUtilities.CreateInstance<T>(_provider);
-            instance.Id = unchecked(_id++);
+
+            do
+            {
+                instance.Id = unchecked(_id++);
+            } while (instance.Id == 0);
 
             foreach (var packet in instance.OpenPackets) _queue.Write(packet);
 
