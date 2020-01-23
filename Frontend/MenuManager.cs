@@ -35,6 +35,7 @@ namespace Frontend
 
             foreach (var packet in instance.OpenPackets) _queue.Write(packet);
 
+            OpenWindow = instance;
             return instance;
         }
 
