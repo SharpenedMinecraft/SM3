@@ -9,7 +9,7 @@ namespace Frontend
         private readonly IPacketQueue _queue;
         private byte _id = 1;
 
-        public IMenu? OpenWindow { get; private set; }
+        public IMenu? OpenMenu { get; private set; }
 
         public MenuManager(IServiceProvider provider, IPacketQueue queue)
         {
@@ -20,10 +20,10 @@ namespace Frontend
         public T Open<T>()
             where T : IMenu
         {
-            if (OpenWindow != null)
+            if (OpenMenu != null)
             {
-                Close(OpenWindow, false);
-                OpenWindow = null;
+                Close(OpenMenu, false);
+                OpenMenu = null;
             }
             
             var instance = ActivatorUtilities.CreateInstance<T>(_provider);
@@ -35,7 +35,7 @@ namespace Frontend
 
             foreach (var packet in instance.OpenPackets) _queue.Write(packet);
 
-            OpenWindow = instance;
+            OpenMenu = instance;
             return instance;
         }
 
@@ -44,7 +44,7 @@ namespace Frontend
             if (!clientInitiated)
                 foreach (var packet in menu.ClosePackets) _queue.Write(packet);
 
-            OpenWindow = null;
+            OpenMenu = null;
         }
     }
 }

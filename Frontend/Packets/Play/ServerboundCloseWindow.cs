@@ -22,9 +22,9 @@ namespace Frontend.Packets.Play
                 // Inventory was closed
             }
             
-            var openWindow = state.PlayerEntity.MenuManager.OpenWindow;
-            if (openWindow?.Id == WindowId)
-                state.PlayerEntity.MenuManager.Close(openWindow, true);
+            var openMenu = state.PlayerEntity.MenuManager.OpenMenu;
+            if (openMenu?.Id == WindowId)
+                state.PlayerEntity.MenuManager.Close(openMenu, true);
         }
     }
 }
