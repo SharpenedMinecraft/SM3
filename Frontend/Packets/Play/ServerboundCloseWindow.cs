@@ -5,7 +5,7 @@ namespace Frontend.Packets.Play
 {
     public struct ServerboundCloseWindow : IReadablePacket
     {
-        public int Id => 0x13;
+        public int Id => 0x0A;
         public MCConnectionStage Stage => MCConnectionStage.Playing;
 
         public byte WindowId;
@@ -17,6 +17,11 @@ namespace Frontend.Packets.Play
 
         public void Process(ILogger logger, IConnectionState state, IServiceProvider serviceProvider)
         {
+            if (WindowId == 0)
+            {
+                // Inventory was closed
+            }
+            
             var openWindow = state.PlayerEntity.MenuManager.OpenWindow;
             if (openWindow?.Id == WindowId)
                 state.PlayerEntity.MenuManager.Close(openWindow, true);

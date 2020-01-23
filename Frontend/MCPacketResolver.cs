@@ -19,6 +19,7 @@ namespace Frontend
             new PlayerSettings(), 
             new ServerboundPluginMessage(), 
             new KeepAliveServerbound(), 
+            new ServerboundCloseWindow(), 
         }, new NetworkPacketComparer());
 
         private class NetworkPacketComparer : EqualityComparer<IReadablePacket>
