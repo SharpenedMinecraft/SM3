@@ -17,9 +17,9 @@ namespace Frontend.Packets.Play
 
         public void Process(ILogger logger, IConnectionState state, IServiceProvider serviceProvider)
         {
-            var openWindow = state.PlayerEntity.WindowManager.OpenWindow;
-            if (openWindow.Id == WindowId)
-                state.PlayerEntity.WindowManager.Close(openWindow, true);
+            var openWindow = state.PlayerEntity.MenuManager.OpenWindow;
+            if (openWindow?.Id == WindowId)
+                state.PlayerEntity.MenuManager.Close(openWindow, true);
         }
     }
 }

@@ -3,22 +3,22 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Frontend
 {
-    public sealed class WindowManager : IWindowManager
+    public sealed class MenuManager : IMenuManager
     {
         private readonly IServiceProvider _provider;
         private readonly IPacketQueue _queue;
         private byte _id = 0;
 
-        public IWindow? OpenWindow { get; private set; }
+        public IMenu? OpenWindow { get; private set; }
 
-        public WindowManager(IServiceProvider provider, IPacketQueue queue)
+        public MenuManager(IServiceProvider provider, IPacketQueue queue)
         {
             _provider = provider;
             _queue = queue;
         }
         
         public T Open<T>()
-            where T : IWindow
+            where T : IMenu
         {
             if (OpenWindow != null)
             {
@@ -34,10 +34,10 @@ namespace Frontend
             return instance;
         }
 
-        public void Close(IWindow window, bool clientInitiated)
+        public void Close(IMenu menu, bool clientInitiated)
         {
             if (!clientInitiated)
-                foreach (var packet in window.ClosePackets) _queue.Write(packet);
+                foreach (var packet in menu.ClosePackets) _queue.Write(packet);
 
             OpenWindow = null;
         }

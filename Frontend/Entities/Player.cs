@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Numerics;
+using System.Security.Principal;
 using Frontend.Entities;
 using Frontend.Packets.Play;
 
@@ -25,9 +26,9 @@ namespace Frontend
         public string Username { get; set; }
         public PlayerSettings Settings { get; set; }
         public TimeSpan? Ping { get; set; }
-        public IWindowManager WindowManager { get; set; }
+        public IMenuManager MenuManager { get; set; }
 
-        public Player(IEntityRegistry entityRegistry, IWindowManagerFactory windowManagerFactory) : base(entityRegistry)
+        public Player(IEntityRegistry entityRegistry) : base(entityRegistry)
         {
             Username = "";
         }
