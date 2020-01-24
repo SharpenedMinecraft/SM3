@@ -7,9 +7,9 @@ namespace Frontend.Windows
 {
     public sealed class PlayerInventory : IWindow
     {
-        public byte Id
+        public sbyte Id
         {
-            get => 0;
+            get => -2;
             set => throw new InvalidOperationException("Player Inventory's ID is always 0");
         }
         

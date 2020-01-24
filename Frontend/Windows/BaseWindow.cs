@@ -5,7 +5,7 @@ namespace Frontend.Windows
 {
     public abstract class BaseWindow : IWindow
     {
-        public byte Id { get; set; }
+        public sbyte Id { get; set; }
 
         public IEnumerable<IWriteablePacket> OpenPackets
         {

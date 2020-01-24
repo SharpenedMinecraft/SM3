@@ -13,7 +13,7 @@
 
         public void Write(IPacketWriter writer)
         {
-            writer.WriteUInt8(Window.Id);
+            writer.WriteInt8(Window.Id);
         }
     }
 }

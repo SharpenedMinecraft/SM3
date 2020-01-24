@@ -31,7 +31,7 @@ namespace Frontend
 
             do
             {
-                instance.Id = unchecked(_id++);
+                instance.Id = unchecked((sbyte)(_id++));
             } while (instance.Id == 0);
 
             foreach (var packet in instance.OpenPackets) _queue.Write(packet);

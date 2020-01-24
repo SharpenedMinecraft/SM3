@@ -4,7 +4,7 @@ namespace Frontend
 {
     public interface IWindow
     {
-        byte Id { get; set; }
+        sbyte Id { get; set; }
         IEnumerable<IWriteablePacket> OpenPackets { get; }
         IEnumerable<IWriteablePacket> ClosePackets { get; }
         Chat Title { get; }
