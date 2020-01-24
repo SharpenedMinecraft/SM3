@@ -4,8 +4,16 @@
     {
         public readonly bool Present;
         public readonly int Id;
-        public readonly byte Count;
+        public readonly sbyte Count;
         public readonly NbtCompound? Nbt;
+
+        public NetworkSlot(bool present, int id, sbyte count, NbtCompound? nbt)
+        {
+            Present = present;
+            Id = id;
+            Count = count;
+            Nbt = nbt;
+        }
 
         public void Write(IPacketWriter writer)
         {
@@ -14,7 +22,7 @@
             if (Present)
             {
                 writer.WriteVarInt(Id);
-                writer.WriteUInt8(Count);
+                writer.WriteInt8(Count);
                 writer.WriteNbt(Nbt);
             }
         }
