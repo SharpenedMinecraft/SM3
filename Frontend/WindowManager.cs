@@ -7,14 +7,16 @@ namespace Frontend
     {
         private readonly IServiceProvider _provider;
         private readonly IPacketQueue _queue;
+        private readonly IWindow? _defaultWindow;
         private byte _id = 1;
 
         public IWindow? OpenWindow { get; private set; }
 
-        public WindowManager(IServiceProvider provider, IPacketQueue queue)
+        public WindowManager(IServiceProvider provider, IPacketQueue queue, IWindow? defaultWindow)
         {
             _provider = provider;
             _queue = queue;
+            _defaultWindow = defaultWindow;
         }
         
         public T Open<T>()
@@ -23,7 +25,6 @@ namespace Frontend
             if (OpenWindow != null)
             {
                 Close(OpenWindow, false);
-                OpenWindow = null;
             }
             
             var instance = ActivatorUtilities.CreateInstance<T>(_provider);
@@ -44,7 +45,7 @@ namespace Frontend
             if (!clientInitiated)
                 foreach (var packet in window.ClosePackets) _queue.Write(packet);
 
-            OpenWindow = null;
+            OpenWindow = _defaultWindow;
         }
     }
 }
