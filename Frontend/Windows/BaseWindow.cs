@@ -25,6 +25,8 @@ namespace Frontend.Windows
         public virtual Chat Title => _defaultTitle;
         public abstract string Type { get; }
         public int TypeId { get; }
+        public abstract int SlotCount { get; }
+        public int InventoryToWindowIndex(int index) => SlotCount + index;
 
         public BaseWindow(IWindowRegistry windowRegistry)
         {

@@ -10,5 +10,6 @@ namespace Frontend
         Chat Title { get; }
         string Type { get; }
         int TypeId { get; }
+        int InventoryToWindowIndex(int index);
     }
 }
