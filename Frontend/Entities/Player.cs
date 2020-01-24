@@ -1,11 +1,8 @@
 using System;
 using System.Collections.Generic;
-using System.Numerics;
-using System.Security.Principal;
-using Frontend.Entities;
 using Frontend.Packets.Play;
 
-namespace Frontend
+namespace Frontend.Entities
 {
     public sealed class Player : Living
     {
@@ -26,12 +23,12 @@ namespace Frontend
         public string Username { get; set; }
         public PlayerSettings Settings { get; set; }
         public TimeSpan? Ping { get; set; }
-        public IMenuManager MenuManager { get; set; }
+        public IWindowManager WindowManager { get; set; }
 
         public Player(IEntityRegistry entityRegistry) : base(entityRegistry)
         {
             Username = "";
-            MenuManager = null!;
+            WindowManager = null!;
         }
 
         public readonly struct PlayerSettings

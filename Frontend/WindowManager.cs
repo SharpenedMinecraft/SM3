@@ -3,27 +3,27 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Frontend
 {
-    public sealed class MenuManager : IMenuManager
+    public sealed class WindowManager : IWindowManager
     {
         private readonly IServiceProvider _provider;
         private readonly IPacketQueue _queue;
         private byte _id = 1;
 
-        public IMenu? OpenMenu { get; private set; }
+        public IWindow? OpenWindow { get; private set; }
 
-        public MenuManager(IServiceProvider provider, IPacketQueue queue)
+        public WindowManager(IServiceProvider provider, IPacketQueue queue)
         {
             _provider = provider;
             _queue = queue;
         }
         
         public T Open<T>()
-            where T : IMenu
+            where T : IWindow
         {
-            if (OpenMenu != null)
+            if (OpenWindow != null)
             {
-                Close(OpenMenu, false);
-                OpenMenu = null;
+                Close(OpenWindow, false);
+                OpenWindow = null;
             }
             
             var instance = ActivatorUtilities.CreateInstance<T>(_provider);
@@ -35,16 +35,16 @@ namespace Frontend
 
             foreach (var packet in instance.OpenPackets) _queue.Write(packet);
 
-            OpenMenu = instance;
+            OpenWindow = instance;
             return instance;
         }
 
-        public void Close(IMenu menu, bool clientInitiated)
+        public void Close(IWindow window, bool clientInitiated)
         {
             if (!clientInitiated)
-                foreach (var packet in menu.ClosePackets) _queue.Write(packet);
+                foreach (var packet in window.ClosePackets) _queue.Write(packet);
 
-            OpenMenu = null;
+            OpenWindow = null;
         }
     }
 }

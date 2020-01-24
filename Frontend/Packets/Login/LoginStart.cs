@@ -3,8 +3,8 @@ using System.Numerics;
 using System.Text;
 using App.Metrics;
 using Frontend.Entities;
-using Frontend.Menus;
 using Frontend.Packets.Play;
+using Frontend.Windows;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
@@ -46,7 +46,7 @@ namespace Frontend.Packets.Login
                 player.Username = Username;
                 player.Guid = Guid.NewGuid();
                 player.Position = new Vector3(0, 15, 0);
-                player.MenuManager = serviceProvider.GetRequiredService<IMenuManagerFactory>()
+                player.WindowManager = serviceProvider.GetRequiredService<IWindowManagerFactory>()
                     .CreateManager(connectionState.PacketQueue);
                 connectionState.PlayerEntity = player;
 
@@ -110,7 +110,7 @@ namespace Frontend.Packets.Login
                 thePerl.Position = new Vector3(0, 21, 0);
                 entityManager.Spawn(thePerl);
 
-                var menu = connectionState.PlayerEntity.MenuManager.Open<Generic9x1>();
+                var window = connectionState.PlayerEntity.WindowManager.Open<Generic9x1>();
             }
         }
     }

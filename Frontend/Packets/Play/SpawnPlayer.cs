@@ -1,4 +1,6 @@
-﻿namespace Frontend.Packets.Play
+﻿using Frontend.Entities;
+
+namespace Frontend.Packets.Play
 {
     public readonly struct SpawnPlayer : IWriteablePacket
     {

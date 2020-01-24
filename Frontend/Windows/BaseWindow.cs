@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using Frontend.Packets.Play;
 
-namespace Frontend.Menus
+namespace Frontend.Windows
 {
-    public abstract class BaseMenu : IMenu
+    public abstract class BaseWindow : IWindow
     {
         public byte Id { get; set; }
 
@@ -26,9 +26,9 @@ namespace Frontend.Menus
         public abstract string Type { get; }
         public int TypeId { get; }
 
-        public BaseMenu(IMenuRegistry menuRegistry)
+        public BaseWindow(IWindowRegistry windowRegistry)
         {
-            TypeId = menuRegistry[Type];
+            TypeId = windowRegistry[Type];
         }
     }
 }

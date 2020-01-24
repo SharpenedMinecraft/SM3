@@ -48,8 +48,8 @@ namespace Frontend
                 }, provider.GetRequiredService<IMetrics>()));
             services.AddSingleton<IRandomProvider, JavaRandomProvider>();
             services.AddSingleton<IEntityRegistry, FileEntityRegistry>();
-            services.AddSingleton<IMenuManagerFactory, MenuManagerFactory>();
-            services.AddSingleton<IMenuRegistry, FileMenuRegistry>();
+            services.AddSingleton<IWindowManagerFactory, WindowManagerFactory>();
+            services.AddSingleton<IWindowRegistry, FileWindowRegistry>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

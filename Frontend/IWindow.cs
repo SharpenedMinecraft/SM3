@@ -2,7 +2,7 @@
 
 namespace Frontend
 {
-    public interface IMenu
+    public interface IWindow
     {
         byte Id { get; set; }
         IEnumerable<IWriteablePacket> OpenPackets { get; }

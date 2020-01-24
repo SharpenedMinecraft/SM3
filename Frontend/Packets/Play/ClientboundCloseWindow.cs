@@ -4,9 +4,9 @@
     {
         public int Id => 0x14;
 
-        public readonly IMenu Window;
+        public readonly IWindow Window;
 
-        public ClientboundCloseWindow(IMenu window)
+        public ClientboundCloseWindow(IWindow window)
         {
             Window = window;
         }

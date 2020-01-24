@@ -4,9 +4,9 @@
 
  namespace Frontend
 {
-    public sealed class FileMenuRegistry : IMenuRegistry
+    public sealed class FileWindowRegistry : IWindowRegistry
     {
-        public FileMenuRegistry()
+        public FileWindowRegistry()
         {
             Default = "";
             const string registryPath = "./Data/registries.json";

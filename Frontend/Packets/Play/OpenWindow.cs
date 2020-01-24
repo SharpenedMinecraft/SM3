@@ -4,9 +4,9 @@
     {
         public int Id => 0x2F;
 
-        public readonly IMenu Window;
+        public readonly IWindow Window;
 
-        public OpenWindow(IMenu window)
+        public OpenWindow(IWindow window)
         {
             Window = window;
         }

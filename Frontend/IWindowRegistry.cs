@@ -1,6 +1,6 @@
 ﻿namespace Frontend
 {
-    public interface IMenuRegistry
+    public interface IWindowRegistry
     {
         int this[string id] { get; }
     }
