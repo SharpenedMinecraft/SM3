@@ -50,6 +50,7 @@ namespace Frontend
             services.AddSingleton<IEntityRegistry, FileEntityRegistry>();
             services.AddSingleton<IWindowManagerFactory, WindowManagerFactory>();
             services.AddSingleton<IWindowRegistry, FileWindowRegistry>();
+            services.AddSingleton<IItemRegistry, FileItemRegistry>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
