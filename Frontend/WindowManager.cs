@@ -17,6 +17,7 @@ namespace Frontend
             _provider = provider;
             _queue = queue;
             _defaultWindow = defaultWindow;
+            OpenWindow = _defaultWindow;
         }
         
         public T Open<T>()
