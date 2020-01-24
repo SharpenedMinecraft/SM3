@@ -1,4 +1,5 @@
 ﻿using System;
+using Frontend.Windows;
 
 namespace Frontend
 {
@@ -11,6 +12,6 @@ namespace Frontend
             _provider = provider;
         }
 
-        public IWindowManager CreateManager(IPacketQueue clientQueue) => new WindowManager(_provider, clientQueue);
+        public IWindowManager CreateManager(IPacketQueue clientQueue) => new WindowManager(_provider, clientQueue, new PlayerInventory());
     }
 }
