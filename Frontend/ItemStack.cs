@@ -15,5 +15,7 @@ namespace Frontend
             Item = item;
             Count = count;
         }
+        
+        public NetworkSlot NetworkSlot => new NetworkSlot(Count != 0, Item.TypeId, Count, null);
     }
 }
