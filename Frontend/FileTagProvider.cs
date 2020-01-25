@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
@@ -49,20 +50,31 @@ namespace Frontend
         {
             foreach(var fileName in Directory.EnumerateFiles(BlockDir, "*.json"))
             {
-                var jsonReader = new Utf8JsonReader(File.ReadAllBytes(fileName));
-                do
+                using var _ = _logger.BeginScope(fileName);
+                try
                 {
-                    jsonReader.Read();
-                    
-                    if (!TryParseTagInfo(ref jsonReader, out var replace, out var values) ||
-                        (_blockTags.ContainsKey(fileName) && !(replace ?? false)))
+                    var jsonReader = new Utf8JsonReader(File.ReadAllBytes(fileName));
+                    do
                     {
-                        continue;
-                    }
+                        jsonReader.Read();
 
-                    var identifier = Path.GetFileNameWithoutExtension(fileName);
-                    _blockTags[identifier] = new Tag(identifier, ResolveBlockNames(values));
-                } while (jsonReader.TokenType != JsonTokenType.None && jsonReader.TokenType != JsonTokenType.EndObject);
+                        if (!TryParseTagInfo(ref jsonReader, out var replace, out var values) ||
+                            (_blockTags.ContainsKey(fileName) && !(replace ?? false)))
+                        {
+                            continue;
+                        }
+
+                        throw new Exception();
+                        var identifier = Path.GetFileNameWithoutExtension(fileName);
+                        _blockTags[identifier] = new Tag(identifier, ResolveBlockNames(values));
+                    } while (jsonReader.TokenType != JsonTokenType.None &&
+                             jsonReader.TokenType != JsonTokenType.EndObject);
+                }
+                catch (Exception e)
+                {
+                    _logger.LogCritical(e, $"Failed to load {fileName}");
+                    throw;
+                }
             }
         }
 
