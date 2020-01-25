@@ -17,6 +17,7 @@ spec:
       containers:
       - name: frontend
         image: docker.pkg.github.com/sharpenedminecraft/sm3/frontend:REPLACEME
+        imagePullPolicy: Always
         ports:
         - containerPort: 25565
           name: minecraft
