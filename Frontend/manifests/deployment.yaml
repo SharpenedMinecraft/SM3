@@ -19,4 +19,6 @@ spec:
         image: docker.pkg.github.com/sharpenedminecraft/sm3/frontend:REPLACEME
         ports:
         - containerPort: 25565
+          name: minecraft
         - containerPort: 80
+          name: http
