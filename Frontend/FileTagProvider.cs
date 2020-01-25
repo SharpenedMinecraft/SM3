@@ -64,7 +64,6 @@ namespace Frontend
                             continue;
                         }
 
-                        throw new Exception();
                         var identifier = Path.GetFileNameWithoutExtension(fileName);
                         _blockTags[identifier] = new Tag(identifier, ResolveBlockNames(values));
                     } while (jsonReader.TokenType != JsonTokenType.None &&
