@@ -1,4 +1,4 @@
-name: Test and build dev
+name: Test and build
 
 on:
   push:
@@ -54,8 +54,8 @@ jobs:
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: SharpenedMinecraft/SM3
+          name: sharpenedminecraft/sm3/frontend
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ github.token }}
           registry: docker.pkg.github.com
           dockerfile: ./Frontend/Dockerfile
