@@ -82,6 +82,8 @@ jobs:
     - run: |
         kubectl create namespace ${{ env.NAMESPACE }} --dry-run -o json | kubectl apply -f -
 
+    - uses: actions/checkout@v1
+
     # Deploy app to AKS
     - uses: azure/k8s-deploy@v1
       with:
