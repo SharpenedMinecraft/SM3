@@ -78,6 +78,15 @@ jobs:
         cluster-name: ${{ env.CLUSTER_NAME }}
         resource-group: ${{ env.CLUSTER_RESOURCE_GROUP }}
 
+    # Create imagepullsecret for Azure Container registry (ACR)
+    - uses: azure/k8s-create-secret@v1
+      with:
+        container-registry-url:  docker.pkg.github.com
+        container-registry-username: ${{ secrets.GITHUB_PACKAGES_USERNAME }}
+        container-registry-password: ${{ secrets.GITHUB_PACKAGES_PASSWORD }}
+        secret-name: github-registry-connection
+        namespace: ${{ env.NAMESPACE }}
+
     # Create namespace if doesn't exist
     - run: |
         kubectl create namespace ${{ env.NAMESPACE }} --dry-run -o json | kubectl apply -f -
@@ -93,6 +102,8 @@ jobs:
         images: |
           docker.pkg.github.com/sharpenedminecraft/sm3/frontend:${{ env.NAMESPACE }}
         namespace: ${{ env.NAMESPACE }}
+        imagepullsecrets: |
+          github-registry-connection
 
 
 
