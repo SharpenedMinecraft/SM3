@@ -59,3 +59,41 @@ jobs:
           password: ${{ github.token }}
           registry: docker.pkg.github.com
           dockerfile: ./Frontend/Dockerfile
+
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    needs: [ docker-build ]
+
+    steps:
+    - name: Extract branch name
+      shell: bash
+      run: echo "::set-env name=NAMESPACE::$(echo ${GITHUB_REF#refs/heads/} | sed 's/\//_/g')"
+      id: extract_branch
+
+    # Set the target Azure Kubernetes Service (AKS) cluster. 
+    - uses: azure/aks-set-context@v1
+      with:
+        creds: '${{ secrets.AZURE_CREDENTIALS }}'
+        cluster-name: ${{ env.CLUSTER_NAME }}
+        resource-group: ${{ env.CLUSTER_RESOURCE_GROUP }}
+
+    # Create namespace if doesn't exist
+    - run: |
+        kubectl create namespace ${{ env.NAMESPACE }} --dry-run -o json | kubectl apply -f -
+
+    # Deploy app to AKS
+    - uses: azure/k8s-deploy@v1
+      with:
+        manifests: |
+          manifests/deployment.yml
+          manifests/service.yml
+        images: |
+          docker.pkg.github.com/sharpenedminecraft/sm3/frontend:${{ env.NAMESPACE }}
+        namespace: ${{ env.NAMESPACE }}
+
+
+
+env:
+  CLUSTER_NAME: SM3
+  CLUSTER_RESOURCE_GROUP: SM3
