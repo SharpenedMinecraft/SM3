@@ -78,6 +78,10 @@ jobs:
         cluster-name: ${{ env.CLUSTER_NAME }}
         resource-group: ${{ env.CLUSTER_RESOURCE_GROUP }}
 
+    # Create namespace if doesn't exist
+    - run: |
+        kubectl create namespace ${{ env.NAMESPACE }} --dry-run -o json | kubectl apply -f -
+
     # Create imagepullsecret for Azure Container registry (ACR)
     - uses: azure/k8s-create-secret@v1
       with:
@@ -86,10 +90,6 @@ jobs:
         container-registry-password: ${{ secrets.GITHUB_PACKAGES_PASSWORD }}
         secret-name: github-registry-connection
         namespace: ${{ env.NAMESPACE }}
-
-    # Create namespace if doesn't exist
-    - run: |
-        kubectl create namespace ${{ env.NAMESPACE }} --dry-run -o json | kubectl apply -f -
 
     - uses: actions/checkout@v1
 
