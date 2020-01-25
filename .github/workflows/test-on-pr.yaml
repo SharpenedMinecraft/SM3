@@ -3,16 +3,13 @@ name: Test on PR
 on: pull_request
 
 jobs:
-  build:
-    name: test
+  test:
+    name: docker-test
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 3.1.100
-    - name: Test with dotnet
-      run: dotnet test
-      working-directory: ./Frontend.Tests/
+      - uses: actions/checkout@v1
+      - name: Build Docker Image
+        run: docker build --target test -t test:latest -f ./Frontend/Dockerfile .
+      - name: Run Tests
+        run: docker run test:latest
