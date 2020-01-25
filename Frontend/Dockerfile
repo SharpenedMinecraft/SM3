@@ -23,7 +23,4 @@ RUN dotnet publish -c release --no-build -o /app
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 WORKDIR /app
 COPY --from=publish /app .
-RUN apt-get update
-RUN apt-get install tree 
-RUN tree
 ENTRYPOINT ["./Frontend"]
