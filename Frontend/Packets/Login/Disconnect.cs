@@ -7,11 +7,6 @@ namespace Frontend.Packets.Login
     // ReSharper disable once CA1815
     public readonly struct Disconnect : IWriteablePacket
     {
-        private static JsonSerializerOptions _jsonSerializerOptions = new JsonSerializerOptions()
-        {
-            IgnoreNullValues = true
-        };
-        
         public int Id => 0x00;
 
         public Disconnect(Chat message)
@@ -23,10 +18,7 @@ namespace Frontend.Packets.Login
         
         public readonly void Write(IPacketWriter writer)
         {
-            var data = JsonSerializer.SerializeToUtf8Bytes(Message, _jsonSerializerOptions);
-            
-            writer.WriteVarInt(data.Length);
-            writer.WriteBytes(data);
+            writer.WriteSpecialType(Message);
         }
     }
 }

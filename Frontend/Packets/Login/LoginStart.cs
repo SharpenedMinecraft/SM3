@@ -4,6 +4,7 @@ using System.Text;
 using App.Metrics;
 using Frontend.Entities;
 using Frontend.Packets.Play;
+using Frontend.Windows;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
@@ -45,6 +46,8 @@ namespace Frontend.Packets.Login
                 player.Username = Username;
                 player.Guid = Guid.NewGuid();
                 player.Position = new Vector3(0, 15, 0);
+                player.WindowManager = serviceProvider.GetRequiredService<IWindowManagerFactory>()
+                    .CreateManager(connectionState.PacketQueue);
                 connectionState.PlayerEntity = player;
 
                 entityManager.Spawn(player);
@@ -106,6 +109,8 @@ namespace Frontend.Packets.Login
                 thePerl.NoGravity = true;
                 thePerl.Position = new Vector3(0, 21, 0);
                 entityManager.Spawn(thePerl);
+
+                var window = connectionState.PlayerEntity.WindowManager.Open<Generic9x1>();
             }
         }
     }

@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics.Contracts;
+using Frontend.Entities;
 using Microsoft.Extensions.Logging;
 
 namespace Frontend.Packets.Play

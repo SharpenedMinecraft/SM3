@@ -1,4 +1,5 @@
 using System;
+using Frontend.Entities;
 
 namespace Frontend.Packets.Play
 {
