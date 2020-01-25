@@ -9,6 +9,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
+        with:
+          lfs: true
       - name: Build Docker Image
         run: docker build --target test -t test:latest -f ./Frontend/Dockerfile .
       - name: Run Tests
