@@ -20,7 +20,7 @@ FROM build AS publish
 RUN dotnet publish -c release --no-build -o /app
 
 # final stage/image
-FROM mcr.microsoft.com/dotnet/core/runtime:3.1
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 WORKDIR /app
 COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "Frontend.dll"]
