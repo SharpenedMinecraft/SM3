@@ -86,8 +86,8 @@ jobs:
     - uses: azure/k8s-deploy@v1
       with:
         manifests: |
-          ./Frontend/manifests/deployment.yml
-          ./Frontend/manifests/service.yml
+          ./Frontend/manifests/deployment.yaml
+          ./Frontend/manifests/service.yaml
         images: |
           docker.pkg.github.com/sharpenedminecraft/sm3/frontend:${{ env.NAMESPACE }}
         namespace: ${{ env.NAMESPACE }}
