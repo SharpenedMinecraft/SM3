@@ -105,6 +105,7 @@ jobs:
         manifests: |
           ./Frontend/manifests/deployment.yaml
           ./Frontend/manifests/service.yaml
+          ./Frontend/manifests/load-balancer.yaml
         images: |
           docker.pkg.github.com/sharpenedminecraft/sm3/frontend:${{ env.NAMESPACE }}
         namespace: ${{ env.NAMESPACE }}
