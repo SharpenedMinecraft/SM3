@@ -47,7 +47,7 @@ jobs:
         run: docker run test:latest
 
   docker-build:
-    name: docker-build
+    name: docker-build-deploy
     runs-on: ubuntu-latest
     needs: [ test ]
 
@@ -63,13 +63,9 @@ jobs:
           password: ${{ github.token }}
           registry: docker.pkg.github.com
           dockerfile: ./Frontend/Dockerfile
+          snapshot: true
+        id: publish
 
-  deploy:
-    name: deploy
-    runs-on: ubuntu-latest
-    needs: [ docker-build ]
-
-    steps:
     - name: Extract branch name
       shell: bash
       run: echo "::set-env name=NAMESPACE::$(echo ${GITHUB_REF#refs/heads/} | sed 's/\//_/g')"
@@ -95,10 +91,6 @@ jobs:
         secret-name: github-registry-connection
         namespace: ${{ env.NAMESPACE }}
 
-    - uses: actions/checkout@v1
-      with:
-        lfs: true
-
     # Deploy app to AKS
     - uses: azure/k8s-deploy@v1
       with:
@@ -107,7 +99,7 @@ jobs:
           ./Frontend/manifests/service.yaml
           ./Frontend/manifests/load-balancer.yaml
         images: |
-          docker.pkg.github.com/sharpenedminecraft/sm3/frontend:${{ env.NAMESPACE }}
+          docker.pkg.github.com/sharpenedminecraft/sm3/frontend:${{ steps.publish.outputs.snapshot-tag }}
         namespace: ${{ env.NAMESPACE }}
         imagepullsecrets: |
           github-registry-connection
