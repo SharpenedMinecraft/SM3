@@ -52,20 +52,20 @@ jobs:
     needs: [ test ]
 
     steps:
-      - uses: actions/checkout@v1
-        with:
-          lfs: true
-      - name: Publish to Registry
-        id: publish
-        uses: elgohr/Publish-Docker-Github-Action@master
-        with:
-          name: sharpenedminecraft/sm3/frontend
-          username: ${{ github.actor }}
-          password: ${{ github.token }}
-          registry: docker.pkg.github.com
-          dockerfile: ./Frontend/Dockerfile
-          snapshot: true
-
+    - uses: actions/checkout@v1
+      with:
+        lfs: true
+    - name: Publish to Registry
+      id: publish
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: sharpenedminecraft/sm3/frontend
+        username: ${{ github.actor }}
+        password: ${{ github.token }}
+        registry: docker.pkg.github.com
+        dockerfile: ./Frontend/Dockerfile
+        snapshot: true
+          
     - name: Extract branch name
       shell: bash
       run: echo "::set-env name=NAMESPACE::$(echo ${GITHUB_REF#refs/heads/} | sed 's/\//_/g')"
