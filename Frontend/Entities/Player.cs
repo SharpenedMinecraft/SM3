@@ -25,11 +25,11 @@ namespace Frontend.Entities
         public PlayerSettings Settings { get; set; }
         public TimeSpan? Ping { get; set; }
         public IWindowManager WindowManager { get; set; }
-        
+
         public Memory<ItemStack<IItem>> Inventory { get; }
 
         public int SelectedSlot
-        
+
         {
             get => _selectedSlot;
             set

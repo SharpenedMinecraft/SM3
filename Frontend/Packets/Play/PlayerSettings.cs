@@ -9,14 +9,14 @@ namespace Frontend.Packets.Play
     {
         public readonly int Id => 0x05;
         public readonly MCConnectionStage Stage => MCConnectionStage.Playing;
-        
+
         public string Locale;
         public byte RenderDistance;
         public int ChatMode;
         public bool ChatColors;
         public byte SkinParts;
         public int MainHand;
-        
+
         public void Read(IPacketReader reader)
         {
             Locale = reader.ReadString().ToString();
