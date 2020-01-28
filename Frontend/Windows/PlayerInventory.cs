@@ -12,7 +12,7 @@ namespace Frontend.Windows
             get => -2;
             set => throw new InvalidOperationException("Player Inventory's ID is always 0");
         }
-        
+
         public IEnumerable<IWriteablePacket> OpenPackets => throw new InvalidOperationException("Player Inventory cannot be opened explicitly");
 
         public IEnumerable<IWriteablePacket> ClosePackets => Enumerable.Empty<IWriteablePacket>();

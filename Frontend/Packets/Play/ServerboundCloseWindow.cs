@@ -9,7 +9,7 @@ namespace Frontend.Packets.Play
         public MCConnectionStage Stage => MCConnectionStage.Playing;
 
         public byte WindowId;
-        
+
         public void Read(IPacketReader reader)
         {
             WindowId = reader.ReadUInt8();
@@ -21,7 +21,7 @@ namespace Frontend.Packets.Play
             {
                 // Inventory was closed
             }
-            
+
             var openWindow = state.PlayerEntity.WindowManager.OpenWindow;
             if (openWindow?.Id == WindowId)
                 state.PlayerEntity.WindowManager.Close(openWindow, true);

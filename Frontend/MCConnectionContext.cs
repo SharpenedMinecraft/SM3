@@ -58,7 +58,7 @@ namespace Frontend
         }
 
         public override IFeatureCollection Features => _underlyingCtx.Features;
-        
+
         public override IDictionary<object, object> Items
         {
             get => _underlyingCtx.Items;
@@ -77,7 +77,7 @@ namespace Frontend
 
         public override ValueTask DisposeAsync() => _underlyingCtx.DisposeAsync();
 
-        public override CancellationToken ConnectionClosed        
+        public override CancellationToken ConnectionClosed
         {
             get => _underlyingCtx.ConnectionClosed;
             set => _underlyingCtx.ConnectionClosed = value;
@@ -87,7 +87,7 @@ namespace Frontend
             get => _underlyingCtx.LocalEndPoint;
             set => _underlyingCtx.LocalEndPoint = value;
         }
-        public override EndPoint RemoteEndPoint 
+        public override EndPoint RemoteEndPoint
         {
             get => _underlyingCtx.RemoteEndPoint;
             set => _underlyingCtx.RemoteEndPoint = value;

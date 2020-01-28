@@ -19,7 +19,7 @@ namespace Frontend
             _defaultWindow = defaultWindow;
             OpenWindow = _defaultWindow;
         }
-        
+
         public T Open<T>()
             where T : IWindow
         {
@@ -27,7 +27,7 @@ namespace Frontend
             {
                 Close(OpenWindow, false);
             }
-            
+
             var instance = ActivatorUtilities.CreateInstance<T>(_provider);
 
             do

@@ -15,7 +15,7 @@ namespace Frontend.Packets.Login
         }
 
         public readonly Chat Message;
-        
+
         public readonly void Write(IPacketWriter writer)
         {
             writer.WriteSpecialType(Message);

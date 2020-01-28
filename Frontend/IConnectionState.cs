@@ -10,7 +10,7 @@ namespace Frontend
         IPacketQueue PacketQueue { get; }
 
         bool IsLocal { get; set; }
-        
+
         Player PlayerEntity { get; set; }
     }
 }
