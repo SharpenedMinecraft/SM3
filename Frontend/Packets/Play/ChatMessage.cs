@@ -20,7 +20,7 @@ namespace Frontend.Packets.Play
 
         public readonly void Process(ILogger logger, IConnectionState state, IServiceProvider serviceProvider)
         {
-            logger.LogInformation($"{state.PlayerEntity.Username} sent a Chat Message");
+            logger.LogInformation($"{state.PlayerEntity.Username} sent a Chat Message: {Message}");
         }
 
     }
