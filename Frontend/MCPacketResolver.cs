@@ -12,13 +12,14 @@ namespace Frontend
     {
         HashSet<IReadablePacket> _packets = new HashSet<IReadablePacket>(new IReadablePacket[]
         {
+            new ChatMessage(),
             new Handshake(),
             new Ping(),
             new StatusRequest(),
-            new LoginStart(), 
-            new PlayerSettings(), 
-            new ServerboundPluginMessage(), 
-            new KeepAliveServerbound(), 
+            new LoginStart(),
+            new PlayerSettings(),
+            new ServerboundPluginMessage(),
+            new KeepAliveServerbound(),
         }, new NetworkPacketComparer());
 
         private class NetworkPacketComparer : EqualityComparer<IReadablePacket>
@@ -29,11 +30,11 @@ namespace Frontend
                     return y is null;
                 if (y is null)
                     return false;
-                
+
                 return x.Id == y.Id && x.Stage == y.Stage;
             }
 
-            public override int GetHashCode(IReadablePacket obj) 
+            public override int GetHashCode(IReadablePacket obj)
                 => HashCode.Combine(obj.Id, obj.Stage);
         }
 
@@ -54,7 +55,7 @@ namespace Frontend
             public void Process(ILogger logger, IConnectionState state, IServiceProvider serviceProvider)
                 => throw new NotSupportedException("This Type is only intended to be used to find matching other types!");
         }
-        
+
         public IReadablePacket? GetReadablePacket(int id, IConnectionState connectionState)
         {
             _packets.TryGetValue(new FindPacket(id, connectionState.ConnectionStage), out var packet);
