@@ -31,6 +31,6 @@ namespace Frontend.Packets.Play
             writer.WriteBytes(data);
             writer.WriteUInt8(Position);
         }
-       
+
     }
 }
