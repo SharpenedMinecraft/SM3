@@ -3,7 +3,6 @@ using System.IO;
 using System.Reflection;
 using App.Metrics;
 using App.Metrics.AspNetCore;
-using App.Metrics.Extensions.Configuration;
 using Microsoft.AspNetCore.Connections;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
@@ -11,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public static class Program
     {

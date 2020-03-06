@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
-using Frontend.Packets.Handshaking;
-using Frontend.Packets.Login;
-using Frontend.Packets.Play;
-using Frontend.Packets.Status;
 using Microsoft.Extensions.Logging;
+using SM3.Frontend.Packets.Handshaking;
+using SM3.Frontend.Packets.Login;
+using SM3.Frontend.Packets.Play;
+using SM3.Frontend.Packets.Status;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public sealed class MCPacketResolver : IPacketResolver
     {

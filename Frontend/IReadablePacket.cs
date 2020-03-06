@@ -1,7 +1,7 @@
 using System;
 using Microsoft.Extensions.Logging;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public interface IReadablePacket
     {

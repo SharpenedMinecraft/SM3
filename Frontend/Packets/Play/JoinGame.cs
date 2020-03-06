@@ -1,7 +1,4 @@
-using System;
-using Microsoft.Extensions.Logging;
-
-namespace Frontend.Packets.Play
+namespace SM3.Frontend.Packets.Play
 {
     public readonly struct JoinGame : IWriteablePacket
     {

@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using NUnit.Framework;
 
-namespace Frontend.Tests
+namespace SM3.Frontend.Tests
 {
     [TestFixture]
     public class Nbt

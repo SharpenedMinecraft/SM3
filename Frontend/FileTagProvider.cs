@@ -6,7 +6,7 @@ using System.IO;
 using System.Text.Json;
 using Microsoft.Extensions.Logging;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public sealed class FileTagProvider : ITagProvider
     {

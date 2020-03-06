@@ -1,8 +1,7 @@
 using System;
 using System.Globalization;
-using Microsoft.Extensions.Logging;
 
-namespace Frontend.Packets.Login
+namespace SM3.Frontend.Packets.Login
 {
     public readonly struct LoginSuccess : IWriteablePacket
     {

@@ -1,7 +1,6 @@
-using System;
 using System.Collections.Generic;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public interface IDimension
     {

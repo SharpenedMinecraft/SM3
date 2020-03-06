@@ -1,13 +1,12 @@
 using System;
 using System.Numerics;
-using System.Text;
 using App.Metrics;
-using Frontend.Entities;
-using Frontend.Packets.Play;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using SM3.Frontend.Entities;
+using SM3.Frontend.Packets.Play;
 
-namespace Frontend.Packets.Login
+namespace SM3.Frontend.Packets.Login
 {
     public struct LoginStart : IReadablePacket
     {

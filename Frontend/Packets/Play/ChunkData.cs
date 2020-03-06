@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.InteropServices;
 
-namespace Frontend.Packets.Play
+namespace SM3.Frontend.Packets.Play
 {
     public readonly struct ChunkData : IWriteablePacket
     {

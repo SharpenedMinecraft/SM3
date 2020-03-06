@@ -1,4 +1,4 @@
-namespace Frontend.Packets.Play
+namespace SM3.Frontend.Packets.Play
 {
     public readonly struct EntityStatus : IWriteablePacket
     {

@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Numerics;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public struct Vector3Int : IEquatable<Vector3Int>, IComparable<Vector3Int>, IComparable
     {

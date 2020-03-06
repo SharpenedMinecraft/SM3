@@ -1,8 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using Microsoft.Extensions.Logging;
 
-namespace Frontend.Packets.Status
+namespace SM3.Frontend.Packets.Status
 {
     public readonly struct StatusResponse : IWriteablePacket
     {

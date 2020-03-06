@@ -1,10 +1,8 @@
 using System;
 using System.Collections.Generic;
-using System.Numerics;
-using Frontend.Entities;
-using Frontend.Packets.Play;
+using SM3.Frontend.Packets.Play;
 
-namespace Frontend
+namespace SM3.Frontend.Entities
 {
     public sealed class Player : Living
     {

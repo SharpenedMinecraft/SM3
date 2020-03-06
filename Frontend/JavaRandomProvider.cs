@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public sealed class JavaRandomProvider : IRandomProvider, IDisposable
     {

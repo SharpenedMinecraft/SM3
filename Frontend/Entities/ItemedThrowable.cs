@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Frontend.Entities
+﻿namespace SM3.Frontend.Entities
 {
     public abstract class ItemedThrowable : Throwable
     {

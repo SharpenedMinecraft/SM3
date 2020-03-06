@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Frontend.Entities;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public interface IEntityManager : IDisposable, IEnumerable<IEntity>
 

@@ -1,6 +1,6 @@
 using System.Buffers;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public interface IPacketReaderFactory
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public readonly struct ChunkPosition : IEquatable<ChunkPosition>, IComparable<ChunkPosition>, IComparable
     {

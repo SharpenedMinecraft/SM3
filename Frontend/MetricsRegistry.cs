@@ -1,10 +1,9 @@
 using App.Metrics;
 using App.Metrics.Counter;
-using App.Metrics.Gauge;
 using App.Metrics.Histogram;
 using App.Metrics.Meter;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public static class MetricsRegistry
     {

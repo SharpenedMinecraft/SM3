@@ -1,4 +1,4 @@
-﻿namespace Frontend.Entities
+﻿namespace SM3.Frontend.Entities
 {
     public abstract class Living : ObjectEntity
     {

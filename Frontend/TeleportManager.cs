@@ -1,8 +1,7 @@
-using System;
 using System.Collections.Generic;
 using System.Numerics;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public sealed class TeleportManager : ITeleportManager
     {

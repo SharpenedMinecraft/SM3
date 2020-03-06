@@ -1,6 +1,4 @@
-using System.Text.Json.Serialization;
-
-namespace Frontend
+namespace SM3.Frontend
 {
     public readonly struct Tag
     {

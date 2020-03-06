@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <RootNamespace>SM3.Frontend</RootNamespace>
   </PropertyGroup>
   
   <!-- AVX enabled by default. It might be benefical to disable this 

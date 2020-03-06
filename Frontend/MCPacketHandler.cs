@@ -1,10 +1,9 @@
 using System;
-using System.Buffers;
 using System.Text.Json;
 using EnumsNET;
 using Microsoft.Extensions.Logging;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public sealed class MCPacketHandler : IPacketHandler
     {

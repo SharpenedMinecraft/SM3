@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace Frontend.Packets.Play
+namespace SM3.Frontend.Packets.Play
 {
     public readonly struct KeepAliveClientbound : IWriteablePacket
     {

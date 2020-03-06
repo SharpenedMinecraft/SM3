@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Numerics;
 
-namespace Frontend.Entities
+namespace SM3.Frontend.Entities
 {
     public abstract class Entity : IEntity
     {

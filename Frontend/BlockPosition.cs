@@ -1,7 +1,7 @@
 using System;
 using System.Numerics;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public readonly struct BlockPosition : IEquatable<BlockPosition>, IComparable<BlockPosition>, IComparable
     {

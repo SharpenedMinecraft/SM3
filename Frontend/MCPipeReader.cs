@@ -3,7 +3,7 @@ using System.IO.Pipelines;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public sealed class MCPipeReader : PipeReader
     {

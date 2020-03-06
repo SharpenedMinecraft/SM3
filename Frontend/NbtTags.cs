@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public interface INbtTag
     {

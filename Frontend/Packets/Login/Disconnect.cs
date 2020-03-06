@@ -1,8 +1,6 @@
-using System;
 using System.Text.Json;
-using Microsoft.Extensions.Logging;
 
-namespace Frontend.Packets.Login
+namespace SM3.Frontend.Packets.Login
 {
     // ReSharper disable once CA1815
     public readonly struct Disconnect : IWriteablePacket

@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace Frontend.Packets.Play
+namespace SM3.Frontend.Packets.Play
 {
     public readonly struct DeclareCommands : IWriteablePacket
     {

@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Buffers;
 using System.Buffers.Binary;
 using System.IO;
-using System.Numerics;
 using System.Runtime.CompilerServices;
-using System.Runtime.Intrinsics;
-using System.Runtime.Intrinsics.X86;
-using System.Text;
-using Microsoft.AspNetCore.Mvc.Routing;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public struct MCPacketWriter : IPacketWriter
     {

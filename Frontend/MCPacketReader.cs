@@ -5,7 +5,7 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public struct MCPacketReader : IPacketReader
     {

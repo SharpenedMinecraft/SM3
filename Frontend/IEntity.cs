@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public interface IEntity
     {

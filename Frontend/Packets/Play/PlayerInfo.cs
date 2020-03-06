@@ -1,6 +1,7 @@
 using System;
+using SM3.Frontend.Entities;
 
-namespace Frontend.Packets.Play
+namespace SM3.Frontend.Packets.Play
 {
     public readonly struct PlayerInfo : IWriteablePacket
     {

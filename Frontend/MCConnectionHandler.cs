@@ -1,14 +1,10 @@
-using System;
 using System.Buffers;
-using System.IO.Pipelines;
-using System.Text;
-using System.Text.Json;
 using System.Threading.Tasks;
 using App.Metrics;
 using Microsoft.AspNetCore.Connections;
 using Microsoft.Extensions.Logging;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public sealed class MCConnectionHandler : ConnectionHandler
     {

@@ -1,7 +1,7 @@
 using System.Buffers;
 using App.Metrics;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public sealed class MCPacketReaderFactory : IPacketReaderFactory
     {

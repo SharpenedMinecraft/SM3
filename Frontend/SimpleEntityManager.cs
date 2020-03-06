@@ -2,13 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading;
-using Frontend.Entities;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public sealed class SimpleEntityManager : IEntityManager
     {

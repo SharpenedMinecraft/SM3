@@ -4,6 +4,7 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
         <IsPackable>false</IsPackable>
+        <RootNamespace>SM3.Frontend.Tests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

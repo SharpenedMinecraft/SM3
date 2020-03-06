@@ -1,8 +1,8 @@
-﻿﻿using System.Collections.Generic;
- using System.IO;
- using System.Text.Json;
+﻿using System.Collections.Generic;
+using System.IO;
+using System.Text.Json;
 
- namespace Frontend
+namespace SM3.Frontend
 {
     public sealed class FileEntityRegistry : IEntityRegistry
     {

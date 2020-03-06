@@ -3,7 +3,7 @@ using App.Metrics;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace Frontend.Packets.Status
+namespace SM3.Frontend.Packets.Status
 {
     public struct StatusRequest : IReadablePacket
     {

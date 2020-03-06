@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public readonly struct ReadOnlyChunk
     {

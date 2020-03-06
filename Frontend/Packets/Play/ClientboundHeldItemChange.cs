@@ -1,6 +1,4 @@
-using System;
-
-namespace Frontend.Packets.Play
+namespace SM3.Frontend.Packets.Play
 {
     public readonly struct ClientboundHeldItemChange : IWriteablePacket
     {

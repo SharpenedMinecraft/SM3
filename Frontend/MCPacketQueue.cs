@@ -1,11 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Pipelines;
-using System.Numerics;
 using App.Metrics;
-using Microsoft.Extensions.DependencyInjection;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public sealed class MCPacketQueue : IPacketQueue
     {

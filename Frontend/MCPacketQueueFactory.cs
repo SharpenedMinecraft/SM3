@@ -2,7 +2,7 @@ using System;
 using System.IO.Pipelines;
 using App.Metrics;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public sealed class MCPacketQueueFactory : IPacketQueueFactory
     {

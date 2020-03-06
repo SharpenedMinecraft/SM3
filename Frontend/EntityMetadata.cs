@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Numerics;
 using System.Text.Json;
-using Frontend.Entities;
+using SM3.Frontend.Entities;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public sealed class EntityMetadata
     {

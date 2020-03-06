@@ -1,8 +1,7 @@
 using System;
 using System.Buffers;
-using Microsoft.Extensions.ObjectPool;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public interface IPacketReader
     {

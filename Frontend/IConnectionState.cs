@@ -1,6 +1,6 @@
-using System;
+using SM3.Frontend.Entities;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public interface IConnectionState
     {

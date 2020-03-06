@@ -6,9 +6,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Connections;
 using Microsoft.AspNetCore.Http.Features;
-using Microsoft.Extensions.Logging;
+using SM3.Frontend.Entities;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public sealed class MCConnectionContext : ConnectionContext, IConnectionState
     {

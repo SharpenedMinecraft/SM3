@@ -1,9 +1,8 @@
 using System;
-using System.Diagnostics.Contracts;
 using System.Text;
 using Microsoft.Extensions.Logging;
 
-namespace Frontend.Packets.Play
+namespace SM3.Frontend.Packets.Play
 {
     public struct ServerboundPluginMessage : IReadablePacket
     {

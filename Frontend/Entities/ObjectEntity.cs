@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Frontend.Packets.Play;
+using SM3.Frontend.Packets.Play;
 
-namespace Frontend.Entities
+namespace SM3.Frontend.Entities
 {
     public abstract class ObjectEntity : Entity
     {

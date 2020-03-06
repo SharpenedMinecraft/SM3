@@ -1,4 +1,6 @@
-﻿namespace Frontend.Packets.Play
+﻿using SM3.Frontend.Entities;
+
+namespace SM3.Frontend.Packets.Play
 {
     public readonly struct SpawnPlayer : IWriteablePacket
     {

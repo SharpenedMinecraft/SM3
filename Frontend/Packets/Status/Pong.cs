@@ -1,6 +1,4 @@
-using Microsoft.Extensions.Logging;
-
-namespace Frontend.Packets.Status
+namespace SM3.Frontend.Packets.Status
 {
     public readonly struct Pong : IWriteablePacket
     {

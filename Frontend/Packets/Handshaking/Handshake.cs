@@ -1,9 +1,9 @@
 using System;
 using EnumsNET;
-using Frontend.Packets.Login;
 using Microsoft.Extensions.Logging;
+using SM3.Frontend.Packets.Login;
 
-namespace Frontend.Packets.Handshaking
+namespace SM3.Frontend.Packets.Handshaking
 {
     public struct Handshake : IReadablePacket
     {
