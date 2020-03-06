@@ -12,7 +12,7 @@ namespace Frontend
     {
         HashSet<IReadablePacket> _packets = new HashSet<IReadablePacket>(new IReadablePacket[]
         {
-            new ChatMessage(),
+            new ServerboundChatMessage(),
             new Handshake(),
             new Ping(),
             new StatusRequest(),
