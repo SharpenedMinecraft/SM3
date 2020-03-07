@@ -14,7 +14,7 @@
         public void Write(IPacketWriter writer)
         {
             writer.WriteVarInt(Entity.NumericId);
-            writer.WriteGuid(Entity.Uuid);
+            writer.WriteGuid(Entity.Guid);
             writer.WriteVarInt(Entity.TypeId);
             writer.WriteDouble(Entity.Position.X);
             writer.WriteDouble(Entity.Position.Y);

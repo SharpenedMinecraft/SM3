@@ -15,7 +15,7 @@ namespace SM3.Network.Play
 
         public void Write(IPacketWriter writer)
         {
-            writer.WriteVarInt(Entity.Id);
+            writer.WriteVarInt(Entity.NumericId);
             writer.WriteGuid(Entity.Guid);
             writer.WriteDouble(Entity.Position.X);
             writer.WriteDouble(Entity.Position.Y);

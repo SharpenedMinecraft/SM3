@@ -4,12 +4,12 @@ namespace SM3
 {
     public readonly struct Entity
     {
-        public readonly Guid Uuid;
+        public readonly Guid Guid;
         public readonly int NumericId;
 
-        public Entity(Guid uuid, int numericId)
+        public Entity(Guid guid, int numericId)
         {
-            Uuid = uuid;
+            Guid = guid;
             NumericId = numericId;
         }
     }
