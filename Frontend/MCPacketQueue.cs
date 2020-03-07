@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.IO.Pipelines;
 using App.Metrics;
+using SM3.NBT;
+using SM3.Network;
 
 namespace SM3.Frontend
 {

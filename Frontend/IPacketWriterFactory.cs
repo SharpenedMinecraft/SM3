@@ -1,4 +1,5 @@
 using System;
+using SM3.Network;
 
 namespace SM3.Frontend
 {

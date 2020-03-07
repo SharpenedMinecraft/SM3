@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
-using SM3.Frontend.Packets.Handshaking;
-using SM3.Frontend.Packets.Login;
-using SM3.Frontend.Packets.Play;
-using SM3.Frontend.Packets.Status;
+using SM3.Network;
+using SM3.Network.Handshaking;
+using SM3.Network.Login;
+using SM3.Network.Play;
+using SM3.Network.Status;
 
 namespace SM3.Frontend
 {
@@ -41,9 +42,9 @@ namespace SM3.Frontend
         private readonly struct FindPacket : IReadablePacket
         {
             public int Id { get; }
-            public MCConnectionStage Stage { get; }
+            public ConnectionStage Stage { get; }
 
-            public FindPacket(int id, MCConnectionStage stage)
+            public FindPacket(int id, ConnectionStage stage)
             {
                 Id = id;
                 Stage = stage;

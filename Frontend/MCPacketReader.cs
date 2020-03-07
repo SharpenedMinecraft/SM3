@@ -4,6 +4,7 @@ using System.Buffers.Binary;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Text;
+using SM3.Network;
 
 namespace SM3.Frontend
 {

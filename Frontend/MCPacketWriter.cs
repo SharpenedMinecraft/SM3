@@ -2,6 +2,8 @@
 using System.Buffers.Binary;
 using System.IO;
 using System.Runtime.CompilerServices;
+using SM3.NBT;
+using SM3.Network;
 
 namespace SM3.Frontend
 {

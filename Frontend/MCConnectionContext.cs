@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Connections;
 using Microsoft.AspNetCore.Http.Features;
-using SM3.Frontend.Entities;
+using SM3.Network;
 
 namespace SM3.Frontend
 {
@@ -20,13 +20,13 @@ namespace SM3.Frontend
             PacketQueue = packetQueue;
             _underlyingCtx = ctx;
             _mcDuplexPipe = new MCDuplexPipe(_underlyingCtx.Transport);
-            Items["state"] = MCConnectionStage.Handshaking;
+            Items["state"] = Network.ConnectionStage.Handshaking;
             Items["isLocal"] = false;
         }
 
-        public MCConnectionStage ConnectionStage
+        public ConnectionStage ConnectionStage
         {
-            get => (MCConnectionStage)Items["state"];
+            get => (ConnectionStage)Items["state"];
             set => Items["state"] = value;
         }
 
@@ -44,9 +44,9 @@ namespace SM3.Frontend
             set => Items["guid"] = value.ToString();
         }
 
-        public Player PlayerEntity
+        public Entity? PlayerEntity
         {
-            get => (Player) Items["playerEntity"];
+            get => (Entity?) Items["playerEntity"];
             set => Items["playerEntity"] = value ?? throw new ArgumentNullException(nameof(value));
         }
 

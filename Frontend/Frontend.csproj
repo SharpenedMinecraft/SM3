@@ -33,12 +33,21 @@
     <PackageReference Include="App.Metrics.Extensions.HealthChecks" Version="4.0.0-*" />
     <PackageReference Include="App.Metrics.Formatters.Prometheus" Version="4.0.0-*" />
     <PackageReference Include="Enums.NET" Version="3.0.2" />
+    <PackageReference Include="MassTransit" Version="6.2.1" />
+    <PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="6.2.1" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="6.2.1" />
+    <PackageReference Include="MassTransit.Redis" Version="6.2.1" />
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8" />
     <PackageReference Include="Roslynator.Analyzers" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="../Data/**" LinkBase="Data/" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+    <ProjectReference Include="..\NBT\NBT.csproj" />
   </ItemGroup>
 
 </Project>

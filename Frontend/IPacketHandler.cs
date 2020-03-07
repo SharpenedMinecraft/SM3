@@ -1,3 +1,5 @@
+using SM3.Network;
+
 namespace SM3.Frontend
 {
     public interface IPacketHandler

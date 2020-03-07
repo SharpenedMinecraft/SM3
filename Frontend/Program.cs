@@ -20,7 +20,7 @@ namespace SM3.Frontend
             using var host = CreateHostBuilder(args).Build();
             Console.WriteLine($"Log of SM3 @ {DateTime.UtcNow}");
             Console.WriteLine("Version: 0.5.1");
-            Console.WriteLine($"Compatible with Protocol {MCPacketHandler.ProtocolVersion} Display Version {MCPacketHandler.VersionName}");
+            Console.WriteLine($"Compatible with Protocol {Constants.ProtocolVersion} Display Version {Constants.VersionName}");
             #if NO_OPTIMIZATION
             Console.WriteLine("This Build uses no special Optimizations! Might lead to heavy loss of performance!");
             #endif

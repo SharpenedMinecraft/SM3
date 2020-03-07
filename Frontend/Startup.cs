@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SM3.Network;
 
 namespace SM3.Frontend
 {
@@ -28,7 +29,6 @@ namespace SM3.Frontend
             services.AddSingleton<IPacketQueueFactory, MCPacketQueueFactory>();
             services.AddSingleton<IPacketResolver, MCPacketResolver>();
             services.AddSingleton<IPacketHandler, MCPacketHandler>();
-            services.AddSingleton<IEntityManager, SimpleEntityManager>();
             services.AddSingleton<ITagProvider, FileTagProvider>();
             services.AddSingleton<ICommandProvider, CommandProvider>();
             services.AddSingleton<ITeleportManager, TeleportManager>();
@@ -38,8 +38,7 @@ namespace SM3.Frontend
                 {
                     new Overworld(),
                 }, provider.GetRequiredService<IMetrics>()));
-            services.AddSingleton<IRandomProvider, JavaRandomProvider>();
-            services.AddSingleton<IEntityRegistry, FileEntityRegistry>();
+            services.AddMinecraftServices();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
