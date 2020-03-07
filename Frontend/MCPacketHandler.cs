@@ -1,16 +1,14 @@
 using System;
-using System.Buffers;
 using System.Text.Json;
 using EnumsNET;
 using Microsoft.Extensions.Logging;
+using SM3.Network;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public sealed class MCPacketHandler : IPacketHandler
     {
         private readonly ILogger _logger;
-        public const int ProtocolVersion = 578;
-        public const string VersionName = "SM3-1.15.2";
         private readonly JsonSerializerOptions _jsonOptions;
         private readonly IPacketResolver _resolver;
         private readonly IServiceProvider _serviceProvider;

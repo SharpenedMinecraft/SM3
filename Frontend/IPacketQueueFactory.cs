@@ -1,6 +1,7 @@
 using System.IO.Pipelines;
+using SM3.Network;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public interface IPacketQueueFactory
     {

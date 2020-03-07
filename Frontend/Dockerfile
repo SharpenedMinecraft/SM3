@@ -4,7 +4,12 @@ WORKDIR /source
 COPY Directory.Build.targets .
 COPY BannedSymbols.txt .
 COPY Frontend/ Frontend/
+COPY Entities/ Entities/
+COPY Messages/ Messages/
+COPY NBT/ NBT/
+COPY Network/ Network/
 COPY Data/ Data/
+COPY Shared/ Shared/
 WORKDIR /source/Frontend
 RUN dotnet restore
 RUN dotnet build -c release --no-restore
@@ -13,7 +18,7 @@ RUN dotnet build -c release --no-restore
 # target entrypoint with: docker build --target test
 FROM build AS test
 WORKDIR /source/tests
-COPY Frontend.Tests/ .
+# COPY Frontend.Tests/ .
 ENTRYPOINT ["dotnet", "test", "--logger:trx"]
 
 FROM build AS publish

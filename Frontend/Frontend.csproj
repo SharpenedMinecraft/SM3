@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <RootNamespace>SM3.Frontend</RootNamespace>
   </PropertyGroup>
   
   <!-- AVX enabled by default. It might be benefical to disable this 
@@ -23,21 +24,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="App.Metrics" Version="4.0.0-*" />
-    <PackageReference Include="App.Metrics.AspNetCore" Version="4.0.0-*" />
-    <PackageReference Include="App.Metrics.AspNetCore.Endpoints" Version="4.0.0-*" />
-    <PackageReference Include="App.Metrics.AspNetCore.Hosting" Version="4.0.0-*" />
-    <PackageReference Include="App.Metrics.Extensions.Configuration" Version="4.0.0-*" />
-    <PackageReference Include="App.Metrics.Extensions.DependencyInjection" Version="4.0.0-*" />
-    <PackageReference Include="App.Metrics.Extensions.HealthChecks" Version="4.0.0-*" />
-    <PackageReference Include="App.Metrics.Formatters.Prometheus" Version="4.0.0-*" />
-    <PackageReference Include="Enums.NET" Version="3.0.2" />
+    <PackageReference Include="Enums.NET" Version="3.0.3" />
+    <PackageReference Include="MassTransit" Version="6.2.1" />
+    <PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="6.2.1" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="6.2.1" />
+    <PackageReference Include="MassTransit.Redis" Version="6.2.1" />
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8" />
-    <PackageReference Include="Roslynator.Analyzers" Version="2.2.0" />
+    <PackageReference Include="Roslynator.Analyzers" Version="2.3.0" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="../Data/**" LinkBase="Data/" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+    <ProjectReference Include="..\NBT\NBT.csproj" />
   </ItemGroup>
 
 </Project>

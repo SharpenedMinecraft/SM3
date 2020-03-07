@@ -1,6 +1,7 @@
 using System;
+using SM3.Network;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public interface IPacketWriterFactory
     {

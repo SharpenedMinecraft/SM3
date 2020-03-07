@@ -1,23 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using Frontend.Entities;
 
-namespace Frontend
+namespace SM3.Frontend
 {
-    public interface IEntityManager : IDisposable, IEnumerable<IEntity>
-
+    public interface IEntityManager
     {
-    // General Use
-    ref T Instantiate<T>() where T : IEntity;
-    void Destroy<T>(T entity) where T : IEntity;
-    IEnumerable<T> EnumerateEntities<T>() where T : IEntity;
-    int Count { get; }
-
-    ref T GetEntity<T>(int id) where T : IEntity;
-
-    // Advanced Use, take care
-    // Called to copy Pre-Tick and create Post-Tick
-    IEntityManager Copy();
-    void Spawn(IEntity entity);
+        Entity Create<T>() where T : unmanaged, IEntity;
+        void Destroy<T>(Entity entity);
     }
 }

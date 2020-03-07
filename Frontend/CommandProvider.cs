@@ -1,9 +1,8 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Extensions.Logging;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public class CommandProvider : ICommandProvider
     {

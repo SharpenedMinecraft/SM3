@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
-using Frontend.Packets.Handshaking;
-using Frontend.Packets.Login;
-using Frontend.Packets.Play;
-using Frontend.Packets.Status;
 using Microsoft.Extensions.Logging;
+using SM3.Network;
+using SM3.Network.Handshaking;
+using SM3.Network.Login;
+using SM3.Network.Play;
+using SM3.Network.Status;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public sealed class MCPacketResolver : IPacketResolver
     {
@@ -17,7 +18,7 @@ namespace Frontend
             new Ping(),
             new StatusRequest(),
             new LoginStart(),
-            new PlayerSettings(),
+            new Network.Play.PlayerSettings(),
             new ServerboundPluginMessage(),
             new KeepAliveServerbound(),
         }, new NetworkPacketComparer());
@@ -41,9 +42,9 @@ namespace Frontend
         private readonly struct FindPacket : IReadablePacket
         {
             public int Id { get; }
-            public MCConnectionStage Stage { get; }
+            public ConnectionStage Stage { get; }
 
-            public FindPacket(int id, MCConnectionStage stage)
+            public FindPacket(int id, ConnectionStage stage)
             {
                 Id = id;
                 Stage = stage;

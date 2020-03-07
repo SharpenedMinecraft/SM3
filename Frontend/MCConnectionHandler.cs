@@ -1,30 +1,23 @@
-using System;
 using System.Buffers;
-using System.IO.Pipelines;
-using System.Text;
-using System.Text.Json;
 using System.Threading.Tasks;
-using App.Metrics;
 using Microsoft.AspNetCore.Connections;
 using Microsoft.Extensions.Logging;
+using SM3.Network;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public sealed class MCConnectionHandler : ConnectionHandler
     {
         private ILogger _logger;
         private readonly IPacketReaderFactory _packetReaderFactory;
         private readonly IPacketQueueFactory _packetQueueFactory;
-        private readonly IMetrics _metrics;
         private readonly IPacketHandler _packetHandler;
 
         public MCConnectionHandler(ILogger<MCConnectionHandler> logger, IPacketReaderFactory packetReaderFactory,
                                    IPacketHandler packetHandler,
-                                   IPacketQueueFactory packetQueueFactory,
-                                   IMetrics metrics)
+                                   IPacketQueueFactory packetQueueFactory)
         {
             _packetQueueFactory = packetQueueFactory;
-            _metrics = metrics;
             _packetHandler = packetHandler;
             _packetReaderFactory = packetReaderFactory;
             _logger = logger;
@@ -32,16 +25,8 @@ namespace Frontend
 
         public override Task OnConnectedAsync(ConnectionContext connection)
         {
-            _metrics.Measure.Counter.Increment(MetricsRegistry.ActiveConnections);
-            try
-            {
-                return HandleConnection(
-                    new MCConnectionContext(connection, _packetQueueFactory.CreateQueue(connection.Transport.Output)));
-            }
-            finally
-            {
-                _metrics.Measure.Counter.Decrement(MetricsRegistry.ActiveConnections);
-            }
+            return HandleConnection(
+                new MCConnectionContext(connection, _packetQueueFactory.CreateQueue(connection.Transport.Output)));
         }
 
         private async Task HandleConnection(MCConnectionContext ctx)
@@ -90,7 +75,6 @@ namespace Frontend
             // NOT IDEAL, but easiest
             var packetSize = length + lengthLength;
             ctx.Transport.Input.AdvanceTo(buffer.GetPosition(packetSize));
-            _metrics.Measure.Histogram.Update(MetricsRegistry.ReadPacketSize, packetSize);
         }
     }
 }

@@ -1,7 +1,6 @@
-﻿using System.Dynamic;
-using System.IO.Pipelines;
+﻿using System.IO.Pipelines;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public sealed class MCDuplexPipe : IDuplexPipe
     {

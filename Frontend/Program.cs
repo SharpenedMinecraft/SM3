@@ -1,9 +1,6 @@
 using System;
 using System.IO;
 using System.Reflection;
-using App.Metrics;
-using App.Metrics.AspNetCore;
-using App.Metrics.Extensions.Configuration;
 using Microsoft.AspNetCore.Connections;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
@@ -11,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public static class Program
     {
@@ -21,7 +18,7 @@ namespace Frontend
             using var host = CreateHostBuilder(args).Build();
             Console.WriteLine($"Log of SM3 @ {DateTime.UtcNow}");
             Console.WriteLine("Version: 0.5.1");
-            Console.WriteLine($"Compatible with Protocol {MCPacketHandler.ProtocolVersion} Display Version {MCPacketHandler.VersionName}");
+            Console.WriteLine($"Compatible with Protocol {Constants.ProtocolVersion} Display Version {Constants.VersionName}");
             #if NO_OPTIMIZATION
             Console.WriteLine("This Build uses no special Optimizations! Might lead to heavy loss of performance!");
             #endif
@@ -37,18 +34,6 @@ namespace Frontend
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureMetrics((context, builder) =>
-                                                  builder.Configuration.Configure(new MetricsOptions
-                                                         {
-                                                             DefaultContextLabel = "SM3 Frontend",
-                                                             Enabled = true,
-                                                             GlobalTags = new GlobalMetricTags(),
-                                                             ReportingEnabled = true
-                                                         })
-                                                         .OutputMetrics.AsPrometheusPlainText()
-                                                         .OutputEnvInfo.AsJson()
-                                                         .OutputEnvInfo.AsPlainText())
-                .UseMetrics()
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder

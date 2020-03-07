@@ -1,22 +1,15 @@
 using System;
 using System.Collections.Generic;
-using App.Metrics;
+using SM3.Network;
 
-namespace Frontend
+namespace SM3.Frontend
 {
     public sealed class BroadcastQueue : IBroadcastQueue
     {
         private List<WeakReference<IPacketQueue>> _packetQueues = new List<WeakReference<IPacketQueue>>();
-        private IMetrics _metrics;
-
-        public BroadcastQueue(IMetrics metrics)
-        {
-            _metrics = metrics;
-        }
 
         public void Broadcast(IWriteablePacket packet)
         {
-            _metrics.Measure.Meter.Mark(MetricsRegistry.BroadcastPackets);
             for (var index = 0; index < _packetQueues.Count; index++)
             {
                 var reference = _packetQueues[index];
