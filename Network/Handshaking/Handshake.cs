@@ -1,6 +1,7 @@
 using System;
 using EnumsNET;
 using Microsoft.Extensions.Logging;
+using SM3.Frontend;
 using SM3.Network.Login;
 
 namespace SM3.Network.Handshaking

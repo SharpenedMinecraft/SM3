@@ -10,9 +10,9 @@ namespace SM3.Entities
         {
             get
             {
-                yield return new EntityIdle(this);
-                yield return new SpawnObject(this);
-                yield return new Packets.Play.EntityMetadata(this);
+                yield return new EntityIdle(Entity);
+                yield return new SpawnObject(Entity);
+                yield return new Network.Play.EntityMetadata(Entity);
             }
         }
 

@@ -4,18 +4,18 @@ namespace SM3.Network.Play
     {
         public int Id => 0x1C;
 
-        public readonly int EntityId;
+        public readonly Entity Entity;
         public readonly byte Status;
 
-        public EntityStatus(int entityId, byte status)
+        public EntityStatus(Entity entity, byte status)
         {
-            EntityId = entityId;
+            Entity = entity;
             Status = status;
         }
 
         public void Write(IPacketWriter writer)
         {
-            writer.WriteInt32(EntityId);
+            writer.WriteInt32(Entity.NumericId);
             writer.WriteUInt8(Status);
         }
     }

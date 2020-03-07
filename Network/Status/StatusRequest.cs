@@ -39,7 +39,6 @@ namespace SM3.Network.Status
                                                                  .WithColor("purple")
                                                                  .Bold())
                                            .Build(), null)));
-            serviceProvider.GetRequiredService<IMetrics>().Measure.Meter.Mark(MetricsRegistry.StatusRequests);
         }
     }
 }

@@ -27,8 +27,8 @@ namespace SM3.Network.Play
 
         public readonly void Process(ILogger logger, IConnectionState state, IServiceProvider serviceProvider)
         {
-            state.PlayerEntity.Settings = new Player.PlayerSettings(Locale, RenderDistance, ChatMode, ChatColors,
-                                                                    (Player.PlayerSettings.DisplayedSkinParts)
+            state.Settings = new Network.PlayerSettings(Locale, RenderDistance, ChatMode, ChatColors,
+                                                                    (Network.PlayerSettings.DisplayedSkinParts)
                                                                     SkinParts, MainHand);
             logger.LogInformation($"{state.PlayerEntity.Username} update their Settings");
         }

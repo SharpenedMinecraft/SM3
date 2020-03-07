@@ -1,8 +1,6 @@
 using System;
 using System.IO;
 using System.Reflection;
-using App.Metrics;
-using App.Metrics.AspNetCore;
 using Microsoft.AspNetCore.Connections;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
@@ -36,18 +34,6 @@ namespace SM3.Frontend
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureMetrics((context, builder) =>
-                                                  builder.Configuration.Configure(new MetricsOptions
-                                                         {
-                                                             DefaultContextLabel = "SM3 Frontend",
-                                                             Enabled = true,
-                                                             GlobalTags = new GlobalMetricTags(),
-                                                             ReportingEnabled = true
-                                                         })
-                                                         .OutputMetrics.AsPrometheusPlainText()
-                                                         .OutputEnvInfo.AsJson()
-                                                         .OutputEnvInfo.AsPlainText())
-                .UseMetrics()
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder

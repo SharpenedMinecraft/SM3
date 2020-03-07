@@ -10,8 +10,8 @@ namespace SM3.Entities
         {
             get
             {
-                yield return new SpawnMob(this);
-                yield return new Network.Play.EntityMetadata(this);
+                yield return new SpawnMob(Entity);
+                yield return new Network.Play.EntityMetadata(Entity);
             }
         }
 

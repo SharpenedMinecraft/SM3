@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Pipelines;
-using App.Metrics;
 using SM3.NBT;
 using SM3.Network;
 
@@ -12,18 +11,16 @@ namespace SM3.Frontend
         private readonly Queue<IWriteablePacket> _toWrite = new Queue<IWriteablePacket>();
         private readonly PipeWriter _writer;
         private readonly IPacketWriterFactory _writerFactory;
-        private readonly IMetrics _metrics;
         private readonly IBroadcastQueue _broadcastQueue;
         private readonly IServiceProvider _serviceProvider;
 
         public bool NeedsWriting => _toWrite.Count != 0;
 
-        public MCPacketQueue(PipeWriter writer, IPacketWriterFactory writerFactory, IMetrics metrics, IBroadcastQueue broadcastQueue, IServiceProvider serviceProvider)
+        public MCPacketQueue(PipeWriter writer, IPacketWriterFactory writerFactory, IBroadcastQueue broadcastQueue, IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
             _writer = writer;
             _writerFactory = writerFactory;
-            _metrics = metrics;
             _broadcastQueue = broadcastQueue;
             _broadcastQueue.Register(this);
         }
@@ -59,7 +56,6 @@ namespace SM3.Frontend
             packet.Write(writer);
 
             _writer.Advance(packetSize);
-            _metrics.Measure.Histogram.Update(MetricsRegistry.WritePacketSize, packetSize);
         }
 
         private int CalculateSize(IWriteablePacket packet)

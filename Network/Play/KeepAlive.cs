@@ -40,7 +40,7 @@ namespace SM3.Network.Play
             var broadcastQueue = serviceProvider.GetRequiredService<IBroadcastQueue>();
             var ping = DateTime.UtcNow - DateTime.FromBinary(KeepAliveId);
             broadcastQueue.Broadcast(new PlayerInfo(PlayerInfo.InfoType.UpdateLatency, new[] {state.PlayerEntity}));
-            state.PlayerEntity.Ping = ping;
+            state.Ping = ping;
             logger.LogInformation($"New Ping {ping.TotalMilliseconds}ms");
             
             

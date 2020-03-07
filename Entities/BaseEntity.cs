@@ -5,7 +5,7 @@ using SM3.Network;
 
 namespace SM3.Entities
 {
-    public abstract class BaseEntity : IEntity
+    public abstract class BaseEntity : INetworkEntity, IEntity
     {
         public Entity Entity { get; }
         public abstract string Type { get; }
@@ -13,7 +13,6 @@ namespace SM3.Entities
         public abstract IEnumerable<IWriteablePacket> SpawnPackets { get; }
 
         protected IEntityRegistry EntityRegistry { get; }
-        public int Id { get; set; }
         public Guid Guid { get; set; }
         public int DimensionId { get; set; }
         public Vector3 Position { get; set; }

@@ -1,7 +1,4 @@
 using System.Diagnostics.CodeAnalysis;
-using App.Metrics;
-using App.Metrics.Formatters.Json;
-using App.Metrics.Formatters.Prometheus;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -37,31 +34,13 @@ namespace SM3.Frontend
                 provider => new MCDimensionResolver(new IDimension[]
                 {
                     new Overworld(),
-                }, provider.GetRequiredService<IMetrics>()));
+                }));
             services.AddMinecraftServices();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseMetricsEndpoint(new MetricsPrometheusTextOutputFormatter());
-            app.UseMetricsTextEndpoint(new MetricsJsonOutputFormatter());
-            app.UseEnvInfoEndpoint();
-            /*
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
-            app.UseRouting();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            });*/
         }
     }
 }

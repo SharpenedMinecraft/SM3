@@ -18,7 +18,7 @@ namespace SM3.Frontend
             new Ping(),
             new StatusRequest(),
             new LoginStart(),
-            new PlayerSettings(),
+            new Network.Play.PlayerSettings(),
             new ServerboundPluginMessage(),
             new KeepAliveServerbound(),
         }, new NetworkPacketComparer());

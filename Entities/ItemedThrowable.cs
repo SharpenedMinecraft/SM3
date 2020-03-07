@@ -1,5 +1,6 @@
 ﻿using SM3.Network;
 using SM3.Network.Play;
+using EntityMetadata = SM3.Network.EntityMetadata;
 
 namespace SM3.Entities
 {

@@ -1,12 +1,14 @@
-﻿namespace SM3.Network.Play
+﻿using System;
+
+namespace SM3.Network.Play
 {
     public readonly struct SpawnPlayer : IWriteablePacket
     {
         public int Id => 0x05;
 
-        public readonly Player Entity;
+        public readonly Entity Entity;
 
-        public SpawnPlayer(Player entity)
+        public SpawnPlayer(Entity entity)
         {
             Entity = entity;
         }
@@ -18,7 +20,7 @@
             writer.WriteDouble(Entity.Position.X);
             writer.WriteDouble(Entity.Position.Y);
             writer.WriteDouble(Entity.Position.Z);
-
+            
             var rotation = RotationHelper.FromLookAt(Entity.LookDir);
             var pitch = rotation.X;
             var yaw = rotation.Y;
