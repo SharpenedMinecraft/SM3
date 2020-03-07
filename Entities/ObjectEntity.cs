@@ -12,7 +12,7 @@ namespace SM3.Entities
             {
                 yield return new EntityIdle(Entity);
                 yield return new SpawnObject(Entity);
-                yield return new Network.Play.EntityMetadata(Entity);
+                yield return new Network.Play.EntityMetadata(this);
             }
         }
 

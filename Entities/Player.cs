@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using SM3.Network;
 using SM3.Network.Play;
+using EntityStatus = SM3.Network.EntityStatus;
 
 namespace SM3.Entities
 {

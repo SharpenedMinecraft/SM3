@@ -11,7 +11,7 @@ namespace SM3.Entities
             get
             {
                 yield return new SpawnMob(Entity);
-                yield return new Network.Play.EntityMetadata(Entity);
+                yield return new Network.Play.EntityMetadata(this);
             }
         }
 
