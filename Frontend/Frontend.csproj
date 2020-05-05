@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netcoreapp5.0</TargetFramework>
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
   </PropertyGroup>
-  
-  <!-- AVX enabled by default. It might be benefical to disable this 
+
+  <!-- AVX enabled by default. It might be benefical to disable this
     when building for machines that do support AVX but do not support it
     without downclocking -->
 
@@ -31,9 +31,9 @@
     <PackageReference Include="App.Metrics.Extensions.DependencyInjection" Version="4.0.0-*" />
     <PackageReference Include="App.Metrics.Extensions.HealthChecks" Version="4.0.0-*" />
     <PackageReference Include="App.Metrics.Formatters.Prometheus" Version="4.0.0-*" />
-    <PackageReference Include="Enums.NET" Version="3.0.2" />
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8" />
-    <PackageReference Include="Roslynator.Analyzers" Version="2.2.0" />
+    <PackageReference Include="Enums.NET" Version="3.0.3" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.0.0" />
+    <PackageReference Include="Roslynator.Analyzers" Version="2.3.0" />
   </ItemGroup>
 
   <ItemGroup>

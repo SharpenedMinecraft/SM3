@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:5.0 AS build
 WORKDIR /source
 
 COPY Directory.Build.targets .
@@ -20,7 +20,7 @@ FROM build AS publish
 RUN dotnet publish -c release --no-build -o /app
 
 # final stage/image
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+FROM mcr.microsoft.com/dotnet/core/aspnet:5.0
 WORKDIR /app
 COPY --from=publish /app .
 ENTRYPOINT ["./Frontend"]

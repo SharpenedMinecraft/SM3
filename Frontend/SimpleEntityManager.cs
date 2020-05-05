@@ -56,7 +56,7 @@ namespace Frontend
             var v = ActivatorUtilities.CreateInstance<T>(_provider);
             v.Id = id;
             _entities[id] = v;
-            return ref GetEntity<T>(id);
+            return ref GetEntity<T>(id)!;
         }
 
         public void Destroy<T>(T entity) where T : IEntity
@@ -81,7 +81,7 @@ namespace Frontend
             if (id == 0)
                 throw new ArgumentException("Id may not be 0", nameof(id));
 
-            return ref Unsafe.As<IEntity?, T>(ref _entities[id]);
+            return ref Unsafe.As<IEntity, T>(ref _entities[id]!)!;
         }
 
         public IEntityManager Copy()

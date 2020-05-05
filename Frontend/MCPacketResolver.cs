@@ -24,7 +24,7 @@ namespace Frontend
 
         private class NetworkPacketComparer : EqualityComparer<IReadablePacket>
         {
-            public override bool Equals(IReadablePacket x, IReadablePacket y)
+            public override bool Equals(IReadablePacket? x, IReadablePacket? y)
             {
                 if (x is null)
                     return y is null;

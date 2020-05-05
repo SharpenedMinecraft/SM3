@@ -4,6 +4,7 @@ using System.Buffers.Binary;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.Unicode;
 
 namespace Frontend
 {
@@ -17,7 +18,7 @@ namespace Frontend
         {
             _buffer = buffer;
         }
-        
+
         public ReadOnlySpan<byte> ReadBytes(int length)
         {
             var data = _buffer.Slice(0, length);
@@ -53,14 +54,14 @@ namespace Frontend
         public ulong ReadUInt64()
             =>BinaryPrimitives.ReadUInt64BigEndian(ReadBytes(sizeof(UInt64)));
 
-        public long ReadInt64() 
+        public long ReadInt64()
             => BinaryPrimitives.ReadInt64BigEndian(ReadBytes(sizeof(Int64)));
 
         public unsafe Guid ReadGuid()
         {
             Guid res = default;
             var ptr = (byte*) Unsafe.AsPointer(ref res);
-            
+
             // this is what GUID is defined as on Windows (and therefore, from history, in .Net)
             Unsafe.Write(ptr, ReadInt32());
             ptr += sizeof(int);
@@ -78,7 +79,7 @@ namespace Frontend
         public double ReadDouble()
             => BitConverter.Int64BitsToDouble(ReadInt64());
 
-        public ushort ReadUInt16() 
+        public ushort ReadUInt16()
             => BinaryPrimitives.ReadUInt16BigEndian(ReadBytes(sizeof(ushort)));
 
         public short ReadInt16()
@@ -110,8 +111,9 @@ namespace Frontend
         public ReadOnlySpan<char> ReadString()
         {
             var length = ReadVarInt();
-
-            return Encoding.UTF8.GetString(ReadBytes(length));
+            Span<char> dest = new char[length];
+            Utf8.ToUtf16(ReadBytes(length), dest, out _, out var actualLength);
+            return dest.Slice(0, actualLength);
         }
     }
 }
