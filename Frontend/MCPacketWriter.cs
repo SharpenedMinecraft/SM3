@@ -33,7 +33,7 @@ namespace Frontend
             WriteVarInt(value.Length);
             // This code could get a lot of help from Char8.
             // for now, we simply drop every second byte.
-            
+
             var utf8Span = Memory.Slice(Position, value.Length).Span;
 
             DownsizeUtf16(value, utf8Span);
