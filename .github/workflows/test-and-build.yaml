@@ -66,43 +66,43 @@ jobs:
         dockerfile: ./Frontend/Dockerfile
         snapshot: true
           
-    - name: Extract branch name
-      shell: bash
-      run: echo "::set-env name=NAMESPACE::$(echo ${GITHUB_REF#refs/heads/} | sed 's/\//_/g')"
-      id: extract_branch
-
-    # Set the target Azure Kubernetes Service (AKS) cluster. 
-    - uses: azure/aks-set-context@v1
-      with:
-        creds: '${{ secrets.AZURE_CREDENTIALS }}'
-        cluster-name: ${{ env.CLUSTER_NAME }}
-        resource-group: ${{ env.CLUSTER_RESOURCE_GROUP }}
-
-    # Create namespace if doesn't exist
-    - run: |
-        kubectl create namespace ${{ env.NAMESPACE }} --dry-run -o json | kubectl apply -f -
-
-    # Create imagepullsecret for Azure Container registry (ACR)
-    - uses: azure/k8s-create-secret@v1
-      with:
-        container-registry-url:  docker.pkg.github.com
-        container-registry-username: ${{ secrets.GITHUB_PACKAGES_USERNAME }}
-        container-registry-password: ${{ secrets.GITHUB_PACKAGES_PASSWORD }}
-        secret-name: github-registry-connection
-        namespace: ${{ env.NAMESPACE }}
-
-    # Deploy app to AKS
-    - uses: azure/k8s-deploy@v1
-      with:
-        manifests: |
-          ./Frontend/manifests/deployment.yaml
-          ./Frontend/manifests/service.yaml
-          ./Frontend/manifests/load-balancer.yaml
-        images: |
-          docker.pkg.github.com/sharpenedminecraft/sm3/frontend:${{ steps.publish.outputs.snapshot-tag }}
-        namespace: ${{ env.NAMESPACE }}
-        imagepullsecrets: |
-          github-registry-connection
+#    - name: Extract branch name
+#      shell: bash
+#      run: echo "::set-env name=NAMESPACE::$(echo ${GITHUB_REF#refs/heads/} | sed 's/\//_/g')"
+#      id: extract_branch
+#
+#    # Set the target Azure Kubernetes Service (AKS) cluster. 
+#    - uses: azure/aks-set-context@v1
+#      with:
+#        creds: '${{ secrets.AZURE_CREDENTIALS }}'
+#        cluster-name: ${{ env.CLUSTER_NAME }}
+#        resource-group: ${{ env.CLUSTER_RESOURCE_GROUP }}
+#
+#    # Create namespace if doesn't exist
+#    - run: |
+#        kubectl create namespace ${{ env.NAMESPACE }} --dry-run -o json | kubectl apply -f -
+#
+#    # Create imagepullsecret for Azure Container registry (ACR)
+#    - uses: azure/k8s-create-secret@v1
+#      with:
+#        container-registry-url:  docker.pkg.github.com
+#        container-registry-username: ${{ secrets.GITHUB_PACKAGES_USERNAME }}
+#        container-registry-password: ${{ secrets.GITHUB_PACKAGES_PASSWORD }}
+#        secret-name: github-registry-connection
+#        namespace: ${{ env.NAMESPACE }}
+#
+#    # Deploy app to AKS
+#    - uses: azure/k8s-deploy@v1
+#      with:
+#        manifests: |
+#          ./Frontend/manifests/deployment.yaml
+#          ./Frontend/manifests/service.yaml
+#          ./Frontend/manifests/load-balancer.yaml
+#        images: |
+#          docker.pkg.github.com/sharpenedminecraft/sm3/frontend:${{ steps.publish.outputs.snapshot-tag }}
+#        namespace: ${{ env.NAMESPACE }}
+#        imagepullsecrets: |
+#          github-registry-connection
 
 
 
