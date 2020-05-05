@@ -57,7 +57,7 @@ namespace Frontend
         }
 
         public override IFeatureCollection Features => _underlyingCtx.Features;
-        
+
         public override IDictionary<object, object> Items
         {
             get => _underlyingCtx.Items;

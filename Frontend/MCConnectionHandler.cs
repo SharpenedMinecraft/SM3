@@ -57,7 +57,7 @@ namespace Frontend
                     _logger.LogInformation("Connection Closed");
                     return;
                 }
-                
+
                 var buffer = readResult.Buffer;
                 HandlePacket(buffer, ctx, packetQueue);
 
@@ -88,7 +88,7 @@ namespace Frontend
             using var packetIdScope = _logger.BeginScope($"Packet ID: {id:x2}");
 
             _packetHandler.HandlePacket(ctx, reader, packetQueue, id);
-            
+
             // NOT IDEAL, but easiest
             var packetSize = length + lengthLength;
             ctx.Transport.Input.AdvanceTo(buffer.GetPosition(packetSize));
