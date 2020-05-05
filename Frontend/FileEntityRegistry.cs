@@ -38,7 +38,7 @@
                     else if (propertyName == "default")
                     {
                         reader.Read();
-                        Default = reader.GetString();
+                        Default = reader.GetString()!;
                     }
                     else if (propertyName == "entries")
                     {
@@ -50,7 +50,7 @@
                             if (reader.TokenType == JsonTokenType.EndObject) // End Object 1
                                 break;
 
-                            var key = reader.GetString();
+                            var key = reader.GetString()!;
                             reader.Read(); // Start Object 2
                             reader.Read(); // "protocol_id"
                             reader.Read();

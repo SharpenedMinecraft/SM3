@@ -208,7 +208,7 @@ namespace Frontend
             jsonReader.Read();
             while (jsonReader.TokenType != JsonTokenType.EndArray)
             {
-                values.Add(jsonReader.GetString());
+                values.Add(jsonReader.GetString()!);
                 jsonReader.Read();
             }
 
