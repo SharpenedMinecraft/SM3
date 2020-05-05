@@ -15,7 +15,7 @@ namespace Frontend
         private const string EntityDir = TagDir + "entity_types/";
         private const string FluidDir = TagDir + "fluids/";
         private const string ItemDir = TagDir + "items/";
-        
+
         private Dictionary<string, Tag> _fluidTags = new Dictionary<string, Tag>();
         private Dictionary<string, Tag> _blockTags = new Dictionary<string, Tag>();
         private Dictionary<string, Tag> _entityTypes = new Dictionary<string, Tag>();
@@ -85,19 +85,19 @@ namespace Frontend
                 do
                 {
                     jsonReader.Read();
-                    
+
                     if (!TryParseTagInfo(ref jsonReader, out var replace, out var values) ||
                         (_entityTypes.ContainsKey(fileName) && !(replace ?? false)))
                     {
                         continue;
                     }
-                    
+
                     var identifier = Path.GetFileNameWithoutExtension(fileName);
                     _entityTypes[identifier] = new Tag(identifier, ResolveEntityNames(values));
                 } while (jsonReader.TokenType != JsonTokenType.None && jsonReader.TokenType != JsonTokenType.EndObject);
             }
         }
-        
+
         private void ParseFluids()
         {
             foreach(var fileName in Directory.EnumerateFiles(FluidDir, "*.json"))
@@ -127,19 +127,19 @@ namespace Frontend
                 do
                 {
                     jsonReader.Read();
-                    
+
                     if (!TryParseTagInfo(ref jsonReader, out var replace, out var values) ||
                         (_itemTags.ContainsKey(fileName) && !(replace ?? false)))
                     {
                         continue;
                     }
-                        
+
                     var identifier = Path.GetFileNameWithoutExtension(fileName);
                     _itemTags[identifier] = new Tag(identifier, ResolveItemNames(values));
                 } while (jsonReader.TokenType != JsonTokenType.None && jsonReader.TokenType != JsonTokenType.EndObject);
             }
         }
-        
+
         private int[] ResolveItemNames(List<string> values)
         {
             var ids = new int[values.Count];
@@ -151,7 +151,7 @@ namespace Frontend
 
             return ids;
         }
-        
+
         private int[] ResolveEntityNames(List<string> values)
         {
             var ids = new int[values.Count];
@@ -181,7 +181,7 @@ namespace Frontend
             bool b = false;
             replace = null;
             values = null;
-            
+
             while (jsonReader.TokenType == JsonTokenType.PropertyName)
             {
                 var name = jsonReader.GetString();

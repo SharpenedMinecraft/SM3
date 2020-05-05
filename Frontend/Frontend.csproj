@@ -6,8 +6,8 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
   </PropertyGroup>
-  
-  <!-- AVX enabled by default. It might be benefical to disable this 
+
+  <!-- AVX enabled by default. It might be benefical to disable this
     when building for machines that do support AVX but do not support it
     without downclocking -->
 

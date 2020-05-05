@@ -28,10 +28,10 @@ namespace Frontend
             #if DUMP_WRITE_BYTES
             Console.WriteLine("This Build will dump any byte*s* written to the Console. I've warned you");
             #endif
-            
+
             // load tags
             host.Services.GetRequiredService<ITagProvider>().Load();
-            
+
             host.Run();
         }
 
