@@ -4,6 +4,7 @@ using System.Buffers.Binary;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.Unicode;
 
 namespace Frontend
 {
@@ -110,8 +111,9 @@ namespace Frontend
         public ReadOnlySpan<char> ReadString()
         {
             var length = ReadVarInt();
-
-            return Encoding.UTF8.GetString(ReadBytes(length));
+            Span<char> dest = new char[length];
+            Utf8.ToUtf16(ReadBytes(length), dest, out _, out var actualLength);
+            return dest.Slice(0, actualLength);
         }
     }
 }

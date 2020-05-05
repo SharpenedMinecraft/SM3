@@ -7,6 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
+using System.Text.Unicode;
 using Microsoft.AspNetCore.Mvc.Routing;
 
 namespace Frontend
@@ -32,7 +33,7 @@ namespace Frontend
             WriteVarInt(value.Length);
             // This code could get a lot of help from Char8.
             // for now, we simply drop every second byte.
-
+            
             var utf8Span = Memory.Slice(Position, value.Length).Span;
 
             DownsizeUtf16(value, utf8Span);
@@ -40,34 +41,9 @@ namespace Frontend
             Position += value.Length;
         }
 
-        public static unsafe void DownsizeUtf16(ReadOnlySpan<char> utf16, Span<byte> utf8)
+        public static void DownsizeUtf16(ReadOnlySpan<char> utf16, Span<byte> utf8)
         {
-            int i = 0;
-
-            fixed (char* pUtf16Char = utf16)
-            fixed (byte* pUtf8 = utf8)
-            {
-                // HACK: (?) assuming sizeof(char) == sizeof(short)
-                var pUtf16 = (short*) pUtf16Char;
-#if !NO_OPTIMIZATION
-                if (Sse2.IsSupported)
-                {
-                    while ((i + (Vector128<short>.Count * 2)) < utf16.Length)
-                    {
-                        var vector1 = Sse2.LoadVector128(pUtf16 + i);
-                        var vector2 = Sse2.LoadVector128(pUtf16 + i + Vector128<short>.Count);
-
-                        Sse2.Store(pUtf8 + i, Sse2.PackUnsignedSaturate(vector1, vector2));
-                        i += Vector128<short>.Count * 2;
-                    }
-                }
-#endif
-                while (i < utf16.Length)
-                {
-                    utf8[i] = *(byte*)(pUtf16 + i);
-                    i += 1;
-                }
-            }
+            Utf8.FromUtf16(utf16, utf8, out _, out _);
         }
 
         public void WriteBytes(ReadOnlySpan<byte> values)
