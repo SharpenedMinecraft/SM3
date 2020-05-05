@@ -44,7 +44,8 @@ namespace Frontend
         public void WriteImmediate(IWriteablePacket packet)
         {
             WritePacketToPipe(packet);
-            _writer.FlushAsync().GetAwaiter().GetResult();
+            var flushTask = _writer.FlushAsync();
+            flushTask.AsTask().Wait();
         }
 
         private void WritePacketToPipe(IWriteablePacket packet)

@@ -30,13 +30,15 @@ namespace Frontend
             _logger = logger;
         }
 
-        public override Task OnConnectedAsync(ConnectionContext connection)
+        public override async Task OnConnectedAsync(ConnectionContext connection)
         {
             _metrics.Measure.Counter.Increment(MetricsRegistry.ActiveConnections);
             try
             {
-                return HandleConnection(
-                    new MCConnectionContext(connection, _packetQueueFactory.CreateQueue(connection.Transport.Output)));
+                var queue = _packetQueueFactory.CreateQueue(connection.Transport.Output);
+                await using var context =
+                    new MCConnectionContext(connection, queue);
+                await HandleConnection(context).ConfigureAwait(false);
             }
             finally
             {
@@ -49,7 +51,7 @@ namespace Frontend
             var packetQueue = ctx.PacketQueue;
             while (!ctx.ConnectionClosed.IsCancellationRequested)
             {
-                var readResult = await ctx.Transport.Input.ReadAsync(ctx.ConnectionClosed);
+                var readResult = await ctx.Transport.Input.ReadAsync(ctx.ConnectionClosed).ConfigureAwait(false);
                 if (readResult.IsCanceled || readResult.IsCompleted)
                 {
                     _logger.LogInformation("Connection Closed");
@@ -62,7 +64,7 @@ namespace Frontend
                 if (packetQueue.NeedsWriting)
                 {
                     packetQueue.WriteQueued();
-                    await ctx.Transport.Output.FlushAsync();
+                    await ctx.Transport.Output.FlushAsync().ConfigureAwait(false);
                 }
             }
         }
