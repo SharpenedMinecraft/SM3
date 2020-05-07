@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frontend", "Frontend\Fronte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frontend.Tests", "Frontend.Tests\Frontend.Tests.csproj", "{E073BADE-AF14-4F12-9CF2-CA10902B6388}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging", "Messaging\Messaging.csproj", "{D74B63CD-D9D3-4BE5-9E99-14F82D74D1A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,17 @@ Global
 		{E073BADE-AF14-4F12-9CF2-CA10902B6388}.Release|x64.Build.0 = Release|Any CPU
 		{E073BADE-AF14-4F12-9CF2-CA10902B6388}.Release|x86.ActiveCfg = Release|Any CPU
 		{E073BADE-AF14-4F12-9CF2-CA10902B6388}.Release|x86.Build.0 = Release|Any CPU
+		{D74B63CD-D9D3-4BE5-9E99-14F82D74D1A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D74B63CD-D9D3-4BE5-9E99-14F82D74D1A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D74B63CD-D9D3-4BE5-9E99-14F82D74D1A8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D74B63CD-D9D3-4BE5-9E99-14F82D74D1A8}.Debug|x64.Build.0 = Debug|Any CPU
+		{D74B63CD-D9D3-4BE5-9E99-14F82D74D1A8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D74B63CD-D9D3-4BE5-9E99-14F82D74D1A8}.Debug|x86.Build.0 = Debug|Any CPU
+		{D74B63CD-D9D3-4BE5-9E99-14F82D74D1A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D74B63CD-D9D3-4BE5-9E99-14F82D74D1A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D74B63CD-D9D3-4BE5-9E99-14F82D74D1A8}.Release|x64.ActiveCfg = Release|Any CPU
+		{D74B63CD-D9D3-4BE5-9E99-14F82D74D1A8}.Release|x64.Build.0 = Release|Any CPU
+		{D74B63CD-D9D3-4BE5-9E99-14F82D74D1A8}.Release|x86.ActiveCfg = Release|Any CPU
+		{D74B63CD-D9D3-4BE5-9E99-14F82D74D1A8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

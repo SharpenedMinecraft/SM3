@@ -40,4 +40,8 @@
     <None Include="../Data/**" LinkBase="Data/" CopyToOutputDirectory="Always" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Messaging\Messaging.csproj" />
+  </ItemGroup>
+
 </Project>

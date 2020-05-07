@@ -8,12 +8,15 @@ using App.Metrics.Extensions.Configuration;
 using App.Metrics.Formatters.Ascii;
 using App.Metrics.Formatters.Json;
 using App.Metrics.Formatters.Prometheus;
+using Messaging;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using StackExchange.Redis.Extensions.Core.Configuration;
+using StackExchange.Redis.Extensions.System.Text.Json;
 
 namespace Frontend
 {
@@ -48,6 +51,7 @@ namespace Frontend
                 }, provider.GetRequiredService<IMetrics>()));
             services.AddSingleton<IRandomProvider, JavaRandomProvider>();
             services.AddSingleton<IEntityRegistry, FileEntityRegistry>();
+            services.AddRedis();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
