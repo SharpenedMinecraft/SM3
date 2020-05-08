@@ -10,6 +10,7 @@
         <PackageReference Include="StackExchange.Redis" Version="2.1.39" />
         <PackageReference Include="StackExchange.Redis.Extensions.AspNetCore" Version="7.0.0-pre" />
         <PackageReference Include="StackExchange.Redis.Extensions.System.Text.Json" Version="7.0.0-pre" />
+        <PackageReference Include="System.Reactive" Version="4.4.1" />
     </ItemGroup>
     
 </Project>

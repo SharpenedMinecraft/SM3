@@ -6,17 +6,19 @@ namespace Messaging
 {
     public static class DependencyInjectionExtensions
     {
-        public static IServiceCollection AddRedis(this IServiceCollection collection) =>
-            collection.AddStackExchangeRedisExtensions<SystemTextJsonSerializer>(new RedisConfiguration
-            {
-                Hosts = new[]
+        public static IServiceCollection AddMessaging(this IServiceCollection collection) =>
+            collection
+                /*.AddStackExchangeRedisExtensions<SystemTextJsonSerializer>(new RedisConfiguration
                 {
-                    new RedisHost
+                    Hosts = new[]
                     {
-                        Host = "localhost",
-                        Port = 6379
+                        new RedisHost
+                        {
+                            Host = "localhost",
+                            Port = 6379
+                        }
                     }
-                }
-            });
+                })*/
+                .AddSingleton<IMessagingProvider, LocalMessagingProvider>();
     }
 }
