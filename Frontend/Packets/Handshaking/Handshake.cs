@@ -1,15 +1,15 @@
 using System;
+using App.Metrics.Logging;
 using EnumsNET;
 using Frontend.Packets.Login;
+using Messaging;
+using Messaging.Messages;
 using Microsoft.Extensions.Logging;
 
 namespace Frontend.Packets.Handshaking
 {
     public struct Handshake : IReadablePacket
     {
-        public readonly int Id => 0x00;
-        public readonly MCConnectionStage Stage => MCConnectionStage.Handshaking;
-        
         public int ProtocolVersion;
         public string ServerAddress;
         public short Port;
@@ -23,25 +23,31 @@ namespace Frontend.Packets.Handshaking
             NextStage = (MCConnectionStage) reader.ReadVarInt();
         }
 
-        public readonly void Process(ILogger logger, IConnectionState connectionState, IServiceProvider serviceProvider)
+        public bool Validate(ILogger logger)
         {
-            connectionState.ConnectionStage = NextStage;
-            connectionState.IsLocal = ServerAddress == "localhost" || ServerAddress == "127.0.0.1";
-
-            if (MCPacketHandler.ProtocolVersion != ProtocolVersion && NextStage == MCConnectionStage.Login)
+            if (ProtocolVersion != MCPacketHandler.ProtocolVersion)
             {
-                var msg = $"Version missmatch. Server: {MCPacketHandler.ProtocolVersion} ({MCPacketHandler.VersionName}), Client: {ProtocolVersion}";
-                logger.LogInformation(msg);
-                connectionState.PacketQueue.Write(new Disconnect(new ChatBuilder()
-                                                                 .AppendText(msg)
-                                                                 .Bold()
-                                                                 .WithColor("red")
-                                                                 .Build()));
-                return;
+                logger.LogCritical($"Version missmatch. Server: {MCPacketHandler.ProtocolVersion} ({MCPacketHandler.VersionName}), Client: {ProtocolVersion}");
+                return false;
             }
 
-            logger.LogInformation($"Received Handshake; Protcol Matches. Address Used: {ServerAddress}:{Port}");
-            logger.LogInformation($"Switching to {NextStage.AsString()}");
+            if (NextStage != MCConnectionStage.Login || NextStage != MCConnectionStage.Status)
+            {
+                logger.LogCritical($"Invalid Next Stage {NextStage.AsString()}");
+                return false;
+            }
+
+            return true;
+        }
+
+        public void UpdateState(IConnectionState state)
+        {
+            state.ConnectionStage = NextStage;
+        }
+
+        public void Message(IMessagingProvider messagingProvider)
+        {
+            messagingProvider.OnClientHandshake(new ClientHandshake(ProtocolVersion, ServerAddress, Port, NextStage == MCConnectionStage.Login));
         }
     }
 }
