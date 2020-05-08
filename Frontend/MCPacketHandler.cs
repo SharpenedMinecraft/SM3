@@ -2,7 +2,9 @@ using System;
 using System.Buffers;
 using System.Text.Json;
 using EnumsNET;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using StackExchange.Redis;
 
 namespace Frontend
 {
@@ -13,11 +15,13 @@ namespace Frontend
         public const string VersionName = "SM3-1.15.2";
         private readonly JsonSerializerOptions _jsonOptions;
         private readonly IPacketResolver _resolver;
+        private readonly ISubscriber _subscriber;
         private readonly IServiceProvider _serviceProvider;
 
-        public MCPacketHandler(ILogger<MCPacketHandler> logger, IPacketResolver resolver, IServiceProvider serviceProvider)
+        public MCPacketHandler(ILogger<MCPacketHandler> logger, IPacketResolver resolver, IServiceProvider serviceProvider, ISubscriber subscriber)
         {
             _serviceProvider = serviceProvider;
+            _subscriber = subscriber;
             _resolver = resolver;
             _logger = logger;
             _jsonOptions = new JsonSerializerOptions()
@@ -36,7 +40,14 @@ namespace Frontend
             }
 
             packet.Read(reader);
-            packet.Process(_logger, ctx, _serviceProvider);
+            bool valid;
+            using (_logger.BeginScope("Validation"))
+                valid = packet.Validate(_logger);
+            
+            if (valid)
+            {
+                packet.Message(_subscriber);
+            }
         }
     }
 }

@@ -1,65 +1,60 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using Frontend.Packets.Handshaking;
 using Frontend.Packets.Login;
 using Frontend.Packets.Play;
 using Frontend.Packets.Status;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 namespace Frontend
 {
     public sealed class MCPacketResolver : IPacketResolver
     {
-        HashSet<IReadablePacket> _packets = new HashSet<IReadablePacket>(new IReadablePacket[]
-        {
-            new ServerboundChatMessage(),
-            new Handshake(),
-            new Ping(),
-            new StatusRequest(),
-            new LoginStart(),
-            new PlayerSettings(),
-            new ServerboundPluginMessage(),
-            new KeepAliveServerbound(),
-        }, new NetworkPacketComparer());
+        private readonly Dictionary<int, Type> _handshakePackets;
+        private readonly Dictionary<int, Type> _statusPackets;
+        private readonly Dictionary<int, Type> _loginPackets;
+        private readonly Dictionary<int, Type> _playingPackets;
 
-        private class NetworkPacketComparer : EqualityComparer<IReadablePacket>
+        private readonly IServiceProvider _provider;
+
+        public MCPacketResolver(IServiceProvider provider)
         {
-            public override bool Equals(IReadablePacket? x, IReadablePacket? y)
+            _provider = provider;
+            _handshakePackets = new Dictionary<int, Type>
             {
-                if (x is null)
-                    return y is null;
-                if (y is null)
-                    return false;
-
-                return x.Id == y.Id && x.Stage == y.Stage;
-            }
-
-            public override int GetHashCode(IReadablePacket obj)
-                => HashCode.Combine(obj.Id, obj.Stage);
-        }
-
-        private readonly struct FindPacket : IReadablePacket
-        {
-            public int Id { get; }
-            public MCConnectionStage Stage { get; }
-
-            public FindPacket(int id, MCConnectionStage stage)
+                [0x00] = typeof(Handshake)
+            };
+            _statusPackets = new Dictionary<int, Type>
             {
-                Id = id;
-                Stage = stage;
-            }
-
-            public void Read(IPacketReader reader)
-                => throw new NotSupportedException("This Type is only intended to be used to find matching other types!");
-
-            public void Process(ILogger logger, IConnectionState state, IServiceProvider serviceProvider)
-                => throw new NotSupportedException("This Type is only intended to be used to find matching other types!");
+                [0x01] = typeof(Ping),
+                [0x00] = typeof(StatusRequest)
+            };
+            _loginPackets = new Dictionary<int, Type>
+            {
+                [0x00] = typeof(LoginStart)
+            };
+            _playingPackets = new Dictionary<int, Type>
+            {
+                [0x0F] = typeof(KeepAliveServerbound),
+                [0x05] = typeof(PlayerSettings),
+                [0x03] = typeof(ServerboundChatMessage),
+                [0x0B] = typeof(ServerboundPluginMessage)
+            };
         }
 
         public IReadablePacket? GetReadablePacket(int id, IConnectionState connectionState)
-        {
-            _packets.TryGetValue(new FindPacket(id, connectionState.ConnectionStage), out var packet);
-            return packet;
-        }
+            => (IReadablePacket)ActivatorUtilities.CreateInstance(_provider, (connectionState.ConnectionStage switch
+            {
+                MCConnectionStage.Handshaking => _handshakePackets,
+                MCConnectionStage.Status => _statusPackets,
+                MCConnectionStage.Login => _loginPackets,
+                MCConnectionStage.Playing => _playingPackets,
+                _ => ThrowInvalidArgumentOutOfRangeExceptionConnectionState()
+            })[id]);
+
+        [DoesNotReturn]
+        private static Dictionary<int, Type> ThrowInvalidArgumentOutOfRangeExceptionConnectionState() => throw new ArgumentOutOfRangeException("connectionState");
     }
 }

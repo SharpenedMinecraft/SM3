@@ -1,15 +1,16 @@
 using System;
+using Messaging;
 using Microsoft.Extensions.Logging;
+using StackExchange.Redis;
 
 namespace Frontend
 {
     public interface IReadablePacket
     {
-        int Id { get; }
-        MCConnectionStage Stage { get; }
-        
         void Read(IPacketReader reader);
 
-        void Process(ILogger logger, IConnectionState state, IServiceProvider serviceProvider);
+        bool Validate(ILogger logger);
+
+        void Message(IMessagingProvider subscriber);
     }
 }
