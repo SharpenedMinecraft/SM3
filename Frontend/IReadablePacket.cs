@@ -11,6 +11,8 @@ namespace Frontend
 
         bool Validate(ILogger logger);
 
-        void Message(IMessagingProvider subscriber);
+        void UpdateState(IConnectionState state);
+        
+        void Message(IMessagingProvider messagingProvider);
     }
 }
