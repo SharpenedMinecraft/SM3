@@ -2,6 +2,8 @@ using System;
 using System.Buffers;
 using System.Text.Json;
 using EnumsNET;
+using Messaging;
+using Microsoft.AspNetCore.Connections;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using StackExchange.Redis;
@@ -15,13 +17,13 @@ namespace Frontend
         public const string VersionName = "SM3-1.15.2";
         private readonly JsonSerializerOptions _jsonOptions;
         private readonly IPacketResolver _resolver;
-        private readonly ISubscriber _subscriber;
+        private readonly IMessagingProvider _messagingProvider;
         private readonly IServiceProvider _serviceProvider;
 
-        public MCPacketHandler(ILogger<MCPacketHandler> logger, IPacketResolver resolver, IServiceProvider serviceProvider, ISubscriber subscriber)
+        public MCPacketHandler(ILogger<MCPacketHandler> logger, IPacketResolver resolver, IServiceProvider serviceProvider, IMessagingProvider messagingProvider)
         {
             _serviceProvider = serviceProvider;
-            _subscriber = subscriber;
+            _messagingProvider = messagingProvider;
             _resolver = resolver;
             _logger = logger;
             _jsonOptions = new JsonSerializerOptions()
@@ -46,7 +48,15 @@ namespace Frontend
             
             if (valid)
             {
-                packet.Message(_subscriber);
+                packet.UpdateState(ctx);
+                packet.Message(_messagingProvider);
+            }
+            else
+            {
+                if (ctx.ConnectionStage != MCConnectionStage.Playing)
+                {
+                    ctx.Abort(new ConnectionAbortedException($"Packet with Id 0x{id:X} was Invalid"));
+                }
             }
         }
     }
