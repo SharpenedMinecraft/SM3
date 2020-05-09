@@ -32,16 +32,13 @@
     <PackageReference Include="App.Metrics.Extensions.HealthChecks" Version="4.0.0-*" />
     <PackageReference Include="App.Metrics.Formatters.Prometheus" Version="4.0.0-*" />
     <PackageReference Include="Enums.NET" Version="3.0.3" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.0.0" />
     <PackageReference Include="Roslynator.Analyzers" Version="2.3.0" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="../Data/**" LinkBase="Data/" CopyToOutputDirectory="Always" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Messaging\Messaging.csproj" />
   </ItemGroup>
 
 </Project>
